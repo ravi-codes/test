@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html lang="en" class="no-js ltie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js non-ie" lang="en">
+<!--<![endif]-->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../dist/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../../dist/img/lgi-styleguide-upc-business/dist/img/favicon.ico" type="image/x-icon" />
+        <title>HPBX UPC Business - Auto attendant</title>
+    </head>
+    <body>
+        <div class="hpbx-body-background-color"></div>
+        <div class="hpbx-body-background-image"></div>
+        <div class="hpbx-header-background-image"></div>
+        <div class="hpbx-body-menu-opened-overlay"></div>
+        <div class="hpbx-header">
+            <div class="hpbx-header-logo"></div>
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+        </div>
+        <div class="hpbx-menu-dummy-handle">
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+        </div>
+        <div class="hpbx-menu">
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+            <ul class="hpbx-menu-items">
+                <li class="hpbx-menu-item hpbx-menu-item-user">
+                    <div class="hpbx-menu-item-icon-container">
+                        <div class="hpbx-menu-item-icon hpbx-menu-handle hpbx-menu-handle-close">
+                        </div>
+                        <div class="hpbx-menu-item-count"></div>
+                    </div>
+                    <div class="hpbx-menu-item-title-container">
+                        <span class="hpbx-menu-item-title">BHP Lab Customer B</span>
+                    </div>
+                    <div class="hpbx-menu-item-subtitle-container">
+                        <span class="hpbx-menu-item-subtitle-addition">admin</span>
+                        <span class="hpbx-menu-item-subtitle">bladerdeeg BV</span>
+                    </div>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-call-log hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Call-log</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-voicemail hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                            <div class="hpbx-menu-item-count">6</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Voicemail</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-personal-settings hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Personal Settings</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-dashboard hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-customers hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Customers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-subscribers hpbx-menu-item-admin">
+                    <a href="subscribers.html" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Subscribers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-pbx-devices hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">PBX Devices</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-hunting-groups hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Hunting Groups</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-auto-attendant hpbx-menu-item-admin active-trail">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Auto Attendant</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-conference-room hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Conference Room</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-music-on-hold hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Music on Hold</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-default-forward hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Default Forward</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="hpbx-menu-items-sub">
+                <li class="hpbx-menu-item hpbx-menu-item-password hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Change password</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-help hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Help</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-logout hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Log out</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-language hpbx-menu-item-sub" data-item-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">English</span>
+                        </div>
+                        <div class="hpbx-menu-item-handle-container">
+                            <div class="hpbx-menu-item-handle"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub hpbx-menu-item-sub-active" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">EN</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">English</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">NL</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Nederlands</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">DE</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Deutsch</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">TW</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Twents</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 hpbx-main-content">
+                    <div class="hpbx-page-title">
+                        <span class="sg-icon LGI-iconb-auto-attendant-large"></span>
+                        <h2 class="sg-header-2">Auto Attendant</h2>
+                    </div>
+                    <div class="hpbx-foldable-list-container">
+                        <form class="hpbx-tab-form hpbx-tab-form-foldable-list">
+                            <dl class="hpbx-foldable-list">
+                                <dt class="hpbx-foldable-heading">
+                                    <span class="hpbx-foldable-heading-title sg-header-6"> Settings </span>
+                                    <span class="hpbx-foldable-heading-state" data-show-label="Show" data-hide-label="Hide"></span>
+                                </dt>
+                                <dd class="hpbx-foldable-content">
+
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="hpbx-tab-form-label">Title</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-7">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input type="text" class="sg-element" value="Auto Attendant 1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="hpbx-tab-form-label">Number</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-7">
+                                                <div class="hpbx-tab-form-field">
+                                                    <select class="chzn-select sg-element no-search"data-placeholder="Choose an option">
+                                                        <option>Choose an option</option>
+                                                        <option value="1">0123456789</option>
+                                                        <option value="2">9876543210</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="hpbx-tab-form-label">Extension</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-8 col-md-7">
+                                                <div class="hpbx-tab-form-field hpbx-tab-form-field-text">
+                                                    4001
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row hpbx-upload-audio-container">
+                                            <div class="col-xs-12">
+                                                <div class="hpbx-tab-form-label">Menu audio</div>
+                                            </div>
+                                            <div class="col-xs-12 hpbx-tab-audio-container hpbx-audio-container hpbx-audio-container-singular" data-audio-url="../voicemail/1" data-audio-id="1">
+                                                <div class="hpbx-audio-background-active"></div>
+                                                <div class="hpbx-audio-progress-bar"></div>
+                                                <div class="hpbx-audio-content">
+                                                    <div class="hpbx-audio-fallback">
+                                                        <embed src="http://213.160.253.145/sites/all/modules/ccs/hpbx/includes/wavplayer.swf?gui=full&amp;h=20&amp;w=200&amp;sound=http://213.160.253.145/hpbx/voicemail/265/play.wav&amp;" bgcolor="#ffffff" width="100" height="20" name="haxe" quality="high" align="middle" scale="noscale" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+                                                    </div>
+                                                    <div class="hpbx-audio-control-icon"></div>
+                                                    <div class="hpbx-audio-title">Name uploaded menu audio</div>
+                                                    <div class="hpbx-audio-duration">03.47</div>
+                                                    <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Delete upload"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                                <input type="checkbox" class="hpbx-audio-is-replaced" />
+                                            </div>
+                                        </div>
+                                        <div class="hpbx-tab-form-label-field-row hpbx-audio-selector-container">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Upload menu audio</div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <span class="hpbx-audio-selector-no-audio-label">-</span>
+                                                    <span class="hpbx-audio-selector">
+                                                        <div class="sg-btn sg-btn-file-input sg-btn-secondary">
+                                                            Pick a file
+                                                            <input type="file" />
+                                                        </div><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                        <span class="sg-btn-file-input-label"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="hidden-xs col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Clear upload"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row hpbx-upload-audio-container">
+                                            <div class="col-xs-12">
+                                                <div class="hpbx-tab-form-label">Upload out of office audio</div>
+                                            </div>
+                                            <div class="col-xs-12 hpbx-tab-audio-container hpbx-audio-container hpbx-audio-container-singular" data-audio-url="../voicemail/2" data-audio-id="2">
+                                                <div class="hpbx-audio-background-active"></div>
+                                                <div class="hpbx-audio-progress-bar"></div>
+                                                <div class="hpbx-audio-content">
+                                                    <div class="hpbx-audio-fallback">
+                                                        <embed src="http://213.160.253.145/sites/all/modules/ccs/hpbx/includes/wavplayer.swf?gui=full&amp;h=20&amp;w=200&amp;sound=http://213.160.253.145/hpbx/voicemail/265/play.wav&amp;" bgcolor="#ffffff" width="100" height="20" name="haxe" quality="high" align="middle" scale="noscale" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+                                                    </div>
+                                                    <div class="hpbx-audio-control-icon"></div>
+                                                    <div class="hpbx-audio-title">Name uploaded out of office audio</div>
+                                                    <div class="hpbx-audio-duration">03.47</div>
+                                                    <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Delete upload"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                                <input type="checkbox" class="hpbx-audio-is-replaced" />
+                                            </div>
+                                        </div>
+                                        <div class="hpbx-tab-form-label-field-row hpbx-audio-selector-container">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Upload out of office audio</div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <span class="hpbx-audio-selector-no-audio-label">-</span>
+                                                    <span class="hpbx-audio-selector">
+                                                        <div class="sg-btn sg-btn-file-input sg-btn-secondary">
+                                                            Pick a file
+                                                            <input type="file" />
+                                                        </div><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                        <span class="sg-btn-file-input-label"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="hidden-xs col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Clear upload"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dt class="hpbx-foldable-heading">
+                                    <span class="hpbx-foldable-heading-title sg-header-6"> Office Hours </span>
+                                    <span class="hpbx-foldable-heading-state" data-show-label="Show" data-hide-label="Hide"></span>
+                                </dt>
+                                <dd class="hpbx-foldable-content">
+
+
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Monday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][2][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][2][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Tuesday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][3][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][3][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Wednesday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][4][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][4][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Thursday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][5][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][5][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Friday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][6][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][6][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Saturday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][7][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][7][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row hpbx-deletable-row hpbx-timeslot-row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Sunday</div>
+                                            </div>
+                                            <div class="col-xs-10 col-sm-11 col-md-8">
+                                                <div class="hpbx-tab-form-field">
+                                                    <input class="hpbx-timeslots-input" data-min="0" data-max="1440" type="hidden" name="call-forwards[cft][times][1][ranges]" value="[['Friday, March 27 2015 1:30 AM','Friday, March 27 2015 2:30 AM'],['Friday, March 27 2015 3:15 AM','Friday, March 27 2015 7:30 AM']]" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2 col-sm-1 col-md-1">
+                                                <div class="hpbx-tab-form-field">
+                                                    <div class="hpbx-delete hpbx-delete-timeslots sg-btn sg-btn-small sg-btn-secondary" data-target="call-forwards[cft][times][1][ranges]" type="button" title="Delete slot"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12 col-md-3">
+                                                <div class="hpbx-tab-form-label">Add a timeslot</div>
+                                            </div>
+                                            <div class="col-xs-12 col-md-2">
+                                                <div class="hpbx-tab-form-field">
+                                                    <button class="sg-btn sg-btn-secondary hpbx-add-timeslot" data-target="call-forwards[cft]" value="Button">Add</button>
+                                                    <span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </dd>
+                                <dt class="hpbx-foldable-heading">
+                                    <span class="hpbx-foldable-heading-title sg-header-6"> Slots </span>
+                                    <span class="hpbx-foldable-heading-state" data-show-label="Show" data-hide-label="Hide"></span>
+                                </dt>
+                                <dd class="hpbx-foldable-content hpbx-slots-container">
+
+                                    <div class="hpbx-slots-rows">
+                                        <div class="row hpbx-slots-row hpbx-deletable-row">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option selected="selected">4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]'>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option selected="selected">1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="Roy van Lier - 0123 456 789 - 5009">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option selected="selected">3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]'>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row hpbx-slots-row hpbx-deletable-row hpbx-invisible">
+                                            <div class="hpbx-tab-form-label-field-row">
+                                                <div class="col-xs-4 col-sm-3">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <select class="chzn-select sg-element no-search" data-placeholder="-">
+                                                            <option></option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6 col-sm-7 col-sm-offset-1">
+                                                    <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                        <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]' value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-2 col-sm-1">
+                                                    <div class="hpbx-tab-form-field">
+                                                        <div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" type="button" title="Delete speed dial"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="hpbx-tab-form-label-field-row">
+                                            <div class="col-xs-12">
+                                                <div class="hpbx-tab-form-field">
+                                                    <button class="sg-btn sg-btn-secondary hpbx-add-slot" type="button">Add</button><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="row">
+                                <div class="hpbx-tab-form-buttons-row">
+                                    <div class="col-xs-12">
+                                        <a class="hpbx-tab-form-link-button" href="#">Cancel</a>
+                                        <input type="submit" class="sg-btn sg-without-icon sg-btn-primary" value="Save">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeslots popup -->
+        <div id="timeslot-popup" class="hpbx-popup mfp-hide">
+            <div class="hpbx-popup-content">
+                <h4 class="hpbx-popup-title">Add a time slot</h4>
+                <form class="hpbx-popup-form">
+                    <div class="hpbx-popup-form-row">
+                        <div class="hpbx-popup-form-item-left">
+                            <div class="hpbx-popup-form-label">Start</div>
+                            <div class="hpbx-popup-form-field">
+                                <input type="text" class="sg-element hpbx-timeslot-start" placeholder="01:00">
+                            </div>
+                        </div>
+                        <div class="hpbx-popup-form-item-right">
+                            <div class="hpbx-popup-form-label">End</div>
+                            <div class="hpbx-popup-form-field">
+                                <input type="text" class="sg-element hpbx-timeslot-end" placeholder="23:00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hpbx-popup-form-row">
+                        <div class="hpbx-popup-form-label">Use on</div>
+                        <div class="hpbx-popup-form-days-container">
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-monday" id="hpbx-timeslot-monday" class="hpbx-timeslot-monday" value="1">
+                                <label for="hpbx-timeslot-monday" title="">M</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-tuesday" id="hpbx-timeslot-tuesday" class="hpbx-timeslot-tuesday" value="1">
+                                <label for="hpbx-timeslot-tuesday" title="">T</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-wednesday" id="hpbx-timeslot-wednesday" class="hpbx-timeslot-wednesday" value="1">
+                                <label for="hpbx-timeslot-wednesday" title="">W</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-thursday" id="hpbx-timeslot-thursday" class="hpbx-timeslot-thursday" value="1">
+                                <label for="hpbx-timeslot-thursday" title="">T</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-friday" id="hpbx-timeslot-friday" class="hpbx-timeslot-friday" value="1">
+                                <label for="hpbx-timeslot-friday" title="">F</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-saturday" id="hpbx-timeslot-saturday" class="hpbx-timeslot-saturday" value="1">
+                                <label for="hpbx-timeslot-saturday" title="">S</label>
+                            </div>
+                            <div class="hpbx-day-checkbox">
+                                <input type="checkbox" name="hpbx-timeslot-sunday" id="hpbx-timeslot-sunday" class="hpbx-timeslot-sunday" value="1">
+                                <label for="hpbx-timeslot-sunday" title="">S</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hpbx-popup-form-add-rule">
+                        <div class="sg-custom-check-and-radio sg-custom-check">
+                            <label>
+                                <input type="checkbox" name="hpbx-add-rule" class="hpbx-timeslot-add-rule" id="hpbx-timeslot-add-rule" value="1" />
+                                <span class="sg-caption">Add another rule</span>
+                                <div class="sg-alternative-display">
+                                    <div class="sg-icon-check"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="hpbx-popup-form-buttons-row">
+                        <div class="hpbx-timeslot-error sg-input-error" data-error-no-day-selected="Select at least one day for timeslot" data-error-invalid-time="Invalid time format" data-error-empty-time="Time cannot be empty" data-error-slot-overlap-msg="Timeslot overlaps not possible"></div>
+                        <input type="submit" class="hpbx-submit-timeslots sg-btn sg-without-icon sg-btn-primary" value="Set">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Timeslots edit popup -->
+        <div id="timeslot-edit-popup" class="hpbx-popup mfp-hide">
+            <div class="hpbx-popup-content">
+                <h4 class="hpbx-popup-title">Edit a time slot</h4>
+                <form class="hpbx-popup-form">
+                    <div class="hpbx-popup-form-row">
+                        <div class="hpbx-popup-form-item-left">
+                            <div class="hpbx-popup-form-label">Start</div>
+                            <div class="hpbx-popup-form-field">
+                                <input type="text" class="sg-element hpbx-timeslot-start" placeholder="01:00">
+                            </div>
+                        </div>
+                        <div class="hpbx-popup-form-item-right">
+                            <div class="hpbx-popup-form-label">End</div>
+                            <div class="hpbx-popup-form-field">
+                                <input type="text" class="sg-element hpbx-timeslot-end" placeholder="23:00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hpbx-popup-form-buttons-row">
+                        <div class="hpbx-timeslot-error sg-input-error" data-error-invalid-time="Invalid time format" data-error-empty-time="Time cannot be empty" data-error-slot-overlap-msg="Timeslot overlaps not possible"></div>
+                        <a class="hpbx-popup-form-link-button hpbx-remove-timeslot" href="#">Remove</a>
+                        <input type="submit" class="hpbx-submit-timeslots sg-btn sg-without-icon sg-btn-primary" value="Set">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Notification message -->
+        <div class="hpbx-notification hpbx-notification-info">
+            <div class="hpbx-notification-icon"></div>
+            <div class="hpbx-notification-title">Site message</div>
+            <div class="hpbx-notification-message">Paragraphs are Arial at 1.4 rem. Lorem ipsum dolor sit amet, consectetur elit.</div>
+        </div>
+
+        <div class="hpbx-notification hpbx-notification-error">
+            <div class="hpbx-notification-icon"></div>
+            <div class="hpbx-notification-title">Site message</div>
+            <div class="hpbx-notification-message">Paragraphs are Arial at 1.4 rem. Lorem ipsum dolor sit amet, consectetur elit.</div>
+            <div class="hpbx-notification-button">
+                <button class="sg-btn sg-without-icon sg-white hpbx-notification-close-button">Got it!</button>
+            </div>
+        </div>
+
+        <div class="hpbx-notification hpbx-notification-success">
+            <div class="hpbx-notification-icon"></div>
+            <div class="hpbx-notification-title">Site message</div>
+            <div class="hpbx-notification-message">Paragraphs are Arial at 1.4 rem. Lorem ipsum dolor sit amet, consectetur elit.</div>
+        </div>
+
+        <!--[if lt IE 9]>
+        <script src="../../dependencies/jquery-legacy/dist/jquery.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="../../dependencies/jquery/dist/jquery.js"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="../../dist/js/all.js"></script>
+
+        <!--[if IE 8 ]><script>
+            $(document).ready(function() {
+                var $style;
+                $style = $('<style type="text/css">:before,:after{content:none !important}</style>');
+                $('head').append($style);
+                return setTimeout((function() {
+                    return $style.remove();
+                }), 0);
+            });
+        </script><![endif]-->
+    </body>
+</html>

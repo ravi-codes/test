@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Drop 5 feature.
+ */
+
+include_once 'drop_5.features.inc';

@@ -1,0 +1,9 @@
+name = ziggo_mail
+description = Mail theme in Ziggo style
+core = "7.x"
+engine = phptemplate
+stylesheets[all][] = css/style.css
+regions[content] = Content
+regions[footer] = Footer
+
+features[] = logo

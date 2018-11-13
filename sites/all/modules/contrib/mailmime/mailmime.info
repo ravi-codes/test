@@ -1,0 +1,13 @@
+package = Mail
+name = Mail MIME
+description = Provides a class for creating MIME messages.
+php = 5.0
+core = 7.x
+files[] = mailmime.inc
+
+; Information added by Drupal.org packaging script on 2014-06-04
+version = "7.x-2.18+2-dev"
+core = "7.x"
+project = "mailmime"
+datestamp = "1401902928"
+

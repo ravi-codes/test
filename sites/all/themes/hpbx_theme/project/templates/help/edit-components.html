@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html lang="en" class="no-js ltie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js non-ie" lang="en">
+<!--<![endif]-->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../../dist/css/all.min.css?version=iframe" media="screen" rel="stylesheet" type="text/css">
+        <title>HPBX UPC Business - Help Components</title>
+    </head>
+    <body class="hpbx-page-help hpbx-page-help-edit hpbx-page-help-edit-components">
+        <div class="hpbx-scrollable-container hpbx-help-scrollable-content-container">
+            <div class="container hpbx-no-menu">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <h2 class="hpbx-help-edit-page-title">UI Components</h2>
+                        <h5 class="hpbx-help-edit-container-title">wysiwyg editor</h5>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+            <div class="hpbx-help-edit-container hpbx-help-edit-wysiwyg">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div id="wysiwyg-toolbar-wysiwyg" class="hpbx-wysiwyg-toolbar">
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2">H2</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4">H4</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p">P</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="customClassParagraph" data-wysihtml5-command-value="sg-text-intro">Intro</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="createLink">link</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="bold">B</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="italic">I</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="underline">U</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertUnorderedList">UL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertOrderedList">OL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="undo">undo</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="redo">redo</a>
+                                    <div class="hpbx-wysiwyg-toolbar-dialog" data-wysihtml5-dialog="createLink" style="display:none">
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Url:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="href" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Class:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="class" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-left">
+                                                        <a class="sg-btn sg-btn-small sg-btn-primary sg-without-icon" data-wysihtml5-dialog-action="save">OK</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-right">
+                                                        <a class="hpbx-help-edit-link-button" data-wysihtml5-dialog-action="cancel">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-wysiwyg-container">
+                                    <div class="hpbx-wysiwyg" id="wysiwyg-editor-wysiwyg" data-toolbar-id="wysiwyg-toolbar-wysiwyg">
+                                        <h2>
+                                            Article 2.
+                                            <br />
+                                            Example of two lines.
+                                        </h2>
+                                        <p class="sg-text-intro">
+                                            Text intro is Arial Bold at 1.4 rem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet arcu vel turpis pellentesque, eu hendrerit quam auctor. Ut non fermentum metus felis.
+                                        </p>
+                                        <p>
+                                            Paragraphs are Arial at 1.4 rem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet arcu vel turpis pellentesque, eu hendrerit quam auctor. Ut non fermentum metus felis.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hpbx-no-menu">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <h5 class="hpbx-help-edit-container-title">Add photos</h5>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+            <div class="hpbx-help-edit-container hpbx-help-edit-photos">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-help-edit-header-title">Add photos</div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-9">
+                                <div class="hpbx-help-edit-upload">
+                                    Drag and drop photos here or <a href="" class="hpbx-file-upload-link">upload</a> them
+                                </div>
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1">
+                                <a href="" class="hpbx-help-edit-open-media-library">
+                                    <span class="LGI-iconmedia-library"></span>
+                                </a>
+                            ​</div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="hpbx-help-edit-container hpbx-help-edit-photos">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-help-edit-header-title">Add photos</div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+
+                        <div class="hpbx-help-filelist hpbx-help-filelist-photos hpbx-help-filelist-editable">
+                            <div class="hpbx-help-filelist-items">
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name that's a little bit longer</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-9">
+                                <div class="hpbx-help-edit-upload">
+                                    Drag and drop photos here or <a href="" class="hpbx-file-upload-link">upload</a> them
+                                </div>
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1">
+                                <a href="" class="hpbx-help-edit-open-media-library">
+                                    <span class="LGI-iconmedia-library"></span>
+                                </a>
+                            ​</div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hpbx-no-menu">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <h5 class="hpbx-help-edit-container-title">Add video</h5>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+            <div class="hpbx-help-edit-container hpbx-help-edit-video">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-help-edit-header-title">Add video</div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-ie8">URL of your video</div>
+                                <input type="text" class="hpbx-help-edit-input-incognito" placeholder="Enter the URL of your video here..." />
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hpbx-no-menu">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <h5 class="hpbx-help-edit-container-title">Add files</h5>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+            <div class="hpbx-help-edit-container hpbx-help-edit-files">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-help-edit-header-title">Add files</div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-10">
+                                Drag and drop files here or <a href="" class="hpbx-file-upload-link">click</a>​ to select files
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="hpbx-help-edit-container hpbx-help-edit-files">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-help-edit-header-title">Add files</div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+
+                        
+                        <div class="hpbx-help-filelist hpbx-help-filelist-files hpbx-help-filelist-editable">
+                            <div class="hpbx-help-filelist-items">
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <img class="hpbx-help-filelist-thubnail-image" src="/dist/img/help/file-types/pdf.png" />
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <img class="hpbx-help-filelist-thubnail-image" src="/dist/img/help/file-types/xslx.png" />
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name that's a little bit longer</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <img class="hpbx-help-filelist-thubnail-image" src="/dist/img/help/file-types/exe.png" />
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <img class="hpbx-help-filelist-thubnail-image" src="/dist/img/help/file-types/mp3.png" />
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-10">
+                                Drag and drop files here or <a href="" class="hpbx-file-upload-link">click</a>​ to select files
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hpbx-no-menu">
+                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <h5 class="hpbx-help-edit-container-title">Add instruction (photo + text)</h5>
+                    </div>
+                    <div class="col-xs-1"></div>
+                </div>
+            </div>
+            <div class="hpbx-help-edit-container hpbx-help-edit-instruction">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div id="wysiwyg-toolbar-instruction-1" class="hpbx-wysiwyg-toolbar">
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="customClassLi" data-wysihtml5-command-value="hpbx-help-step-substep">Substep</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="createLink">link</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="bold">B</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="italic">I</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="underline">U</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertUnorderedList">UL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertOrderedList">OL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="undo">undo</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="redo">redo</a>
+                                    <div class="hpbx-wysiwyg-toolbar-dialog" data-wysihtml5-dialog="createLink" style="display:none">
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Url:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="href" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Class:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="class" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-left">
+                                                        <a class="sg-btn sg-btn-small sg-btn-primary sg-without-icon" data-wysihtml5-dialog-action="save">OK</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-right">
+                                                        <a class="hpbx-help-edit-link-button" data-wysihtml5-dialog-action="cancel">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="hpbx-help-edit-instruction-step-number">1</span>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-wysiwyg-container">
+                                    <div class="hpbx-wysiwyg" id="wysiwyg-editor-instruction-1" data-toolbar-id="wysiwyg-toolbar-instruction-1">
+                                        Type your text here...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-9">
+                                <div class="hpbx-help-edit-upload">
+                                    Drag and drop photos here or <a href="" class="hpbx-file-upload-link">upload</a> them
+                                </div>
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1">
+                                <a href="" class="hpbx-help-edit-open-media-library">
+                                    <span class="LGI-iconmedia-library"></span>
+                                </a>
+                            ​</div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                    <a class="hpbx-help-edit-link-button" href="#">Add next step</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="hpbx-help-edit-container hpbx-help-edit-instruction">
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div id="wysiwyg-toolbar-instruction-2" class="hpbx-wysiwyg-toolbar">
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="customClassParagraph" data-wysihtml5-command-value="hpbx-help-step-title">Title</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="customClassLi" data-wysihtml5-command-value="hpbx-help-step-substep">Substep</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="createLink">link</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="bold">B</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="italic">I</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="underline">U</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertUnorderedList">UL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertOrderedList">OL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="undo">undo</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="redo">redo</a>
+                                    <div class="hpbx-wysiwyg-toolbar-dialog" data-wysihtml5-dialog="createLink" style="display:none">
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Url:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="href" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Class:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="class" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-left">
+                                                        <a class="sg-btn sg-btn-small sg-btn-primary sg-without-icon" data-wysihtml5-dialog-action="save">OK</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-right">
+                                                        <a class="hpbx-help-edit-link-button" data-wysihtml5-dialog-action="cancel">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main hpbx-saved">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="hpbx-help-edit-instruction-step-number">1</span>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-wysiwyg-container">
+                                    <div class="hpbx-wysiwyg" id="wysiwyg-editor-instruction-2" data-toolbar-id="wysiwyg-toolbar-instruction-2">
+                                        <li class="hpbx-help-step-substep">
+                                            Paragraphs are Arial at 1.2 rem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet arcu vel turpis pellentesque, eu hendrerit quam auctor. Ut non fermentum metus felis.
+                                        </li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="hpbx-help-filelist hpbx-help-filelist-photos hpbx-help-filelist-editable">
+                            <div class="hpbx-help-filelist-items">
+                                <div class="hpbx-help-filelist-item">
+                                    <div class="row">
+                                        <div class="col-xs-1"></div>
+                                        <div class="col-xs-9">
+                                            <div class="hpbx-help-filelist-thumbnail-container">
+                                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/help/steps/step-1.JPG)"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hpbx-help-filelist-item-info">
+                                                <div class="hpbx-help-filelist-item-title">File name</div>
+                                                <div class="hpbx-help-filelist-item-subtitle">512.8 kb</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <div class="LGI-iconcross hpbx-help-filelist-hover-icon"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-header">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <div class="hpbx-help-edit-header-icon-left"><span class="LGI-iconedit hpbx-help-edit-header-icon"></span></div>
+                            </div>
+                            <div class="col-xs-10">
+                                <div id="wysiwyg-toolbar-instruction-3" class="hpbx-wysiwyg-toolbar">
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="customClassLi" data-wysihtml5-command-value="hpbx-help-step-substep">Substep</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="createLink">link</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="bold">B</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="italic">I</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="underline">U</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertUnorderedList">UL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="insertOrderedList">OL</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="undo">undo</a>
+                                    <a class="sg-btn sg-btn-small sg-btn-secondary sg-without-icon" data-wysihtml5-command="redo">redo</a>
+                                    <div class="hpbx-wysiwyg-toolbar-dialog" data-wysihtml5-dialog="createLink" style="display:none">
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Url:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="href" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-3">Class:</div>
+                                                <div class="col-xs-9"><input type="text" class="sg-element" data-wysihtml5-dialog-field="class" value=""></div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="hpbx-help-toolbar-dialog-row">
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-left">
+                                                        <a class="sg-btn sg-btn-small sg-btn-primary sg-without-icon" data-wysihtml5-dialog-action="save">OK</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="hpbx-help-edit-footer-right">
+                                                        <a class="hpbx-help-edit-link-button" data-wysihtml5-dialog-action="cancel">Cancel</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="hpbx-help-edit-instruction-step-number">2</span>
+                            </div>
+                            <div class="col-xs-10">
+                                <div class="hpbx-wysiwyg-container">
+                                    <div class="hpbx-wysiwyg" id="wysiwyg-editor-instruction-3" data-toolbar-id="wysiwyg-toolbar-instruction-3">
+                                        Type your text here...
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-main">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-9">
+                                <div class="hpbx-help-edit-upload">
+                                    Drag and drop photos here or <a href="" class="hpbx-file-upload-link">upload</a> them
+                                </div>
+                                <input type="file"/>
+                            </div>
+                            <div class="col-xs-1">
+                                <a href="" class="hpbx-help-edit-open-media-library">
+                                    <span class="LGI-iconmedia-library"></span>
+                                </a>
+                            ​</div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hpbx-help-edit-footer">
+                    <div class="container hpbx-no-menu">
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-left">
+                                    <button class="sg-btn sg-btn-small sg-btn-primary sg-without-icon">Save</button>
+                                    <a class="hpbx-help-edit-link-button" href="#">Add next step</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-5">
+                                <div class="hpbx-help-edit-footer-right">
+                                    <a class="hpbx-help-edit-link-button" href="#">Remove block</a>
+                                    <a class="hpbx-help-edit-link-button" href="#">Cancel</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <!-- </div> -->
+        <!--[if lt IE 9]>
+        <script src="../../../dependencies/jquery-legacy/dist/jquery.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="../../../dependencies/jquery/dist/jquery.js"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="../../../dependencies/wysihtml/dist/wysihtml-toolbar.min.js"></script>
+        <script type="text/javascript" src="../../../dependencies/wysihtml/parser_rules/advanced_and_extended.js"></script>
+        <script type="text/javascript" src="../../../dist/js/all.js"></script>
+    </body>
+</html>

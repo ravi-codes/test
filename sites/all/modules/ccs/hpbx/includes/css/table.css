@@ -1,0 +1,86 @@
+/**
+ * body.page-hpbx  tables.
+ */
+body.page-hpbx  table {
+
+  width: 100%;
+  font-family: 'Helvetica';
+  font-size: 13px;
+  margin: 0 0 10px;
+  border: 1px solid #bebfb9;
+  margin-top: 15px;
+}
+
+body.page-hpbx  table td,
+body.page-hpbx  table th {
+  vertical-align: middle;
+  padding: 8px 10px;
+  border: 0;
+  color: #000;
+}
+
+
+body.page-hpbx tr.even,
+body.page-hpbx tr.odd {
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: #bebfb9;
+  background: #f3f4ee;
+}
+body.page-hpbx tr.odd {
+  background: #fff;
+}
+body.page-hpbx tr.drag {
+  background: #fe7;
+}
+body.page-hpbx tr.drag-previous {
+  background: #ffb;
+}
+body.page-hpbx  table th {
+  text-transform: uppercase;
+  background: #e1e2dc;
+  font-weight: normal;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bebfb9;
+  padding: 3px 10px;
+}
+
+body.page-hpbx table th {
+  font-size:12px;
+}
+body.page-hpbx table th a {
+  display: block;
+  position: relative;
+}
+body.page-hpbx table th.active a {
+  padding: 0 25px 0 0; /* LTR */
+}
+body.page-hpbx table th.active img {
+  position: absolute;
+  top: 3px;
+  right: 3px; /* LTR */
+}
+body.page-hpbx table td.active {
+  background: #e9e9dd;
+}
+body.page-hpbx table tr.odd td.active {
+  background: #f3f4ee;
+}
+body.page-hpbx table tr.selected td.active,
+body.page-hpbx table tr.selected td {
+  background: #ffc;
+  border-color: #eeb;
+}
+
+body.page-hpbx td.checkbox, body.page-hpbx th.checkbox {
+  text-align: center;
+}
+
+/**
+ * Exception for webkit bug with the right border of the last cell
+ * in some body.page-hpbx  tables, since it's webkit only, we can use :last-child
+ */
+body.page-hpbx tr td:last-child {
+  border-right: 1px solid #bebfb9; /* LTR */
+}

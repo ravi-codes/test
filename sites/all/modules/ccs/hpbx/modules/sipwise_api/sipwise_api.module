@@ -1,0 +1,361 @@
+<?php
+
+/**
+ * Implementation of hook_init().
+ */
+function sipwise_api_init() {
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/Sipwise.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseEntity.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseSoundFile.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseSubscriber.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseReseller.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseCustomer.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwisePBXDevice.class.php');
+  require_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseFax.class.php');
+  
+  
+  define('SIPWISE_API_ENDPOINT_URL_DEFAULT', 'https://172.30.52.36:1443');
+}
+function sipwise_api_activate_reseller($reseller_id) {
+
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/Sipwise.class.php');
+  include_once(drupal_get_path('module', 'sipwise_api') . '/includes/SipwiseEntity.class.php');
+
+  global $sipwise_api_reseller_id;
+
+
+  global $ActiveReseller;
+
+  $sipwise_api_reseller_id = $reseller_id;
+
+  if (is_numeric($sipwise_api_reseller_id)) {
+    $ActiveReseller = SipwiseEntity::load('resellers', $sipwise_api_reseller_id);
+  }
+}
+
+function sipwise_api_get_active_reseller() {
+  global $sipwise_api_reseller_id;
+  
+  if (!empty($sipwise_api_reseller_id)) {
+    return $sipwise_api_reseller_id;
+  }
+  return FALSE;
+}
+
+
+/**
+ * 
+ * @param SipwiseEntity $Entry
+ * @param array $results
+ * @param string $type
+ * @param boolean $references
+ */
+function sipwise_api_set_entry(&$Entry, &$results, $query, $type, $references) {
+
+  if (!isset($Entry->id)) {
+    $Entry->id = basename($Entry->_links->self->href);
+  }
+
+  if ($type == 'soundfiles') {
+    $results[$type][md5(serialize($query))][$Entry->id] = new SipwiseSoundFile($Entry);    
+  }
+  else {
+    // Create a SipwiseEntity object of the returned object.
+    $results[$type][md5(serialize($query))][$Entry->id] = SipwiseEntity::create($type, $Entry);
+  }
+
+  if ($references) {
+    sipwise_api_set_references($results[$type][md5(serialize($query))][$Entry->id]);
+  }
+}
+
+/**
+ * 
+ * @param string $type
+ * @param array $query
+ * @param boolean $reset
+ * @param boolean $references
+ * @param boolean $set_total
+ *
+ * @return SipwiseEntity[]
+ */
+function sipwise_api_get_all($type, $query = array(), $reset = TRUE, $references = FALSE, $set_total = TRUE) {
+
+  static $total_counts;
+  global $total_count;
+  static $results = array();
+  global $ActiveReseller;
+  global $conf;
+
+  // Set default query arguments.
+  $default_query = array('page' => 1, 'rows' => 1000);
+
+  // Merge passed query arguments.
+  $query += $default_query;
+
+  if ($type == 'customers') {
+    $query['not_status'] = 'terminated';
+  }
+    
+  if ($type != 'resellers') {
+    if (!empty($ActiveReseller->id)) {
+      $query['reseller_id'] = $ActiveReseller->id;
+    }
+    else {
+      watchdog('sipwise_api', 'could not find active reseller id');
+      drupal_not_found();
+      die();
+    }
+  }
+
+  if ($reset || !isset($results[$type][md5(serialize($query))])) {
+
+    // Construct URL.
+    $url = '/api/'. $type .'/?'. http_build_query($query);
+
+    if (in_array($type, $conf['sipwise_api']['sipwise_api_cached_lists'])) {
+
+        if ($type!='resellers') {
+          $cid = $type . '_list_' . $query['reseller_id'] . '_' . md5(serialize($query)) . '_response';
+        }
+        else {
+          $cid = $type . '_list_' . md5(serialize($query)) . '_response';
+        }
+
+        if ($cache = cache_get($cid, 'cache_sipwise_api')) {
+          watchdog('sipwise_api_cache', t('Read @type list from cache (@cid). request=@request', array('@type' => $type, '@cid' => $cid, '@request' => $url)));
+          $response = $cache->data;
+        }
+        else {
+          $response = Sipwise::exec($url);
+          
+          // Verify if we did receive an (error) message.
+          list($headers, $body) = $response;
+          if (isset($body->message) || strpos($headers['http_code'], '504 Gateway Time-out')!==FALSE) {
+            if (!empty($body->message)) {
+              watchdog('sipwise_api_cache', t('@type list NOT written to cache (@cid) as we received an error message @message',
+              array('@message' => $body->message ,'@type' => $type, '@cid' => $cid)));
+            }
+            else {
+              watchdog('sipwise_api', 'Failed to load '. $type);
+            }
+          }
+          else {
+            watchdog('sipwise_api_cache', t('Write @type list to cache (@cid). source=@source', array('@type' => $type, '@cid' => $cid, '@source' => $url)));
+            cache_set($cid, $response, 'cache_sipwise_api');
+          }
+        }
+    }
+    else {
+      $response = Sipwise::exec($url);
+    }
+
+    // Verify if we did receive an (error) message.
+    list($headers, $body) = $response;
+    if (isset($body->message) || strpos($headers['http_code'], '504 Gateway Time-out')!==FALSE) {
+      if (!empty($body->message)) {
+        watchdog('sipwise_api', 'Failed to load '. $type .' Error message: '. $body->message . ' (' . $body->code . ')');
+      }
+      else {
+        watchdog('sipwise_api', 'Failed to load '. $type);
+      }
+      //throw new ErrorException($body->message, $body->code);
+      return FALSE;
+    }
+    
+    if ($set_total) {
+      $total_counts[$type][md5(serialize($query))] = $body->total_count;
+    }
+
+    // Single object.
+    if (!is_null($body) && isset($body->_embedded->{'ngcp:' . $type}) && is_object($body->_embedded->{'ngcp:' . $type})) {
+
+      $Entry = $body->_embedded->{'ngcp:' . $type};
+      sipwise_api_set_entry($Entry, $results, $query, $type, $references);
+    }
+
+    // Array of objects.
+    elseif (!is_null($body) && isset($body->_embedded->{'ngcp:' . $type}) && is_array($body->_embedded->{'ngcp:' . $type})) {
+      // Walk each result. entry.
+      foreach ($body->_embedded->{'ngcp:' . $type} as $Entry) {
+
+        sipwise_api_set_entry($Entry, $results, $query, $type, $references);
+      } // End of entry.
+    }
+    else {
+      if ($set_total) {
+        $total_count = $total_counts[$type][md5(serialize($query))];
+      }
+      return array();
+    }
+  }
+  if ($set_total) {
+    $total_count = $total_counts[$type][md5(serialize($query))];
+  }
+
+  return $results[$type][md5(serialize($query))];
+}
+
+/**
+ * 
+ * @param SipwiseEntity $SipwiseEntity
+ */
+function sipwise_api_set_references(SipwiseEntity &$SipwiseEntity) {
+
+  // Verify if links are passed, and retrieve them directly.
+  if (isset($SipwiseEntity->_links)) {
+
+    // New Object.
+    foreach ($SipwiseEntity->_links as $reference_type => $Link) {
+      
+      
+      if (substr($reference_type, 0, 5) == 'ngcp:') {
+
+        // Set entity type.
+        $reference_type = substr($reference_type, 5);
+
+        $id = basename($Link->href);
+
+        try {
+
+          // Load entity, but we will not load references AGAIN.
+          if ($ReferenceEntry = SipwiseEntity::load($reference_type, $id, FALSE, FALSE)) {
+            
+            $SipwiseEntity->$reference_type = $ReferenceEntry;
+          }
+        }
+        catch(Exception $e) {
+          
+          if ($e->getMessage()!= 'Path not found') { // @todo remove.
+            drupal_set_message($reference_type .' => '. t($e->getMessage()), 'error');
+          }
+        }
+      }
+    }
+    unset($SipwiseEntity->_links);
+  } // End of references.
+}
+
+/**
+ * 
+ * @param unknown $type
+ * @param unknown $id
+ *
+ * @return boolean
+ */
+function sipwise_api_delete($type, $id) {
+
+  if ($Entity = SipwiseEntity::load($type, $id)) {
+    
+    // Delete the entity.
+    $Entity->delete();
+  }
+  return TRUE;
+}
+
+/**
+ * Applies rewrite rules to a given number according to the given
+ * direction. It can for example be used to normalize user input to
+ * E164 using callee_in direction, or to denormalize E164 to user
+ * output using caller_out.
+ *
+ * @param string $number
+ * @param string $direction
+ */
+function sipwise_api_normalize_number($subscriber_id, $number, $direction = 'callee_in') {
+
+  $data = new stdClass();
+  $data->direction = $direction;
+  $data->number = $number;
+  $data->subscriber_id = $subscriber_id;
+
+  // Execute the API request.
+  list($headers, $body) = Sipwise::exec('/api/applyrewrites/', $data, 'POST');
+
+  // Verify if we did receive an (error) message.
+  if (isset($body->message)) {
+
+    // Set message.
+    //drupal_set_message(var_export($data, TRUE) . ' => '. t($body->message), 'error');
+    return FALSE;
+  }
+  return $body->result;
+}
+
+/**
+ * 
+ * @param unknown $type
+ * @param unknown $id
+ * @param unknown $data
+ * @param string $customrequest
+ * @return boolean
+ */
+function sipwise_api_update($type, $id, $data, $customrequest = 'PUT') {
+
+  // Execute the API request.
+  $url = '/api/'. $type . '/'. $id;
+  list($headers, $body) = Sipwise::exec($url, $data, $customrequest);
+
+  // Verify if we did receive an (error) message.
+  if (isset($body->message)) {
+
+    // Set message.
+    drupal_set_message($url . ' => '. t($body->message), 'error');
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+function sipwise_api_create($type, $data) {
+
+  $url = '/api/'. $type . '/';
+  // Execute the API request.
+  list($headers, $body) = Sipwise::exec($url, $data);
+
+  // Verify if we did receive an (error) message.
+  if (isset($body->message)) {
+
+    // Set message.
+    drupal_set_message($url . ' => '. t($body->message), 'error');
+    return FALSE;
+  }
+  return TRUE;
+}
+
+
+function sipwise_get_preferencedefs($type, $reset = FALSE) {
+
+  // Cache customers
+  $results = &drupal_static(__FUNCTION__);
+
+  if ($reset || !isset($results[$type])) {
+    // Execute the API request.
+    list($headers, $body) = Sipwise::exec('/api/'. $type . 'preferencedefs/');
+
+    // Verify if we did receive an (error) message.
+    if (isset($body->message)) {
+
+      // Set message.
+      drupal_set_message($url . ' => '. t($body->message), 'error');
+      return FALSE;
+    }
+
+
+    // Assign response object.
+    $results[$type] = $body;
+  }
+
+  return $results[$type];
+}
+
+
+/**
+ *
+ * @param unknown $url
+ * @param unknown $data
+ * @return mixed|boolean
+ */
+
+
+

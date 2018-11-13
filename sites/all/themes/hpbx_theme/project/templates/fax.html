@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html lang="en" class="no-js ltie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js non-ie" lang="en">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../dist/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../../dist/img/lgi-styleguide-upc-business/dist/img/favicon.ico" type="image/x-icon" />
+        <title>HPBX UPC Business - Fax</title>
+    </head>
+    <body>
+        <div class="hpbx-body-background-color"></div>
+        <div class="hpbx-body-background-image"></div>
+        <div class="hpbx-header-background-image"></div>
+        <div class="hpbx-body-menu-opened-overlay"></div>
+        <div class="hpbx-header">
+            <div class="hpbx-header-logo"></div>
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+        </div>
+        <div class="hpbx-menu-dummy-handle">
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+        </div>
+        <div class="hpbx-menu">
+            <div class="hpbx-menu-handle hpbx-menu-handle-open"></div>
+            <ul class="hpbx-menu-items">
+                <li class="hpbx-menu-item hpbx-menu-item-user">
+                    <div class="hpbx-menu-item-icon-container">
+                        <div class="hpbx-menu-item-icon hpbx-menu-handle hpbx-menu-handle-close">
+                        </div>
+                        <div class="hpbx-menu-item-count"></div>
+                    </div>
+                    <div class="hpbx-menu-item-title-container">
+                        <span class="hpbx-menu-item-title">BHP Lab Customer B</span>
+                    </div>
+                    <div class="hpbx-menu-item-subtitle-container">
+                        <span class="hpbx-menu-item-subtitle-addition">admin</span>
+                        <span class="hpbx-menu-item-subtitle">bladerdeeg BV</span>
+                    </div>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-call-log hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Call-log</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-fax hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Fax</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-voicemail hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                            <div class="hpbx-menu-item-count">6</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Voicemail</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-personal-settings hpbx-menu-item-everyone">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Personal Settings</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-dashboard hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-customers hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Customers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-subscribers hpbx-menu-item-admin active-trail">
+                    <a href="subscribers.html" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Subscribers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-pbx-devices hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">PBX Devices</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-hunting-groups hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Hunting Groups</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-auto-attendant hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Auto Attendant</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-conference-room hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Conference Room</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-music-on-hold hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Music on Hold</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-default-forward hpbx-menu-item-admin">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Default Forward</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="hpbx-menu-items-sub">
+                <li class="hpbx-menu-item hpbx-menu-item-password hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Change password</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-help hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Help</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-logout hpbx-menu-item-sub">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Log out</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-language hpbx-menu-item-sub" data-item-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon"></div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">English</span>
+                        </div>
+                        <div class="hpbx-menu-item-handle-container">
+                            <div class="hpbx-menu-item-handle"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub hpbx-menu-item-sub-active" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">EN</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">English</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">NL</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Nederlands</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">DE</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Deutsch</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hpbx-menu-item hpbx-menu-item-sub" data-parent-id="language">
+                    <a href="#" class="hpbx-menu-item-link">
+                        <div class="hpbx-menu-item-icon-container">
+                            <div class="hpbx-menu-item-icon">TW</div>
+                        </div>
+                        <div class="hpbx-menu-item-title-container">
+                            <span class="hpbx-menu-item-title">Twents</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="hpbx-help-edit-url-popup-trigger">
+            <span class="LGI-iconedit"></span>
+        </div>
+        <div class="hpbx-help-open-handle hpbx-help-open-handle-content-section" id="open-button" data-help-url="/project/templates/help/article-steps.html">
+            <span class="LGI-iconb-help-large"></span>
+        </div>
+        <div class="hpbx-help">
+            <iframe class="hpbx-help-iframe" src="/project/templates/help/loader.html" width="100%" height="100%" data-default-url="/project/templates/help/home.html"></iframe>
+        </div>
+        <div class="hpbx-help-loading-overlay">
+            <div class="hpbx-help-loading-wait-container">
+                <div class="hpbx-loader-animation-container">
+                    <div class="hpbx-loader-animation">
+                    </div>
+                </div>
+            </div>
+            <div class="hpbx-help-loading-text hpbx-loader-title">Help is loading...</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 hpbx-main-content hpbx-page-fax">
+                    <div class="hpbx-page-title">
+                        <span class="sg-icon LGI-iconb-fax-large"></span>
+                        <h2 class="sg-header-2">Fax</h2>
+                    </div>
+
+                    <div class="hpbx-tabs">
+                        <ul>
+                            <li class="hpbx-tab-item">
+                                <div class="hpbx-tab-item-title">
+                                    <a href="#tab-fax-2-email">Fax 2 email</a>
+                                </div>
+                                <div class="hpbx-tab-item-background"></div>
+                            </li>
+                            <li class="hpbx-tab-item">
+                                <div class="hpbx-tab-item-title">
+                                    <a href="#tab-send-fax">Send fax</a>
+                                </div>
+                                <div class="hpbx-tab-item-background"></div>
+                            </li>
+                            <li class="hpbx-tab-item">
+                                <div class="hpbx-tab-item-title">
+                                    <a href="#tab-fax-log">Fax log</a>
+                                </div>
+                                <div class="hpbx-tab-item-background"></div>
+                            </li>
+                        </ul>
+                        <div id="tab-fax-2-email">
+                            <a class="hpbx-tabs-create-bar" href="fax-create.html"> <span class="sg-icon sg-icon-plus-round"></span> <h5 class="sg-header-5"> Create new fax number </h5></a>
+                            <table class="hpbx-table hpbx-table-fullwidth hpbx-table-subscribers hpbx-table-sortable">
+                                <col class="hpbx-col-name"/>
+                                <col class="hpbx-col-email"/>
+                                <col class="hpbx-col-number"/>
+                                <col class="hpbx-col-subscriber-type"/>
+                                <col class="hpbx-col-action"/>
+                                <thead class="sg-text-small">
+                                    <tr>
+                                        <th class="hpbx-sortable hpbx-show">Name</th>
+                                        <th class="hpbx-sortable hpbx-show-xs">Number</th>
+                                        <th class="hpbx-sortable hpbx-show-sm">Email destination</th>
+                                        <th class="hpbx-show-xs"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-url="fax-edit.html?id=1">
+                                        <td class="hpbx-show">Fax name 1</td>
+                                        <td class="hpbx-show-xs">053-256<span class="hpbx-pbx-extension">2812</span></td>
+                                        <td class="hpbx-show-sm">faxname1@jurassicpark.com</td>
+                                        <td class="hpbx-show-xs"><div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Delete subscriber"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div></td>
+                                    </tr>
+                                    <tr data-url="fax-edit.html?id=2">
+                                        <td class="hpbx-show">Fax name 2</td>
+                                        <td class="hpbx-show-xs">053-256<span class="hpbx-pbx-extension">2812</span></td>
+                                        <td class="hpbx-show-sm">faxname2@jurassicpark.com</td>
+                                        <td class="hpbx-show-xs"><div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Delete subscriber"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div></td>
+                                    </tr>
+                                    <tr data-url="fax-edit.html?id=3">
+                                        <td class="hpbx-show">Fax name 3</td>
+                                        <td class="hpbx-show-xs">053-256<span class="hpbx-pbx-extension">2812</span></td>
+                                        <td class="hpbx-show-sm">faxname3@jurassicpark.com</td>
+                                        <td class="hpbx-show-xs"><div class="hpbx-delete js-delete sg-btn sg-btn-small sg-btn-secondary" title="Delete subscriber"><span class="sg-btn-icon LGI-iconb-cross-bold"></span></div></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab-send-fax">
+                            <form class="hpbx-tab-form">
+                                <div class="row">
+                                    <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="hpbx-tab-form-label">Outgoing number</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7">
+                                            <div class="hpbx-tab-form-field">
+                                                <select class="chzn-select sg-element no-search" data-placeholder="Choose an option">
+                                                    <option></option>
+                                                    <option>Item 1</option>
+                                                    <option>Item 2</option>
+                                                    <option>Item 3</option>
+                                                    <option>Item 4</option>
+                                                    <option>Item 5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="hpbx-tab-form-label">Destination number</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7">
+                                            <div class="hpbx-tab-form-field hpbx-autocomplete-row">
+                                                <input type="text" class="sg-element hpbx-autocomplete" placeholder="" data-title="Recently used numbers" data-values='[{"value":"0201234567","label":"0201234567 Erik Scholten"},{"value":"0201234568","label":"0201234568 Lasse Licht"},{"value":"0201234569","label":"0201234569 Roeland Graat"},{"value":"0201234560","label":"0201234560 Roy van Lier"}]'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="hpbx-tab-form-label-field-row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="hpbx-tab-form-label">Page header</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7">
+                                            <div class="hpbx-tab-form-field">
+                                                <input type="text" class="sg-element">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="hpbx-tab-form-label-field-row">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="hpbx-tab-form-label">Page content</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7">
+                                            <div class="hpbx-tab-form-field">
+                                                <textarea class="sg-element"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="hpbx-tab-form-label-field-row hpbx-required">
+                                        <div class="col-xs-12 col-sm-3">
+                                            <div class="hpbx-tab-form-label">File upload (pdf)</div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-8 col-md-7">
+                                            <div class="hpbx-tab-form-field">
+                                                <div class="sg-btn sg-btn-file-input sg-btn-secondary hpbx-click-with-alert needsclick" data-alert-title="Max file size" data-alert-message="The maximum file size is 10MB." data-alert-button-text="OK">
+                                                    Pick a file
+                                                    <input type="file" class="hpbx-click-with-alert-input" />
+                                                </div><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                <span class="sg-btn-file-input-label"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="hpbx-tab-form-buttons-row">
+                                        <div class="col-xs-12">
+                                            <input type="submit" class="sg-btn sg-without-icon sg-btn-primary" value="Send">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="tab-fax-log">
+                            <div class="hpbx-table-call-log">
+                                <div class="hpbx-table-selector-caption">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="hpbx-table-selector-title sg-text-intro">Subscriber</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-9 col-md-7">
+                                                <div class="hpbx-table-selector-inputs">
+                                                    <select class="chzn-select sg-element" data-placeholder="Choose an option">
+                                                        <option>Lasse Licht - 0123 456 789 5007</option>
+                                                        <option>Second item</option>
+                                                        <option>Item 3</option>
+                                                        <option>Another item</option>
+                                                        <option>Item 5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-3">
+                                                <div class="hpbx-table-selector-title sg-text-intro">Date</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-3">
+                                                <div class="hpbx-table-selector-inputs">
+                                                    <input id="hpbx-call-log-start-date" type="text" class="sg-element" placeholder="Start">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-1">
+                                                <div class="hpbx-table-selector-subcaption">till</div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-3">
+                                                <div class="hpbx-table-selector-inputs">
+                                                    <input id="hpbx-call-log-end-date" type="text" class="sg-element" placeholder="End">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-10">
+                                                <div class="hpbx-table-selector-inputs hpbx-table-selector-submit-container">
+                                                    <input type="submit" class="sg-btn sg-btn-secondary" value="Change"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <table class="hpbx-table hpbx-table-fullwidth hpbx-table-call-log hpbx-table-sortable">
+                                <col class="hpbx-col-call-icon"/>
+                                <col class="hpbx-col-date-and-time"/>
+                                <col class="hpbx-col-info"/>
+                                <col class="hpbx-col-numbers"/>
+                                <col class="hpbx-col-caller"/>
+                                <col class="hpbx-col-callee"/>
+                                <col class="hpbx-col-status"/>
+                                <col class="hpbx-col-pages"/>
+                                <col class="hpbx-col-download"/>
+                                <thead class="sg-text-small">
+                                    <tr>
+                                        <th class="hpbx-show"></th>
+                                        <th class="hpbx-sortable hpbx-show-xs"><a href="#">Date & time</a></th>
+                                        <th class="hpbx-sortable hpbx-show hpbx-hide-xs"><a href="#">Information</a></th>
+                                        <th class="hpbx-sortable hpbx-show-xs hpbx-hide-sm"><a href="#">Numbers</a></th>
+                                        <th class="hpbx-sortable hpbx-show-sm"><a href="#">Caller</a></th>
+                                        <th class="hpbx-sortable hpbx-show-sm"><a href="#">Callee</a></th>
+                                        <th class="hpbx-sortable hpbx-show-sm"><a href="#">Status</a></th>
+                                        <th class="hpbx-sortable hpbx-show-sm"><a href="#">Pages</a></th>
+                                        <th class="hpbx-show"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hpbx-table-head-row sg-text-small">
+                                        <td class="hpbx-show"></td>
+                                        <td class="hpbx-show" colspan="6">Wednesday 19-02-2015</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hpbx-show hpbx-table-icon-container"><div class="hpbx-table-icon hpbx-call-icon hpbx-inbound"></div></td>
+                                        <td class="hpbx-show-xs">09:32:02</td>
+                                        <td class="hpbx-show hpbx-hide-xs">
+                                            09:32:02
+                                            <br />
+                                            012615002
+                                            <br />
+                                            06123456789
+                                        </td>
+                                        <td class="hpbx-show-xs hpbx-hide-sm">
+                                            012615022
+                                            <br />
+                                            06123456789
+                                        </td>
+                                        <td class="hpbx-show-sm">12345678901234</td>
+                                        <td class="hpbx-show-sm">0612345678</td>
+                                        <td class="hpbx-show-sm">Failed</td>
+                                        <td class="hpbx-show-sm">2</td>
+                                        <td class="hpbx-show hpbx-table-icon-container"><div class="hpbx-table-icon hpbx-download-icon"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hpbx-show hpbx-table-icon-container"><div class="hpbx-table-icon hpbx-call-icon hpbx-outbound"></div></td>
+                                        <td class="hpbx-show-xs">09:32:02</td>
+                                        <td class="hpbx-show hpbx-hide-xs">
+                                            09:32:02
+                                            <br />
+                                            012615002
+                                            <br />
+                                            06123456789
+                                        </td>
+                                        <td class="hpbx-show-xs hpbx-hide-sm">
+                                            012615022
+                                            <br />
+                                            06123456789
+                                        </td>
+                                        <td class="hpbx-show-sm">12345678901234</td>
+                                        <td class="hpbx-show-sm">0612345678</td>
+                                        <td class="hpbx-show-sm">Success</td>
+                                        <td class="hpbx-show-sm">1</td>
+                                        <td class="hpbx-show hpbx-table-icon-container"></td>
+                                    </tr>
+                                    <tr class="hpbx-table-extra-row-when-has-pagination">
+                                        <td colspan="6"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="hpbx-pagination-container">
+                                    <ul class="hpbx-pagination">
+                                        <li class="hpbx-pagination-item hpbx-pagination-item-start hpbx-pagination-item-unavailable">
+                                            <span class="hpbx-pagination-item-content LGI-iconb-begin-bold"></span>
+                                        </li>
+                                        <li class="hpbx-pagination-item hpbx-pagination-item-before-current"><a class="hpbx-pagination-item-content" href="#">20</a></li>
+                                        <li class="hpbx-pagination-item hpbx-pagination-item-current"><a class="hpbx-pagination-item-content" href="#">21</a></li>
+                                        <li class="hpbx-pagination-item hpbx-pagination-item-after-current"><a class="hpbx-pagination-item-content" href="#">22</a></li>
+                                        <li class="hpbx-pagination-item"><a class="hpbx-pagination-item-content" href="#">23</a></li>
+                                        <li class="hpbx-pagination-item"><a class="hpbx-pagination-item-content" href="#">24</a></li>
+                                        <li class="hpbx-pagination-item hpbx-pagination-item-end">
+                                            <a class="hpbx-pagination-item-content" href="#"><span class="LGI-iconb-end-bold"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hpbx-help-edit-media-library-popup-trigger"></div>
+        <div id="hpbx-help-edit-media-library-popup" class="hpbx-dialog hpbx-help-edit-media-library-popup hpbx-popup mfp-hide">
+            <div class="hpbx-dialog-header">
+                <div class="hpbx-dialog-header-icon"><span class="LGI-iconb-customer-large"></span></div>
+                <div class="hpbx-dialog-header-title">Add photo's from the media library</div>
+            </div>
+            <div class="hpbx-dialog-contents hpbx-scrollable-container">
+                <div class="hpbx-help-edit-media-library-popup-tag-filter">
+                    <input type="text" class="sg-element" placeholder="Type filter" />
+                </div>
+                <div class="hpbx-help-filelist-photos hpbx-help-filelist">
+                    <div class="hpbx-help-filelist-thumbnails">
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="hpbx-dialog-footer">
+                <div class="hpbx-dialog-footer-left">
+                    <input type="button" class="sg-btn sg-btn-small sg-without-icon sg-btn-primary" value="Save" data-click-handler="yourOwnCustomFunction">
+                </div>
+                <div class="hpbx-dialog-footer-right">
+                    <a class="hpbx-tab-form-link-button hpbx-dialog-close-handle" href="#">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <div id="hpbx-help-edit-url-popup" class="hpbx-dialog hpbx-help-edit-url-popup hpbx-popup mfp-hide">
+            <div class="hpbx-dialog-header">
+                <div class="hpbx-dialog-header-icon"><span class="LGI-iconedit"></span></div>
+                <div class="hpbx-dialog-header-title">Enter URL of Help page</div>
+            </div>
+            <div class="hpbx-dialog-contents">
+                <div class="hpbx-form-login-caption">First name</div>
+                <input type="text" class="sg-element" placeholder="Type URL" />
+            </div>
+            <div class="hpbx-dialog-footer">
+                <div class="hpbx-dialog-footer-left">
+                    <input type="button" class="sg-btn sg-btn-small sg-without-icon sg-btn-primary" value="Save" data-click-handler="yourOwnCustomFunction">
+                </div>
+                <div class="hpbx-dialog-footer-right">
+                    <a class="hpbx-tab-form-link-button hpbx-dialog-close-handle" href="#">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <div class="hpbx-alert hpbx-alert-small hpbx-notification-info">
+            <div class="hpbx-alert-box">
+                <div class="hpbx-notification-icon"></div>
+                <div class="hpbx-notification-title"></div>
+                <div class="hpbx-notification-message"></div>
+                <div class="hpbx-notification-button">
+                    <button class="sg-btn sg-without-icon sg-white hpbx-alert-close-button needsclick"></button>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+        <script src="../../dependencies/jquery-legacy/dist/jquery.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="../../dependencies/jquery/dist/jquery.js"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="../../dist/js/all.js"></script>
+    </body>
+</html>

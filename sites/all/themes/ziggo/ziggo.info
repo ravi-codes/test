@@ -1,0 +1,66 @@
+; $Id$
+
+; THEME INFO
+; -----------------------------
+name        = Ziggo
+description = Ziggo
+package     = Youwe
+version     = "7.1"
+core        = 7.x
+engine      = phptemplate
+php         = DRUPAL_MINIMUM_PHP
+
+
+; CSS / LESS
+; -----------------------------
+
+; THEME LAYOUT -- overrides all styling that comes before it
+; ----------------------------
+stylesheets[all][]    = css/animation.css
+stylesheets[all][]    = css/layout.css
+stylesheets[all][]    = css/style.css
+stylesheets[all][]    = css/forms.css
+stylesheets[all][]  = css/additions.css
+stylesheets[print][]  = css/print.css
+
+; SCRIPTS
+; -----------------------------
+scripts[] = script/modernizr-latest.js
+scripts[] = script/script.js
+
+; REGIONS
+; -----------------------------
+regions[topbar]         = Topbar
+regions[header]         = Header
+regions[nav_bar]        = Navigation
+regions[help]           = Help
+regions[highlight]      = Highlight
+regions[content_top]    = Content top
+regions[content]        = Content
+regions[content_bottom] = Content bottom
+regions[sidebar_first]  = Sidebar First
+regions[sidebar_second]  = Sidebar Second
+regions[footer]         = Footer
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+; REGIONS
+; -----------------------------
+
+;features[] = name
+;features[] = slogan
+;features[] = mission
+;features[] = node_user_picture
+features[] = comment_user_picture
+;features[] = search
+features[] = favicon
+;features[] = logo
+; features[] = primary_links
+; features[] = secondary_links
+
+; SETTINGS
+; -----------------------------
+settings[main_menu_display_style]       = menu
+settings[secondary_menu_display_style]  = menu
+settings[main_menu_allow_tree]          = 0
+settings[secondary_menu_allow_tree]     = 0

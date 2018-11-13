@@ -1,0 +1,50 @@
+/*
+ * Additional CSS can go into this file
+ */
+[id="header"] .region-header .block li a.active,
+[id="nav-bar"] ul.menu li a.active {
+  color: #F48C00;
+  font-weight: bold;
+}
+div#block-menu-menu-enviroment-switch {
+  float: left;
+  margin-left: 4em;
+}
+div#block-menu-menu-enviroment-switch ul.menu li{
+  float: left;
+}
+
+table th, table td {
+  border-right: 0;
+}
+
+
+div#block-locale-language ul>li:before,
+div#block-locale-language li.dm {
+  display: none;
+}
+
+div#block-locale-language ul {
+  float: right;
+}
+
+div#block-locale-language ul li {
+  float: left;
+}
+
+[id="header"] .region-header .block li a:hover {
+  text-decoration:none;
+  color: #F48C00
+}
+
+body.page-adm [id="content"] {
+  max-width: none;
+}
+
+body.page-adm .region-sidebar-second {
+  float: right;
+}
+
+input.form-submit:active {
+  outline:none;
+}

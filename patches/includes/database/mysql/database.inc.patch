@@ -1,0 +1,19 @@
+# HG changeset patch
+# User rgraat
+# Date 1337516225 -7200
+# Node ID 1da173eaeb634fe4808f86a1984b9eb1b7b7b852
+# Parent  1d9cd88c823a2283ab85b94910075f12336cf908
+Reverted a fixed bug, so 'unfixed' now. To prevert a lot of work
+
+diff -r 1d9cd88c823a -r 1da173eaeb63 includes/database/mysql/database.inc
+--- a/includes/database/mysql/database.inc  Sun May 20 13:55:44 2012 +0200
++++ b/includes/database/mysql/database.inc  Sun May 20 14:17:05 2012 +0200
+@@ -46,6 +46,8 @@
+       PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => TRUE,
+       // Because MySQL's prepared statements skip the query cache, because it's dumb.
+       PDO::ATTR_EMULATE_PREPARES => TRUE,
++      // Force column names to lower case.
++     PDO::ATTR_CASE => PDO::CASE_LOWER,
+     );
+ 
+     parent::__construct($dsn, $connection_options['username'], $connection_options['password'], $connection_options['pdo']);

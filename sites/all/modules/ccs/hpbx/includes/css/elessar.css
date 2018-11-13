@@ -1,0 +1,141 @@
+body fieldset.hpbx-times-day .elessar-handle {
+  display: block;
+  background: #249;
+  height: 100%;
+  width: 2px;
+  cursor: ew-resize;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+body fieldset.hpbx-times-day .elessar-handle:first-child {
+  left: 0;
+}
+body fieldset.hpbx-times-day .elessar-handle:last-child {
+  right: 0;
+}
+body fieldset.hpbx-times-day .elessar-vertical .elessar-handle {
+  height: 5px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: auto;
+}
+body fieldset.hpbx-times-day .elessar-vertical .elessar-handle:first-child {
+  top: 0;
+}
+body fieldset.hpbx-times-day .elessar-vertical .elessar-handle:last-child {
+  bottom: 0;
+}
+body fieldset.hpbx-times-day .elessar-indicator {
+  position: absolute;
+  background: black;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 1px;
+  width: 2px;
+  height: 100%;
+  z-index: 15;
+}
+body fieldset.hpbx-times-day .elessar-vertical .elessar-indicator {
+  width: 100%;
+  height: 2px;
+}
+body fieldset.hpbx-times-day .elessar-range {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-color: none;
+  position: absolute;
+  cursor: move;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #0AD;
+  width: 0;
+  z-index: 10;
+  margin: 0;
+  font-weight: normal;
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: #FFF;
+  font-family: Arial;
+}
+body fieldset.hpbx-times-day .elessar-vertical .elessar-range {
+  width: auto;
+  height: 0;
+}
+body fieldset.hpbx-times-day .elessar-label {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  border-left: 1px solid #999;
+  padding-left: 10px;
+}
+body fieldset.hpbx-times-day .elessar-readonly {
+  opacity: 0.6;
+  cursor: default !important;
+}
+body fieldset.hpbx-times-day .elessar-phantom {
+  background-color: transparent;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer !important;
+}
+body fieldset.hpbx-times-day .elessar-rangebar {
+  position: relative;
+  height: 31px;
+  line-height: 32px;
+  background: #F7F7F7;
+  border: 1px solid #CCC;
+}
+body fieldset.hpbx-times-day .elessar-delete-confirm {
+  background: #CB0000 url('../images/bin.png') no-repeat center;
+  height: 29px;
+}
+body fieldset.hpbx-times-day .elessar-delete-confirm span.elessar-barlabel {
+  display:none;  
+}
+
+body.elessar-resizing, body.elessar-dragging {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body.elessar-resizing,
+body.elessar-resizing .bar,
+body.elessar-resizing .handle {
+  cursor: ew-resize !important;
+
+}
+body.elessar-dragging,
+body.elessar-dragging .bar,
+body.elessar-dragging .handle {
+  cursor: -webkit-grabbing !important;
+  cursor: -moz-grabbing !important;
+  cursor: grabbing !important;
+}
+
+fieldset.hpbx-times-day {
+  padding-bottom: 7px !important;
+}
+div.time-bar-overlay { 
+  position: relative;
+  top: -33px;
+  left: 0px;
+  width: 399px;
+  height: 33px;
+  background: #FFF;
+  z-index: 999;
+  opacity: 0.6;
+}
+
+fieldset.hpbx-times-day .form-type-item {
+  margin-top: 8px;
+  margin-left: 15px;
+}

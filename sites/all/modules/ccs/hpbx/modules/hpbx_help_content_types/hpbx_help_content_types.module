@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HPBX Help content-types feature.
+ */
+
+include_once 'hpbx_help_content_types.features.inc';

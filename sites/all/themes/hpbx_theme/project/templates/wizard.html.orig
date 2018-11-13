@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html lang="en" class="no-js ltie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js non-ie" lang="en">
+<!--<![endif]-->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../dist/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../../dist/img/lgi-styleguide-upc-business/dist/img/favicon.ico" type="image/x-icon" />
+        <title>HPBX UPC Business - Wizard</title>
+    </head>
+    <body class="hpbx-page-wizard" data-background-id="1">
+        <div class="hpbx-wizard-background"></div>
+        <div class="hpbx-wizard-cartoon"></div>
+        <a class="hpbx-btn-wizard-exit" href="dashboard.html"><div class="hpbx-btn-wizard-exit-icon"></div>Exit</a>
+        <div class="hpbx-header">
+            <div class="hpbx-header-logo"></div>
+        </div>
+        <div class="hpbx-help-edit-url-popup-trigger">
+            <span class="LGI-iconedit"></span>
+        </div>
+        <div class="hpbx-help-open-handle hpbx-help-open-handle-content-section" id="open-button" data-help-url="/project/templates/help/article-steps.html">
+            <span class="LGI-iconb-help-large"></span>
+        </div>
+        <div class="hpbx-help">
+            <iframe class="hpbx-help-iframe" src="/project/templates/help/loader.html" width="100%" height="100%" data-default-url="/project/templates/help/home.html"></iframe>
+        </div>
+        <div class="hpbx-help-loading-overlay">
+            <div class="hpbx-help-loading-wait-container">
+                <div class="hpbx-loader-animation-container">
+                    <div class="hpbx-loader-animation">
+                    </div>
+                </div>
+            </div>
+            <div class="hpbx-help-loading-text hpbx-loader-title">Help is loading...</div>
+        </div>
+        <div class="container hpbx-no-menu">
+            <div class="row">
+                <div class="col-xs-12 hpbx-main-content">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6"></div>
+                        <div class="col-xs-12 col-sm-6 col-md-5">
+                            <div class="hpbx-content-container hpbx-hidden">
+                                <div class="hpbx-wizard-step-container" data-step="1" data-background-id="1">
+                                    <div class="hpbx-wizard-title sg-header-3">Create a subscriber</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-current"></div>
+                                            <div class="hpbx-wizard-progress-step"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-unavailable"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Create an account</h4>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">First name</div>
+                                            <input type="text" class="sg-element" placeholder="First name" data-hide-type="hpbx-disable-self-care"/>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Last name</div>
+                                            <input type="text" class="sg-element" placeholder="Last name" data-hide-type="hpbx-disable-self-care"/>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">E-mail</div>
+                                            <input type="text" class="sg-element" placeholder="E-mail" data-hide-type="hpbx-disable-self-care"/>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Name</div>
+                                            <input type="text" class="sg-element" placeholder="Name" data-show-type="hpbx-disable-self-care"/>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="sg-custom-check-and-radio sg-custom-check" data-hide-type="hpbx-disable-self-care">
+                                                <label title="">
+                                                    <input type="checkbox" name="hpbx-block-anonymous-incoming-call" id="hpbx-block-anonymous-incoming-call" value="1"/>
+                                                    <span class="sg-caption">Administrative account</span>
+                                                    <div class="sg-alternative-display">
+                                                        <div class="sg-icon-check"></div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="sg-custom-check-and-radio sg-custom-check">
+                                                <label title="">
+                                                    <input type="checkbox" name="hpbx-disable-self-care" id="hpbx-disable-self-care" value="1" data-show-hide-type="hpbx-disable-self-care"/>
+                                                    <span class="sg-caption">Disable self care rights</span>
+                                                    <div class="sg-alternative-display">
+                                                        <div class="sg-icon-check"></div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-btn-primary hpbx-wizard-little-space" value="Next" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                            <input type="button" class="sg-btn sg-btn-primary hpbx-wizard-lots-of-space" value="Next Step" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hpbx-wizard-step-container" data-step="2" data-background-id="2">
+                                    <div class="hpbx-wizard-title sg-header-3">Create a subscriber</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-current"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-unavailable"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Specifications</h4>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Number</div>
+                                            <select class="chzn-select sg-element">
+                                                <option selected="selected" value="">Choose number</option><option value="222415061">222415061</option><option value="222415062">222415062</option><option value="222415063">222415063</option><option value="222415064">222415064</option><option value="222415065">222415065</option><option value="222415066">222415066</option><option value="222415067">222415067</option><option value="222415068">222415068</option><option value="222415069">222415069</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <span class="sg-caption">Extension: <strong>1234</strong></span>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Caller Line Identification</div>
+                                            <select class="chzn-select sg-element">
+                                                <option>Caller Line Identification</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Subscriber profile</div>
+                                            <select class="chzn-select no-search sg-element">
+                                                <option>Subscriber profile</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Call barrings</div>
+                                            <select class="chzn-select no-search sg-element">
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                                <option>Call barrings</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="sg-custom-check-and-radio sg-custom-check">
+                                                <label title="">
+                                                    <input type="checkbox" name="hpbx-block-anonymous-incoming-call" id="hpbx-block-anonymous-incoming-call" value="1" />
+                                                    <span class="sg-caption">Block anonymous inbound calls</span>
+                                                    <div class="sg-alternative-display">
+                                                        <div class="sg-icon-check"></div>
+                                                    </div>
+                                                </label>
+                                            </div>  
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">PIN for overriding (temporary) call barrings</div>
+                                            <input type="text" class="sg-element" placeholder="PIN for overriding (temporary) call barrings" />
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-left">
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-little-space" href="#" data-click-handler="wizardPreviousStep">Previous</a>
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-lots-of-space" href="#" data-click-handler="wizardPreviousStep">Previous step</a>
+                                        </div>
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-btn-primary" value="Finish" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hpbx-wizard-step-container" data-step="3" data-background-id="3">
+                                    <div class="hpbx-wizard-title sg-header-3">Subscriber succesfully created</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-unavailable"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Would you like to add a device to this subscriber?</h4>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-left">
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-little-space" href="dashboard.html">No</a>
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-lots-of-space" href="dashboard.html">No, I'm done!</a>
+                                        </div>
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-btn-primary" value="Add device" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hpbx-wizard-step-container" data-step="4" data-background-id="4">
+                                    <div class="hpbx-wizard-title sg-header-3">Create a device</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-current"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Setup new device</h4>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Name</div>
+                                            <input type="text" class="sg-element" placeholder="Name" />
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Brand</div>
+                                            <select class="chzn-select no-search sg-element" data-show-type="brand-model-ip-address" data-is-show-type-parent="true">
+                                                <option>brand</option>
+                                                <option value="cisco-device">cisco</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">Model</div>
+                                            <select class="chzn-select sg-element" data-show-type="brand-model-ip-address" data-is-show-type-parent="true">
+                                                <option>Model</option>
+                                                <option value="cisco-device">7975G</option>
+                                            </select>
+                                        </div>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">MAC Address</div>
+                                            <input type="text" class="sg-element" placeholder="MAC address" />
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-left">
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-little-space" href="#" data-click-handler="wizardPreviousStep">Previous</a>
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-lots-of-space" href="#" data-click-handler="wizardPreviousStep">Previous step</a>
+                                        </div>
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-btn-primary" value="Next" data-show-type="brand-model-ip-address" data-show-value="cisco-device" data-is-show-type-child="true" data-click-handler="wizardNextStep"><span data-show-type="brand-model-ip-address"  data-is-show-type-child="true" data-show-value="cisco-device" class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                            <input type="button" class="sg-btn sg-btn-primary" value="Finish" data-show-type="brand-model-ip-address" data-hide-value="cisco-device" data-is-show-type-child="true" data-click-handler="wizardGoToStep" data-click-handler-argument="6"><span data-show-type="brand-model-ip-address" data-is-show-type-child="true" data-hide-value="cisco-device" class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hpbx-wizard-step-container" data-step="5" data-background-id="5">
+                                    <div class="hpbx-wizard-title sg-header-3">Create a device</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-current"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Associate device</h4>
+                                        <ol>
+                                            <li>Press the Setup button.</li>
+                                            <li>Scroll to Network and press select.</li>
+                                            <li>Scroll to view Current IP. This is the IP address of your device</li>
+                                        </ol>
+                                        <div class="hpbx-form-login-row">
+                                            <div class="hpbx-form-login-caption">IP address</div>
+                                            <input type="text" class="sg-element" placeholder="IP address" />
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-left">
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-little-space" href="#" data-click-handler="wizardPreviousStep">Previous</a>
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-lots-of-space" href="#" data-click-handler="wizardPreviousStep">Previous step</a>
+                                        </div>
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-btn-primary hpbx-wizard-little-space" value="Sync" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                            <input type="button" class="sg-btn sg-btn-primary hpbx-wizard-lots-of-space" value="Sync device" data-click-handler="wizardNextStep"><span class="sg-btn-icon LGI-iconb-arrow-right-bold"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hpbx-wizard-step-container" data-step="6" data-background-id="ready">
+                                    <div class="hpbx-wizard-title sg-header-3">Device succesfully created</div>
+                                    <div class="hpbx-wizard-progress">
+                                        <div class="hpbx-wizard-progress-inner">
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                            <div class="hpbx-wizard-progress-step hpbx-completed"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hpbx-wizard-content">
+                                        <h4 class="hpbx-wizard-content-title">Provisioning can take up to 5 minutes.</h4>
+                                    </div>
+                                    <div class="hpbx-wizard-buttons">
+                                        <div class="hpbx-wizard-buttons-left">
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-little-space" href="dashboard.html">Done!</a>
+                                            <a class="hpbx-tab-form-link-button hpbx-wizard-lots-of-space" href="dashboard.html">OK, I'm done!</a>
+                                        </div>
+                                        <div class="hpbx-wizard-buttons-right">
+                                            <input type="button" class="sg-btn sg-without-icon sg-btn-primary" value="Add another" data-click-handler="wizardBackToStart">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hpbx-help-edit-media-library-popup-trigger"></div>
+        <div id="hpbx-help-edit-media-library-popup" class="hpbx-dialog hpbx-help-edit-media-library-popup hpbx-popup mfp-hide">
+            <div class="hpbx-dialog-header">
+                <div class="hpbx-dialog-header-icon"><span class="LGI-iconb-customer-large"></span></div>
+                <div class="hpbx-dialog-header-title">Add photo's from the media library</div>
+            </div>
+            <div class="hpbx-dialog-contents hpbx-scrollable-container">
+                <div class="hpbx-help-edit-media-library-popup-tag-filter">
+                    <input type="text" class="sg-element" placeholder="Type filter" />
+                </div>
+                <div class="hpbx-help-filelist-photos hpbx-help-filelist">
+                    <div class="hpbx-help-filelist-thumbnails">
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="hpbx-help-filelist-thumbnail-container hpbx-selectable">
+                            <label>
+                                <input type="checkbox" />
+                                <div class="hpbx-help-filelist-thumbnail-outer">
+                                    <div class="hpbx-help-filelist-thumbnail-inner" style="background-image: url(/dist/img/wizard/upc-business-1.jpg)">
+                                        <div class="hpbx-help-filelist-thumbnail-overlay">
+                                        </div>
+                                        <div class="hpbx-help-filelist-thumbnail-overlay-icon"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="hpbx-dialog-footer">
+                <div class="hpbx-dialog-footer-left">
+                    <input type="button" class="sg-btn sg-btn-small sg-without-icon sg-btn-primary" value="Save" data-click-handler="yourOwnCustomFunction">
+                </div>
+                <div class="hpbx-dialog-footer-right">
+                    <a class="hpbx-tab-form-link-button hpbx-dialog-close-handle" href="#">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <div id="hpbx-help-edit-url-popup" class="hpbx-dialog hpbx-help-edit-url-popup hpbx-popup mfp-hide">
+            <div class="hpbx-dialog-header">
+                <div class="hpbx-dialog-header-icon"><span class="LGI-iconedit"></span></div>
+                <div class="hpbx-dialog-header-title">Enter URL of Help page</div>
+            </div>
+            <div class="hpbx-dialog-contents">
+                <div class="hpbx-form-login-caption">First name</div>
+                <input type="text" class="sg-element" placeholder="Type URL" />
+            </div>
+            <div class="hpbx-dialog-footer">
+                <div class="hpbx-dialog-footer-left">
+                    <input type="button" class="sg-btn sg-btn-small sg-without-icon sg-btn-primary" value="Save" data-click-handler="yourOwnCustomFunction">
+                </div>
+                <div class="hpbx-dialog-footer-right">
+                    <a class="hpbx-tab-form-link-button hpbx-dialog-close-handle" href="#">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+        <script src="../../dependencies/jquery-legacy/dist/jquery.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="../../dependencies/jquery/dist/jquery.js"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="../../dist/js/all.js"></script>
+    </body>
+</html>

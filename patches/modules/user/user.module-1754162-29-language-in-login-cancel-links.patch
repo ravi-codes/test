@@ -1,0 +1,155 @@
+diff --git a/modules/user/user.module b/modules/user/user.module
+index bdfd36f..d33a528 100644
+--- a/modules/user/user.module
++++ b/modules/user/user.module
+@@ -2328,14 +2328,26 @@ function user_external_login_register($name, $module) {
+  *   following properties:
+  *   - uid: The user ID number.
+  *   - login: The UNIX timestamp of the user's last login.
++ * @param array $options
++ *   (optional) A keyed array of settings. Supported options are:
++ *   - langcode: A language code to be used when generating locale-sensitive
++ *    urls. If langcode is NULL the users preferred language is used.
+  *
+  * @return
+  *   A unique URL that provides a one-time log in for the user, from which
+  *   they can change their password.
+  */
+-function user_pass_reset_url($account) {
++function user_pass_reset_url($account, $options = array()) {
+   $timestamp = REQUEST_TIME;
+-  return url("user/reset/$account->uid/$timestamp/" . user_pass_rehash($account->pass, $timestamp, $account->login, $account->uid), array('absolute' => TRUE));
++  $url_options = array('absolute' => TRUE);
++  if (isset($options['langcode'])) {
++    $languages = language_list();
++    $url_options['language'] = $languages[$options['langcode']];
++  }
++  else {
++    $url_options['language'] = user_preferred_language($account);
++  }
++  return url("user/reset/$account->uid/$timestamp/" . user_pass_rehash($account->pass, $timestamp, $account->login, $account->uid), $url_options);
+ }
+ 
+ /**
+@@ -2347,6 +2359,10 @@ function user_pass_reset_url($account) {
+  *   - uid: The user ID number.
+  *   - pass: The hashed user password string.
+  *   - login: The UNIX timestamp of the user's last login.
++ * @param array $options
++ *   (optional) A keyed array of settings. Supported options are:
++ *   - langcode: A language code to be used when generating locale-sensitive
++ *    urls. If langcode is NULL the users preferred language is used.
+  *
+  * @return
+  *   A unique URL that may be used to confirm the cancellation of the user
+@@ -2355,9 +2371,17 @@ function user_pass_reset_url($account) {
+  * @see user_mail_tokens()
+  * @see user_cancel_confirm()
+  */
+-function user_cancel_url($account) {
++function user_cancel_url($account, $options = array()) {
+   $timestamp = REQUEST_TIME;
+-  return url("user/$account->uid/cancel/confirm/$timestamp/" . user_pass_rehash($account->pass, $timestamp, $account->login, $account->uid), array('absolute' => TRUE));
++  $url_options = array('absolute' => TRUE);
++  if (isset($options['langcode'])) {
++    $languages = language_list();
++    $url_options['language'] = $languages[$options['langcode']];
++  }
++  else {
++    $url_options['language'] = user_preferred_language($account);
++  }
++  return url("user/$account->uid/cancel/confirm/$timestamp/" . user_pass_rehash($account->pass, $timestamp, $account->login, $account->uid), $url_options);
+ }
+ 
+ /**
+@@ -2843,7 +2867,7 @@ Your account on [site:name] has been canceled.
+   if ($replace) {
+     // We do not sanitize the token replacement, since the output of this
+     // replacement is intended for an e-mail message, not a web browser.
+-    return token_replace($text, $variables, array('language' => $language, 'callback' => 'user_mail_tokens', 'sanitize' => FALSE, 'clear' => TRUE));
++    return token_replace($text, $variables, array('language' => $language, 'langcode' => $langcode, 'callback' => 'user_mail_tokens', 'sanitize' => FALSE, 'clear' => TRUE));
+   }
+ 
+   return $text;
+@@ -2870,8 +2894,8 @@ Your account on [site:name] has been canceled.
+  */
+ function user_mail_tokens(&$replacements, $data, $options) {
+   if (isset($data['user'])) {
+-    $replacements['[user:one-time-login-url]'] = user_pass_reset_url($data['user']);
+-    $replacements['[user:cancel-url]'] = user_cancel_url($data['user']);
++    $replacements['[user:one-time-login-url]'] = user_pass_reset_url($data['user'], $options);
++    $replacements['[user:cancel-url]'] = user_cancel_url($data['user'], $options);
+   }
+ }
+ 
+diff --git a/modules/user/user.test b/modules/user/user.test
+index 07be4c2..4536e0c 100644
+--- a/modules/user/user.test
++++ b/modules/user/user.test
+@@ -2145,6 +2145,26 @@ class UserTokenReplaceTestCase extends DrupalWebTestCase {
+     );
+   }
+ 
++  public function setUp() {
++    parent::setUp('locale');
++
++    $account = $this->drupalCreateUser(array('access administration pages', 'administer languages'));
++    $this->drupalLogin($account);
++
++    // Add language.
++    $edit = array('langcode' => 'de');
++    $this->drupalPost('admin/config/regional/language/add', $edit, t('Add language'));
++
++    // Enable URL language detection and selection.
++    $edit = array('language[enabled][locale-url]' => 1);
++    $this->drupalPost('admin/config/regional/language/configure', $edit, t('Save settings'));
++
++    // Reset static caching.
++    drupal_static_reset('language_list');
++    drupal_static_reset('locale_url_outbound_alter');
++    drupal_static_reset('locale_language_url_rewrite_url');
++  }
++
+   /**
+    * Creates a user, then tests the tokens generated from it.
+    */
+@@ -2195,6 +2215,39 @@ class UserTokenReplaceTestCase extends DrupalWebTestCase {
+       $output = token_replace($input, array('user' => $account), array('language' => $language, 'sanitize' => FALSE));
+       $this->assertEqual($output, $expected, format_string('Unsanitized user token %token replaced.', array('%token' => $input)));
+     }
++
++    $languages = language_list();
++
++    // Generate login and cancel link.
++    $tests = array();
++    $tests['[user:one-time-login-url]'] = user_pass_reset_url($account);
++    $tests['[user:cancel-url]'] = user_cancel_url($account);
++
++    // Generate tokens with interface language.
++    $link = url('user', array('absolute' => TRUE));
++    foreach ($tests as $input => $expected) {
++      $output = token_replace($input, array('user' => $account), array('langcode' => $language->language, 'callback' => 'user_mail_tokens', 'sanitize' => FALSE, 'clear' => TRUE));
++      $this->assertTrue(strpos($output, $link) === 0, 'Generated URL is in interface language.');
++    }
++
++    // Generate tokens with the user's preferred language.
++    $edit['language'] = 'de';
++    $account = user_save($account, $edit);
++    $link = url('user', array('language' => $languages[$account->language], 'absolute' => TRUE));
++    foreach ($tests as $input => $expected) {
++      $output = token_replace($input, array('user' => $account), array('callback' => 'user_mail_tokens', 'sanitize' => FALSE, 'clear' => TRUE));
++      $this->assertTrue(strpos($output, $link) === 0, "Generated URL is in the user's preferred language.");
++    }
++
++    // Generate tokens with one specific language.
++    $link = url('user', array('language' => $languages['de'], 'absolute' => TRUE));
++    foreach ($tests as $input => $expected) {
++      foreach (array($user1, $user2) as $account) {
++        $output = token_replace($input, array('user' => $account), array('langcode' => 'de', 'callback' => 'user_mail_tokens', 'sanitize' => FALSE, 'clear' => TRUE));
++        $this->assertTrue(strpos($output, $link) === 0, "Generated URL in in the requested language.");
++      }
++    }
++
+   }
+ }
+ 

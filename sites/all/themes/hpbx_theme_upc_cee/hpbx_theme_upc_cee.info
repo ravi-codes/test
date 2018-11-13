@@ -1,0 +1,11 @@
+name = UPC HPBX CEE Sub theme
+description = HPBX UPC CEE sub theme
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = dist/css/all-upc-poland.min.css
+regions[sidebar_right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+base theme = hpbx_theme
+features[] = favicon

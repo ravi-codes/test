@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted"
+AuthUserFile /var/www/www.ccswebtool.com/apc/.htpasswd
+Require valid-user

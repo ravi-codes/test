@@ -1,0 +1,194 @@
+<?php
+function hpbx_schema() {
+    $schema['hpbx_help'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'Relations between hpbx url and node id',
+        'fields' => array(
+          'nuid' => array(
+              'description' => 'The primary identifier.',
+              'type' => 'serial',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+          ),
+          'reseller_id' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+          'lang' => array(
+              'description' => 'language',
+              'type' => 'varchar',
+              'length' => 32,
+              'not null' => FALSE,
+          ),
+          'hpbx_url' => array(
+            'description' => 'The subject url',
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+            'default' => '',
+          ),
+          'help_url' => array(
+              'description' => 'The node id',
+              'type' => 'varchar',
+              'length' => 255,
+              'not null' => TRUE,
+              'default' => '',
+          ),
+          'nid' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+        ),
+        'unique keys' => array(
+            'res_lang_url' => array('reseller_id', 'lang', 'hpbx_url'),
+        ),
+        'primary key' => array('nuid'),
+    ); 
+    
+    $schema['hpbx_business_partners'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'Relations between hpbx url and node id',
+        'fields' => array(
+          'bp_id' => array(
+              'description' => 'The primary identifier.',
+              'type' => 'serial',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+          ),
+          'reseller_id' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+          'bp_name' => array(
+              'description' => 'Business Partner name',
+              'type' => 'varchar',
+              'length' => 128,
+              'not null' => FALSE,
+          ),
+          'create_date' => array(
+            'description' => 'Business Partner created date',
+            'type' => 'datetime',
+            'mysql_type' => 'datetime',           
+            'not null' => FALSE,            
+          ),         
+        ),
+        'primary key' => array('bp_id'),
+    ); 
+    
+    $schema['hpbx_business_partner_settings'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'Relations between hpbx url and node id',
+        'fields' => array(
+          'bp_id' => array(
+              'description' => 'The primary identifier.',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+          ),
+          'reseller_id' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+          'settings' => array(
+              'description' => 'Business Partner settings',
+              'type' => 'blob',              
+              'not null' => FALSE,
+          ),
+          'update_date' => array(
+            'description' => 'Business Partner settings update date',
+            'type' => 'datetime',
+            'mysql_type' => 'datetime',           
+            'not null' => FALSE,            
+          ),         
+        ),
+        'unique keys' => array(
+            'res_bp_id' => array('bp_id', 'reseller_id'),
+        ),
+        'primary key' => array('bp_id'),
+    );
+    
+    $schema['hpbx_customers'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'Relations between hpbx url and node id',
+        'fields' => array(
+          'customer_id' => array(
+              'description' => 'The primary identifier.',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+          ),
+          'reseller_id' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+          'company' => array(
+              'description' => 'Company Name',
+              'type' => 'varchar',
+              'length' => 255,              
+              'not null' => TRUE,
+          ),
+          'external_id' => array(
+            'description' => 'Customer External id',
+            'type' => 'varchar',
+            'length' => 32,           
+            'not null' => TRUE,            
+          ),
+          'bp_name' => array(
+            'description' => 'Business partner Name',
+            'type' => 'varchar',
+            'length' => 128,           
+            'not null' => FALSE,
+            'default' => NULL,
+          ),
+          'primary_number' => array(
+            'description' => 'Primary Number',
+            'type' => 'varchar',
+            'length' => 32,           
+            'not null' => FALSE,
+            'default' => NULL,
+          ),
+          'ncos' => array(
+            'description' => 'NCOS',
+            'type' => 'varchar',
+            'length' => 32,           
+            'not null' => FALSE,
+            'default' => NULL,
+          ), 
+          'status' => array(
+            'description' => 'Customer Status',
+            'type' => 'varchar',
+            'length' => 32,           
+            'not null' => FALSE,
+            'default' => NULL,
+          ), 
+          'suspend_date' => array(
+            'description' => 'Customer Suspend date',
+            'type' => 'datetime',
+            'mysql_type' => 'datetime',           
+            'not null' => FALSE,
+            'default' => NULL,
+          ),        
+        ),
+        'unique keys' => array(
+            'customer_id' => array('customer_id', 'reseller_id'),
+        ),        
+    ); 
+       
+    return $schema;
+}
+

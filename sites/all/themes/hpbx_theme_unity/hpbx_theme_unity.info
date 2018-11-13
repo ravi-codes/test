@@ -1,0 +1,11 @@
+name = Unity Media HPBX Sub theme
+description = HPBX Unity Media sub theme
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = dist/css/all-unitymedia.min.css
+regions[sidebar_right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+base theme = hpbx_theme
+features[] = favicon

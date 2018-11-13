@@ -1,0 +1,6 @@
+<?php
+
+function sipwise_api_schema() {
+  $schema['cache_sipwise_api'] = drupal_get_schema_unprocessed('system', 'cache');
+  return $schema;
+}
