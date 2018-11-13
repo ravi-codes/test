@@ -1,0 +1,114 @@
+/* $Id$ */
+/**
+ * @file print.css
+ * Optimized stylesheet for hardcopy printing.
+ *
+ * The main function of this CSS is to reduce
+ * the colours of the site to monochrome and
+ * optimize font sizes for printing output.
+ */
+/**
+ * Hide elements that aren't used in the printable layout
+ */
+#search-theme-form,
+#navigation-secondary,
+#navigation-primary,
+#mission,
+.sidebar,
+.push,
+.messages,
+.region,
+.views-exposed-form,
+.comment-form,
+div.tabs,
+div.links,
+span.edit_link,
+.forum-node-create-links,
+.forum-post-links,
+.node.node-view-full .group-left .icon,
+ul.menu,
+.more-link,
+iframe[src*="youtube"],
+.view-header,
+.views-field.views-field-edit-delete,
+.views-field.views-field-edit-delete,
+.button .form-submit {
+  display: none;
+  visibility: hidden;
+}
+.region-content {
+  display: inherit;
+  visibility: inherit;
+}
+/**
+ * Override global classes
+ */
+.section,
+.content-inner {
+  clear: none !important;
+  float: none !important;
+  margin: 0 !important;
+  position: relative !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+/**
+ * Override defaults
+ */
+html,
+body,
+#header,
+#columns,
+#footer {
+  background-color: white !important;
+  color: black !important;
+  height: auto !important;
+}
+h1 {
+  border: 0px !important;
+  margin-left: 10px !important;
+}
+body {
+  font-size: 14px !important;
+  line-height: 131% !important;
+  background: none;
+  padding-top: 0 !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+/**
+ * Override tables
+ */
+thead th {
+  background: black !important;
+  color: white !important;
+}
+thead th a:link,
+thead th a:visited {
+  color: white !important;
+}

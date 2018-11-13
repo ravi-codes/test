@@ -1,0 +1,14 @@
+name = hpbx
+description = "Hosted PBX" 
+package = HostedPBX
+version = VERSION
+core = 7.x
+files[] = hpbx.module
+files[] = hpbx.users.inc
+dependencies[] = sipwise_api
+dependencies[] = htmlmail
+dependencies[] = mailmime
+dependencies[] = mailsystem
+dependencies[] = emogrifier
+dependencies[] = fapi_validation
+stylesheets[all][] = includes/css/hpbx.css

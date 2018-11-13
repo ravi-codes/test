@@ -1,0 +1,4283 @@
+# $Id$
+#
+# Hungarian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ccs/ccs.module: n/a
+#  hpbx/includes/hpbx.user.inc: n/a
+#  ccs/ccs.info: n/a
+#  hpbx/hpbx.module: n/a
+#  hpbx/includes/hpbx.conference.inc: n/a
+#  hpbx/includes/hpbx.subscriber.inc: n/a
+#  hpbx/includes/hpbx.business_partner.inc: n/a
+#  hpbx/includes/hpbx.customer.inc: n/a
+#  hpbx/includes/hpbx.reseller.inc: n/a
+#  hpbx/includes/hpbx.subscriber.bulk.inc: n/a
+#  hpbx/includes/hpbx.wizard.inc: n/a
+#  hpbx/includes/hpbx.scripts.inc: n/a
+#  hpbx/includes/hpbx.download.inc: n/a
+#  hpbx/includes/hpbx.help.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc: n/a
+#  hpbx/includes/hpbx.callrecords.inc: n/a
+#  hpbx/includes/hpbx.defaultforward.inc: n/a
+#  hpbx/includes/hpbx.fax.inc: n/a
+#  hpbx/includes/hpbx.huntgroup.inc: n/a
+#  hpbx/includes/hpbx.masquerade.inc: n/a
+#  hpbx/includes/hpbx.pbxdevice.inc: n/a
+#  hpbx/includes/hpbx.voicemail.inc: n/a
+#  hpbx/includes/hpbx.autoattendant.inc: n/a
+#  hpbx/includes/hpbx.musiconhold.inc: n/a
+#  hpbx/includes/hpbx.fax2email.inc: n/a
+#  hpbx/includes/js/hpbx.js: n/a
+#  hpbx/includes/hpbx.dashboard.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc: n/a
+#  hpbx/modules/hpbx_rps/hpbx_rps.info: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.info: n/a
+#  hpbx/includes/js/hpbx_help.js: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc: n/a
+#  hpbx/hpbx.info: n/a
+#  hpbx/modules/sipwise_api/includes/Sipwise.class.php: n/a
+#  hpbx/modules/drop_5/drop_5.info: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.info: n/a
+#  hpbx/includes/hpbx.audio.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc: n/a
+#  hpbx/includes/js/hpbx_devices.js: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.module: n/a
+#  hpbx/includes/js/hpbx-wizard.js: n/a
+#  hpbx/includes/js/hpbx.stats.js: n/a
+#  hpbx/includes/js/hpbx_subscriber_bulk.js: n/a
+#  hpbx/modules/drop_5/drop_5.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc: n/a
+#  hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-04-17 14:13+0200\n"
+"PO-Revision-Date: 2018-04-17 14:13+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Hungarian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ccs/ccs.module:40
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: ccs/ccs.module:44
+msgid "Please enter your username or e-mail address. A one-time login link</br>will be send to your e-mail address."
+msgstr ""
+"Kérjük, adja meg a felhasználónevét vagy az e-mail címét. Egy "
+"egyszeri</br>belépési linket küldünk az e-mail címére."
+
+#: ccs/ccs.module:78
+msgid "View webserver current hostname by triggering easter-egg."
+msgstr ""
+"A webszerver aktuális host nevének megnézése az Easter Egg "
+"elindításával."
+
+#: ccs/ccs.module:81
+msgid "ccs icm number overview"
+msgstr "ccs icm szám áttekintés"
+
+#: ccs/ccs.module:135;142
+msgid "Sorry, %name is not recognized as a user name."
+msgstr "Sajnos a %name felhasználónév nem szerepel a rendszerben."
+
+#: ccs/ccs.module:147;269
+msgid "Sorry, we don't have a valid e-mail address attached to the user account. Please contact the support desk."
+msgstr ""
+"Sajnos a felhasználói fiókhoz nem tartozik érvényes e-mail cím. "
+"Kérjük, forduljon az Ügyfélszolgálathoz."
+
+#: ccs/ccs.module:193
+msgid "Invalid customer definition id."
+msgstr "Érvénytelen ügyfél-meghatározási azonosító."
+
+#: ccs/ccs.module:261
+msgid "Further instructions have been sent to your e-mail address."
+msgstr ""
+"A jelszót és a további utasításokat elküldtük a megadott e-mail "
+"címére."
+
+#: ccs/ccs.module:264;680
+msgid "Could not reset password"
+msgstr "A jelszót nem lehetett visszaállítani."
+
+#: ccs/ccs.module:279
+msgid "Replacement login information for @name at www.ccswebtool.com"
+msgstr ""
+"Heyettesíto bejelentkezési adatok a @name számára a "
+"www.ccswebtool.com oldalon"
+
+#: ccs/ccs.module:280
+msgid "@name,\n\n        A request to reset the password for your account has been made at www.ccswebtool.com.\n\n        Username: @name\n        Password: @password\n\n        --  www.ccswebtool.com team"
+msgstr ""
+
+#: ccs/ccs.module:327
+msgid "Tools"
+msgstr "Eszközök"
+
+#: ccs/ccs.module:333
+msgid "Database"
+msgstr "Adatbázis"
+
+#: ccs/ccs.module:339
+msgid "Change Language"
+msgstr "A nyelv módosítása"
+
+#: ccs/ccs.module:345
+msgid "Get current hostname"
+msgstr "Az aktuális host név lekérdezése"
+
+#: ccs/ccs.module:502
+msgid "Within the tools section, some essentials tools can be found to manupulate various settings involving your (service)numbers."
+msgstr ""
+
+#: ccs/ccs.module:514
+msgid "Currently, we don't have your e-mail\n        address. Please enter a valid e-mail address at the !link page."
+msgstr ""
+"Jelenleg nem rendelkezünk az Ön e-mail-\n"
+"        címével. Kérjük, adjon meg egy érvényes e-mail címet a "
+"!link oldalon."
+
+#: ccs/ccs.module:516
+msgid "account settings"
+msgstr "Fiókbeállítások"
+
+#: ccs/ccs.module:555
+msgid "Request new password"
+msgstr "Új jelszó kérése"
+
+#: ccs/ccs.module:675
+msgid "Your password has been reset by the system administrator. Please check your e-mail for details on how to reset your password. If further information is required, please contact your administrator."
+msgstr ""
+
+#: ccs/ccs.module:773
+msgid "Enter your current password to change the E-mail address or Password."
+msgstr ""
+"Az e-mail cím vagy a jelszó módosításához adja meg a jelenlegi "
+"jelszavát."
+
+#: ccs/ccs.module:827
+msgid "Your current password is missing or incorrect; it's required to change the %name."
+msgstr ""
+"A jelenlegi jelszava hiányzik vagy hibás. A %name "
+"megváltoztatásához szükség van a jelszóra."
+
+#: ccs/ccs.module:837
+msgid "The e-mail address @mail is not valid."
+msgstr "A(z) @mail e-mail cím nem érvényes."
+
+#: ccs/ccs.module:847
+msgid "Problem while trying to update the e-mail address, please try again or contact the support desk."
+msgstr ""
+"Probléma az e-mail cím frissítés megkísérlésénél. Próbálja "
+"meg újból, vagy forduljon az Ügyfélszolgálathoz."
+
+#: ccs/ccs.module:852 hpbx/includes/hpbx.user.inc:174
+msgid "Will enable user %user"
+msgstr "Engedélyezi a %user felhasználót"
+
+#: ccs/ccs.module:857
+msgid "Problem while trying to change the password, please try again or contact the support desk."
+msgstr ""
+"Probléma a jelszó módosítás megkísérlésénél. Próbálja meg "
+"újból, vagy forduljon az Ügyfélszolgálathoz."
+
+#: ccs/ccs.module:865
+msgid "Will validate user %user"
+msgstr "Hitelesíti a %user felhasználót"
+
+#: ccs/ccs.module:1042
+msgid "Changing status for @name to @uac was successfully"
+msgstr "A(z) @name sikeresen @uac státuszra változtatva"
+
+#: ccs/ccs.module:1053
+msgid "Change enabled/disabled status for @name failed"
+msgstr ""
+"A(z) @name engedélyezett/tiltott státuszát nem sikerült "
+"megváltoztatni"
+
+#: ccs/ccs.module:1095
+msgid "Unlock for @name was successfully"
+msgstr "A(z) @name esetében a zárolás megszüntetése sikeres volt"
+
+#: ccs/ccs.module:1101
+msgid "Unlock for @name failed"
+msgstr "A(z) @name esetében a zárolást nem sikerült megszüntetni"
+
+#: ccs/ccs.module:260
+msgid "user"
+msgstr "felhasználó"
+
+#: ccs/ccs.module:260
+msgid "Password reset instructions mailed to %name at %email."
+msgstr ""
+"A jelszó módosítási utasításokat elkültük %name számára a(z) "
+"%email címre."
+
+#: ccs/ccs.module:906
+msgid "ldap_authentication"
+msgstr "ldap_authentication"
+
+#: ccs/ccs.module:906
+msgid "Failed to get valid ldap authentication configuration."
+msgstr ""
+"Nem sikerült érvényes ldap hitelesítési konfigurációt "
+"lekérdezni."
+
+#: ccs/ccs.info:0;0
+msgid "CCS"
+msgstr "CCS"
+
+#: ccs/ccs.info:0
+msgid "General module"
+msgstr "Általános modul"
+
+#: hpbx/hpbx.module:66
+msgid "The PIN used to enter the voicemail from external numbers."
+msgstr ""
+"A hangposta külso számokról történo elérését szolgáló PIN "
+"kód."
+
+#: hpbx/hpbx.module:67;69 hpbx/includes/hpbx.conference.inc:128;130 hpbx/includes/hpbx.subscriber.inc:579
+msgid "PIN"
+msgstr "PIN"
+
+#: hpbx/hpbx.module:74
+msgid "The email address to which notifications and the recordings (if attach is enabled) are sent."
+msgstr ""
+"Az e-mail cím, ahova az értesítések és a rögzített "
+"hangfelvételek (ha a csatolás engedélyezve van) elküldésre "
+"kerülnek."
+
+#: hpbx/hpbx.module:75;78 hpbx/includes/hpbx.business_partner.inc:97;101;623;624;947 hpbx/includes/hpbx.customer.inc:963;964 hpbx/includes/hpbx.reseller.inc:333 hpbx/includes/hpbx.subscriber.bulk.inc:17 hpbx/includes/hpbx.subscriber.inc:336;346;1092 hpbx/includes/hpbx.user.inc:1315;1316 hpbx/includes/hpbx.wizard.inc:324;329
+msgid "Email"
+msgstr "E-mail"
+
+#: hpbx/hpbx.module:88
+msgid "Attach recordings (wav file) to the notification emails."
+msgstr ""
+"Rögzített hangfelvétel (wav fájl) csatolása az értesítés "
+"e-mailekhez."
+
+#: hpbx/hpbx.module:89
+msgid "Attach"
+msgstr "Csatolás"
+
+#: hpbx/hpbx.module:100
+msgid "Delete voicemails from the voicemail box after sending the recording via email. Note that if delete is enabled and the mail cannot be delivered, the voicemail is lost."
+msgstr ""
+"A hangposta üzenetek törlése a hangpostafiókból, a rögzített "
+"hangfelvétel e-mailben történo elküldése után. Fontos "
+"tudnivaló: a hangposta üzenet elvész, ha a törlés engedélyezve "
+"van, de az e-mail nem kézbesítheto."
+
+#: hpbx/hpbx.module:101;1239;4654;4747;6059;6414;6471;1574;1670;1679;1714;1746;1778;2180;2244;2252 hpbx/includes/hpbx.subscriber.bulk.inc:32
+msgid "Delete"
+msgstr "Törlés"
+
+#: hpbx/hpbx.module:131
+msgid "General settings"
+msgstr "Általános beállítások"
+
+#: hpbx/hpbx.module:138
+msgid "Maintenance mode"
+msgstr "Karbantartási mód"
+
+#: hpbx/hpbx.module:139
+msgid "In case hpbx is in maintenance mode, only the LGI admin can login to deactivate this mode"
+msgstr ""
+"Ha a hpbx karbantartási módban található, csak az LGI "
+"adminisztrátor tud bejelentkezni, hogy ezt a módot kikapcsolja."
+
+#: hpbx/hpbx.module:146
+msgid "Show version number"
+msgstr "Verziószám megjelenítése"
+
+#: hpbx/hpbx.module:147
+msgid "Show hpbx version number (top-left, dev only)"
+msgstr "A hpbx verziószám megjelenítése (balra fent, csak fejl.)"
+
+#: hpbx/hpbx.module:154
+msgid "Bypass cooldown period"
+msgstr "A cooldown fázis kikerülése"
+
+#: hpbx/hpbx.module:155
+msgid "Allow deleting of customers before the cooldown periode has passed"
+msgstr "Ügyféltörlés engedélyezése a cooldown ido letelte elott."
+
+#: hpbx/hpbx.module:161
+msgid "Verify masquerade login button"
+msgstr "Bejelentkezési gomb maszkolás hitelesítése"
+
+#: hpbx/hpbx.module:162
+msgid "Before displaying the login button on the customer overview page, check if it actually can be used"
+msgstr ""
+
+#: hpbx/hpbx.module:171;173 hpbx/includes/hpbx.scripts.inc:120;122
+msgid "Panasonic RDS"
+msgstr ""
+
+#: hpbx/hpbx.module:178
+msgid "Password Policy"
+msgstr ""
+
+#: hpbx/hpbx.module:179
+msgid "Enable more complex password requirements for users"
+msgstr ""
+
+#: hpbx/hpbx.module:186
+msgid "Password Reset while login"
+msgstr ""
+
+#: hpbx/hpbx.module:187
+msgid "Trigger the password reset mail while login"
+msgstr ""
+
+#: hpbx/hpbx.module:308
+msgid "Offline"
+msgstr "Offline"
+
+#: hpbx/hpbx.module:310
+msgid "Due to planned work the portal is currently offline...."
+msgstr "A portál az elore betervezett munka miatt jelenleg offline...."
+
+#: hpbx/hpbx.module:314 hpbx/includes/hpbx.download.inc:67
+msgid "Whoops"
+msgstr "Hoppá."
+
+#: hpbx/hpbx.module:316 hpbx/includes/hpbx.download.inc:69
+msgid "the page you're trying to reach doesn't exist..."
+msgstr "Az elérni kívánt oldal nem létezik..."
+
+#: hpbx/hpbx.module:339
+msgid "HostedPBX logged-in user info."
+msgstr "HostedPBX bejelentkezett felhasználó információk."
+
+#: hpbx/hpbx.module:344
+msgid "HostedPBX masquerade."
+msgstr "HostedPBX maszkolás."
+
+#: hpbx/hpbx.module:349
+msgid "HostedPBX customer search."
+msgstr "HostedPBX ügyfélkeresés."
+
+#: hpbx/hpbx.module:356
+msgid "HostedPBX subscribers"
+msgstr "HostedPBX elofizetok"
+
+#: hpbx/hpbx.module:484
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: hpbx/hpbx.module:489 hpbx/includes/hpbx.customer.inc:2368 hpbx/includes/hpbx.help.inc:1031;1039
+msgid "Search"
+msgstr "Keresés"
+
+#: hpbx/hpbx.module:776;783;791
+msgid "Extension cannot start with @na"
+msgstr "A mellék nem kezdodhet úgy, hogy @na."
+
+#: hpbx/hpbx.module:796 hpbx/includes/hpbx.subscriber.bulk.inc:833
+msgid "Extension requires length of @length digits"
+msgstr "A melléknek @length számjegy hosszúnak kell lennie."
+
+#: hpbx/hpbx.module:973 hpbx/includes/hpbx.scripts.inc:76 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:723 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:563
+msgid "Reseller"
+msgstr "Viszonteladó"
+
+#: hpbx/hpbx.module:978
+msgid "Subscriber ID"
+msgstr "Elofizeto azonosító"
+
+#: hpbx/hpbx.module:983;1022 hpbx/includes/hpbx.customer.inc:858
+msgid "Input"
+msgstr "Bevitel"
+
+#: hpbx/hpbx.module:990
+msgid "Apply rewrite rules"
+msgstr "Újraírási szabályok alkalmazása"
+
+#: hpbx/hpbx.module:1057
+msgid "Queue"
+msgstr "Sor"
+
+#: hpbx/hpbx.module:1072;1082;1202;6368;6378;6388;6398 hpbx/includes/hpbx.callrecords.inc:47 hpbx/includes/hpbx.customer.inc:546;557;718;732;745;757 hpbx/includes/hpbx.defaultforward.inc:75;77 hpbx/includes/hpbx.fax.inc:289 hpbx/includes/hpbx.huntgroup.inc:225;234 hpbx/includes/hpbx.masquerade.inc:182 hpbx/includes/hpbx.pbxdevice.inc:837;855 hpbx/includes/hpbx.scripts.inc:34;79;82;121 hpbx/includes/hpbx.subscriber.inc:899 hpbx/includes/hpbx.voicemail.inc:187;189;205
+msgid "Choose an option"
+msgstr "Opció választása"
+
+#: hpbx/hpbx.module:1074
+msgid "Wrap up time (sec)*"
+msgstr "Ügykezelési ido (s)*"
+
+#: hpbx/hpbx.module:1075
+msgid "Wrap up time (sec)"
+msgstr "Ügykezelési ido (s)"
+
+#: hpbx/hpbx.module:1084
+msgid "Max. number of calls in queue"
+msgstr "A sorban álló hívások maximális száma"
+
+#: hpbx/hpbx.module:1108 hpbx/includes/hpbx.autoattendant.inc:236 hpbx/includes/hpbx.huntgroup.inc:411 hpbx/includes/hpbx.musiconhold.inc:79
+msgid "Delete upload"
+msgstr "A feltöltés törlése"
+
+#: hpbx/hpbx.module:1125 hpbx/includes/hpbx.huntgroup.inc:426
+msgid "Upload !title audio"
+msgstr "A(z) !title hangfájl feltöltése"
+
+#: hpbx/hpbx.module:1140 hpbx/includes/hpbx.autoattendant.inc:270 hpbx/includes/hpbx.huntgroup.inc:441 hpbx/includes/hpbx.musiconhold.inc:114
+msgid "File requirements"
+msgstr "Fájl követelmények"
+
+#: hpbx/hpbx.module:1141 hpbx/includes/hpbx.autoattendant.inc:271 hpbx/includes/hpbx.huntgroup.inc:442
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr ""
+"Hangfájl feltöltése esetén biztosítani kell, hogy a hangfájl "
+"tartalmának jogtulajdonosa Ön legyen, vagy az azzal kapcsolatos "
+"jogdíjak ki legyenek fizetve.</br></br>Támogatott fájltípusok: "
+"wav, mp3, flac, ogg, raw"
+
+#: hpbx/hpbx.module:1142 hpbx/includes/hpbx.autoattendant.inc:272 hpbx/includes/hpbx.customer.inc:970 hpbx/includes/hpbx.fax.inc:175 hpbx/includes/hpbx.huntgroup.inc:443 hpbx/includes/hpbx.musiconhold.inc:116
+msgid "OK"
+msgstr "OK"
+
+#: hpbx/hpbx.module:1196 hpbx/includes/hpbx.customer.inc:652;659;857
+msgid "None"
+msgstr "Nincs"
+
+#: hpbx/hpbx.module:1199 hpbx/includes/hpbx.autoattendant.inc:36 hpbx/includes/hpbx.conference.inc:210 hpbx/includes/hpbx.huntgroup.inc:28 hpbx/includes/hpbx.subscriber.bulk.inc:20 hpbx/includes/hpbx.subscriber.inc:402;418;856;2111 hpbx/includes/hpbx.voicemail.inc:267 hpbx/includes/hpbx.wizard.inc:37;449
+msgid "Number"
+msgstr "Szám"
+
+#: hpbx/hpbx.module:1208 hpbx/includes/hpbx.autoattendant.inc:42 hpbx/includes/hpbx.conference.inc:216 hpbx/includes/hpbx.huntgroup.inc:34 hpbx/includes/hpbx.subscriber.bulk.inc:21 hpbx/includes/hpbx.subscriber.inc:407;2115
+msgid "Extension"
+msgstr "Mellék"
+
+#: hpbx/hpbx.module:1239;4029;4734;4835;6462;6541;1754;1786;2284 hpbx/includes/hpbx.autoattendant.inc:423 hpbx/includes/hpbx.subscriber.inc:750
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: hpbx/hpbx.module:1310
+msgid "hpbx basic"
+msgstr "hpbx alap"
+
+#: hpbx/hpbx.module:1311
+msgid "hpbx import help"
+msgstr "hpbx súgó importálása"
+
+#: hpbx/hpbx.module:1312
+msgid "hpbx view reseller"
+msgstr "hpbx viszonteladó megtekintése"
+
+#: hpbx/hpbx.module:1313
+msgid "hpbx edit reseller"
+msgstr "hpbx viszonteladó szerkesztése"
+
+#: hpbx/hpbx.module:1314
+msgid "hpbx edit own reseller"
+msgstr "hpbx saját viszonteladó szerkesztése"
+
+#: hpbx/hpbx.module:1316
+msgid "hpbx edit own reseller users"
+msgstr "hpbx saját viszonteladó felhasználók szerkesztése"
+
+#: hpbx/hpbx.module:1317
+msgid "hpbx edit general reseller settings"
+msgstr "hpbx általános viszonteladó beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1318
+msgid "hpbx edit dashboard reseller settings"
+msgstr "hpbx viszonteladó dashboard beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1319
+msgid "hpbx edit mail reseller settings"
+msgstr "hpbx viszonteladó levél beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1320
+msgid "hpbx edit terms reseller settings"
+msgstr "hpbx viszonteladó feltételek beállításainak szerkesztése"
+
+#: hpbx/hpbx.module:1321
+msgid "hpbx edit emergency reseller settings"
+msgstr "hpbx viszonteladó vészhelyzeti beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1323
+msgid "hpbx add reseller"
+msgstr "hpbx viszonteladó hozzáadása"
+
+#: hpbx/hpbx.module:1324
+msgid "hpbx delete reseller"
+msgstr "hpbx viszonteladó törlése"
+
+#: hpbx/hpbx.module:1326
+msgid "hpbx view customer"
+msgstr "hpbx ügyfél megtekintése"
+
+#: hpbx/hpbx.module:1327
+msgid "hpbx add customer"
+msgstr "hpbx ügyfél hozzáadása"
+
+#: hpbx/hpbx.module:1328
+msgid "hpbx edit customer"
+msgstr "hpbx ügyfél szerkesztése"
+
+#: hpbx/hpbx.module:1329
+msgid "hpbx delete customer"
+msgstr "hpbx ügyfél törlése"
+
+#: hpbx/hpbx.module:1331
+msgid "hpbx view business partners"
+msgstr "hpbx üzleti partner megtekintése"
+
+#: hpbx/hpbx.module:1332
+msgid "hpbx view business partner customer"
+msgstr "hpbx üzleti partner ügyfelének megtekintése"
+
+#: hpbx/hpbx.module:1333
+msgid "hpbx add business partner customer"
+msgstr "hpbx üzleti partner ügyfelének hozzáadása"
+
+#: hpbx/hpbx.module:1334
+msgid "hpbx edit business partner customer"
+msgstr "hpbx üzleti partner ügyfelének szerkesztése"
+
+#: hpbx/hpbx.module:1335
+msgid "hpbx delete business partner customer"
+msgstr "hpbx üzleti partner ügyfelének törlése"
+
+#: hpbx/hpbx.module:1336
+msgid "hpbx edit business partner users"
+msgstr "hpbx üzleti partner felhasználóinak szerkesztése"
+
+#: hpbx/hpbx.module:1337
+msgid "hpbx edit business partner settings"
+msgstr "hpbx üzleti partner beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1338
+msgid "hpbx delete business partner"
+msgstr "hpbx üzleti partner törlése"
+
+#: hpbx/hpbx.module:1340
+msgid "hpbx edit own business partner users"
+msgstr "hpbx saját üzleti partner felhasználóinak szerkesztése"
+
+#: hpbx/hpbx.module:1341
+msgid "hpbx edit own business partner settings"
+msgstr "hpbx saját üzleti partner beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1343
+msgid "hpbx edit general business partner settings"
+msgstr "hpbx általános üzleti partner beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1344
+msgid "hpbx edit dashboard business partner settings"
+msgstr "hpbx üzleti partner dashboard beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1345
+msgid "hpbx edit mail business partner settings"
+msgstr "hpbx üzleti partner levél beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1347
+msgid "hpbx delete customer override"
+msgstr "hpbx ügyfél felülbírálat törlése"
+
+#: hpbx/hpbx.module:1349
+msgid "hpbx masquerade customer"
+msgstr "hpbx ügyfél maszkolás"
+
+#: hpbx/hpbx.module:1351
+msgid "hpbx view reseller customer"
+msgstr "hpbx viszonteladó ügyfél megtekintése"
+
+#: hpbx/hpbx.module:1352
+msgid "hpbx add reseller customer"
+msgstr "hpbx viszonteladó ügyfél hozzáadása"
+
+#: hpbx/hpbx.module:1353
+msgid "hpbx edit reseller customer"
+msgstr "hpbx viszonteladó ügyfél szerkesztése"
+
+#: hpbx/hpbx.module:1354
+msgid "hpbx delete reseller customer"
+msgstr "hpbx viszonteladó ügyfél törlése"
+
+#: hpbx/hpbx.module:1357
+msgid "hpbx view subscriber"
+msgstr "hpbx elofizeto megtekintése"
+
+#: hpbx/hpbx.module:1358
+msgid "hpbx edit own subscriber settings"
+msgstr "hpbx saját elofizeto beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1359
+msgid "hpbx edit own customer settings"
+msgstr "hpbx saját ügyfél beállítások szerkesztése"
+
+#: hpbx/hpbx.module:1361
+msgid "hpbx edit subscriber"
+msgstr "hpbx elofizeto szerkesztése"
+
+#: hpbx/hpbx.module:1362
+msgid "hpbx delete subscriber"
+msgstr "hpbx elofizeto törlése"
+
+#: hpbx/hpbx.module:1363
+msgid "hpbx view pbxdevice"
+msgstr "hpbx pbxdevice megtekintése"
+
+#: hpbx/hpbx.module:1364
+msgid "hpbx edit pbxdevice"
+msgstr "hpbx pbxdevice szerkesztése"
+
+#: hpbx/hpbx.module:1365
+msgid "hpbx delete pbxdevice"
+msgstr "hpbx pbxdevice törlése"
+
+#: hpbx/hpbx.module:1366
+msgid "hpbx sync pbxdevice"
+msgstr "hpbx pbxdevice szinkronizálása"
+
+#: hpbx/hpbx.module:1367
+msgid "hpbx view call records"
+msgstr "hpbx hívásjegyzékek megtekintése"
+
+#: hpbx/hpbx.module:1369
+msgid "hpbx view huntgroup"
+msgstr "hpbx vonalcsoport megtekintése"
+
+#: hpbx/hpbx.module:1370
+msgid "hpbx edit huntgroup"
+msgstr "hpbx vonalcsoport szerkesztése"
+
+#: hpbx/hpbx.module:1371
+msgid "hpbx delete huntgroup"
+msgstr "hpbx vonalcsoport törlése"
+
+#: hpbx/hpbx.module:1373
+msgid "hpbx view auto attendant"
+msgstr "hpbx automatikus résztvevo megtekintése"
+
+#: hpbx/hpbx.module:1374
+msgid "hpbx edit auto attendant"
+msgstr "hpbx automatikus résztvevo szerkesztése"
+
+#: hpbx/hpbx.module:1375
+msgid "hpbx delete auto attendant"
+msgstr "hpbx automatikus résztvevo törlése"
+
+#: hpbx/hpbx.module:1377
+msgid "hpbx view conference"
+msgstr "hpbx konferencia megtekintése"
+
+#: hpbx/hpbx.module:1378
+msgid "hpbx edit conference"
+msgstr "hpbx konferencia szerkesztése"
+
+#: hpbx/hpbx.module:1379
+msgid "hpbx delete conference"
+msgstr "hpbx konferencia törlése"
+
+#: hpbx/hpbx.module:1381
+msgid "hpbx view numbers"
+msgstr "hpbx számok megtekintése"
+
+#: hpbx/hpbx.module:1382
+msgid "hpbx edit audio"
+msgstr "hpbx hanganyag szerkesztése"
+
+#: hpbx/hpbx.module:1384
+msgid "hpbx view administrator user"
+msgstr "hpbx adminisztrátor felhasználó megtekintése"
+
+#: hpbx/hpbx.module:1385
+msgid "hpbx edit administrator user"
+msgstr "hpbx adminisztrátor felhasználó szerkesztése"
+
+#: hpbx/hpbx.module:1387
+msgid "hpbx administer reseller"
+msgstr "hpbx viszonteladó adminisztrálása"
+
+#: hpbx/hpbx.module:1389
+msgid "hpbx change password (as non subscriber)"
+msgstr "hpbx jelszó megváltoztatása (nem elofizetoként)"
+
+#: hpbx/hpbx.module:1391
+msgid "hpbx view dashboard"
+msgstr "hpbx dashboard megtekintése"
+
+#: hpbx/hpbx.module:1393
+msgid "hpbx send fax"
+msgstr "hpbx fax küldése"
+
+#: hpbx/hpbx.module:1394
+msgid "hpbx view fax log"
+msgstr "hpbx fax napló megtekintése"
+
+#: hpbx/hpbx.module:1395
+msgid "hpbx view fax2email"
+msgstr "hpbx fax2email megtekintése"
+
+#: hpbx/hpbx.module:1396
+msgid "hpbx edit fax2email"
+msgstr "hpbx fax2email szerkesztése"
+
+#: hpbx/hpbx.module:1397
+msgid "hpbx delete fax2email"
+msgstr "hpbx fax2email törlése"
+
+#: hpbx/hpbx.module:1433
+msgid "Terms not found"
+msgstr "A feltételek nem találhatók"
+
+#: hpbx/hpbx.module:1457
+msgid "I agree"
+msgstr "Beleegyezem"
+
+#: hpbx/hpbx.module:1490
+msgid "HPBX general settings"
+msgstr "HPBX általános beállítások"
+
+#: hpbx/hpbx.module:1498;1506;1514
+msgid "Report"
+msgstr "Jelentés"
+
+#: hpbx/hpbx.module:2418 hpbx/includes/hpbx.scripts.inc:23
+msgid "Sipwise Scripts"
+msgstr "Sipwise szkriptek"
+
+#: hpbx/hpbx.module:2632
+msgid "Welcome"
+msgstr "Üdvözöljük"
+
+#: (duplicate) hpbx/hpbx.module:2829;5473 ;5548  hpbx/includes/hpbx.autoattendant.inc:454;877 hpbx/includes/hpbx.business_partner.inc:129;657;921 hpbx/includes/hpbx.conference.inc:169 hpbx/includes/hpbx.customer.inc:1022 hpbx/includes/hpbx.defaultforward.inc:89 hpbx/includes/hpbx.fax2email.inc:229 hpbx/includes/hpbx.help.inc:801 hpbx/includes/hpbx.huntgroup.inc:626 hpbx/includes/hpbx.musiconhold.inc:174 hpbx/includes/hpbx.pbxdevice.inc:916 hpbx/includes/hpbx.reseller.inc:313 hpbx/includes/hpbx.subscriber.inc:779 hpbx/includes/hpbx.user.inc:93;1344
+msgid "Save"
+msgstr "Mentés"
+
+#: hpbx/hpbx.module:2856 hpbx/includes/hpbx.customer.inc:544;603 hpbx/includes/hpbx.reseller.inc:699;790;836;844;859;1036;1045;1054 hpbx/includes/hpbx.subscriber.bulk.inc:99;114;119;129;141;694;798;884 hpbx/includes/hpbx.subscriber.inc:364;371;530 hpbx/includes/js/hpbx.js:0
+msgid "Yes"
+msgstr "Igen"
+
+#: hpbx/hpbx.module:2856 hpbx/includes/hpbx.customer.inc:543;602 hpbx/includes/hpbx.reseller.inc:699;790;836;844;859;1036;1045;1054 hpbx/includes/hpbx.subscriber.bulk.inc:87;93;98;108;120;140;693;797;883 hpbx/includes/hpbx.subscriber.inc:219;364;530 hpbx/includes/hpbx.wizard.inc:740 hpbx/includes/js/hpbx.js:0
+msgid "No"
+msgstr "Nem"
+
+#: hpbx/hpbx.module:3798
+msgid "<strong>@name</strong>&nbsp;<i>@role</i>"
+msgstr "<strong>@name</strong>&nbsp;<i>@role</i>"
+
+#: hpbx/hpbx.module:3906
+msgid "Werkdagen > Werktijden"
+msgstr "Munkanap > Munkaido"
+
+#: hpbx/hpbx.module:3907
+msgid "Werkdagen > Lunchtijd"
+msgstr "Munkanap > Ebédido"
+
+#: hpbx/hpbx.module:3908
+msgid "Werkdagen > Koffiepauzes"
+msgstr "Munkanap > Kávészünet"
+
+#: hpbx/hpbx.module:3909
+msgid "Werkdagen > Buiten werktijd"
+msgstr "Munkanap > Munkaidon kívül"
+
+#: hpbx/hpbx.module:3910
+msgid "Weekend"
+msgstr "Hétvége"
+
+#: hpbx/hpbx.module:3982
+msgid "Office hours (during)"
+msgstr "Hivatali ido (alatt)"
+
+#: hpbx/hpbx.module:4028
+msgid "Add timeslot(s)"
+msgstr "Idoablak(ok) hozzáadása"
+
+#: hpbx/hpbx.module:4191;4217;4219 hpbx/includes/hpbx.voicemail.inc:174;175;459
+msgid "Groups"
+msgstr "Csoportok"
+
+#: hpbx/hpbx.module:4199;4206;4212;4214;2260 hpbx/includes/hpbx.dashboard.inc:18;64 hpbx/includes/hpbx.subscriber.inc:2248 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:246
+msgid "Subscribers"
+msgstr "Elofizetok"
+
+#: hpbx/hpbx.module:4423;4607 hpbx/includes/hpbx.autoattendant.inc:326 hpbx/includes/hpbx.subscriber.inc:648
+msgid "Option"
+msgstr "Opciók"
+
+#: hpbx/hpbx.module:4426;4610 hpbx/includes/hpbx.autoattendant.inc:330 hpbx/includes/hpbx.subscriber.inc:154;652;931
+msgid "Destination"
+msgstr "Rendeltetési hely"
+
+#: hpbx/hpbx.module:4470
+msgid "Ported / </br>New number"
+msgstr "Hordozott / </br>Új szám"
+
+#: hpbx/hpbx.module:4473
+msgid "Area code"
+msgstr "Körzetszám"
+
+#: hpbx/hpbx.module:4476;5930;6004 hpbx/includes/hpbx.callrecords.inc:57 hpbx/includes/hpbx.fax.inc:304
+msgid "Start"
+msgstr "Indítás"
+
+#: hpbx/hpbx.module:4479
+msgid "Length"
+msgstr "Hossz"
+
+#: hpbx/hpbx.module:4482
+msgid "Prefix"
+msgstr "Elohívószám"
+
+#: hpbx/hpbx.module:4532
+msgid "Weekday"
+msgstr "Hétköznap"
+
+#: hpbx/hpbx.module:4536
+msgid "Hour"
+msgstr "Óra"
+
+#: hpbx/hpbx.module:4540
+msgid "Minute"
+msgstr "Perc"
+
+#: hpbx/hpbx.module:4547
+msgid "Sun"
+msgstr "V"
+
+#: hpbx/hpbx.module:4548
+msgid "Mon"
+msgstr "H"
+
+#: hpbx/hpbx.module:4549
+msgid "Tue"
+msgstr "K"
+
+#: hpbx/hpbx.module:4550
+msgid "Wed"
+msgstr "Sze"
+
+#: hpbx/hpbx.module:4551
+msgid "Thu"
+msgstr "Cs"
+
+#: hpbx/hpbx.module:4552
+msgid "Fri"
+msgstr "P"
+
+#: hpbx/hpbx.module:4553
+msgid "Sat"
+msgstr "Szo"
+
+#: hpbx/hpbx.module:4824;5534 hpbx/includes/hpbx.musiconhold.inc:286
+msgid "Select"
+msgstr "Kiválasztás"
+
+#: hpbx/hpbx.module:5190
+msgid "Type URL"
+msgstr "URL típus"
+
+#: hpbx/hpbx.module:5572
+msgid "total"
+msgstr "összesen"
+
+#: hpbx/hpbx.module:5614;1651;1661 hpbx/includes/hpbx.callrecords.inc:504 hpbx/includes/hpbx.huntgroup.inc:508 hpbx/includes/hpbx.subscriber.inc:59;855 hpbx/includes/hpbx.voicemail.inc:125
+msgid "Voicemail"
+msgstr "Hangposta"
+
+#: hpbx/hpbx.module:5744
+msgid "search"
+msgstr "keresés"
+
+#: hpbx/hpbx.module:5753
+msgid "Select all"
+msgstr "Az összes kiválasztása"
+
+#: hpbx/hpbx.module:5801 hpbx/includes/hpbx.voicemail.inc:207
+msgid "Show"
+msgstr "Megmutatás"
+
+#: hpbx/hpbx.module:5801;5801
+msgid "Hide"
+msgstr "Elrejtés"
+
+#: hpbx/hpbx.module:5852;5888
+msgid "Pick a file"
+msgstr "Fájl kiválasztása"
+
+#: hpbx/hpbx.module:5886
+msgid "File upload"
+msgstr "Fájl feltöltése"
+
+#: hpbx/hpbx.module:5926
+msgid "Add a time slot"
+msgstr "Idoablak hozzáadása"
+
+#: hpbx/hpbx.module:5936;6010 hpbx/includes/hpbx.callrecords.inc:67 hpbx/includes/hpbx.fax.inc:314
+msgid "End"
+msgstr "Vége"
+
+#: hpbx/hpbx.module:5943
+msgid "Use on"
+msgstr "Használat ekkor"
+
+#: hpbx/hpbx.module:5947
+msgid "Monday"
+msgstr "Hétfo"
+
+#: hpbx/hpbx.module:5951
+msgid "Tuesday"
+msgstr "Kedd"
+
+#: hpbx/hpbx.module:5955
+msgid "Wednesday"
+msgstr "Szerda"
+
+#: hpbx/hpbx.module:5959
+msgid "Thursday"
+msgstr "Csütörtök"
+
+#: hpbx/hpbx.module:5963
+msgid "Friday"
+msgstr "Péntek"
+
+#: hpbx/hpbx.module:5967
+msgid "Saturday"
+msgstr "Szombat"
+
+#: hpbx/hpbx.module:5971
+msgid "Sunday"
+msgstr "Vasárnap"
+
+#: hpbx/hpbx.module:5980
+msgid "Add another rule"
+msgstr "További szabály hozzáadása"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "Select at least one day for time slot"
+msgstr "Legalább egy napot ki kell választani az idoablakhoz"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "Invalid Start time format"
+msgstr "Érvénytelen kezdési ido formátum"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "Invalid End time format"
+msgstr "Érvénytelen befejezési ido formátum"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "Start time cannot be empty"
+msgstr "A kezdési ido nem maradhat üresen"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "End time cannot be empty"
+msgstr "A befejezési ido nem maradhat üresen"
+
+#: hpbx/hpbx.module:5990;6018
+msgid "Timeslot overlaps not possible"
+msgstr "Az idoablakok nem fedhetik át egymást"
+
+#: hpbx/hpbx.module:5991;6020
+msgid "Set"
+msgstr "Beállítás"
+
+#: hpbx/hpbx.module:6000
+msgid "Edit a time slot"
+msgstr "Idoablak szerkesztése"
+
+#: hpbx/hpbx.module:6019 hpbx/includes/hpbx.customer.inc:193;196;202;205
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: hpbx/hpbx.module:6096;6193 hpbx/includes/hpbx.subscriber.inc:2102
+msgid "No entries found"
+msgstr "Egyetlen tétel sem található"
+
+#: hpbx/hpbx.module:6276
+msgid "<p>This is a one-time login for %user_name and will expire after 24 hours.</p><p>Click on this button to log in to the site and change your password.</p>"
+msgstr ""
+"<p>Ez egy egyszeri bejelentkezés a(z) %user_name számára, amely 24 "
+"óra elteltével lejár.</p><p>Az oldalra való bejelentkezéshez és "
+"a jelszava megváltoztatásához kattintson rá a gombra.</p>"
+
+#: hpbx/hpbx.module:6345
+msgid "Site Name"
+msgstr ""
+
+#: hpbx/hpbx.module:6356 hpbx/includes/hpbx.customer.inc:592
+msgid "Allowed IPs"
+msgstr "Engedélyezett IP-k"
+
+#: hpbx/hpbx.module:6367 hpbx/includes/hpbx.customer.inc:715
+msgid "Region"
+msgstr "Régió"
+
+#: hpbx/hpbx.module:6377 hpbx/includes/hpbx.customer.inc:729
+msgid "Township"
+msgstr "Közigazgatási egység"
+
+#: hpbx/hpbx.module:6387 hpbx/includes/hpbx.customer.inc:742
+msgid "City"
+msgstr "Város"
+
+#: hpbx/hpbx.module:6397 hpbx/includes/hpbx.customer.inc:754
+msgid "Z gm."
+msgstr "Z gm."
+
+#: hpbx/hpbx.module:6572
+msgid "You have exceeded the maximum number of sites "
+msgstr ""
+
+#: (duplicate) hpbx/hpbx.module:5197 
+msgid "Add photo's from the media library"
+msgstr "Adjon hozzá fényképeket a médiakönyvtárból"
+
+#: (duplicate) hpbx/hpbx.module:5201 
+msgid "Type filter"
+msgstr "Szuro típus"
+
+#: (duplicate) hpbx/hpbx.module:5476 
+msgid "Cance"
+msgstr "Mégsem"
+
+#: (duplicate) hpbx/hpbx.module:5485 
+msgid "Select URL of Help page"
+msgstr "A súgó oldal URL kiválasztása"
+
+#: (duplicate) hpbx/hpbx.module:5488 
+msgid "URL"
+msgstr "URL"
+
+#: (duplicate) hpbx/hpbx.module:5551  hpbx/includes/hpbx.autoattendant.inc:446 hpbx/includes/hpbx.business_partner.inc:121;650;913 hpbx/includes/hpbx.conference.inc:162 hpbx/includes/hpbx.customer.inc:971;1014 hpbx/includes/hpbx.fax2email.inc:222 hpbx/includes/hpbx.huntgroup.inc:619 hpbx/includes/hpbx.masquerade.inc:201 hpbx/includes/hpbx.musiconhold.inc:287 hpbx/includes/hpbx.subscriber.inc:772 hpbx/includes/hpbx.user.inc:1337
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: hpbx/hpbx.module:689;693
+msgid "hpbx_goto_alter"
+msgstr "hpbx_goto_alter"
+
+#: hpbx/hpbx.module:689
+msgid "rewritten to hpbx/password (non subscribers)"
+msgstr "átírva hpbx/jelszóra (nem elofizetok)"
+
+#: hpbx/hpbx.module:693
+msgid "rewritten to hpbx/settings"
+msgstr "átírva hpbx/beállításokra"
+
+#: hpbx/hpbx.module:3060
+msgid "sipwise"
+msgstr "sipwise"
+
+#: hpbx/hpbx.module:3060
+msgid "Could not get active customer"
+msgstr "Aktív ügyfél nem volt behívható"
+
+#: hpbx/hpbx.module:6290
+msgid "hpbx_cron"
+msgstr "hpbx_cron"
+
+#: hpbx/hpbx.module:6290
+msgid "reseller clear cache cron ran"
+msgstr "Viszonteladó cache törlés Cron lefuttatva"
+
+#: hpbx/hpbx.module:1491
+msgid "Set affiliate independent settings"
+msgstr "Független partner beállítás szerkesztés"
+
+#: hpbx/hpbx.module:1522
+msgid "Log out"
+msgstr "Kijelentkezés"
+
+#: hpbx/hpbx.module:1528
+msgid "Change password"
+msgstr "Jelszó módosítás"
+
+#: hpbx/hpbx.module:1536 hpbx/includes/hpbx.business_partner.inc:946 hpbx/includes/hpbx.reseller.inc:332
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: hpbx/hpbx.module:1543
+msgid "Download Soft Client"
+msgstr "Soft Client letöltése"
+
+#: hpbx/hpbx.module:1550
+msgid "Download"
+msgstr "Letöltés"
+
+#: hpbx/hpbx.module:1558
+msgid "Edit fax number"
+msgstr "Fax szám szerkesztése"
+
+#: hpbx/hpbx.module:1566 hpbx/includes/hpbx.dashboard.inc:194 hpbx/includes/hpbx.fax2email.inc:46
+msgid "Create fax number"
+msgstr "Fax szám létrehozása"
+
+#: hpbx/hpbx.module:1582 hpbx/includes/hpbx.fax.inc:361
+msgid "Fax"
+msgstr "Fax"
+
+#: hpbx/hpbx.module:1589 hpbx/includes/hpbx.reseller.inc:334
+msgid "Terms and Conditions"
+msgstr "Üzleti feltételek"
+
+#: hpbx/hpbx.module:1596
+msgid "Rewrite rules"
+msgstr "Szabályok átírása"
+
+#: hpbx/hpbx.module:1603;1618;1626;1634;1642
+msgid "Masquerade"
+msgstr "Maszkolás"
+
+#: hpbx/hpbx.module:1611 hpbx/modules/hpbx_rps/hpbx_rps.info:0 hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise"
+msgstr "Sipwise"
+
+#: hpbx/hpbx.module:1689 hpbx/includes/hpbx.callrecords.inc:215
+msgid "Call records"
+msgstr "Hívásjegyzékek"
+
+#: (duplicate) hpbx/hpbx.module:1698;1706;1722 hpbx/includes/hpbx.dashboard.inc:16;297 ;310  hpbx/includes/hpbx.huntgroup.inc:11
+msgid "Hunt groups"
+msgstr "Vonalcsoportok"
+
+#: (duplicate) hpbx/hpbx.module:1730 hpbx/includes/hpbx.autoattendant.inc:17 hpbx/includes/hpbx.dashboard.inc:14;298 ;318 
+msgid "Auto attendants"
+msgstr "Automatikus résztvevok"
+
+#: hpbx/hpbx.module:1738 hpbx/includes/hpbx.callrecords.inc:501
+msgid "Auto attendant"
+msgstr "Automatikus résztvevo"
+
+#: (duplicate) hpbx/hpbx.module:1762 hpbx/includes/hpbx.conference.inc:191 hpbx/includes/hpbx.dashboard.inc:15;296 ;302 
+msgid "Conference rooms"
+msgstr "Konferenciatermek"
+
+#: hpbx/hpbx.module:1770
+msgid "Conference"
+msgstr "Konferencia"
+
+#: hpbx/hpbx.module:1796 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:235
+msgid "Affiliates"
+msgstr "Partnerek"
+
+#: hpbx/hpbx.module:1804;2172;2226;2235;2276;2351;2359 hpbx/includes/hpbx.reseller.inc:642 hpbx/includes/js/hpbx_help.js:0
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: hpbx/hpbx.module:1812;2269 hpbx/includes/hpbx.autoattendant.inc:142 hpbx/includes/hpbx.business_partner.inc:375 hpbx/includes/hpbx.conference.inc:75 hpbx/includes/hpbx.defaultforward.inc:31 hpbx/includes/hpbx.fax2email.inc:66 hpbx/includes/hpbx.huntgroup.inc:174 hpbx/includes/hpbx.masquerade.inc:163 hpbx/includes/hpbx.musiconhold.inc:31 hpbx/includes/hpbx.reseller.inc:169 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:245
+msgid "Settings"
+msgstr "Beállítások"
+
+#: hpbx/hpbx.module:1820;1854 hpbx/includes/hpbx.business_partner.inc:376 hpbx/includes/hpbx.reseller.inc:170 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:247
+msgid "Users"
+msgstr "Felhasználók"
+
+#: hpbx/hpbx.module:1828;1871
+msgid "Create affiliate user "
+msgstr "Partner felhasználó létrehozása"
+
+#: hpbx/hpbx.module:1836;1845;1879;1887;1949;1957;1965
+msgid "Edit affiliate user"
+msgstr "Partner felhasználó szerkesztése"
+
+#: hpbx/hpbx.module:1862 hpbx/includes/hpbx.reseller.inc:178
+msgid "Clear cache"
+msgstr "Cache törlése"
+
+#: hpbx/hpbx.module:1895;1903 hpbx/includes/hpbx.reseller.inc:171 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:239
+msgid "Customers"
+msgstr "Ügyfelek"
+
+#: hpbx/hpbx.module:1910;1925
+msgid "Create"
+msgstr "Létrehozás"
+
+#: hpbx/hpbx.module:1918;2077
+msgid "location"
+msgstr "Tartózkodási hely"
+
+#: hpbx/hpbx.module:1933;1941 hpbx/includes/hpbx.business_partner.inc:19
+msgid "Create Business Partner"
+msgstr "Üzleti partner létrehozása"
+
+#: hpbx/hpbx.module:1973;1981 hpbx/includes/hpbx.business_partner.inc:340 hpbx/includes/hpbx.reseller.inc:173;175
+msgid "Business Partners"
+msgstr "Üzleti partnerek"
+
+#: hpbx/hpbx.module:1989;1997;2005
+msgid "Business Partner Users"
+msgstr "Üzleti partner felhasználók"
+
+#: hpbx/hpbx.module:2012;2020;2028;2036;2044
+msgid "Create Business Partner user "
+msgstr "Üzleti partner felhasználó létrehozása"
+
+#: hpbx/hpbx.module:2052;2060;2068
+msgid "Business Partner settings "
+msgstr "Üzleti partner beállítások"
+
+#: hpbx/hpbx.module:2085;2093;2124;2131 hpbx/includes/hpbx.reseller.inc:642 hpbx/includes/js/hpbx_help.js:0
+msgid "View"
+msgstr "Megtekintés"
+
+#: hpbx/hpbx.module:2101 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:243
+msgid "PBX Settings"
+msgstr "PBX beállítások"
+
+#: hpbx/hpbx.module:2108
+msgid "Music on Hold"
+msgstr "Várakoztató zene"
+
+#: hpbx/hpbx.module:2116 hpbx/includes/hpbx.defaultforward.inc:20
+msgid "Default forward"
+msgstr "Alapértelmezett továbbítás"
+
+#: hpbx/hpbx.module:2138;2164 hpbx/includes/hpbx.dashboard.inc:98 hpbx/includes/hpbx.pbxdevice.inc:349 hpbx/includes/hpbx.reseller.inc:22
+msgid "Devices"
+msgstr "Készülékek"
+
+#: hpbx/hpbx.module:2147
+msgid "PBX Device Model JSON callback"
+msgstr "PBX készülék modell JSON visszahívás"
+
+#: hpbx/hpbx.module:2155
+msgid "PBX Device Model Image"
+msgstr "PBX készülék modell kép"
+
+#: hpbx/hpbx.module:2194 hpbx/includes/hpbx.wizard.inc:963;1125;1218
+msgid "Associate device"
+msgstr "Készülék hozzárendelése"
+
+#: hpbx/hpbx.module:2202
+msgid "Device failed to be associated"
+msgstr "A készülék hozzárendelése sikertelen volt."
+
+#: hpbx/hpbx.module:2210 hpbx/includes/hpbx.wizard.inc:252
+msgid "Device successfully associated"
+msgstr "A készülék sikeresen hozzárendelésre került"
+
+#: hpbx/hpbx.module:2218
+msgid "Play"
+msgstr "Lejátszás"
+
+#: hpbx/hpbx.module:2292 hpbx/includes/hpbx.dashboard.inc:46
+msgid "Start wizard"
+msgstr "Varázsló elindítása"
+
+#: hpbx/hpbx.module:2300;2307;2314;2322
+msgid "Wizard"
+msgstr "Varázsló"
+
+#: hpbx/hpbx.module:2330 hpbx/includes/hpbx.dashboard.inc:47 hpbx/includes/hpbx.subscriber.bulk.inc:567;1084
+msgid "Bulk import"
+msgstr "Tömeges importálás"
+
+#: hpbx/hpbx.module:2337;2344
+msgid "Bulk"
+msgstr "Tömeges"
+
+#: hpbx/hpbx.module:2367;2374
+msgid "Save url"
+msgstr "URL lementése"
+
+#: hpbx/hpbx.module:2381
+msgid "Help Loader"
+msgstr "Betöltés súgó"
+
+#: hpbx/hpbx.module:2388 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:179 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:145
+msgid "Help"
+msgstr "Súgó"
+
+#: hpbx/hpbx.module:2395
+msgid "Help replicate"
+msgstr "Replikálás súgó"
+
+#: hpbx/hpbx.module:2403 hpbx/includes/hpbx.help.inc:929
+msgid "Sitemap"
+msgstr ""
+
+#: hpbx/hpbx.module:2410
+msgid "Help node import"
+msgstr "Csomópont importálás súgó"
+
+#: hpbx/hpbx.info:0 hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "hpbx"
+msgstr "hpbx"
+
+#: hpbx/hpbx.info:0
+msgid "Hosted PBX"
+msgstr "Hosted PBX"
+
+#: hpbx/hpbx.info:0 hpbx/modules/drop_5/drop_5.info:0 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0 hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "HostedPBX"
+msgstr "HostedPBX"
+
+#: hpbx/includes/hpbx.audio.inc:187
+msgid "The file extension @ext is not supported"
+msgstr "A(z) @ext fájlkiterjesztés nincs támogatva."
+
+#: hpbx/includes/hpbx.audio.inc:223
+msgid "Failed to upload the audio file. Possibly this is a corrupt audio file or invalid extension in combination with used audio codec."
+msgstr ""
+"A hangfájl feltöltése nem sikerült. Lehet, hogy a hangfájl "
+"sérült, vagy a használt audió kodekkel kombinálva érvénytelen a "
+"kiterjesztése."
+
+#: hpbx/includes/hpbx.autoattendant.inc:25 hpbx/includes/hpbx.dashboard.inc:193
+msgid "Create auto attendant"
+msgstr "Automatikus résztvevo létrehozása"
+
+#: hpbx/includes/hpbx.autoattendant.inc:35;165;166;502 hpbx/includes/hpbx.business_partner.inc:58;451 hpbx/includes/hpbx.conference.inc:97;98;209;291 hpbx/includes/hpbx.fax2email.inc:90;259 hpbx/includes/hpbx.huntgroup.inc:27;198;665 hpbx/includes/hpbx.pbxdevice.inc:788;789 hpbx/includes/hpbx.reseller.inc:158;682 hpbx/includes/hpbx.subscriber.bulk.inc:14 hpbx/includes/hpbx.subscriber.inc:271;280;1119;1122;2110 hpbx/includes/hpbx.user.inc:1064 hpbx/includes/hpbx.wizard.inc:107;334;339;789;793
+msgid "Name"
+msgstr "Név"
+
+#: hpbx/includes/hpbx.autoattendant.inc:38
+msgid "Delete auto attendant"
+msgstr "Automatikus résztvevo törlése"
+
+#: hpbx/includes/hpbx.autoattendant.inc:107 hpbx/includes/hpbx.conference.inc:51
+msgid "!external_id"
+msgstr "!external_id"
+
+#: hpbx/includes/hpbx.autoattendant.inc:122
+msgid "Create Auto Attendant"
+msgstr "Automatikus résztvevo létrehozása"
+
+#: hpbx/includes/hpbx.autoattendant.inc:182 hpbx/includes/hpbx.conference.inc:115 hpbx/includes/hpbx.fax2email.inc:107 hpbx/includes/hpbx.huntgroup.inc:308
+msgid "Site*"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:255
+msgid "Upload @title"
+msgstr "@title feltöltése"
+
+#: hpbx/includes/hpbx.autoattendant.inc:303
+msgid "Menu options"
+msgstr "Menüopciók"
+
+#: hpbx/includes/hpbx.autoattendant.inc:396 hpbx/includes/hpbx.subscriber.inc:723
+msgid "Delete speed dial"
+msgstr "Gyorstárcsázó törlése"
+
+#: hpbx/includes/hpbx.autoattendant.inc:454;880 hpbx/includes/hpbx.wizard.inc:402;655;912
+msgid "Next"
+msgstr "Következo"
+
+#: hpbx/includes/hpbx.autoattendant.inc:483;675 hpbx/includes/hpbx.conference.inc:285;354 hpbx/includes/hpbx.huntgroup.inc:670;804 hpbx/includes/hpbx.subscriber.inc:1017;1327
+msgid "Can't find customer"
+msgstr "Az ügyfél nem található."
+
+#: hpbx/includes/hpbx.autoattendant.inc:502 hpbx/includes/hpbx.conference.inc:291 hpbx/includes/hpbx.fax2email.inc:259 hpbx/includes/hpbx.huntgroup.inc:665 hpbx/includes/hpbx.subscriber.inc:1075;1085;1122
+msgid "Semicolon is not allowed in !name."
+msgstr "A(z) !name megadásnál nem megengedett a pontosvesszo használata."
+
+#: hpbx/includes/hpbx.autoattendant.inc:524
+msgid "Menu audio file is required"
+msgstr "A menühöz hangfájl szükséges."
+
+#: hpbx/includes/hpbx.autoattendant.inc:532;670 hpbx/includes/hpbx.conference.inc:276;349 hpbx/includes/hpbx.huntgroup.inc:659;799 hpbx/includes/hpbx.subscriber.inc:1012;1321
+msgid "Can't find the customer ID"
+msgstr "Az ügyfélazonosító nem található."
+
+#: hpbx/includes/hpbx.autoattendant.inc:548 hpbx/includes/hpbx.conference.inc:317 hpbx/includes/hpbx.fax2email.inc:274 hpbx/includes/hpbx.huntgroup.inc:678
+msgid "You have used up all your available @profile_names"
+msgstr "Minden rendelkezésre álló @profile_names felhasználásra került."
+
+#: hpbx/includes/hpbx.autoattendant.inc:555 hpbx/includes/hpbx.conference.inc:324 hpbx/includes/hpbx.fax2email.inc:281 hpbx/includes/hpbx.huntgroup.inc:714 hpbx/includes/hpbx.subscriber.inc:1063
+msgid "Extension is already in use. Please select another extension."
+msgstr "A mellék már használatban van. Válasszon egy másik melléket."
+
+#: hpbx/includes/hpbx.autoattendant.inc:569 hpbx/includes/hpbx.huntgroup.inc:738
+msgid "Upload failed"
+msgstr "Sikertelen feltöltés"
+
+#: hpbx/includes/hpbx.autoattendant.inc:576 hpbx/includes/hpbx.customer.inc:1623 hpbx/includes/hpbx.huntgroup.inc:745
+msgid "The file format @ext is not supported"
+msgstr "A(z) @ext fájlformátum nincs támogatva."
+
+#: hpbx/includes/hpbx.autoattendant.inc:584 hpbx/includes/hpbx.conference.inc:303 hpbx/includes/hpbx.fax2email.inc:257 hpbx/includes/hpbx.huntgroup.inc:704
+msgid "Name must be unique"
+msgstr "A névnek egyedinek kell lennie."
+
+#: hpbx/includes/hpbx.autoattendant.inc:610
+msgid "The destination of menu option @slot cannot be assigned to this auto attendant."
+msgstr ""
+"A(z) @slot menüopció rendeltetési helye nem rendelheto hozzá ehhez "
+"az automatikus résztvevohöz."
+
+#: hpbx/includes/hpbx.autoattendant.inc:614 hpbx/includes/hpbx.subscriber.inc:1174;1177;1231
+msgid "Not allowed to set this destination number"
+msgstr "Ez a rendeltetési szám nem állítható be."
+
+#: hpbx/includes/hpbx.autoattendant.inc:623
+msgid "Please enter unique menu options"
+msgstr "Kérjük, adjon meg egyedi menüopciókat."
+
+#: hpbx/includes/hpbx.autoattendant.inc:627
+msgid "The Auto attendant must have been provided with at least one menu option."
+msgstr ""
+"Az automatikus résztvevonek legalább egy menüopcióval rendelkeznie "
+"kell."
+
+#: hpbx/includes/hpbx.autoattendant.inc:639;644 hpbx/includes/hpbx.huntgroup.inc:780;784
+msgid "Office hours audio file is required"
+msgstr "A hivatali idohöz tartozó hangfájlra van szükség."
+
+#: hpbx/includes/hpbx.autoattendant.inc:680 hpbx/includes/hpbx.conference.inc:359 hpbx/includes/hpbx.fax2email.inc:299 hpbx/includes/hpbx.huntgroup.inc:809 hpbx/includes/hpbx.subscriber.inc:1332
+msgid "Can't find customer preferences"
+msgstr "Az ügyfél preferenciák nem találhatók."
+
+#: hpbx/includes/hpbx.autoattendant.inc:685 hpbx/includes/hpbx.conference.inc:364 hpbx/includes/hpbx.fax2email.inc:304 hpbx/includes/hpbx.huntgroup.inc:814 hpbx/includes/hpbx.subscriber.inc:1338
+msgid "Can't find the pilot subscriber"
+msgstr "Az ellenorzo elofizeto nem található."
+
+#: hpbx/includes/hpbx.autoattendant.inc:856 hpbx/includes/hpbx.conference.inc:530 hpbx/includes/hpbx.fax2email.inc:445 hpbx/includes/hpbx.huntgroup.inc:1146 hpbx/includes/hpbx.pbxdevice.inc:266 hpbx/includes/hpbx.subscriber.inc:1906
+msgid "Failed to update"
+msgstr "Sikertelen frissítés"
+
+#: hpbx/includes/hpbx.autoattendant.inc:868 hpbx/includes/hpbx.conference.inc:539 hpbx/includes/hpbx.fax2email.inc:454 hpbx/includes/hpbx.huntgroup.inc:1156 hpbx/includes/hpbx.pbxdevice.inc:470 hpbx/includes/hpbx.subscriber.inc:1930;2037;2054
+msgid "Cleared @type with @cid"
+msgstr "A(z) @cid azonosítójú @type törölve"
+
+#: hpbx/includes/hpbx.autoattendant.inc:872 hpbx/includes/hpbx.conference.inc:543 hpbx/includes/hpbx.fax2email.inc:458 hpbx/includes/hpbx.huntgroup.inc:1160 hpbx/includes/hpbx.subscriber.inc:1934;2041
+msgid "Cleared subscribers list with @cid*"
+msgstr "A(z) @cid* azonosítójú elofizetoi lista törölve"
+
+#: hpbx/includes/hpbx.autoattendant.inc:878
+msgid "Auto attendant successfully saved"
+msgstr "Az automatikus résztvevo sikeresen lementve"
+
+#: hpbx/includes/hpbx.business_partner.inc:41
+msgid "Business Partner Settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:59;356;989
+msgid "Business Partner Name"
+msgstr "Üzleti partner név"
+
+#: hpbx/includes/hpbx.business_partner.inc:64
+msgid "Business Partner Administrator"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:74 hpbx/includes/hpbx.customer.inc:940
+msgid "Administrative user"
+msgstr "Adminisztratív felhasználó"
+
+#: hpbx/includes/hpbx.business_partner.inc:82;83;601;603 hpbx/includes/hpbx.customer.inc:948;949 hpbx/includes/hpbx.subscriber.bulk.inc:15 hpbx/includes/hpbx.subscriber.inc:295;303;1072;1075 hpbx/includes/hpbx.user.inc:1293;1295 hpbx/includes/hpbx.wizard.inc:304;309
+msgid "First name"
+msgstr "Keresztnév"
+
+#: hpbx/includes/hpbx.business_partner.inc:90;91;610;612 hpbx/includes/hpbx.customer.inc:956;957 hpbx/includes/hpbx.subscriber.bulk.inc:16 hpbx/includes/hpbx.subscriber.inc:315;323;1082;1085 hpbx/includes/hpbx.user.inc:1302;1304 hpbx/includes/hpbx.wizard.inc:314;319
+msgid "Last name"
+msgstr "Vezetéknév"
+
+#: hpbx/includes/hpbx.business_partner.inc:143;676 hpbx/includes/hpbx.user.inc:1358
+msgid "Reseller not found"
+msgstr "A viszonteladó nem található"
+
+#: hpbx/includes/hpbx.business_partner.inc:159;690 hpbx/includes/hpbx.user.inc:1374
+msgid "A user with the provided first name and last name is already present within the HPBX administrator group."
+msgstr ""
+"A HPBX adminisztrátori csoportban már létezik a megadott vezeték- "
+"és keresztnévvel rendelkezo felhasználó."
+
+#: hpbx/includes/hpbx.business_partner.inc:164
+msgid "Name is already assigned to Business Partner @bp"
+msgstr "A név már hozzá van rendelve a(z) @bp üzleti partnerhez."
+
+#: hpbx/includes/hpbx.business_partner.inc:173;706 hpbx/includes/hpbx.user.inc:1385
+msgid "Unable to retrieve existing ldap user %name."
+msgstr "A(z) %name nevu, már létezo ldap felhasználó nem töltheto be."
+
+#: hpbx/includes/hpbx.business_partner.inc:178;712 hpbx/includes/hpbx.user.inc:1391
+msgid "A user - with one of the HPBX roles - with the provided email address is already present."
+msgstr ""
+"Egy - az egyik HPBX szereppel rendelkezo - felhasználó már létezik "
+"a megadott e-mail címmel."
+
+#: hpbx/includes/hpbx.business_partner.inc:185 hpbx/includes/hpbx.customer.inc:1609 hpbx/includes/hpbx.user.inc:1489;1518;1525
+msgid "A user with the provided email address is already present."
+msgstr "Egy felhasználó már létezik a megadott e-mail címmel."
+
+#: hpbx/includes/hpbx.business_partner.inc:289;754 hpbx/includes/hpbx.user.inc:885;1427
+msgid "Further instructions have been sent to @mail"
+msgstr "A további instrukciókat elküldtük a(z) @mail címre."
+
+#: hpbx/includes/hpbx.business_partner.inc:292;757 hpbx/includes/hpbx.user.inc:888;1430
+msgid "Could not sent e-mail with instructions."
+msgstr "Az instrukciókat tartalmazó e-mailt nem sikerült elküldeni."
+
+#: hpbx/includes/hpbx.business_partner.inc:299;769
+msgid "Failed to create reseller business partner administrator account"
+msgstr ""
+"A viszonteladó üzleti partnerhez nem sikerült adminisztrátori "
+"fiókot létrehozni."
+
+#: hpbx/includes/hpbx.business_partner.inc:344
+msgid "Create Business Partners"
+msgstr "Üzleti partner létrehozása"
+
+#: hpbx/includes/hpbx.business_partner.inc:359
+msgid "Delete Business Partner"
+msgstr "Üzleti partner törlése"
+
+#: hpbx/includes/hpbx.business_partner.inc:428
+msgid "Business Partner users"
+msgstr "Üzleti partner felhasználók"
+
+#: hpbx/includes/hpbx.business_partner.inc:432 hpbx/includes/hpbx.user.inc:1052
+msgid "Create user"
+msgstr "Felhasználó létrehozása"
+
+#: hpbx/includes/hpbx.business_partner.inc:452 hpbx/includes/hpbx.subscriber.inc:2126 hpbx/includes/hpbx.user.inc:1065
+msgid "Login name"
+msgstr "Bejelentkezési név"
+
+#: hpbx/includes/hpbx.business_partner.inc:453;593 hpbx/includes/hpbx.user.inc:1066;1285
+msgid "Role"
+msgstr "Szerep"
+
+#: hpbx/includes/hpbx.business_partner.inc:455 hpbx/includes/hpbx.user.inc:1068
+msgid "Delete user"
+msgstr "Felhasználó törlése"
+
+#: hpbx/includes/hpbx.business_partner.inc:545 hpbx/includes/hpbx.user.inc:1236
+msgid "User @cn"
+msgstr "Felhasználó @cn"
+
+#: hpbx/includes/hpbx.business_partner.inc:697
+msgid "A user with the provided email address is already present within the HPBX administrator group."
+msgstr ""
+"Egy felhasználó a megadott e-mail címmel már létezik a HPBX "
+"adminisztrátori csoportban."
+
+#: hpbx/includes/hpbx.business_partner.inc:773;792
+msgid "Failed to update Business Partner administrator account"
+msgstr "Az üzleti partner adminisztrátori fiókot nem sikerült frissíteni."
+
+#: hpbx/includes/hpbx.business_partner.inc:795
+msgid "User successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:830;835;845;858;1356;1374;1380 hpbx/includes/hpbx.user.inc:1172;1190;1196
+msgid "Failed to remove the user account"
+msgstr "A felhasználói fiókot nem sikerült eltávolítani."
+
+#: hpbx/includes/hpbx.business_partner.inc:945 hpbx/includes/hpbx.reseller.inc:331 hpbx/includes/hpbx.subscriber.inc:57
+msgid "General"
+msgstr "Általános"
+
+#: hpbx/includes/hpbx.business_partner.inc:1006 hpbx/includes/hpbx.reseller.inc:380
+msgid "Logo & Footer"
+msgstr "Logo és lábrész"
+
+#: hpbx/includes/hpbx.business_partner.inc:1016 hpbx/includes/hpbx.reseller.inc:390
+msgid "Logo preview"
+msgstr "Logo elonézet"
+
+#: hpbx/includes/hpbx.business_partner.inc:1028 hpbx/includes/hpbx.reseller.inc:397
+msgid "Logo"
+msgstr "Logo"
+
+#: hpbx/includes/hpbx.business_partner.inc:1030 hpbx/includes/hpbx.reseller.inc:399
+msgid "Upload an email logo. Allowed extensions: jpg, jpeg, png"
+msgstr ""
+"E-mail logo feltöltése. Engedélyezett kiterjesztések: jpg, jpeg, "
+"png"
+
+#: hpbx/includes/hpbx.business_partner.inc:1036 hpbx/includes/hpbx.reseller.inc:405
+msgid "Footer"
+msgstr "Lábrész"
+
+#: hpbx/includes/hpbx.business_partner.inc:1048
+msgid "Business Partner Customer Administrator welcome email"
+msgstr ""
+"Az üzleti partner ügyfél adminisztrátorának küldött üdvözlo "
+"e-mail"
+
+#: hpbx/includes/hpbx.business_partner.inc:1054;1097;1140 hpbx/includes/hpbx.reseller.inc:421;463;505;547;591
+msgid "Subject"
+msgstr "Tárgy"
+
+#: hpbx/includes/hpbx.business_partner.inc:1079;1122;1163 hpbx/includes/hpbx.reseller.inc:446;488;528;570;614 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:719 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:562
+msgid "Body"
+msgstr "Szövegtest"
+
+#: hpbx/includes/hpbx.business_partner.inc:1092
+msgid "Business Partner Subscriber welcome email"
+msgstr "Az üzleti partner elofizetojének küldött üdvözlo e-mail"
+
+#: hpbx/includes/hpbx.business_partner.inc:1135
+msgid "Business Partner User welcome email"
+msgstr "Az üzleti partner felhasználójának küldött üdvözlo e-mail\t"
+
+#: hpbx/includes/hpbx.business_partner.inc:1173 hpbx/includes/hpbx.reseller.inc:625
+msgid "Replacements"
+msgstr "Pótlások"
+
+#: hpbx/includes/hpbx.business_partner.inc:1190 hpbx/includes/hpbx.reseller.inc:649
+msgid "Phonenumber"
+msgstr "Telefonszám"
+
+#: hpbx/includes/hpbx.business_partner.inc:1199 hpbx/includes/hpbx.reseller.inc:658
+msgid "Help website url"
+msgstr "Weboldal URL súgó"
+
+#: hpbx/includes/hpbx.business_partner.inc:1206 hpbx/includes/hpbx.reseller.inc:665
+msgid "Help mail address"
+msgstr "E-mail cím súgó"
+
+#: hpbx/includes/hpbx.business_partner.inc:1216 hpbx/includes/hpbx.reseller.inc:672
+msgid "Help name"
+msgstr "Név súgó"
+
+#: hpbx/includes/hpbx.business_partner.inc:1348 hpbx/includes/hpbx.user.inc:1164
+msgid "Not allowed to remove the user account"
+msgstr "A felhasználói fiókot nem szabad eltávolítani."
+
+#: hpbx/includes/hpbx.business_partner.inc:1363 hpbx/includes/hpbx.user.inc:56;1179
+msgid "User succesfully removed"
+msgstr "A felhasználó sikeresen eltávolítva"
+
+#: hpbx/includes/hpbx.business_partner.inc:1367 hpbx/includes/hpbx.user.inc:1183
+msgid "Only partially removed the user account"
+msgstr "A felhasználói fiók csak részben lett eltávolítva."
+
+#: hpbx/includes/hpbx.business_partner.inc:1459
+msgid "Failed to change the business partner name"
+msgstr "Az üzleti partner nevét nem sikerült megváltoztatni."
+
+#: hpbx/includes/hpbx.business_partner.inc:833;843;1354;1362;1366;1375;1381 hpbx/includes/hpbx.user.inc:37;51;60;64;208;214;1170;1178;1182;1191;1197
+msgid "hpbx_users"
+msgstr "hpbx_users"
+
+#: hpbx/includes/hpbx.business_partner.inc:833;1354 hpbx/includes/hpbx.user.inc:37;1170
+msgid "Failed to remove user with username from AD: @username"
+msgstr ""
+"Az AD-bol vett @username felhasználónevu felhasználót nem "
+"sikerült eltávolítani."
+
+#: hpbx/includes/hpbx.business_partner.inc:843
+msgid "Failed to remove business partner from AD: @username"
+msgstr ""
+"Az AD-bol vett @username felhasználónevu üzleti partnert nem "
+"sikerült eltávolítani."
+
+#: hpbx/includes/hpbx.business_partner.inc:1362 hpbx/includes/hpbx.user.inc:1178
+msgid "Successfully removed affiliate user with @username"
+msgstr ""
+"A(z) @username felhasználónevu partner felhasználó sikeresen "
+"eltávolítva."
+
+#: hpbx/includes/hpbx.business_partner.inc:1366 hpbx/includes/hpbx.user.inc:1182
+msgid "Failed to remove user with username from drupal: @username @exception_message"
+msgstr ""
+"A(z) @username @exception_message felhasználónevu felhasználót nem "
+"sikerült eltávolítani a drupalból."
+
+#: hpbx/includes/hpbx.business_partner.inc:1375 hpbx/includes/hpbx.user.inc:1191
+msgid "Failed to load drupal user with username @username"
+msgstr ""
+"A(z) @username felhasználónevu drupal felhasználót nem sikerült "
+"betölteni."
+
+#: hpbx/includes/hpbx.business_partner.inc:1381 hpbx/includes/hpbx.user.inc:1197
+msgid "Failed to load drupal user with username @username (more then 1 user found?)"
+msgstr ""
+"A @username felhasználónevu drupal felhasználót nem sikerült "
+"betölteni (több mint 1 felhasználót talált?)."
+
+#: hpbx/includes/hpbx.callrecords.inc:35 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Own number"
+msgstr "Saját szám"
+
+#: hpbx/includes/hpbx.callrecords.inc:46
+msgid "All"
+msgstr "Az összes"
+
+#: hpbx/includes/hpbx.callrecords.inc:49
+msgid "Subscriber or group"
+msgstr "Elofizeto vagy csoport"
+
+#: hpbx/includes/hpbx.callrecords.inc:56;59 hpbx/includes/hpbx.fax.inc:299;303
+msgid "Date"
+msgstr "Dátum"
+
+#: hpbx/includes/hpbx.callrecords.inc:65;69 hpbx/includes/hpbx.fax.inc:309;312
+msgid "through"
+msgstr "keresztül"
+
+#: hpbx/includes/hpbx.callrecords.inc:76 hpbx/includes/hpbx.fax.inc:321 hpbx/includes/hpbx.voicemail.inc:215;508
+msgid "Change"
+msgstr "Módosítás"
+
+#: hpbx/includes/hpbx.callrecords.inc:202 hpbx/includes/hpbx.fax.inc:349
+msgid "Forwarded unconditionally"
+msgstr "Feltétel nélkül átirányítva"
+
+#: hpbx/includes/hpbx.callrecords.inc:203 hpbx/includes/hpbx.fax.inc:350
+msgid "Forwarded due to busy"
+msgstr "Átirányítva, mert foglalt"
+
+#: hpbx/includes/hpbx.callrecords.inc:204 hpbx/includes/hpbx.fax.inc:351
+msgid "Forwarded due to unavailable"
+msgstr "Átirányítva, mert nem érheto el"
+
+#: hpbx/includes/hpbx.callrecords.inc:205 hpbx/includes/hpbx.fax.inc:352
+msgid "Forwared due to timeout"
+msgstr "Továbbítva idotúllépés miatt"
+
+#: hpbx/includes/hpbx.callrecords.inc:206 hpbx/includes/hpbx.fax.inc:353
+msgid "Normal call"
+msgstr "Normál hívás"
+
+#: hpbx/includes/hpbx.callrecords.inc:207 hpbx/includes/hpbx.fax.inc:354
+msgid "Inbound"
+msgstr "Beérkezo"
+
+#: hpbx/includes/hpbx.callrecords.inc:208 hpbx/includes/hpbx.fax.inc:355
+msgid "Outbound"
+msgstr "Kimeno"
+
+#: hpbx/includes/hpbx.callrecords.inc:226 hpbx/includes/hpbx.fax.inc:370
+msgid "Date & Time"
+msgstr "Dátum és ido"
+
+#: hpbx/includes/hpbx.callrecords.inc:227 hpbx/includes/hpbx.fax.inc:371
+msgid "Information"
+msgstr "Információ"
+
+#: hpbx/includes/hpbx.callrecords.inc:228 hpbx/includes/hpbx.fax.inc:372
+msgid "Numbers"
+msgstr "Számok"
+
+#: hpbx/includes/hpbx.callrecords.inc:229
+msgid "Caller"
+msgstr "Hívó"
+
+#: hpbx/includes/hpbx.callrecords.inc:230
+msgid "Called"
+msgstr "Hívott"
+
+#: hpbx/includes/hpbx.callrecords.inc:231
+msgid "Call type"
+msgstr "Hívás típus"
+
+#: hpbx/includes/hpbx.callrecords.inc:232 hpbx/includes/hpbx.customer.inc:107 hpbx/includes/hpbx.fax.inc:375 hpbx/includes/hpbx.reseller.inc:21
+msgid "Status"
+msgstr "Státusz"
+
+#: hpbx/includes/hpbx.callrecords.inc:233
+msgid "Duration"
+msgstr "Tartam"
+
+#: hpbx/includes/hpbx.callrecords.inc:492 hpbx/includes/hpbx.voicemail.inc:370
+msgid "Anonymous"
+msgstr "Névtelen"
+
+#: hpbx/includes/hpbx.callrecords.inc:495
+msgid "Conference room"
+msgstr "Konferenciaterem"
+
+#: hpbx/includes/hpbx.callrecords.inc:498
+msgid "Office hours"
+msgstr "Hivatali ido"
+
+#: hpbx/includes/hpbx.callrecords.inc:507
+msgid "Voicemail retrieval"
+msgstr "Hangposta betöltés"
+
+#: hpbx/includes/hpbx.callrecords.inc:510
+msgid "Voicemail deposit"
+msgstr "Hangposta üzenet hagyása"
+
+#: hpbx/includes/hpbx.callrecords.inc:513
+msgid "Voicemail via ext."
+msgstr "Hangposta melléken keresztül"
+
+#: hpbx/includes/hpbx.callrecords.inc:521
+msgid "terminated"
+msgstr "befejezve"
+
+#: hpbx/includes/hpbx.conference.inc:66
+msgid "Create Conference room"
+msgstr "Konferenciaterem létrehozása"
+
+#: hpbx/includes/hpbx.conference.inc:129
+msgid "If you enter a PIN, it must consist of 5 digits"
+msgstr "A megadott PIN-nek 5 számból kell állnia."
+
+#: hpbx/includes/hpbx.conference.inc:147
+msgid "Announcement language"
+msgstr "A közlemény nyelve"
+
+#: hpbx/includes/hpbx.conference.inc:199 hpbx/includes/hpbx.dashboard.inc:191
+msgid "Create conference room"
+msgstr "Konferenciaterem létrehozása"
+
+#: hpbx/includes/hpbx.conference.inc:212
+msgid "Delete conference room"
+msgstr "Konferenciaterem törlése"
+
+#: hpbx/includes/hpbx.conference.inc:281
+msgid "PIN needs to be exactly 5 digits."
+msgstr "A PIN-nek pontosan 5 számjegyunek kell lennie."
+
+#: hpbx/includes/hpbx.conference.inc:547
+msgid "Conference room successfully saved"
+msgstr "Konferenciaterem sikeresen lementve"
+
+#: hpbx/includes/hpbx.customer.inc:75;360
+msgid "Create customer"
+msgstr "Ügyfél létrehozása"
+
+#: hpbx/includes/hpbx.customer.inc:95 hpbx/includes/hpbx.reseller.inc:18
+msgid "Company name"
+msgstr "Cégnév"
+
+#: hpbx/includes/hpbx.customer.inc:98;653;660
+msgid "Business Partner"
+msgstr "Üzleti partner"
+
+#: hpbx/includes/hpbx.customer.inc:100;431;432
+msgid "Customer Id"
+msgstr "Ügyfélazonosító"
+
+#: hpbx/includes/hpbx.customer.inc:103;599
+msgid "Multisite"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:183;524 hpbx/includes/hpbx.reseller.inc:62
+msgid "Suspended"
+msgstr "Felfüggesztve"
+
+#: hpbx/includes/hpbx.customer.inc:202
+msgid "Customer is suspended since @suspend_date and can be remove from @remove_date."
+msgstr ""
+"Az ügyfél @suspend_date óta fel van függesztve, és @remove_date "
+"után eltávolítható."
+
+#: hpbx/includes/hpbx.customer.inc:205
+msgid "Customer needs to be suspended before it can be removed"
+msgstr "Az ügyfelet fel kell függeszteni, mielott eltávolítható lenne."
+
+#: hpbx/includes/hpbx.customer.inc:235;237;242;246 hpbx/includes/hpbx.masquerade.inc:208
+msgid "Login"
+msgstr "Bejelentkezés"
+
+#: hpbx/includes/hpbx.customer.inc:242
+msgid "Login disabled. This customer is created on another environment"
+msgstr ""
+"Bejelentkezés letiltva. Az ügyfél egy másik környezetben lett "
+"létrehozva."
+
+#: hpbx/includes/hpbx.customer.inc:352 hpbx/includes/hpbx.reseller.inc:293
+msgid "!name"
+msgstr "!name"
+
+#: hpbx/includes/hpbx.customer.inc:386
+msgid "Customer settings"
+msgstr "Ügyfélbeállítások"
+
+#: hpbx/includes/hpbx.customer.inc:421;422
+msgid "Company Name"
+msgstr "Cégnév"
+
+#: hpbx/includes/hpbx.customer.inc:453
+msgid "Domain"
+msgstr "Domain"
+
+#: hpbx/includes/hpbx.customer.inc:475;802;856
+msgid "Unlimited"
+msgstr "Korlátlan"
+
+#: hpbx/includes/hpbx.customer.inc:495
+msgid "Maximum total concurrent calls"
+msgstr "Az egyideju hívások maximális száma"
+
+#: hpbx/includes/hpbx.customer.inc:515
+msgid "Profile Set"
+msgstr "Profilsorozat"
+
+#: hpbx/includes/hpbx.customer.inc:530
+msgid "Since @suspend_date"
+msgstr "@suspend_date óta"
+
+#: hpbx/includes/hpbx.customer.inc:540
+msgid "Derive extension from DID"
+msgstr "Mellék származtatása DID-bol"
+
+#: hpbx/includes/hpbx.customer.inc:554
+msgid "Extension Length"
+msgstr "A mellék hossza"
+
+#: hpbx/includes/hpbx.customer.inc:574;582
+msgid "Pilot number"
+msgstr "Ellenorzo szám"
+
+#: hpbx/includes/hpbx.customer.inc:579
+msgid "Invalid pilotnumber size"
+msgstr "Érvénytelen ellenorzo szám méret"
+
+#: hpbx/includes/hpbx.customer.inc:616
+msgid "Site Settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:679
+msgid "Customer Location"
+msgstr "Ügyfél tartózkodási hely"
+
+#: hpbx/includes/hpbx.customer.inc:775
+msgid "Bundle settings"
+msgstr "Csomag beállítások"
+
+#: hpbx/includes/hpbx.customer.inc:781
+msgid "Profile set"
+msgstr "Profilsorozat"
+
+#: hpbx/includes/hpbx.customer.inc:782
+msgid "Profile"
+msgstr "Profil"
+
+#: hpbx/includes/hpbx.customer.inc:784
+msgid "Amount"
+msgstr "Mennyiség"
+
+#: hpbx/includes/hpbx.customer.inc:803
+msgid "Limit total"
+msgstr "Határérték összesen"
+
+#: hpbx/includes/hpbx.customer.inc:804
+msgid "Limit per profile"
+msgstr "Határérték profilonként"
+
+#: hpbx/includes/hpbx.customer.inc:888
+msgid "Number ranges"
+msgstr "Számtartományok"
+
+#: hpbx/includes/hpbx.customer.inc:929
+msgid "Customer administrator"
+msgstr "Ügyfél adminisztrátor"
+
+#: hpbx/includes/hpbx.customer.inc:968
+msgid "Prefix of a number range has been changed"
+msgstr "A számtartomány elohívószámát megváltoztatták."
+
+#: hpbx/includes/hpbx.customer.inc:969
+msgid "Changing the prefix of a number range, results in an update of the extensions of all of the existing subscribers, hunt groups, auto attendants and conference rooms. In order to update the numbers on the devices of the subscribers, the devices need to be rebooted."
+msgstr ""
+"A számtartomány elohívószámának megváltoztatása minden "
+"meglévo elofizeto, vonalcsoport, automatikus résztvevo és "
+"konferenciaterem mellékeinek frissítését eredményezi. Az "
+"elofizetoi készülékek számának frissítéséhez újra kell "
+"indítani a készülékeket."
+
+#: hpbx/includes/hpbx.customer.inc:1207;1224
+msgid "@key field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1215
+msgid "The Site Name should be unique"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1252;1258;1673;1679
+msgid "The passed IP address @IP is invalid"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1338
+msgid "Not allowed to set this limit for the @profile_name profile, as the customer currently exceeds this limit"
+msgstr ""
+"Ez a határérték nem állítható be a(z) @profile_name profilhoz, "
+"mert az ügyfél jelenleg túllépi ezt a határértéket."
+
+#: hpbx/includes/hpbx.customer.inc:1343
+msgid "Not allowed to set this limit for the @profile_set_name profile set, as the customer currently exceeds this limit"
+msgstr ""
+"Ez a határérték nem állítható be a(z) @profile_set_name "
+"profilsorozathoz, mert az ügyfél jelenleg túllépi ezt a "
+"határértéket."
+
+#: hpbx/includes/hpbx.customer.inc:1352
+msgid "Invalid Customer ID. Please use a @length digit number"
+msgstr ""
+"Érvénytelen ügyfélazonosító. Kérjük, használjon egy @length "
+"számjegyu számot."
+
+#: hpbx/includes/hpbx.customer.inc:1357;1360
+msgid "The Customer id @customer_id already exists"
+msgstr "A(z) @customer_id ügyfélazonosító már létezik."
+
+#: hpbx/includes/hpbx.customer.inc:1364
+msgid "Company name is already assigned to customer @company"
+msgstr "A cégnév már hozzá van rendelve a(z) @company ügyfélhez."
+
+#: hpbx/includes/hpbx.customer.inc:1383
+msgid "Invalid pilot number"
+msgstr "Érvénytelen ellenorzo szám"
+
+#: hpbx/includes/hpbx.customer.inc:1423
+msgid "Empty area code"
+msgstr "Üres körzetszám"
+
+#: hpbx/includes/hpbx.customer.inc:1426
+msgid "Invalid area code size"
+msgstr "Érvénytelen körzetszám méret"
+
+#: hpbx/includes/hpbx.customer.inc:1430
+msgid "Empty start number"
+msgstr "Üres kezdoszám"
+
+#: hpbx/includes/hpbx.customer.inc:1433
+msgid "Invalid start number size"
+msgstr "Érvénytelen kezdoszám méret"
+
+#: hpbx/includes/hpbx.customer.inc:1439
+msgid "Invalid prefix"
+msgstr "Érvénytelen elohívószám"
+
+#: hpbx/includes/hpbx.customer.inc:1443
+msgid "Please select a number range length"
+msgstr "Kérjük, válasszon ki egy számtartomány hosszt."
+
+#: hpbx/includes/hpbx.customer.inc:1451;1458
+msgid "Prefix cannot start with @na"
+msgstr "Az elohívószám nem kezdodhet úgy, hogy @na."
+
+#: hpbx/includes/hpbx.customer.inc:1482
+msgid "Potential overlap between extensions"
+msgstr "Lehetséges átfedés a mellékek között"
+
+#: hpbx/includes/hpbx.customer.inc:1493
+msgid "The combination of extension length and the choosen number range results in extensions starting with @na, which is not allowed."
+msgstr ""
+"A mellékhossz és a kiválasztott számtartomány kombinációjának "
+"eredményeként a mellék úgy kezdodik, hogy @na, ami nem "
+"megengedett."
+
+#: hpbx/includes/hpbx.customer.inc:1499
+msgid "The combination of extension length and the choosen number range results in extensions starting with the digit for national calls which is not allowed."
+msgstr ""
+"A mellékhossz és a kiválasztott számtartomány kombinációjának "
+"eredményeként a mellék az országos hívást szolgáló "
+"számjeggyel kezdodik, ami nem megengedett."
+
+#: hpbx/includes/hpbx.customer.inc:1506
+msgid "The combination of extension length and the choosen numberrange could result in an extension number equal to @na, which is not allowed."
+msgstr ""
+"A mellékhossz és a kiválasztott számtartomány kombinációjának "
+"eredményeként az egyik mellék egy ezzel azonos mellékszámmal "
+"rendelkezhet: @na, ami nem megengedett."
+
+#: hpbx/includes/hpbx.customer.inc:1526
+msgid "The number range @range has overlap with a number range assigned to customer @customer"
+msgstr ""
+"A(z) @range számtartomány átfedi a(z) @customer ügyfélhez "
+"hozzárendelt számtartományt."
+
+#: hpbx/includes/hpbx.customer.inc:1538
+msgid "The pilot number @pilot_number is already assigned to customer @customer"
+msgstr ""
+"A(z) @pilot_number ellenorzo szám már hozzá van rendelve a(z) "
+"@customer ügyfélhez."
+
+#: hpbx/includes/hpbx.customer.inc:1548
+msgid "Possible overlap in extensions. Please review the numberrange prefixes."
+msgstr ""
+"Lehetséges átfedés a mellékeknél. Kérjük, ellenorizze a "
+"számtartomány elohívószámait."
+
+#: hpbx/includes/hpbx.customer.inc:1552
+msgid "Please enter unique number ranges and/or pilot number."
+msgstr ""
+"Kérjük, adjon meg egyedi számtartományokat és/vagy ellenorzo "
+"számot."
+
+#: hpbx/includes/hpbx.customer.inc:1557
+msgid "At least one number range must be defined. Enter the number range details and hit the \"Add\" button to add a new number range."
+msgstr ""
+"Legalább egy számtartományt definiálni kell. Az új "
+"számtartomány megadásához adja meg a számtartomány adatait, és "
+"nyomja meg a „Hozzáadás” gombot."
+
+#: hpbx/includes/hpbx.customer.inc:1562
+msgid "If a prefix is set for a number range, all numberranges must have a prefix"
+msgstr ""
+"Ha egy számtartományhoz elohívószám van beállítva, akkor minden "
+"számtartománynak rendelkeznie kell elohívószámmal."
+
+#: hpbx/includes/hpbx.customer.inc:1572
+msgid "The prefix must have less digits then the choosen extension length"
+msgstr ""
+"Az elohívószámnak kevesebb számjeggyel kell rendelkeznie, mint a "
+"kiválasztott melléknek."
+
+#: hpbx/includes/hpbx.customer.inc:1583;1586
+msgid "Overlapping number ranges and/or pilot number are not allowed"
+msgstr ""
+"Az egymást átfedo számtartományok és/vagy ellenorzo számok "
+"nincsenek engedélyezve."
+
+#: hpbx/includes/hpbx.customer.inc:1602
+msgid "Pilot number is already assigned to customer @company"
+msgstr "Az ellenorzo szám már hozzá van rendelve a(z) @company ügyfélhez."
+
+#: hpbx/includes/hpbx.customer.inc:1616
+msgid "Upload of @handle failed"
+msgstr "A(z) @handle feltöltése nem sikerült"
+
+#: hpbx/includes/hpbx.customer.inc:1697
+msgid "You have exceeded the maximum number of @site sites"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1870
+msgid "Failed to change the company name"
+msgstr "A cégnév módosítása nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:1920
+msgid "Failed to disable user accounts"
+msgstr "A felhasználói fiók letiltása nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:1927
+msgid "Failed to enable user accounts"
+msgstr "A felhasználói fiók engedélyezése nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:2150
+msgid "Failed to create AD user"
+msgstr "Az AD felhasználó létrehozása nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:2161
+msgid "Failed to store the customer"
+msgstr "Az ügyfél lementése nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:2171;2537
+msgid "Cleared customers with @cid"
+msgstr "A(z) @cid azonosítójú ügyfelek törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2175;2541
+msgid "Cleared customers_list with @cid*"
+msgstr "A(z) @cid azonosítójú customers_list törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2180;2546
+msgid "Cleared customerpreferences with @cid"
+msgstr "A(z) @cid azonosítójú ügyfélpreferenciák törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2184;2550
+msgid "Cleared customerpreferences list with @cid*"
+msgstr "A(z) @cid* azonosítójú ügyfélpreferencia lista törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2191;2555
+msgid "Cleared customercontacts with @cid"
+msgstr "A(z) @cid azonosítójú ügyfél elérhetoségek törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2195;2559
+msgid "Cleared customercontacts list with @cid*"
+msgstr "A(z) @cid* azonosítójú ügyfél elérhetoség lista törölve"
+
+#: hpbx/includes/hpbx.customer.inc:2200
+msgid "Customer successfully saved"
+msgstr "Az ügyfél sikeresen lementve."
+
+#: hpbx/includes/hpbx.customer.inc:2228
+msgid "The customer was not created due to a technical problem. Please contact your system administrator."
+msgstr ""
+"Az ügyfelet technikai problémák miatt nem sikerült létrehozni. "
+"Kérjük, forduljon a rendszeradminisztrátorához."
+
+#: hpbx/includes/hpbx.customer.inc:2380
+msgid "Find"
+msgstr "Keresés"
+
+#: hpbx/includes/hpbx.customer.inc:2394
+msgid "The internal customer search database table is not in sync with the Sipwise API. The search results may contain incorrect results."
+msgstr ""
+"A belso ügyfélkeresési adatbázis tábla nincs szinkronban a "
+"Sipwise API-val. A keresési eredmények hibás eredményeket "
+"tartalmazhatnak."
+
+#: hpbx/includes/hpbx.customer.inc:2480
+msgid "No customer found that matches the entered search criteria"
+msgstr ""
+"A megadott keresési kritériumoknak megfelelo ügyfél nem "
+"található."
+
+#: hpbx/includes/hpbx.customer.inc:2529
+msgid "Customer successfully deleted"
+msgstr "Az ügyfél sikeresen törölve."
+
+#: hpbx/includes/hpbx.customer.inc:2566
+msgid "Failed to delete the customer"
+msgstr "Az ügyfél törlése nem sikerült."
+
+#: hpbx/includes/hpbx.customer.inc:2627
+msgid "Customer !name"
+msgstr "!name ügyfél"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:17;252 ;259  hpbx/includes/hpbx.fax.inc:41
+msgid "Fax numbers"
+msgstr "Fax számok"
+
+#: hpbx/includes/hpbx.dashboard.inc:65
+msgid "@percentage% of numbers in use"
+msgstr "A használt számok @percentage% százalékaránya"
+
+#: hpbx/includes/hpbx.dashboard.inc:93
+msgctxt "plural2"
+msgid "@count devices"
+msgstr "@count készülék"
+
+#: hpbx/includes/hpbx.dashboard.inc:192 hpbx/includes/hpbx.huntgroup.inc:148
+msgid "Create Hunt group"
+msgstr "Vonalcsoport létrehozása"
+
+#: hpbx/includes/hpbx.dashboard.inc:420;442
+msgid "Need help?"
+msgstr "Szüksége van segítségre?"
+
+#: hpbx/includes/hpbx.dashboard.inc:428;450
+msgid "visit website"
+msgstr "Weboldal felkeresése"
+
+#: hpbx/includes/hpbx.dashboard.inc:431;453
+msgid "mail us"
+msgstr "Küldjön nekünk egy e-mailt."
+
+#: hpbx/includes/hpbx.dashboard.inc:435;457
+msgid "start chat"
+msgstr "Csevegés elindítása"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:287 
+msgid "F.A.Q."
+msgstr "Gy.I.K."
+
+#: hpbx/includes/hpbx.dashboard.inc:84
+msgid "@count device"
+msgid_plural "@count devices"
+msgstr[0] "@count készülék"
+msgstr[1] "@count készülék"
+
+#: hpbx/includes/hpbx.defaultforward.inc:74
+msgid "Forward all numbers not in use to"
+msgstr "Az összes nem használt szám átirányítása"
+
+#: hpbx/includes/hpbx.defaultforward.inc:155
+msgid "Failed to store default forward "
+msgstr "Az alapértelmezett átirányítás lementése nem sikerült."
+
+#: hpbx/includes/hpbx.defaultforward.inc:161
+msgid "Default forward successfully saved"
+msgstr "Az alapértelmezett továbbküldés sikeresen lementve."
+
+#: hpbx/includes/hpbx.download.inc:5
+msgid "For your desktop"
+msgstr "Az Ön asztala számára"
+
+#: hpbx/includes/hpbx.fax.inc:45
+msgid "Send fax"
+msgstr "Fax küldése"
+
+#: hpbx/includes/hpbx.fax.inc:48 hpbx/includes/js/hpbx.js:0
+msgid "Fax log"
+msgstr "Fax napló"
+
+#: hpbx/includes/hpbx.fax.inc:92
+msgid "Create new fax number"
+msgstr "Új fax szám létrehozása"
+
+#: hpbx/includes/hpbx.fax.inc:139;280
+msgid "Fax number"
+msgstr "Fax szám"
+
+#: hpbx/includes/hpbx.fax.inc:147
+msgid "Destination number"
+msgstr "Rendeltetési szám"
+
+#: hpbx/includes/hpbx.fax.inc:156
+msgid "Page header"
+msgstr "Oldal fejrész"
+
+#: hpbx/includes/hpbx.fax.inc:163
+msgid "Page content"
+msgstr "Oldal tartalom"
+
+#: hpbx/includes/hpbx.fax.inc:173
+msgid "Max file size"
+msgstr "Maximális fájlméret"
+
+#: hpbx/includes/hpbx.fax.inc:174
+msgid "The maximum file size is 10MB.</br></br>Supported file type: PDF"
+msgstr "A maximális fájlméret 10MB.</br></br>Támogatott fájltípus: PDF"
+
+#: hpbx/includes/hpbx.fax.inc:188
+msgid "Send"
+msgstr "Küldés"
+
+#: hpbx/includes/hpbx.fax.inc:290 hpbx/includes/hpbx.wizard.inc:454;483
+msgid "Narrow results"
+msgstr "Eredmények leszukítése"
+
+#: hpbx/includes/hpbx.fax.inc:291
+msgid "No results match"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:373
+msgid "Sender"
+msgstr "Feladó"
+
+#: hpbx/includes/hpbx.fax.inc:374
+msgid "Receiver"
+msgstr "Címzett"
+
+#: hpbx/includes/hpbx.fax.inc:376
+msgid "Pages"
+msgstr "Oldalak"
+
+#: hpbx/includes/hpbx.fax.inc:593
+msgid "Problem retrieving the originating subscriber"
+msgstr "Probléma a kiindulási elofizeto betöltésével"
+
+#: hpbx/includes/hpbx.fax.inc:598 hpbx/includes/hpbx.subscriber.inc:1180
+msgid "Please enter a valid destination number"
+msgstr "Kérjük, adjon meg egy érvényes rendeltetési számot."
+
+#: hpbx/includes/hpbx.fax.inc:610;616;621;609
+msgid "Unknown error while uploading the fax file"
+msgstr "Ismeretlen hiba a fax fájl feltöltésénél"
+
+#: hpbx/includes/hpbx.fax.inc:627;631
+msgid "Please upload a PDF file"
+msgstr "Kérjük, töltsön fel egy PDF fájlt"
+
+#: hpbx/includes/hpbx.fax.inc:649
+msgid "Your fax is being processed. This may take a few minutes."
+msgstr "Az Ön faxa feldolgozás alatt. Ez igénybe vehet néhány percet."
+
+#: hpbx/includes/hpbx.fax.inc:652
+msgid "Failed to sent fax"
+msgstr "A fax elküldése nem sikerült."
+
+#: hpbx/includes/hpbx.fax.inc:609;615;620;626
+msgid "hpbx_fax"
+msgstr "hpbx_fax"
+
+#: hpbx/includes/hpbx.fax.inc:615
+msgid "Uploaded PDF file does not exist (anymore"
+msgstr "A feltöltött PDF fájl (már) nem létezik."
+
+#: hpbx/includes/hpbx.fax.inc:620
+msgid "Could not open uploaded PDF file"
+msgstr "A feltöltött PDF fájl nem nyitható meg."
+
+#: hpbx/includes/hpbx.fax.inc:626
+msgid "Please upload a valid PDF file"
+msgstr "Kérjük, töltsön fel egy érvényes PDF fájlt."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This fax number has no members"
+msgstr "Ez a fax szám nem rendelkezik tagokkal."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0} person is eligible to use this fax number"
+msgstr "{0} személy jogosult ennek a fax számnak a használatára."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0}  persons are eligible to use this fax number"
+msgstr "{0} személy jogosult ennek a fax számnak a használatára."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This Fax group is empty"
+msgstr "Ez a fax csoport üres."
+
+#: hpbx/includes/hpbx.fax2email.inc:89 hpbx/includes/hpbx.huntgroup.inc:194 hpbx/includes/hpbx.subscriber.inc:270
+msgid "Name*"
+msgstr "Name*"
+
+#: hpbx/includes/hpbx.fax2email.inc:118
+msgid "Email destination for incoming faxes"
+msgstr "A bejövo fax e-mail rendeltetési helye"
+
+#: hpbx/includes/hpbx.fax2email.inc:119 hpbx/includes/hpbx.subscriber.inc:2120
+msgid "Email destination"
+msgstr "E-mail rendeltetési hely"
+
+#: hpbx/includes/hpbx.fax2email.inc:130
+msgid "Receive a copy of outgoing faxes"
+msgstr "A kimeno faxok egy másolatának megorzése"
+
+#: hpbx/includes/hpbx.fax2email.inc:137
+msgid "Receive reports of outgoing and incoming faxes"
+msgstr "A bejövo és kimeno faxokról szóló jelentések fogadása"
+
+#: hpbx/includes/hpbx.fax2email.inc:144 hpbx/includes/hpbx.huntgroup.inc:541
+msgid "Members"
+msgstr "Tagok"
+
+#: hpbx/includes/hpbx.fax2email.inc:157
+msgid "Select the subscribers that are eligable to use this fax number"
+msgstr ""
+"Az ennek a fax számnak a használatára jogosult elofizetok "
+"kiválasztása."
+
+#: hpbx/includes/hpbx.fax2email.inc:158 hpbx/includes/hpbx.huntgroup.inc:554
+msgid "No subscribers found"
+msgstr "Egyetlen elofizeto sem található"
+
+#: hpbx/includes/hpbx.fax2email.inc:415
+msgid "Can't load faxserversettings"
+msgstr "A fax szerver beállítások nem tölthetok be."
+
+#: hpbx/includes/hpbx.fax2email.inc:462
+msgid "Fax number successfully saved"
+msgstr "A fax szám sikeresen lementve"
+
+#: hpbx/includes/hpbx.help.inc:432
+msgid "Copy - @title"
+msgstr "Másolat - @title"
+
+#: hpbx/includes/hpbx.help.inc:438
+msgid "Failed to replicate the help article"
+msgstr "A súgó szócikk replikálása nem sikerült."
+
+#: hpbx/includes/hpbx.help.inc:508 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:24;32
+msgid "Title"
+msgstr "Cím"
+
+#: hpbx/includes/hpbx.help.inc:1014
+msgid "No url"
+msgstr "Nincs URL"
+
+#: hpbx/includes/hpbx.help.inc:1018
+msgid "No user_access"
+msgstr "Nincs user_access"
+
+#: hpbx/includes/hpbx.help.inc:382;755;875;880
+msgid "hpbx_help"
+msgstr "hpbx_help"
+
+#: hpbx/includes/hpbx.help.inc:382;880
+msgid "Created new field_hpbx_block field_collection item"
+msgstr "Új field_hpbx_block field_collection elem létrehozva"
+
+#: hpbx/includes/hpbx.help.inc:454
+msgid "hpbx_help_count"
+msgstr "hpbx_help_count"
+
+#: hpbx/includes/hpbx.help.inc:454;875
+msgid "Loaded existing field_hpbx_block field_collection item with id "
+msgstr ""
+"A meglévo field_hpbx_block field_collection elem az azonosítóval "
+"betöltve"
+
+#: hpbx/includes/hpbx.help.inc:755
+msgid "Created new instruction_photo field_collection item"
+msgstr "Új instruction_photo field_collection elem létrehozva"
+
+#: hpbx/includes/hpbx.huntgroup.inc:17
+msgid "Create hunt group"
+msgstr "Vonalcsoport létrehozása"
+
+#: hpbx/includes/hpbx.huntgroup.inc:30
+msgid "Delete hunt group"
+msgstr "Vonalcsoport törlése"
+
+#: hpbx/includes/hpbx.huntgroup.inc:37
+msgid "Hunting Policy"
+msgstr "Vonalkeresési irányelv"
+
+#: hpbx/includes/hpbx.huntgroup.inc:38
+msgid "Time out"
+msgstr "Idotúllépés"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132;132
+msgid "This Hunt group is empty"
+msgstr "Ez a vonalcsoport üres."
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} person in this Hunt group"
+msgstr "{0} személy található ebben a vonalcsoportban"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} persons in this Hunt group"
+msgstr "{0} személy található ebben a vonalcsoportban"
+
+#: hpbx/includes/hpbx.huntgroup.inc:208
+msgid "Serial Ringing"
+msgstr "Soros csengetés"
+
+#: hpbx/includes/hpbx.huntgroup.inc:209
+msgid "Parallel Ringing"
+msgstr "Párhuzamos csengetés"
+
+#: hpbx/includes/hpbx.huntgroup.inc:210
+msgid "Random"
+msgstr "Véletlenszeru"
+
+#: hpbx/includes/hpbx.huntgroup.inc:211
+msgid "Circular"
+msgstr "Cirkuláló"
+
+#: hpbx/includes/hpbx.huntgroup.inc:215;216
+msgid "The selected policy does not support ordering"
+msgstr "A választott irányelv nem támogatja a rendelést."
+
+#: hpbx/includes/hpbx.huntgroup.inc:227
+msgid "Hunting Policy*"
+msgstr "Vonalkeresési irányelv*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:245
+msgid "Time out (sec)"
+msgstr "Idotúllépés (s)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:260 hpbx/includes/hpbx.subscriber.bulk.inc:27 hpbx/includes/hpbx.subscriber.inc:586 hpbx/includes/hpbx.wizard.inc:51
+msgid "Language of Voicemail announcements"
+msgstr "A hangposta közlemények nyelve"
+
+#: hpbx/includes/hpbx.huntgroup.inc:345
+msgid "Out of office destination"
+msgstr "Rendeltetési hely távollét esetén"
+
+#: hpbx/includes/hpbx.huntgroup.inc:358
+msgid "No out of office destination"
+msgstr "Távollét esetén nincs rendeltetési hely"
+
+#: hpbx/includes/hpbx.huntgroup.inc:368
+msgid "Announcement"
+msgstr "Értesítés"
+
+#: hpbx/includes/hpbx.huntgroup.inc:377
+msgid "Destination (Voicemail or Number)"
+msgstr "Rendeltetési hely (hangposta vagy szám)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:515
+msgid "PIN*"
+msgstr "PIN*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:519
+msgid "No Answer Settings"
+msgstr "A nincs válasz beállítások"
+
+#: hpbx/includes/hpbx.huntgroup.inc:553
+msgid "Drag members in the correct dialing sequence"
+msgstr "A tag behúzása a megfelelo tárcsázási sorozatba"
+
+#: hpbx/includes/hpbx.huntgroup.inc:730
+msgid "Please select one or more members for this hunt group."
+msgstr "Kérjük, válasszon ki egy vagy több tagot ehhez a vonalcsoporthoz."
+
+#: hpbx/includes/hpbx.huntgroup.inc:759
+msgid "Please provide a valid numeric voicemail pin"
+msgstr "Kérjük, biztosítson egy érvényes numerikus PIN-t a hangpostához"
+
+#: hpbx/includes/hpbx.huntgroup.inc:819 hpbx/includes/hpbx.subscriber.inc:1344
+msgid "Can't find the pilot subscriber preferences"
+msgstr "Az ellenorzo elofizeto preferenciák nem találhatók."
+
+#: hpbx/includes/hpbx.huntgroup.inc:1164
+msgid "Hunt group successfully saved"
+msgstr "A vonalcsoport sikeresen lementve"
+
+#: hpbx/includes/hpbx.masquerade.inc:121
+msgid "Could not find administrative user for selected customer"
+msgstr ""
+"A kiválasztott ügyfélhez nem található adminisztratív "
+"felhasználó"
+
+#: hpbx/includes/hpbx.masquerade.inc:178
+msgid "Customer Administrator"
+msgstr "Ügyfél adminisztrátor"
+
+#: hpbx/includes/hpbx.musiconhold.inc:20
+msgid "Music on hold"
+msgstr "Várakoztató zene"
+
+#: hpbx/includes/hpbx.musiconhold.inc:97
+msgid "Upload Music on Hold audio"
+msgstr "A várakoztató zene hangfájljának feltöltése"
+
+#: hpbx/includes/hpbx.musiconhold.inc:115
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>The maximum allowed duration of the audio file is 60 minutes.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr ""
+"Hangfájl feltöltése esetén biztosítani kell, hogy a hangfájl "
+"tartalmának jogtulajdonosa Ön legyen, vagy az azzal kapcsolatos "
+"jogdíjak ki legyenek fizetve.</br></br>A hangfájl megengedett "
+"maximális hossza 60 perc.</br></br>Támogatott fájltípusok: wav, "
+"mp3, flac, ogg, raw"
+
+#: hpbx/includes/hpbx.musiconhold.inc:121
+msgid "Clear upload"
+msgstr "Feltöltés törlése"
+
+#: hpbx/includes/hpbx.musiconhold.inc:128
+msgid "Or choose a song from our default !icon !ml_link"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:130
+msgid "music library"
+msgstr "Zenekönyvtár"
+
+#: hpbx/includes/hpbx.musiconhold.inc:285
+msgid "Choose your music on hold media"
+msgstr "Válassza ki a várakoztató zene médiát."
+
+#: hpbx/includes/hpbx.musiconhold.inc:336;355
+msgid "Upload of Music on Hold failed"
+msgstr "A várakoztató zene feltöltése nem sikerült."
+
+#: hpbx/includes/hpbx.musiconhold.inc:343
+msgid "The extension '@ext' is not supported"
+msgstr "A(z) @ext kiterjesztés nincs támogatva."
+
+#: hpbx/includes/hpbx.musiconhold.inc:351
+msgid "The audio file you tried to upload is too big"
+msgstr "Az Ön által feltölteni kívánt hangfájlt túl nagy."
+
+#: hpbx/includes/hpbx.musiconhold.inc:365
+msgid "File not found"
+msgstr "A fájl nem található"
+
+#: hpbx/includes/hpbx.musiconhold.inc:368
+msgid "Access denied"
+msgstr "Hozzáférés megtiltva"
+
+#: hpbx/includes/hpbx.musiconhold.inc:529
+msgid "Failed to store music on hold"
+msgstr "A várakoztató zene lementése nem sikerült."
+
+#: hpbx/includes/hpbx.musiconhold.inc:535
+msgid "Music on hold successfully saved"
+msgstr "A várakoztató zene sikeresen lementve"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:32
+msgid "Private Line"
+msgstr "Privát vonal"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:35
+msgid "Shared Line"
+msgstr "Megosztott vonal"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:38
+msgid "Busy Lamp Field"
+msgstr "Foglalt vonalat jelzo lámpa"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:81
+msgid "At lease one line must be defined. Enter the line details and hit the \"Add\" button to add a new line."
+msgstr ""
+"Legalább egy vonalat definiálni kell. Az új vonal hozzáadásához "
+"adja meg a vonal adatait, és nyomja meg a „Hozzáadás” gombot."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:91
+msgid "Invalid subscriber"
+msgstr "Érvénytelen elofizeto"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:94
+msgid "A hunt group can only be assigned to a BLF key"
+msgstr "Egy vonalcsoport csak egyetlen BLF kulcshoz rendelheto hozzá."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:97
+msgid "Subscriber cannot be assigned to a BLF key, as it is not allowed for the subscriber profile"
+msgstr ""
+"Az elofizeto nem rendelheto hozzá a BLF kulcshoz, mert ez nincs "
+"engedélyezve a felhasználó profil számára."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:108;112;158;252
+msgid "MAC address is invalid, please check the MAC address"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:124
+msgid "MAC address is already assigned to device with device name @station_name"
+msgstr ""
+"A MAC cím már hozzá van rendelve a(z) @station_name nevu "
+"készülékhez."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:127
+msgid "MAC Address is already assigned to another device"
+msgstr "A MAC cím már hozzá van rendelve egy másik készülékhez."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:357
+msgid "Create device"
+msgstr "Készülék létrehozása"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:367 hpbx/includes/hpbx.subscriber.bulk.inc:28;255
+msgid "Device name"
+msgstr "Készüléknév"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:368
+msgid "Brand and model"
+msgstr "Márka és modell"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:369;867;871 hpbx/includes/hpbx.subscriber.bulk.inc:31 hpbx/includes/js/hpbx_devices.js:0
+msgid "MAC address"
+msgstr "MAC cím"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:372
+msgid "Delete device"
+msgstr "Készülék törlése"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:400 hpbx/includes/hpbx.wizard.inc:1019;1182;1273
+msgid "Sync"
+msgstr "Szinkronizálás"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:456
+msgid "Device successfully deleted"
+msgstr "A készülék sikeresen törölve"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:474
+msgid "Cleared @type list with @cid*"
+msgstr "A(z) @cid* azonosítójú @type lista törölve"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:555
+msgid "1. Pick up the phone connected to the ATA and call * * * *"
+msgstr "1. Vegye fel az ATA-hoz csatlakozó telefont, és hívja fel: * * * *."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:556
+msgid "2. Enter 1 1 0 #"
+msgstr "2. Adja meg, hogy 1 1 0 #."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:557
+msgid "3. You will now hear a message giving you the IP address"
+msgstr "3. Ekkor egy üzenet lesz hallható, amely megadja az IP címet."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:560
+msgid "1. Enter the phone menu"
+msgstr "1. Lépjen be a telefon menübe."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:561
+msgid "2. Scroll to settings and press select"
+msgstr "2. Görgessen a beállításokhoz, és nyomja meg a kiválasztást."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:562
+msgid "3. Scroll to phone info and press select"
+msgstr ""
+"3. Görgessen a telefon információkhoz, és nyomja meg a "
+"kiválasztást."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:563
+msgid "4. Scroll to view IP Address. This is the IP address of your device"
+msgstr ""
+"4. Görgessen az IP cím megtekintéshez. Ez az Ön készülékének "
+"az IP címe."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:566
+msgid "1. Press the Setup button."
+msgstr "1. Nyomja meg a Beállítás gombot."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:567
+msgid "2. Scroll to Network and press select."
+msgstr "2. Görgessen a Hálózathoz, és nyomja meg a kiválasztást."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:568
+msgid "3. Scroll to view Current IP. This is the IP address of your device."
+msgstr ""
+"3. Görgessen az aktuális IP cím megtekintéshez. Ez az Ön "
+"készülékének az IP címe."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:574;579
+msgid "IP Address"
+msgstr "IP cím"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:580
+msgid "This field is mandatory___The given value must be a valid IP address"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:596 hpbx/includes/hpbx.wizard.inc:1031;1194;1285
+msgid "Sync device"
+msgstr "Készülék szinkronizálása"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:628
+msgid "The request could not be sent to the device. Possible causes: <br/><br/>The device is already associated.<br/>The device is not connected to the LAN<br/>The IP adress is incorrect"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:634
+msgid "The request is successfully sent to device. The device will now try to retrieve the profile and one or more firmware versions."
+msgstr ""
+"A kérés sikeresen elküldve a készülékhez. Most a készülék "
+"megpróbálja betölteni a profilt és egy vagy több firmware "
+"verziót."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:757 hpbx/includes/hpbx.wizard.inc:761
+msgid "Add device"
+msgstr "Készülék hozzáadása"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:830 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:724 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:565
+msgid "Type"
+msgstr "Típus"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:832
+msgid "Choose a brand"
+msgstr "Márka kiválasztása"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:834 hpbx/includes/hpbx.subscriber.bulk.inc:29 hpbx/includes/hpbx.wizard.inc:110;838;848;850
+msgid "Brand"
+msgstr "Márka"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:849;853 hpbx/includes/hpbx.subscriber.bulk.inc:30 hpbx/includes/hpbx.wizard.inc:857;865;867
+msgid "Model"
+msgstr "Modell"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:851
+msgid "Choose a model"
+msgstr "Modell kiválasztása"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:872
+msgid "This field is mandatory___The given value must be of the MAC address type"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:908
+msgid "Next step"
+msgstr "Következo lépés"
+
+#: hpbx/includes/hpbx.reseller.inc:19
+msgid "PTSID"
+msgstr "PTSID"
+
+#: hpbx/includes/hpbx.reseller.inc:20
+msgid "Concurrent Max"
+msgstr "Egyideju maximum"
+
+#: hpbx/includes/hpbx.reseller.inc:104;110;121
+msgid "Cleared @type with @cid*"
+msgstr "A(z) @cid* azonosítójú @type törölve"
+
+#: hpbx/includes/hpbx.reseller.inc:113
+msgid "Cleared the cache for API type @api_type for @reseller_id (list)"
+msgstr ""
+"A(z) @reseller_id (lista) viszonteladó @api_type API típusához "
+"tartozó cache törölve."
+
+#: hpbx/includes/hpbx.reseller.inc:123
+msgid "Cleared the cache for API type @api_type for @reseller_id (entity)"
+msgstr ""
+"A(z) @reseller_id (entitás) viszonteladó @api_type API típusához "
+"tartozó cache törölve."
+
+#: hpbx/includes/hpbx.reseller.inc:175
+msgid "You are not authorised to create Business Partners"
+msgstr "Ön nem jogosult az üzleti partner létrehozására."
+
+#: hpbx/includes/hpbx.reseller.inc:335
+msgid "Emergency Settings"
+msgstr "Vészhelyzeti beállítások"
+
+#: hpbx/includes/hpbx.reseller.inc:415
+msgid "Administrator welcome email"
+msgstr "Adminisztrátor üdvözlo e-mail"
+
+#: hpbx/includes/hpbx.reseller.inc:458
+msgid "Subscriber welcome email"
+msgstr "Elofizeto üdvözlo e-mail"
+
+#: hpbx/includes/hpbx.reseller.inc:500
+msgid "Affiliate user welcome email"
+msgstr "Partner felhasználó üdvözlo e-mail"
+
+#: hpbx/includes/hpbx.reseller.inc:542
+msgid "Business Partner welcome email"
+msgstr "Üzleti partner üdvözlo e-mail"
+
+#: hpbx/includes/hpbx.reseller.inc:586
+msgid "Reset Password"
+msgstr "Jelszó visszaállítása"
+
+#: hpbx/includes/hpbx.reseller.inc:688
+msgid "Time Zone"
+msgstr "Idozóna"
+
+#: hpbx/includes/hpbx.reseller.inc:698
+msgid "Time Zone correction required"
+msgstr "Az idozónát korrigálni kell."
+
+#: hpbx/includes/hpbx.reseller.inc:710
+msgid "Domain ID"
+msgstr "Domain azonosító"
+
+#: hpbx/includes/hpbx.reseller.inc:721
+msgid "digit_for_national_calls"
+msgstr "digit_for_national_calls"
+
+#: hpbx/includes/hpbx.reseller.inc:729
+msgid "country_code"
+msgstr "country_code"
+
+#: hpbx/includes/hpbx.reseller.inc:737
+msgid "area_code_min_digits"
+msgstr "area_code_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:740;749;774;783
+msgid "Number of digits includes the digit for national calls"
+msgstr "A számjegyek száma az országhívó számot is magában foglalja."
+
+#: hpbx/includes/hpbx.reseller.inc:746
+msgid "area_code_max_digits"
+msgstr "area_code_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:755
+msgid "subscriber_number_min_digits"
+msgstr "subscriber_number_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:763
+msgid "subscriber_number_max_digits"
+msgstr "subscriber_number_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:771
+msgid "pilot_subscriber_number_min_digits"
+msgstr "pilot_subscriber_number_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:780
+msgid "pilot_subscriber_number_max_digits"
+msgstr "pilot_subscriber_number_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:789
+msgid "automatic_pilot_number_generation"
+msgstr "automatic_pilot_number_generation"
+
+#: hpbx/includes/hpbx.reseller.inc:797
+msgid "automatic_pilot_number_generation_prefix"
+msgstr "automatic_pilot_number_generation_prefix"
+
+#: hpbx/includes/hpbx.reseller.inc:805
+msgid "customer_concurrent_max"
+msgstr "customer_concurrent_max"
+
+#: hpbx/includes/hpbx.reseller.inc:808
+msgid "Number of concurrent max calls."
+msgstr "Az egyideju hívások maximális száma."
+
+#: hpbx/includes/hpbx.reseller.inc:813
+msgid "customer_max_extension_length"
+msgstr "customer_max_extension_length"
+
+#: hpbx/includes/hpbx.reseller.inc:816
+msgid "Max extension length."
+msgstr "A mellék maximális hossza."
+
+#: hpbx/includes/hpbx.reseller.inc:822
+msgid "extensions_are_not_allowed_to_start_with"
+msgstr "extensions_are_not_allowed_to_start_with"
+
+#: hpbx/includes/hpbx.reseller.inc:829
+msgid "exclude_extensions"
+msgstr "exclude_extensions"
+
+#: hpbx/includes/hpbx.reseller.inc:835
+msgid "polish_emergency_routing"
+msgstr "polish_emergency_routing"
+
+#: hpbx/includes/hpbx.reseller.inc:843
+msgid "bundle_settings"
+msgstr "bundle_settings"
+
+#: hpbx/includes/hpbx.reseller.inc:851
+msgid "emergency_prefix"
+msgstr "emergency_prefix"
+
+#: hpbx/includes/hpbx.reseller.inc:858
+msgid "execute_logic_for_area_code_dependant_emergency_suffix"
+msgstr "execute_logic_for_area_code_dependant_emergency_suffix"
+
+#: hpbx/includes/hpbx.reseller.inc:872
+msgid "suspend_ncos_level"
+msgstr "suspend_ncos_level"
+
+#: hpbx/includes/hpbx.reseller.inc:882
+msgid "default_subscriber_ncos_level"
+msgstr "default_subscriber_ncos_level"
+
+#: hpbx/includes/hpbx.reseller.inc:892
+msgid "mail_from_address"
+msgstr "mail_from_address"
+
+#: hpbx/includes/hpbx.reseller.inc:908
+msgid "generic_profile_set_id"
+msgstr "generic_profile_set_id"
+
+#: hpbx/includes/hpbx.reseller.inc:917
+msgid "pilot_subscriber_profile_id"
+msgstr "pilot_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:925
+msgid "hunt_group_subscriber_profile_id"
+msgstr "hunt_group_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:934
+msgid "auto_attendant_subscriber_profile_id"
+msgstr "auto_attendant_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:942
+msgid "fax_subscriber_profile_id"
+msgstr "fax_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:951
+msgid "conference_room_subscriber_profile_id"
+msgstr "conference_room_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:959
+msgid "can be configured as a BLF line type"
+msgstr "BLF vonal típusként konfigurálható"
+
+#: hpbx/includes/hpbx.reseller.inc:960
+msgid "can be a HuntGroup member"
+msgstr "A vonalcsoport tagja lehet"
+
+#: hpbx/includes/hpbx.reseller.inc:961
+msgid "can set the CLI"
+msgstr "A CLI beállítható"
+
+#: hpbx/includes/hpbx.reseller.inc:962
+msgid "can send faxes"
+msgstr "Tud faxot küldeni"
+
+#: hpbx/includes/hpbx.reseller.inc:1014
+msgid "customer_id_length"
+msgstr "customer_id_length"
+
+#: hpbx/includes/hpbx.reseller.inc:1026
+msgid "Terms & Conditions Drupal node ID"
+msgstr "Üzleti feltételek Drupal csomópont azonosító"
+
+#: hpbx/includes/hpbx.reseller.inc:1035
+msgid "enable_restricted_access"
+msgstr "enable_restricted_access"
+
+#: hpbx/includes/hpbx.reseller.inc:1044
+msgid "Enable Business Partners"
+msgstr "Üzleti partnerek engedélyezése"
+
+#: hpbx/includes/hpbx.reseller.inc:1053
+msgid "Enable Multisite"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1061
+msgid "Number of Sites"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1093
+msgid "Emergency Routing"
+msgstr "Vészhelyzeti irányítás"
+
+#: hpbx/includes/hpbx.reseller.inc:1102
+msgid "Default emergency suffix"
+msgstr "Alapértelmezett vészhelyzeti utótag"
+
+#: hpbx/includes/hpbx.reseller.inc:1115
+msgid "Emergency Suffixes"
+msgstr "Vészhelyzeti utótag"
+
+#: hpbx/includes/hpbx.reseller.inc:1128
+msgid "Location CSV"
+msgstr "Tartózkodási hely CSV"
+
+#: hpbx/includes/hpbx.reseller.inc:1130
+msgid "Upload the CSV containing the Location information"
+msgstr "A tartózkodási hely információkat tartalmazó CSV feltöltése"
+
+#: hpbx/includes/hpbx.reseller.inc:1142
+msgid "Emergency Number Mapping CSV"
+msgstr "Vészhelyzeti szám hozzárendelés CSV"
+
+#: hpbx/includes/hpbx.reseller.inc:1145
+msgid "Upload the CSV containing the Emergency Numbers and Prefix information"
+msgstr ""
+"A vészhívószámokat és az elohívószám információkat "
+"tartalmazó CSV feltöltése"
+
+#: hpbx/includes/hpbx.reseller.inc:1176
+msgid "Only digits allowed: @profile_id"
+msgstr "Csak számjegyek megengedettek: @profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:1189;1201;1216
+msgid "Only digits allowed"
+msgstr "Csak számjegyek megengedettek"
+
+#: hpbx/includes/hpbx.reseller.inc:1233
+msgid "Only digits allowed for field @field"
+msgstr "Csak számjegyek megengedettek a @field mezonél"
+
+#: hpbx/includes/hpbx.reseller.inc:1238
+msgid "Customer max extension length must be less than subscriber number min digits."
+msgstr ""
+"A mellék maximális hosszának kisebbnek kell lennie az elofizetoi "
+"szám minimum számjegyeinél."
+
+#: hpbx/includes/hpbx.reseller.inc:1253
+msgid "Unknown error while uploading the polish emergency indexes CSV file"
+msgstr ""
+"Ismeretlen hiba a lengyel vészhelyzeti index CSV fájl "
+"feltöltésénél"
+
+#: hpbx/includes/hpbx.reseller.inc:1258
+msgid "The uploaded indexes file does not exist (anymore)"
+msgstr "A feltöltött index fájl (már) nem létezik."
+
+#: hpbx/includes/hpbx.reseller.inc:1262
+msgid "Could not open uploaded indexes file"
+msgstr "A feltöltött index fájl nem volt megnyitható."
+
+#: hpbx/includes/hpbx.reseller.inc:1270
+msgid "Unknown error while uploading the mappings file"
+msgstr "Ismeretlen hiba a hozzárendelési fájl feltöltésénél"
+
+#: hpbx/includes/hpbx.reseller.inc:1275
+msgid "The uploaded mappings file does not exist (anymore)"
+msgstr "A feltöltött hozzárendelési fájl (már) nem létezik."
+
+#: hpbx/includes/hpbx.reseller.inc:1279
+msgid "Could not open uploaded mappings file"
+msgstr "A feltöltött hozzárendelési fájl nem volt megnyitható."
+
+#: hpbx/includes/hpbx.reseller.inc:1419
+msgid "Cleared resellers with @cid"
+msgstr "A(z) @cid azonosítójú viszonteladók törölve"
+
+#: hpbx/includes/hpbx.reseller.inc:1423
+msgid "Cleared resellers_list with @cid*"
+msgstr "A(z) @cid* azonosítójú resellers_list törölve"
+
+#: hpbx/includes/hpbx.reseller.inc:1427
+msgid "Cleared contracts with @cid"
+msgstr "A(z) @cid azonosítójú szerzodések törölve"
+
+#: hpbx/includes/hpbx.reseller.inc:1432
+msgid "Cleared systemcontacts with @cid"
+msgstr "A(z) @cid azonosítójú rendszer elérhetoségek törölve"
+
+#: hpbx/includes/hpbx.reseller.inc:1446
+msgid "Affiliate settings successfully saved"
+msgstr "A partnerbeállítások sikeresen lementve"
+
+#: hpbx/includes/hpbx.reseller.inc:214 hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "sipwise_api"
+msgstr "sipwise_api"
+
+#: hpbx/includes/hpbx.reseller.inc:214
+msgid "Failed to load emergencymappings"
+msgstr "A vészhelyzeti hozzárendelések betöltése nem sikerült."
+
+#: hpbx/includes/hpbx.scripts.inc:30
+msgid "Script Name"
+msgstr "Szkriptnév"
+
+#: hpbx/includes/hpbx.scripts.inc:93;95
+msgid "Customer"
+msgstr "Ügyfél"
+
+#: hpbx/includes/hpbx.scripts.inc:94
+msgid "All Customers"
+msgstr "Minden ügyfél"
+
+#: hpbx/includes/hpbx.scripts.inc:106
+msgid "New Provision URL"
+msgstr "Új provisioning URL"
+
+#: hpbx/includes/hpbx.scripts.inc:107
+msgid "Provisioning URL"
+msgstr "Provisioning URL"
+
+#: hpbx/includes/hpbx.scripts.inc:113
+msgid "New Provision Server"
+msgstr "Új provisioning szerver"
+
+#: hpbx/includes/hpbx.scripts.inc:114
+msgid "Provisioning Server"
+msgstr "Provisioning szerver"
+
+#: hpbx/includes/hpbx.scripts.inc:135
+msgid "Run"
+msgstr "Futtatás"
+
+#: hpbx/includes/hpbx.scripts.inc:147
+msgid "Reseller field is required"
+msgstr "A viszonteladó mezo kötelezoen kitöltendo."
+
+#: hpbx/includes/hpbx.scripts.inc:152
+msgid "New Provisiong URL field is required"
+msgstr "Az új provisioning URL mezo kötelezoen kitöltendo."
+
+#: hpbx/includes/hpbx.scripts.inc:155
+msgid "Select Panasonic RDS"
+msgstr "Válassza ki a Panasonic RDS-t"
+
+#: hpbx/includes/hpbx.scripts.inc:160
+msgid "New Provisiong Server field is required"
+msgstr "Az új provisioning szerver mezo kötelezoen kitöltendo."
+
+#: hpbx/includes/hpbx.scripts.inc:211
+msgid "Webpassword has been successfully updated"
+msgstr "A webes jelszó sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:215
+msgid "Softphone auto provision option has been successfully updated"
+msgstr "Az automatikus Softphone provisioning opció sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:219
+msgid "Display name has been successfully updated"
+msgstr "A kijelzonév sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:223
+msgid "Reseller settings fields successfully updated"
+msgstr "A viszonteladó beállítási mezok sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:227
+msgid "Customer Settings fields successfully updated"
+msgstr "Az ügyfél beállítási mezok sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:231
+msgid "Provisioning URL for Panasonic successfully updated"
+msgstr "A Panasonic provisioning URL sikeresen frissítve."
+
+#: hpbx/includes/hpbx.scripts.inc:235
+msgid "Provisioning URL for Yealink successfully updated"
+msgstr "A Yealink provisioning URL sikeresen frissítve."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:12
+msgid "Valid?"
+msgstr "Érvényes?"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:13 hpbx/includes/hpbx.subscriber.inc:207;218 hpbx/includes/hpbx.wizard.inc:293
+msgid "Disable self care rights"
+msgstr "Önkiszolgálási jogok letiltása"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:18 hpbx/includes/hpbx.subscriber.inc:436 hpbx/includes/hpbx.wizard.inc:41;478
+msgid "Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:19 hpbx/includes/hpbx.subscriber.inc:354;366
+msgid "Administrative"
+msgstr "Adminisztratív"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:22
+msgid "Caller line identification"
+msgstr "Hívó vonal azonosítás"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:23;263 hpbx/includes/hpbx.subscriber.inc:190;507;2138 hpbx/includes/hpbx.wizard.inc:48;113;543
+msgid "Subscriber profile"
+msgstr "Elofizeto profil"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:24 hpbx/includes/hpbx.subscriber.inc:525;532 hpbx/includes/hpbx.wizard.inc:579
+msgid "Block anonymous inbound calls"
+msgstr "A névtelen bejövo hívások blokkolása"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:25 hpbx/includes/hpbx.subscriber.inc:555;568 hpbx/includes/hpbx.wizard.inc:568
+msgid "Call barrings"
+msgstr "Hívás letiltások"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:26
+msgid "PIN for overriding call barrings"
+msgstr "PIN a hívástiltás hatálytalanításához"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:96;857 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Restricted"
+msgstr "Korlátozva"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:117;138;857
+msgid "Own"
+msgstr "Saját"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:247
+msgid "Device key can't be determined. "
+msgstr "A készülékkulcs nem határozható meg."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:255;263;271 hpbx/includes/hpbx.subscriber.inc:1072;1082;1092;1119 hpbx/includes/hpbx.wizard.inc:37;41;45;48;51;107;110;113;116
+msgid "!name field is required."
+msgstr "A !name mezo kötelezoen kitöltendo."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:271 hpbx/includes/hpbx.wizard.inc:116;872;876
+msgid "MAC Address"
+msgstr "MAC cím"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:321
+msgid "Device not created"
+msgstr "A készülék nincs létrehozva"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:402
+msgid "Subscriber not created"
+msgstr "Az elofizeto nincs létrehozva"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:422;630 hpbx/includes/js/hpbx-wizard.js:0
+msgid "Device"
+msgstr "Készülék"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:534
+msgid "Input error"
+msgstr "Bemeneti hiba"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:535
+msgid "Value is not in list"
+msgstr "Az érték nincs a listán"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:536
+msgid "Pick a value from the list"
+msgstr "Válasszon egy értéket a listáról."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:537
+msgid "Please pick a value from the drop-down list."
+msgstr "Válasszon egy értéket a legördülo listáról."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:657
+msgid "Failed to retrieve entries from Excel file"
+msgstr "A tételek betöltése az Excel fájlból nem sikerült."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:702;719;736
+msgid "This field is mandatory___The maximum length of this field is 255"
+msgstr "Ez a mezo kötelezoen kitöltendo___A mezo maximális hossza 255."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:753
+msgid "This field is mandatory___The given value must be of the email type___The maximum length of this field is 255"
+msgstr ""
+"Ez a mezo kötelezoen kitöltendo___A megadott értéknek e-mail "
+"típusúnak kell lennie___A mezo maximális hossza 255."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:754;814;1035
+msgid "One of the values is not unique"
+msgstr "Az értékek egyike nem egyedi."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:813
+msgid "The given value must be of the phone number type"
+msgstr "A megadott értéknek telefonszám típusúnak kell lennie."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:907
+msgid "The maximum length of this field is 4___The given value is not completely a digit string"
+msgstr ""
+"A mezo maximális hossza 4___A megadott érték nem teljesen "
+"számsorozat."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:957
+msgid "The maximum length of this field is 255"
+msgstr "A mezo maximális hossza 255."
+
+#: hpbx/includes/hpbx.subscriber.inc:41;2251
+msgid "Create subscriber"
+msgstr "Elofizeto létrehozása"
+
+#: hpbx/includes/hpbx.subscriber.inc:58
+msgid "Call forwards"
+msgstr "Hívástovábbítás"
+
+#: hpbx/includes/hpbx.subscriber.inc:60
+msgid "Speed dials"
+msgstr "Gyorstárcsázás"
+
+#: hpbx/includes/hpbx.subscriber.inc:111
+msgid "Subscriber settings"
+msgstr "Elofizeto beállítások"
+
+#: hpbx/includes/hpbx.subscriber.inc:151
+msgid "When"
+msgstr "Mikor"
+
+#: hpbx/includes/hpbx.subscriber.inc:152;906
+msgid "Destination type"
+msgstr "Rendeltetési hely típus"
+
+#: hpbx/includes/hpbx.subscriber.inc:153
+msgid "During"
+msgstr "Mialatt"
+
+#: hpbx/includes/hpbx.subscriber.inc:155
+msgid "Disconnect after"
+msgstr "Megszakítás utána"
+
+#: hpbx/includes/hpbx.subscriber.inc:251 hpbx/includes/hpbx.wizard.inc:370
+msgid "Assign to current user"
+msgstr "Aktuális felhasználóhoz való hozzárendelés"
+
+#: hpbx/includes/hpbx.subscriber.inc:258
+msgid "When you as an administrator would like to have a phone number created for this account, please check this box"
+msgstr ""
+"Ha adminisztrátorként létre kíván hozni egy telefonszámot ehhez "
+"a fiókhoz, jelölje be ezt a négyzetet."
+
+#: hpbx/includes/hpbx.subscriber.inc:290
+msgid "First name*"
+msgstr "Keresztnév*"
+
+#: hpbx/includes/hpbx.subscriber.inc:312
+msgid "Last name*"
+msgstr "Vezetéknév*"
+
+#: hpbx/includes/hpbx.subscriber.inc:331
+msgid "Email*"
+msgstr "E-mail*"
+
+#: hpbx/includes/hpbx.subscriber.inc:497 hpbx/includes/hpbx.wizard.inc:45;59;520
+msgid "Caller Line Identification"
+msgstr "Hívó vonal azonosítás"
+
+#: hpbx/includes/hpbx.subscriber.inc:578 hpbx/includes/hpbx.wizard.inc:587;593
+msgid "PIN for overriding (temporary) call barrings"
+msgstr "PIN a hívás letiltás (átmeneti) hatálytalanításához"
+
+#: hpbx/includes/hpbx.subscriber.inc:838
+msgid "Unconditional"
+msgstr "Feltétel nélküli"
+
+#: hpbx/includes/hpbx.subscriber.inc:839
+msgid "Busy"
+msgstr "Foglalt"
+
+#: hpbx/includes/hpbx.subscriber.inc:840
+msgid "Unavailable"
+msgstr "Nem érheto el"
+
+#: hpbx/includes/hpbx.subscriber.inc:841
+msgid "Timeout"
+msgstr "Idotúllépés"
+
+#: hpbx/includes/hpbx.subscriber.inc:875
+msgid "voicemail"
+msgstr "Hangposta"
+
+#: hpbx/includes/hpbx.subscriber.inc:886
+msgid "Not active"
+msgstr "Nem aktív"
+
+#: hpbx/includes/hpbx.subscriber.inc:891
+msgid "@cf_title"
+msgstr "@cf_title"
+
+#: hpbx/includes/hpbx.subscriber.inc:947
+msgid "After (sec)"
+msgstr "Után (s)"
+
+#: hpbx/includes/hpbx.subscriber.inc:956
+msgid "Call forward active during"
+msgstr "Hívásátirányítás aktív alatta"
+
+#: hpbx/includes/hpbx.subscriber.inc:1043;1052
+msgid "You have used up all your available @profile_name subscribers"
+msgstr ""
+"Az összes rendelkezésre álló @profile_name elofizetojét "
+"felhasználta"
+
+#: hpbx/includes/hpbx.subscriber.inc:1079;1089;1130
+msgid "Only UTF-8 characters are allowed"
+msgstr "Csk az UTF-8 karakterek engedélyezettek"
+
+#: hpbx/includes/hpbx.subscriber.inc:1095
+msgid "The email address you specified is not valid."
+msgstr "A megadott e-mail cím nem érvényes."
+
+#: hpbx/includes/hpbx.subscriber.inc:1099
+msgid "The amount of characters entered for the First name and Last name exceeds the limit."
+msgstr ""
+"A vezeték- és keresztnévnél megadott karakterszám túllépte a "
+"határértéket."
+
+#: hpbx/includes/hpbx.subscriber.inc:1126
+msgid "The entered Name may not exceed 125 characters."
+msgstr "A megadott név nem lehet 125 karakternél hosszabb."
+
+#: hpbx/includes/hpbx.subscriber.inc:1151
+msgid "Invalid number"
+msgstr "Érvénytelen szám"
+
+#: hpbx/includes/hpbx.subscriber.inc:1159
+msgid "Invalid area code"
+msgstr "Érvénytelen körzetszám"
+
+#: hpbx/includes/hpbx.subscriber.inc:1171
+msgid "Destination number is required"
+msgstr "Rendeltetési számot kötelezo megadni."
+
+#: hpbx/includes/hpbx.subscriber.inc:1189
+msgid "Please enter a valid ring time out"
+msgstr "Kérjük, adjon meg egy érvényes idotúllépést a csengetéshez."
+
+#: hpbx/includes/hpbx.subscriber.inc:1215
+msgid "Please choose a slot for the speed dial destination."
+msgstr "Kérjük, válasszon ki egy gyorstárcsázási idoablakot."
+
+#: hpbx/includes/hpbx.subscriber.inc:1227
+msgid "Only numeric characters are allowed as destination number."
+msgstr ""
+"Rendeltetési számként csak numerikus karakterek használata "
+"megengedett."
+
+#: hpbx/includes/hpbx.subscriber.inc:1237
+msgid "Options need to be unique"
+msgstr "Az opcióknak egyedinek kell lenniük."
+
+#: hpbx/includes/hpbx.subscriber.inc:1243
+msgid "The voicemail PIN should consist of exactly 4 numbers"
+msgstr "A hangposta PIN-nek pontosan 4 számjegybol kell állnia."
+
+#: hpbx/includes/hpbx.subscriber.inc:1250
+msgid "Please provide a valid email address"
+msgstr "Kérjük, adjon meg egy érvényes e-mail címet."
+
+#: hpbx/includes/hpbx.subscriber.inc:1269
+msgid "An internal error occurred"
+msgstr "Belso hiba lépett fel."
+
+#: hpbx/includes/hpbx.subscriber.inc:1270
+msgid "Could not find location id for passed polish emergency routing arguments"
+msgstr ""
+"A korábbi lengyel vészhelyzeti irányítási argumentumok "
+"helyazonosítója nem található."
+
+#: hpbx/includes/hpbx.subscriber.inc:1757
+msgid "Failed to create user"
+msgstr "A felhasználó létrehozása nem sikerült"
+
+#: hpbx/includes/hpbx.subscriber.inc:1776
+msgid "Failed to update user"
+msgstr "A felhasználó frissítése nem sikerült"
+
+#: hpbx/includes/hpbx.subscriber.inc:1918
+msgid "Failed to restore the alias_number on the PilotSubscriber. Exception: @e"
+msgstr ""
+"A PilotSubscriber alias_number helyreállítása nem sikerült. "
+"Kivétel: @e."
+
+#: hpbx/includes/hpbx.subscriber.inc:1919
+msgid "Failed to restore the number"
+msgstr "A szám helyreállítása nem sikerült."
+
+#: hpbx/includes/hpbx.subscriber.inc:1938
+msgid "User successfully saved"
+msgstr "A felhasználó sikeresen lementve."
+
+#: hpbx/includes/hpbx.subscriber.inc:2030
+msgid "Failed to remove the subscriber"
+msgstr "A résztvevo eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.subscriber.inc:2132
+msgid "Admin"
+msgstr "Admin"
+
+#: hpbx/includes/hpbx.subscriber.inc:2143
+msgid "Delete fax number"
+msgstr "Fax szám törlése"
+
+#: hpbx/includes/hpbx.subscriber.inc:2143
+msgid "Delete subscriber"
+msgstr "Elofizeto törlése"
+
+#: hpbx/includes/hpbx.subscriber.inc:2279;2284 hpbx/includes/hpbx.voicemail.inc:120
+msgid "Create an administrative subscriber first"
+msgstr "Eloször egy adminisztratív elofizeto létrehozása"
+
+#: hpbx/includes/hpbx.subscriber.inc:2007;2015
+msgid "hpbx_subscriber_delete"
+msgstr "hpbx_subscriber_delete"
+
+#: hpbx/includes/hpbx.subscriber.inc:2007
+msgid "Failed to remove soundset"
+msgstr "A hangkészlet eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.subscriber.inc:2015
+msgid "Will not remove pilotsubscriber soundset"
+msgstr "Az ellenorzo elofizeto hangkészlet nem kerül eltávolításra."
+
+#: hpbx/includes/hpbx.user.inc:108
+msgid "Your password must contain at least one uppercase letter."
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:112
+msgid "Your password must contain at least one lowercase letter."
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:116
+msgid "Your password must contain at least one number."
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:120
+msgid "Your password must contain at least one special character."
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:124
+msgid "Your password must be at least 8 characters in length total."
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:134
+msgid "The passwords do not match"
+msgstr "A jelszavak nem egyeznek."
+
+#: hpbx/includes/hpbx.user.inc:140;162
+msgid "Your current password is missing or incorrect"
+msgstr "Az Ön aktuális jelszava hiányzik vagy hibás."
+
+#: hpbx/includes/hpbx.user.inc:185
+msgid "Password successfully changed"
+msgstr "A jelszó sikeresen módosítva"
+
+#: hpbx/includes/hpbx.user.inc:259
+msgid "Failed to remove group assignment."
+msgstr "A csoport hozzárendelés eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:275;323
+msgid "Failed to modify user @username"
+msgstr "A(z) @username módosításe nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:284
+msgid "Failed to rename user @username"
+msgstr "A(z) @username átnevezése nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:300;666;822
+msgid "Failed to add role."
+msgstr "A szerep hozzáadása nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:407
+msgid "No Reseller name set, so can't create OU"
+msgstr ""
+"Viszonteladó név nem került beállításra, ezért nem hozható "
+"létre OU."
+
+#: hpbx/includes/hpbx.user.inc:510
+msgid "No company name set, so can't create OU"
+msgstr "Cégnév nem került beállításra, ezért nem hozható létre OU."
+
+#: hpbx/includes/hpbx.user.inc:647;803
+msgid "Failed to add a user account for @firstname @lastname"
+msgstr ""
+"A @firstname @lastname névhez történo felhasználói fiók "
+"hozzáadás nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:1048
+msgid "Affiliate users"
+msgstr "Partner felhasználók"
+
+#: hpbx/includes/hpbx.user.inc:1437
+msgid "Failed to create reseller administrator account"
+msgstr "A viszonteladó adminisztrátor fiók létrehozása nem sikerült"
+
+#: hpbx/includes/hpbx.user.inc:1443;1462
+msgid "Failed to update reseller administrator account"
+msgstr "A viszonteladó adminisztrátor fiók frissítése nem sikerült"
+
+#: hpbx/includes/hpbx.user.inc:1465
+msgid "User succesfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:1479;1508
+msgid "A user with the provided first name and last name is already present."
+msgstr ""
+"A megadott vezeték- és keresztnévvel rendelkezo felhasználó már "
+"létezik."
+
+#: hpbx/includes/hpbx.user.inc:51
+msgid "Failed to remove user with username from drupal: @username @exception_msg"
+msgstr ""
+"A drupal: @username @exception_msg felhasználónévvel rendelkezo "
+"felhasználó eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:60
+msgid "Failed to remove user with username: @username (not found in AD)"
+msgstr ""
+"A(z) @username felhasználónévvel rendelkezo felhasználó "
+"eltávolítása nem sikerült (nem található az AD-ban)."
+
+#: hpbx/includes/hpbx.user.inc:64
+msgid "Failed to remove user with empty web username"
+msgstr ""
+"Az üres webes felhasználónévvel rendelkezo felhasználó "
+"eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.user.inc:208;214
+msgid "Failed to remove organisation unit: @company"
+msgstr "A(z) @company szervezeti egység eltávolítása nem sikerült."
+
+#: hpbx/includes/hpbx.voicemail.inc:41
+msgid "Voicemail successfully deleted"
+msgstr "Hangposta sikeresen törölve"
+
+#: hpbx/includes/hpbx.voicemail.inc:191
+msgid "Voicemail group"
+msgstr "Hangposta csoport"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Unheard"
+msgstr "Nincs meghallgatva"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Heard"
+msgstr "Meghallgatva"
+
+#: hpbx/includes/hpbx.voicemail.inc:204
+msgid "All messages"
+msgstr "Minden üzenet"
+
+#: hpbx/includes/hpbx.voicemail.inc:244
+msgid "Personal"
+msgstr "Személyes"
+
+#: hpbx/includes/hpbx.voicemail.inc:256
+msgid "Huntgroup"
+msgstr "Vonalcsoport"
+
+#: hpbx/includes/hpbx.voicemail.inc:268
+msgid "Time"
+msgstr "Ido"
+
+#: hpbx/includes/hpbx.voicemail.inc:375
+msgid "Delete voicemail"
+msgstr "Hangposta törlése"
+
+#: hpbx/includes/hpbx.voicemail.inc:388;523
+msgid "Mark selected as heard"
+msgstr "A kiválasztottak megjelölése meghallgatottként"
+
+#: hpbx/includes/hpbx.voicemail.inc:396;542
+msgid "Mark selected as unheard"
+msgstr "A kiválasztottak megjelölése nem meghallgatottként"
+
+#: hpbx/includes/hpbx.voicemail.inc:405;559
+msgid "Delete selected"
+msgstr "A kiválasztottak törlése"
+
+#: hpbx/includes/hpbx.wizard.inc:59
+msgid "!name not allowed value."
+msgstr "A !name nem megengedett érték."
+
+#: hpbx/includes/hpbx.wizard.inc:121;175;224
+msgid "Unknown error occurred. Please try again."
+msgstr "Ismeretlen hiba lépett fel. Kérjük, próbálja meg újból."
+
+#: hpbx/includes/hpbx.wizard.inc:253
+msgid "Provisioning can take up to 5 minutes."
+msgstr "A provisioning akár 5 percig tarthat."
+
+#: hpbx/includes/hpbx.wizard.inc:256
+msgid "Failed to associate device"
+msgstr "A készüléket nem sikerült hozzárendelni."
+
+#: hpbx/includes/hpbx.wizard.inc:260;960;1122;1215
+msgid "Device successfully created"
+msgstr "A készülék sikeresen hozzárendelve"
+
+#: hpbx/includes/hpbx.wizard.inc:282;438
+msgid "Create a subscriber"
+msgstr "Elofizeto létrehozása"
+
+#: hpbx/includes/hpbx.wizard.inc:285
+msgid "Subscriber details"
+msgstr "Elofizeto adatok"
+
+#: hpbx/includes/hpbx.wizard.inc:385
+msgid "Administrative account"
+msgstr "Adminisztratív fiók"
+
+#: hpbx/includes/hpbx.wizard.inc:411;666
+msgid "Next Step"
+msgstr "Következo lépés"
+
+#: hpbx/includes/hpbx.wizard.inc:441
+msgid "Specifications"
+msgstr "Specifikációk"
+
+#: hpbx/includes/hpbx.wizard.inc:456
+msgid "Choose number"
+msgstr "Szám kiválasztása"
+
+#: hpbx/includes/hpbx.wizard.inc:464
+msgid "Fill in Extension"
+msgstr "Mellék kitöltése"
+
+#: hpbx/includes/hpbx.wizard.inc:485
+msgid "Choose Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:526
+msgid "Choose Caller Line Identification"
+msgstr "Hívó vonal azonosítás kiválasztás"
+
+#: hpbx/includes/hpbx.wizard.inc:549
+msgid "Choose Subscriber Profile"
+msgstr "Elofizeto profil kiválasztás"
+
+#: hpbx/includes/hpbx.wizard.inc:574
+msgid "Choose Call Barring"
+msgstr "Hívás letiltás kiválasztás"
+
+#: hpbx/includes/hpbx.wizard.inc:603
+msgid "Choose language of Voicemail announcements"
+msgstr "A hangposta üzenetek nyelvének kiválasztása"
+
+#: hpbx/includes/hpbx.wizard.inc:634
+msgid "Previous"
+msgstr "Vissza"
+
+#: hpbx/includes/hpbx.wizard.inc:643
+msgid "Previous Step"
+msgstr "Elozo lépés"
+
+#: hpbx/includes/hpbx.wizard.inc:724
+msgid "Subscriber successfully created"
+msgstr "Elofizeto sikeresen létrehozva"
+
+#: hpbx/includes/hpbx.wizard.inc:727
+msgid "Would you like to add a device to this subscriber?"
+msgstr "Akar ehhez az elofizetohöz készüléket hozzáadni?"
+
+#: hpbx/includes/hpbx.wizard.inc:748
+msgid "No, I'm done!"
+msgstr "Nem, készen vagyok!"
+
+#: hpbx/includes/hpbx.wizard.inc:780
+msgid "Create a device"
+msgstr "Készülék létrehozása"
+
+#: hpbx/includes/hpbx.wizard.inc:783
+msgid "Setup new device"
+msgstr "Új készülék beállítása"
+
+#: hpbx/includes/hpbx.wizard.inc:891;998;1078;1161;1252
+msgid "Done!"
+msgstr "Kész!"
+
+#: hpbx/includes/hpbx.wizard.inc:899;1006;1086;1169;1260
+msgid "OK, I'm done!"
+msgstr "OK, készen vagyok!"
+
+#: hpbx/includes/hpbx.wizard.inc:930
+msgid "Finish"
+msgstr "Befejezés"
+
+#: hpbx/includes/hpbx.wizard.inc:968
+msgid "Press the Setup button."
+msgstr "Nyomja meg a Beállítás gombot."
+
+#: hpbx/includes/hpbx.wizard.inc:969
+msgid "Scroll to Network and press select."
+msgstr "Görgessen a Hálózathoz, és nyomja meg a kiválasztást."
+
+#: hpbx/includes/hpbx.wizard.inc:970
+msgid "Scroll to view Current IP. This is the IP address of your device."
+msgstr ""
+"Görgessen az aktuális IP cím megtekintéséhez. Ez az Ön "
+"készülékének az IP címe."
+
+#: hpbx/includes/hpbx.wizard.inc:981;985;1144;1148;1235;1239
+msgid "IP address"
+msgstr "IP cím"
+
+#: hpbx/includes/hpbx.wizard.inc:1100
+msgid "Add another"
+msgstr "Másik hozzárendelése"
+
+#: hpbx/includes/hpbx.wizard.inc:1130
+msgid "Enter the phone menu."
+msgstr "Lépjen be a telefon menübe."
+
+#: hpbx/includes/hpbx.wizard.inc:1131
+msgid "Scroll to settings and press select."
+msgstr "Görgessen a beállításokhoz, és nyomja meg a kiválasztást."
+
+#: hpbx/includes/hpbx.wizard.inc:1132
+msgid "Scroll to phone info and press select."
+msgstr ""
+"Görgessen a telefon információkhoz, és nyomja meg a "
+"kiválasztást."
+
+#: hpbx/includes/hpbx.wizard.inc:1133
+msgid "Scroll to view IP Address. This is the IP address of your device."
+msgstr ""
+"Görgessen az IP cím megtekintéshez. Ez az Ön készülékének az "
+"IP címe."
+
+#: hpbx/includes/hpbx.wizard.inc:1223
+msgid " Pick up the phone connected to the ATA and call * * * *"
+msgstr "Vegye fel az ATA-hoz csatlakozó telefont, és hívja fel: * * * *."
+
+#: hpbx/includes/hpbx.wizard.inc:1224
+msgid "Enter 1 1 0 #"
+msgstr "Adja meg, hogy 1 1 0 #."
+
+#: hpbx/includes/hpbx.wizard.inc:1225
+msgid "You will now hear a message giving you the IP address."
+msgstr "Ekkor egy üzenet lesz hallható, amely megadja az IP címet."
+
+#: hpbx/includes/hpbx.wizard.inc:120;174
+msgid "hpbx_wizard"
+msgstr "hpbx_wizard"
+
+#: hpbx/includes/hpbx.wizard.inc:120
+msgid "Subscriber ID not found, so can't assign to device"
+msgstr ""
+"Az elofizeto azonosító nem található; ezért a készülékhez nem "
+"lehet rendelni."
+
+#: hpbx/includes/hpbx.wizard.inc:174
+msgid "Device ID not found, so can't sync device"
+msgstr ""
+"A készülék azonosító nem található; ezért a készülék nem "
+"szinkronizálható."
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Subscriber"
+msgstr "Elofizeto"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Please wait"
+msgstr "Kérjük, várjon"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "The @type is currently being created."
+msgstr "A(z) @type éppen létrehozás alatt."
+
+#: hpbx/includes/js/hpbx.js:0
+msgid "Are you sure you want to remove this item? This action cannot be undone."
+msgstr ""
+"Biztos benne, hogy ezt a tételt el kívánja távolítani? Ez a "
+"muvelet nem vonható vissza."
+
+#: hpbx/includes/js/hpbx.stats.js:0
+msgid "Failed to retrieve stats"
+msgstr "A statisztikai adatokat nem sikerült betölteni."
+
+#: hpbx/includes/js/hpbx_devices.js:0;0
+msgid "Unassigned"
+msgstr "Nincs hozzárendelve"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device !station_name"
+msgstr "Készülék !station_name"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Line selection button !button"
+msgstr "!button vonalválasztó gomb"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Private"
+msgstr "Privát"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Shared"
+msgstr "Megosztott"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "BLF"
+msgstr "BLF"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device profile"
+msgstr "Készülék profil"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Processing"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "This can take a while."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device successfully saved"
+msgstr "A készülék sikeresen lementve"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Exit"
+msgstr "Kilépés"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Reboot your phone to provision the device"
+msgstr ""
+"A telefon rendelkezésre bocsátásához indítsa újra a "
+"készülékét"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Please fill in the IP address of your phone in order to provision it"
+msgstr ""
+"Kérjük, a rendelkezésre bocsátáshoz adja meg a telefonja IP "
+"címét."
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "In case the device is already synced, reboot<br/>your phone to provision the device."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Otherwise, please fill in the IP address of your phone in order to provision it"
+msgstr ""
+"Ellenkezo esetben adja meg a telefonja IP címét a rendelkezésre "
+"bocsátásához."
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "IP-Address"
+msgstr "IP cím"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Got it!"
+msgstr "Minden értheto!"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "There should be at least one line provisioned on the device. Please adjust and save the configuration."
+msgstr ""
+"Legalább egy vonalat rendelkezésre kell bocsátani a "
+"készüléknél. Kérjük, állítsa be és mentse le a "
+"konfigurációt."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Replicate"
+msgstr "Replikálás"
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Enter the URL of your video here..."
+msgstr "Adja meg itt a videója URL-jét..."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Type your text here..."
+msgstr "Írja be itt a szövegét..."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add files"
+msgstr "Fájlok hozzáadása."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add next step"
+msgstr "A következo lépés hozzáadása."
+
+#: hpbx/includes/js/hpbx_subscriber_bulk.js:0
+msgid "Uploading data failed for an unknown reason. Please try again."
+msgstr ""
+"Az adatok feltöltése ismeretlen ok miatt nem sikerült. Kérjük, "
+"próbálja meg újból."
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:144
+msgid "HPBX MoH audio category"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:145 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:726
+msgid "View counter"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.info:0
+msgid "Drop 5"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:720
+msgid "File"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:721
+msgid "Instruction + Photo"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:722
+msgid "Photo"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:725
+msgid "Video"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:727
+msgid "hpbx block"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:20 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:20
+msgid "HPBX Help article"
+msgstr "HPBX súgó címszó"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:24
+msgid "Titel"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:178 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:144
+msgid "Master"
+msgstr "Master"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:180 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:146
+msgid "more"
+msgstr "tovább"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:181 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:147
+msgid "Apply"
+msgstr "Alkalmazás"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:182
+msgid "Opnieuw instellen"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:183 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:149
+msgid "Sort by"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:184 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:150
+msgid "Asc"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:185 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:151
+msgid "Desc"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:186
+msgid "Inhoud toevoegen"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:187
+msgid "<?php\r\nglobal $user;\r\n$account = $user;\r\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\r\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\r\n}\r\n\r\nif (user_access('edit any hpbx_help_article content', $account)) {\r\n\r\n  echo '<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n<div class=\"col-xs-5 col-xxs-12 col-sm-4 col-md-3\">' . l(t('Add help article'),'node/add/hpbx-help-article', array('attributes' => array('class' => array('sg-btn sg-btn-wizard')))) . '</div></br>\r\n<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n';\r\n\r\n}\r\n\r\n?>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:206 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:168
+msgid "term"
+msgstr "tartam"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:207
+msgid "<a class=\"hpbx-help-category-item\" href=\"[path]\">[title]</a>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:208 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:170
+msgid "HPBX Help frontpage"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0
+msgid "HPBX help 2.0"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:564
+msgid "Step"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:566
+msgid "step_image"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:28
+msgid "HPBX Help article steps"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:148
+msgid "Reset"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:152
+msgid "Add content"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:153
+msgid "<?php\nglobal $user;\n$account = $user;\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\n}\n\nif (user_access('edit any hpbx_help_article content', $account)) {\n  echo '<ul>';\n  echo '<li>'. l(t('Add help article'),'node/add/hpbx-help-article') . '</li>';\n  echo  '<li>'. l(t('Add help article (steps)'),'node/add/hpbx-help-article-steps'). '</li>';\n  echo  '</ul>';\n}\n\n?>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:169
+msgid "<a class=\"hpbx-help-category-item\" href=\"/node/[nid]\">[title]</a>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0
+msgid "HPBX Help content-types"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:31
+msgid "HostedPBX Management"
+msgstr "HostedPBX menedzsment"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:32
+msgid "Main menu Hosted PBX"
+msgstr "Hosted PBX fomenü"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:236
+msgid "Auto Attendants"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:237
+msgid "Call Records"
+msgstr "Hívásjegyzékek"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:238
+msgid "Conference Rooms"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:240
+msgid "Home"
+msgstr "Kezdolap"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:241
+msgid "Hunting Groups"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:242
+msgid "PBX Devices"
+msgstr "PBX készülékek"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:244
+msgid "Resellers"
+msgstr "Viszonteladók"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:248
+msgid "Voicemails"
+msgstr "Hangposták"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "hpbx_permissions"
+msgstr "hpbx_permissions"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "Hosted PBX Permissions"
+msgstr "Hosted PBX engedélyek"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "RPS provisioning"
+msgstr "RPS provisioning"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "Redirect and Provisioning Service Provisioning module"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:126
+msgid "Read @type list from cache (@cid). request=@request"
+msgstr "A(z) @type lista kiolvasása a cache-bol (@cid). Kérés=@request"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:136
+msgid "@type list NOT written to cache (@cid) as we received an error message @message"
+msgstr ""
+"A(z) @type lista NEM a cache-be lett beírva (@cid), mert @message "
+"hibaüzenet érkezett."
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:144
+msgid "Write @type list to cache (@cid). source=@source"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "could not find active reseller id"
+msgstr "Aktív viszonteladó azonosító nem volt található."
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise API"
+msgstr "Sipwise API"
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise NGCP HTTP API implementation"
+msgstr "Sipwise NGCP HTTP API implementáció"
+
+#: hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "cant find active reseller_id"
+msgstr "Az aktív reseller_id nem található."
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:251
+msgid "Read @type (@id) entity from cache (@cid). request=@request"
+msgstr ""
+"A(z) @type (@id) entitás kiolvasása a cache-bol (@cid). "
+"Kérés=@request"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:262
+msgid "@type (@id) entity NOT written to cache (@cid) as we received an error message @message"
+msgstr ""
+"A(z) @type (@id) entitás NEM a cache-be lett beírva (@cid), mert "
+"@message hibaüzenet érkezett."
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:266
+msgid "Write @type (@id) entity to cache (@cid). source=@source"
+msgstr ""
+"A(z) @type (@id) entitás NEM a cache-be lett beírva (@cid). "
+"Forrás=@source"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:468;478
+msgid "Cleared @table with @cid"
+msgstr "A(z) @cid azonosítójú @table törölve"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:485;571
+msgid "Cleared @table_list with @cid*"
+msgstr "A(z) @cid* azonosítójú @table_list törölve"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:508;534;558
+msgid "Failed to set gpp chunks"
+msgstr "A gpp sémák beállítása nem sikerült."
+

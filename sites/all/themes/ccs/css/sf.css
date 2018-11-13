@@ -1,0 +1,71 @@
+div#top-header-region .upc-top-menu {
+	position: relative;
+	margin-left: 271px;
+	width: 900px;
+}
+
+div#top-header-region .upc-top-menu.sf-navbar {
+  width: 100%;
+}
+div#top-header-region .upc-top-menu ul {
+   float: left;
+   height: 36px;
+   list-style: none outside none;
+   margin: 0;
+   padding: 0;
+}
+
+div#top-header-region .upc-top-menu ul li.home {
+	background: url('../images/ico_home_sprite.png') no-repeat left bottom;
+	width: 17px;
+	height: 15px;
+	margin-top: 13px;
+	margin-left: 28px;
+	cursor: pointer;
+	margin-right: 30px;
+}
+
+div#top-header-region .upc-top-menu ul li.home {
+  padding-bottom: 0;
+  border-bottom: 0px;
+}
+
+div#top-header-region .upc-top-menu ul li a:hover {
+  color: #0AD;
+}
+
+div#top-header-region .upc-top-menu ul li.home.active,
+div#top-header-region .upc-top-menu ul li.home:hover {
+  background-position:left top;
+}
+
+div#top-header-region .upc-top-menu ul li.home a {
+	font-size: 0px;
+}
+
+div#top-header-region .upc-top-menu a {
+   float: left;
+   font-size: 23px;
+   font-weight: normal;
+   margin: 8px 30px 0 0;
+   font-family: speak_bold, Helvetica, Arial, sans-serif;
+   color:#249;
+}
+
+
+div#top-header-region .upc-top-menu.sf-navbar a {
+  border: 0;
+}
+
+div#top-header-region .upc-top-menu li {
+    color: #DAEEF9;
+    float: left;
+    height: 34px;
+    margin: 2px 0 0;
+    padding: 0;
+}
+
+div#top-header-region .upc-top-menu li {
+	list-style-image: none;
+	list-style-type: none;
+}

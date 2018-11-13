@@ -1,0 +1,4532 @@
+# $Id$
+#
+# Romanian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ccs/ccs.module: n/a
+#  hpbx/includes/hpbx.user.inc: n/a
+#  ccs/ccs.info: n/a
+#  hpbx/hpbx.module: n/a
+#  hpbx/includes/hpbx.conference.inc: n/a
+#  hpbx/includes/hpbx.subscriber.inc: n/a
+#  hpbx/includes/hpbx.business_partner.inc: n/a
+#  hpbx/includes/hpbx.customer.inc: n/a
+#  hpbx/includes/hpbx.reseller.inc: n/a
+#  hpbx/includes/hpbx.subscriber.bulk.inc: n/a
+#  hpbx/includes/hpbx.wizard.inc: n/a
+#  hpbx/includes/hpbx.scripts.inc: n/a
+#  hpbx/includes/hpbx.download.inc: n/a
+#  hpbx/includes/hpbx.help.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc: n/a
+#  hpbx/includes/hpbx.callrecords.inc: n/a
+#  hpbx/includes/hpbx.defaultforward.inc: n/a
+#  hpbx/includes/hpbx.fax.inc: n/a
+#  hpbx/includes/hpbx.huntgroup.inc: n/a
+#  hpbx/includes/hpbx.masquerade.inc: n/a
+#  hpbx/includes/hpbx.pbxdevice.inc: n/a
+#  hpbx/includes/hpbx.voicemail.inc: n/a
+#  hpbx/includes/hpbx.autoattendant.inc: n/a
+#  hpbx/includes/hpbx.musiconhold.inc: n/a
+#  hpbx/modules/stretto_api/stretto_api.info: n/a
+#  hpbx/includes/hpbx.fax2email.inc: n/a
+#  hpbx/includes/js/hpbx.js: n/a
+#  hpbx/includes/hpbx.dashboard.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc: n/a
+#  hpbx/modules/hpbx_rps/hpbx_rps.info: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.info: n/a
+#  hpbx/includes/js/hpbx_help.js: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc: n/a
+#  hpbx/hpbx.info: n/a
+#  hpbx/modules/sipwise_api/includes/Sipwise.class.php: n/a
+#  hpbx/modules/drop_5/drop_5.info: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.info: n/a
+#  hpbx/includes/hpbx.audio.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc: n/a
+#  hpbx/includes/js/hpbx_devices.js: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.module: n/a
+#  hpbx/includes/js/hpbx-wizard.js: n/a
+#  hpbx/includes/js/hpbx.stats.js: n/a
+#  hpbx/includes/js/hpbx_subscriber_bulk.js: n/a
+#  hpbx/modules/drop_5/drop_5.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc: n/a
+#  hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-06-05 08:45+0200\n"
+"PO-Revision-Date: 2018-06-05 08:45+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Romanian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ccs/ccs.module:40
+msgid "Username"
+msgstr "Nume utilizator"
+
+#: ccs/ccs.module:44
+msgid "Please enter your username or e-mail address. A one-time login link</br>will be send to your e-mail address."
+msgstr ""
+
+#: ccs/ccs.module:78
+msgid "View webserver current hostname by triggering easter-egg."
+msgstr ""
+
+#: ccs/ccs.module:81
+msgid "ccs icm number overview"
+msgstr ""
+
+#: ccs/ccs.module:135;142
+msgid "Sorry, %name is not recognized as a user name."
+msgstr "Scuze, %name nu este recunoscut ca nume utilizator."
+
+#: ccs/ccs.module:147;269
+msgid "Sorry, we don't have a valid e-mail address attached to the user account. Please contact the support desk."
+msgstr ""
+
+#: ccs/ccs.module:193
+msgid "Invalid customer definition id."
+msgstr ""
+
+#: ccs/ccs.module:261
+msgid "Further instructions have been sent to your e-mail address."
+msgstr "Urmatoarele instructiuni au fost transmise la adresa dumneavoastra de e-mail."
+
+#: ccs/ccs.module:264;680
+msgid "Could not reset password"
+msgstr ""
+
+#: ccs/ccs.module:279
+msgid "Replacement login information for @name at www.ccswebtool.com"
+msgstr ""
+
+#: ccs/ccs.module:280
+msgid "@name,\n\n        A request to reset the password for your account has been made at www.ccswebtool.com.\n\n        Username: @name\n        Password: @password\n\n        --  www.ccswebtool.com team"
+msgstr ""
+
+#: ccs/ccs.module:327
+msgid "Tools"
+msgstr ""
+
+#: ccs/ccs.module:333
+msgid "Database"
+msgstr ""
+
+#: ccs/ccs.module:339
+msgid "Change Language"
+msgstr ""
+
+#: ccs/ccs.module:345
+msgid "Get current hostname"
+msgstr ""
+
+#: ccs/ccs.module:502
+msgid "Within the tools section, some essentials tools can be found to manupulate various settings involving your (service)numbers."
+msgstr ""
+
+#: ccs/ccs.module:514
+msgid "Currently, we don't have your e-mail\n        address. Please enter a valid e-mail address at the !link page."
+msgstr ""
+
+#: ccs/ccs.module:516
+msgid "account settings"
+msgstr ""
+
+#: ccs/ccs.module:555
+msgid "Request new password"
+msgstr "Solicitaţi o parolă nouă"
+
+#: ccs/ccs.module:675
+msgid "Your password has been reset by the system administrator. Please check your e-mail for details on how to reset your password. If further information is required, please contact your administrator."
+msgstr ""
+
+#: ccs/ccs.module:785
+msgid "Enter your current password to change the E-mail address or Password."
+msgstr ""
+
+#: ccs/ccs.module:839
+msgid "Your current password is missing or incorrect; it's required to change the %name."
+msgstr ""
+
+#: ccs/ccs.module:849
+msgid "The e-mail address @mail is not valid."
+msgstr ""
+
+#: ccs/ccs.module:859
+msgid "Problem while trying to update the e-mail address, please try again or contact the support desk."
+msgstr ""
+
+#: ccs/ccs.module:864 hpbx/includes/hpbx.user.inc:174
+msgid "Will enable user %user"
+msgstr "Activare user %user"
+
+#: ccs/ccs.module:869
+msgid "Problem while trying to change the password, please try again or contact the support desk."
+msgstr "Parola nu a fost modificata, va rig sa incercati din nou sau sa contactati Support Desk"
+
+#: ccs/ccs.module:877
+msgid "Will validate user %user"
+msgstr ""
+
+#: ccs/ccs.module:1054
+msgid "Changing status for @name to @uac was successfully"
+msgstr ""
+
+#: ccs/ccs.module:1065
+msgid "Change enabled/disabled status for @name failed"
+msgstr ""
+
+#: ccs/ccs.module:1107
+msgid "Unlock for @name was successfully"
+msgstr ""
+
+#: ccs/ccs.module:1113
+msgid "Unlock for @name failed"
+msgstr ""
+
+#: ccs/ccs.module:260
+msgid "user"
+msgstr "utilizator"
+
+#: ccs/ccs.module:260
+msgid "Password reset instructions mailed to %name at %email."
+msgstr "Instrucţiunile de schimbare a parolei au fost trimise spre %name la adresa %email."
+
+#: ccs/ccs.module:918
+msgid "ldap_authentication"
+msgstr ""
+
+#: ccs/ccs.module:918
+msgid "Failed to get valid ldap authentication configuration."
+msgstr ""
+
+#: ccs/ccs.info:0;0
+msgid "CCS"
+msgstr ""
+
+#: ccs/ccs.info:0
+msgid "General module"
+msgstr ""
+
+#: hpbx/hpbx.module:66
+msgid "The PIN used to enter the voicemail from external numbers."
+msgstr "Codul PIN utilizat pentru a accesa mesageria vocala de pe numere externe"
+
+#: hpbx/hpbx.module:67;69 hpbx/includes/hpbx.conference.inc:128;130 hpbx/includes/hpbx.subscriber.inc:600
+msgid "PIN"
+msgstr "PIN"
+
+#: hpbx/hpbx.module:74
+msgid "The email address to which notifications and the recordings (if attach is enabled) are sent."
+msgstr ""
+
+#: hpbx/hpbx.module:75;78 hpbx/includes/hpbx.business_partner.inc:97;101;623;624;950 hpbx/includes/hpbx.customer.inc:963;964 hpbx/includes/hpbx.reseller.inc:334 hpbx/includes/hpbx.subscriber.bulk.inc:17 hpbx/includes/hpbx.subscriber.inc:336;346;1113 hpbx/includes/hpbx.user.inc:1315;1316 hpbx/includes/hpbx.wizard.inc:324;329
+msgid "Email"
+msgstr "Email"
+
+#: hpbx/hpbx.module:88
+msgid "Attach recordings (wav file) to the notification emails."
+msgstr ""
+
+#: hpbx/hpbx.module:89
+msgid "Attach"
+msgstr "Atasament"
+
+#: hpbx/hpbx.module:100
+msgid "Delete voicemails from the voicemail box after sending the recording via email. Note that if delete is enabled and the mail cannot be delivered, the voicemail is lost."
+msgstr ""
+
+#: hpbx/hpbx.module:101;1243;4666;4759;6071;6426;6483;1578;1674;1683;1718;1750;1782;2184;2248;2256 hpbx/includes/hpbx.subscriber.bulk.inc:32
+msgid "Delete"
+msgstr "Sterge"
+
+#: hpbx/hpbx.module:131
+msgid "General settings"
+msgstr ""
+
+#: hpbx/hpbx.module:138
+msgid "Maintenance mode"
+msgstr "Mod mentenanță"
+
+#: hpbx/hpbx.module:139
+msgid "In case hpbx is in maintenance mode, only the LGI admin can login to deactivate this mode"
+msgstr ""
+
+#: hpbx/hpbx.module:146
+msgid "Show version number"
+msgstr ""
+
+#: hpbx/hpbx.module:147
+msgid "Show hpbx version number (top-left, dev only)"
+msgstr ""
+
+#: hpbx/hpbx.module:154
+msgid "Bypass cooldown period"
+msgstr ""
+
+#: hpbx/hpbx.module:155
+msgid "Allow deleting of customers before the cooldown periode has passed"
+msgstr ""
+
+#: hpbx/hpbx.module:161
+msgid "Verify masquerade login button"
+msgstr ""
+
+#: hpbx/hpbx.module:162
+msgid "Before displaying the login button on the customer overview page, check if it actually can be used"
+msgstr ""
+
+#: hpbx/hpbx.module:171;173 hpbx/includes/hpbx.scripts.inc:120;122
+msgid "Panasonic RDS"
+msgstr ""
+
+#: hpbx/hpbx.module:178
+msgid "Password Policy"
+msgstr ""
+
+#: hpbx/hpbx.module:179
+msgid "Enable more complex password requirements for users"
+msgstr ""
+
+#: hpbx/hpbx.module:186
+msgid "Password Reset while login"
+msgstr ""
+
+#: hpbx/hpbx.module:187
+msgid "Trigger the password reset mail while login"
+msgstr ""
+
+#: hpbx/hpbx.module:308
+msgid "Offline"
+msgstr ""
+
+#: hpbx/hpbx.module:310
+msgid "Due to planned work the portal is currently offline...."
+msgstr ""
+
+#: hpbx/hpbx.module:314 hpbx/includes/hpbx.download.inc:67
+msgid "Whoops"
+msgstr "Ups"
+
+#: hpbx/hpbx.module:316 hpbx/includes/hpbx.download.inc:69
+msgid "the page you're trying to reach doesn't exist..."
+msgstr "Pagina pe care incercati sa o accesati nu exista…"
+
+#: hpbx/hpbx.module:339
+msgid "HostedPBX logged-in user info."
+msgstr "HostedPBX conectat-informatii utilizator."
+
+#: hpbx/hpbx.module:344
+msgid "HostedPBX masquerade."
+msgstr "HostedPBX masca."
+
+#: hpbx/hpbx.module:349
+msgid "HostedPBX customer search."
+msgstr "HostedPBX cautare client."
+
+#: hpbx/hpbx.module:356
+msgid "HostedPBX subscribers"
+msgstr "HostedPBX abonati"
+
+#: hpbx/hpbx.module:484
+msgid "Logout"
+msgstr "Iesire"
+
+#: hpbx/hpbx.module:489 hpbx/includes/hpbx.customer.inc:2368 hpbx/includes/hpbx.help.inc:1031;1039
+msgid "Search"
+msgstr "Cauta"
+
+#: hpbx/hpbx.module:773
+msgid "Extension number may consist of digits only"
+msgstr ""
+
+#: hpbx/hpbx.module:780;787;795
+msgid "Extension cannot start with @na"
+msgstr "Extensia nu poate incepe cu @na"
+
+#: hpbx/hpbx.module:800 hpbx/includes/hpbx.subscriber.bulk.inc:833
+msgid "Extension requires length of @length digits"
+msgstr "Extensia necesita o lungime de @length digits"
+
+#: hpbx/hpbx.module:977 hpbx/includes/hpbx.scripts.inc:76 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:723 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:563
+msgid "Reseller"
+msgstr "Distribuitor"
+
+#: hpbx/hpbx.module:982
+msgid "Subscriber ID"
+msgstr "ID Abonat"
+
+#: hpbx/hpbx.module:987;1026 hpbx/includes/hpbx.customer.inc:858
+msgid "Input"
+msgstr "Introdu"
+
+#: hpbx/hpbx.module:994
+msgid "Apply rewrite rules"
+msgstr "Aplica regulile de rescriere"
+
+#: hpbx/hpbx.module:1061
+msgid "Queue"
+msgstr "Coada"
+
+#: hpbx/hpbx.module:1076;1086;1206;6380;6390;6400;6410 hpbx/includes/hpbx.callrecords.inc:47 hpbx/includes/hpbx.customer.inc:546;557;718;732;745;757 hpbx/includes/hpbx.defaultforward.inc:75;77 hpbx/includes/hpbx.fax.inc:289 hpbx/includes/hpbx.huntgroup.inc:225;234 hpbx/includes/hpbx.masquerade.inc:182 hpbx/includes/hpbx.pbxdevice.inc:837;855 hpbx/includes/hpbx.scripts.inc:34;79;82;121 hpbx/includes/hpbx.subscriber.inc:920 hpbx/includes/hpbx.voicemail.inc:187;189;205
+msgid "Choose an option"
+msgstr "Alege o optiune"
+
+#: hpbx/hpbx.module:1078
+msgid "Wrap up time (sec)*"
+msgstr ""
+
+#: hpbx/hpbx.module:1079
+msgid "Wrap up time (sec)"
+msgstr "Completeaza timpul (sec)"
+
+#: hpbx/hpbx.module:1088
+msgid "Max. number of calls in queue"
+msgstr "Numar maxim de apeluri in coada de asteptare"
+
+#: hpbx/hpbx.module:1112 hpbx/includes/hpbx.autoattendant.inc:236 hpbx/includes/hpbx.huntgroup.inc:411 hpbx/includes/hpbx.musiconhold.inc:79
+msgid "Delete upload"
+msgstr "Stergere incarcare"
+
+#: hpbx/hpbx.module:1129 hpbx/includes/hpbx.huntgroup.inc:426
+msgid "Upload !title audio"
+msgstr ""
+
+#: hpbx/hpbx.module:1144 hpbx/includes/hpbx.autoattendant.inc:270 hpbx/includes/hpbx.huntgroup.inc:441 hpbx/includes/hpbx.musiconhold.inc:114
+msgid "File requirements"
+msgstr "Cerinte fisier"
+
+#: hpbx/hpbx.module:1145 hpbx/includes/hpbx.autoattendant.inc:271 hpbx/includes/hpbx.huntgroup.inc:442
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr ""
+
+#: hpbx/hpbx.module:1146 hpbx/includes/hpbx.autoattendant.inc:272 hpbx/includes/hpbx.customer.inc:970 hpbx/includes/hpbx.fax.inc:175 hpbx/includes/hpbx.huntgroup.inc:443 hpbx/includes/hpbx.musiconhold.inc:116
+msgid "OK"
+msgstr "Da"
+
+#: hpbx/hpbx.module:1200 hpbx/includes/hpbx.customer.inc:652;659;857 hpbx/includes/hpbx.reseller.inc:1082;1092;1102;1112
+msgid "None"
+msgstr "Nimic"
+
+#: hpbx/hpbx.module:1203 hpbx/includes/hpbx.autoattendant.inc:36 hpbx/includes/hpbx.conference.inc:210 hpbx/includes/hpbx.huntgroup.inc:28 hpbx/includes/hpbx.subscriber.bulk.inc:20 hpbx/includes/hpbx.subscriber.inc:402;418;877;2187 hpbx/includes/hpbx.voicemail.inc:267 hpbx/includes/hpbx.wizard.inc:37;449
+msgid "Number"
+msgstr "Numar"
+
+#: hpbx/hpbx.module:1212 hpbx/includes/hpbx.autoattendant.inc:42 hpbx/includes/hpbx.conference.inc:216 hpbx/includes/hpbx.huntgroup.inc:34 hpbx/includes/hpbx.subscriber.bulk.inc:21 hpbx/includes/hpbx.subscriber.inc:407;2191
+msgid "Extension"
+msgstr "Extensie"
+
+#: hpbx/hpbx.module:1243;4041;4746;4847;6474;6553;1758;1790;2288 hpbx/includes/hpbx.autoattendant.inc:423 hpbx/includes/hpbx.subscriber.inc:771
+msgid "Add"
+msgstr "Adauga"
+
+#: hpbx/hpbx.module:1314
+msgid "hpbx basic"
+msgstr "hpbx nivel de baza"
+
+#: hpbx/hpbx.module:1315
+msgid "hpbx import help"
+msgstr ""
+
+#: hpbx/hpbx.module:1316
+msgid "hpbx view reseller"
+msgstr "hpbx vizualizare distribuitor"
+
+#: hpbx/hpbx.module:1317
+msgid "hpbx edit reseller"
+msgstr "hpbx editare distribuitor"
+
+#: hpbx/hpbx.module:1318
+msgid "hpbx edit own reseller"
+msgstr ""
+
+#: hpbx/hpbx.module:1320
+msgid "hpbx edit own reseller users"
+msgstr ""
+
+#: hpbx/hpbx.module:1321
+msgid "hpbx edit general reseller settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1322
+msgid "hpbx edit dashboard reseller settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1323
+msgid "hpbx edit mail reseller settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1324
+msgid "hpbx edit terms reseller settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1325
+msgid "hpbx edit emergency reseller settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1327
+msgid "hpbx add reseller"
+msgstr "hpbx adaugare distribuitor"
+
+#: hpbx/hpbx.module:1328
+msgid "hpbx delete reseller"
+msgstr "hpbx stergere distribuitor"
+
+#: hpbx/hpbx.module:1330
+msgid "hpbx view customer"
+msgstr "hpbx vizualizare client"
+
+#: hpbx/hpbx.module:1331
+msgid "hpbx add customer"
+msgstr "hpbx adaugare client"
+
+#: hpbx/hpbx.module:1332
+msgid "hpbx edit customer"
+msgstr "hpbx editare client"
+
+#: hpbx/hpbx.module:1333
+msgid "hpbx delete customer"
+msgstr "hpbx stergere client"
+
+#: hpbx/hpbx.module:1335
+msgid "hpbx view business partners"
+msgstr "hpbx vizualizare parteneri business suport"
+
+#: hpbx/hpbx.module:1336
+msgid "hpbx view business partner customer"
+msgstr "hpbx vizualizare client partener business"
+
+#: hpbx/hpbx.module:1337
+msgid "hpbx add business partner customer"
+msgstr "hpbx adaugare client partener business"
+
+#: hpbx/hpbx.module:1338
+msgid "hpbx edit business partner customer"
+msgstr "hpbx editare client partener business"
+
+#: hpbx/hpbx.module:1339
+msgid "hpbx delete business partner customer"
+msgstr "hpbx stergere client partener business"
+
+#: hpbx/hpbx.module:1340
+msgid "hpbx edit business partner users"
+msgstr "hpbx editare utilizatori clienti partener business"
+
+#: hpbx/hpbx.module:1341
+msgid "hpbx edit business partner settings"
+msgstr "hpbx editare setari partener business"
+
+#: hpbx/hpbx.module:1342
+msgid "hpbx delete business partner"
+msgstr "hpbx stergere partener business"
+
+#: hpbx/hpbx.module:1344
+msgid "hpbx edit own business partner users"
+msgstr "hpbx editare apartenenta utilizator partener business"
+
+#: hpbx/hpbx.module:1345
+msgid "hpbx edit own business partner settings"
+msgstr "hpbx editare setari partener business propriu"
+
+#: hpbx/hpbx.module:1347
+msgid "hpbx edit general business partner settings"
+msgstr "hpbx editare setari partener business"
+
+#: hpbx/hpbx.module:1348
+msgid "hpbx edit dashboard business partner settings"
+msgstr "hpbx editare machete setari partener business"
+
+#: hpbx/hpbx.module:1349
+msgid "hpbx edit mail business partner settings"
+msgstr "hpbx editare mail setari partener business"
+
+#: hpbx/hpbx.module:1351
+msgid "hpbx delete customer override"
+msgstr "hpbx sterge client suprascris"
+
+#: hpbx/hpbx.module:1353
+msgid "hpbx masquerade customer"
+msgstr "hpbx masca client"
+
+#: hpbx/hpbx.module:1355
+msgid "hpbx view reseller customer"
+msgstr "hpbx vizualizare client al distribuitorului"
+
+#: hpbx/hpbx.module:1356
+msgid "hpbx add reseller customer"
+msgstr "hpbx adaugare client al distribuitorului"
+
+#: hpbx/hpbx.module:1357
+msgid "hpbx edit reseller customer"
+msgstr "hpbx editare client al distribuitorului"
+
+#: hpbx/hpbx.module:1358
+msgid "hpbx delete reseller customer"
+msgstr "hpbx stergere client al distribuitorului"
+
+#: hpbx/hpbx.module:1361
+msgid "hpbx view subscriber"
+msgstr "hpbx vizualizare abonat"
+
+#: hpbx/hpbx.module:1362
+msgid "hpbx edit own subscriber settings"
+msgstr "hpbx editeaza setarile abonatului propriu"
+
+#: hpbx/hpbx.module:1363
+msgid "hpbx edit own customer settings"
+msgstr "hpbx editeaza setarile clientului propriu"
+
+#: hpbx/hpbx.module:1365
+msgid "hpbx edit subscriber"
+msgstr "hpbx editare abonat"
+
+#: hpbx/hpbx.module:1366
+msgid "hpbx delete subscriber"
+msgstr "hpbx stergere abonat"
+
+#: hpbx/hpbx.module:1367
+msgid "hpbx view pbxdevice"
+msgstr "hpbx vizualizare echipament pbx"
+
+#: hpbx/hpbx.module:1368
+msgid "hpbx edit pbxdevice"
+msgstr "hpbx editare echipament pbx"
+
+#: hpbx/hpbx.module:1369
+msgid "hpbx delete pbxdevice"
+msgstr "hpbx stergere echipament pbx"
+
+#: hpbx/hpbx.module:1370
+msgid "hpbx sync pbxdevice"
+msgstr "hpbx sincronizare echipament pbx"
+
+#: hpbx/hpbx.module:1371
+msgid "hpbx view call records"
+msgstr "hpbx vizualizare istoric apeluri"
+
+#: hpbx/hpbx.module:1373
+msgid "hpbx view huntgroup"
+msgstr "hpbx vizualizare grup de hunting "
+
+#: hpbx/hpbx.module:1374
+msgid "hpbx edit huntgroup"
+msgstr "hpbx editare grup de hunting "
+
+#: hpbx/hpbx.module:1375
+msgid "hpbx delete huntgroup"
+msgstr "hpbx stergere grup de hunting "
+
+#: hpbx/hpbx.module:1377
+msgid "hpbx view auto attendant"
+msgstr "hpbx vizualizare auto asistent"
+
+#: hpbx/hpbx.module:1378
+msgid "hpbx edit auto attendant"
+msgstr "hpbx editare auto asistent"
+
+#: hpbx/hpbx.module:1379
+msgid "hpbx delete auto attendant"
+msgstr "hpbx stergere auto asistent"
+
+#: hpbx/hpbx.module:1381
+msgid "hpbx view conference"
+msgstr "hpbx vizualizare audio conferinta"
+
+#: hpbx/hpbx.module:1382
+msgid "hpbx edit conference"
+msgstr "hpbx editare audio conferinta"
+
+#: hpbx/hpbx.module:1383
+msgid "hpbx delete conference"
+msgstr "hpbx stergere audio conferinta"
+
+#: hpbx/hpbx.module:1385
+msgid "hpbx view numbers"
+msgstr "hpbx vizualizare numere"
+
+#: hpbx/hpbx.module:1386
+msgid "hpbx edit audio"
+msgstr "hpbx editare audio"
+
+#: hpbx/hpbx.module:1388
+msgid "hpbx view administrator user"
+msgstr "hpbx vizualizare user administrator"
+
+#: hpbx/hpbx.module:1389
+msgid "hpbx edit administrator user"
+msgstr "hpbx editare user administrator"
+
+#: hpbx/hpbx.module:1391
+msgid "hpbx administer reseller"
+msgstr "hpbx editare client distribuitor"
+
+#: hpbx/hpbx.module:1393
+msgid "hpbx change password (as non subscriber)"
+msgstr "hpbx schimbare parola (nu ca abonanat)"
+
+#: hpbx/hpbx.module:1395
+msgid "hpbx view dashboard"
+msgstr "hbpx vizualizare Tablou de bord"
+
+#: hpbx/hpbx.module:1397
+msgid "hpbx send fax"
+msgstr ""
+
+#: hpbx/hpbx.module:1398
+msgid "hpbx view fax log"
+msgstr ""
+
+#: hpbx/hpbx.module:1399
+msgid "hpbx view fax2email"
+msgstr ""
+
+#: hpbx/hpbx.module:1400
+msgid "hpbx edit fax2email"
+msgstr ""
+
+#: hpbx/hpbx.module:1401
+msgid "hpbx delete fax2email"
+msgstr ""
+
+#: hpbx/hpbx.module:1437
+msgid "Terms not found"
+msgstr "Sintaxa necunoscuta"
+
+#: hpbx/hpbx.module:1461
+msgid "I agree"
+msgstr "Sunt de acord"
+
+#: hpbx/hpbx.module:1494
+msgid "HPBX general settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1502;1510;1518
+msgid "Report"
+msgstr "Raport"
+
+#: hpbx/hpbx.module:2422 hpbx/includes/hpbx.scripts.inc:23
+msgid "Sipwise Scripts"
+msgstr ""
+
+#: hpbx/hpbx.module:2430 hpbx/modules/stretto_api/stretto_api.info:0;0
+msgid "Stretto"
+msgstr ""
+
+#: hpbx/hpbx.module:2644
+msgid "Welcome"
+msgstr "Bine ati venit"
+
+#: (duplicate) hpbx/hpbx.module:2841;5485 ;5560  hpbx/includes/hpbx.autoattendant.inc:454;877 hpbx/includes/hpbx.business_partner.inc:129;657;924 hpbx/includes/hpbx.conference.inc:169 hpbx/includes/hpbx.customer.inc:1022 hpbx/includes/hpbx.defaultforward.inc:89 hpbx/includes/hpbx.fax2email.inc:229 hpbx/includes/hpbx.help.inc:801 hpbx/includes/hpbx.huntgroup.inc:626 hpbx/includes/hpbx.musiconhold.inc:174 hpbx/includes/hpbx.pbxdevice.inc:916 hpbx/includes/hpbx.reseller.inc:314 hpbx/includes/hpbx.subscriber.inc:800 hpbx/includes/hpbx.user.inc:93;1344
+msgid "Save"
+msgstr "Salveaza"
+
+#: hpbx/hpbx.module:2868 hpbx/includes/hpbx.customer.inc:544;603 hpbx/includes/hpbx.reseller.inc:700;791;837;845;860;1039;1048;1057 hpbx/includes/hpbx.subscriber.bulk.inc:99;114;119;129;141;694;798;884 hpbx/includes/hpbx.subscriber.inc:364;371;530;549 hpbx/includes/js/hpbx.js:0
+msgid "Yes"
+msgstr "Da"
+
+#: hpbx/hpbx.module:2868 hpbx/includes/hpbx.customer.inc:543;602 hpbx/includes/hpbx.reseller.inc:700;791;837;845;860;1039;1048;1057 hpbx/includes/hpbx.subscriber.bulk.inc:87;93;98;108;120;140;693;797;883 hpbx/includes/hpbx.subscriber.inc:219;364;530;549 hpbx/includes/hpbx.wizard.inc:740 hpbx/includes/js/hpbx.js:0
+msgid "No"
+msgstr "Nu"
+
+#: hpbx/hpbx.module:3810
+msgid "<strong>@name</strong>&nbsp;<i>@role</i>"
+msgstr "<strong>@name</strong>&nbsp;<i>@role</i>"
+
+#: hpbx/hpbx.module:3918
+msgid "Werkdagen > Werktijden"
+msgstr "Zile lucratoare>Program de lucru"
+
+#: hpbx/hpbx.module:3919
+msgid "Werkdagen > Lunchtijd"
+msgstr "Zile lucratoare>Pauza de masa"
+
+#: hpbx/hpbx.module:3920
+msgid "Werkdagen > Koffiepauzes"
+msgstr "Zile lucratoare>Pauza de cafea"
+
+#: hpbx/hpbx.module:3921
+msgid "Werkdagen > Buiten werktijd"
+msgstr "Zile lucratoare>In afara orelor de program"
+
+#: hpbx/hpbx.module:3922
+msgid "Weekend"
+msgstr "Sfarsit de saptamana"
+
+#: hpbx/hpbx.module:3994
+msgid "Office hours (during)"
+msgstr "Program de lucru (In timpul)"
+
+#: hpbx/hpbx.module:4040
+msgid "Add timeslot(s)"
+msgstr "Adauga interval de timp"
+
+#: hpbx/hpbx.module:4203;4229;4231 hpbx/includes/hpbx.voicemail.inc:174;175;459
+msgid "Groups"
+msgstr "Grupuri"
+
+#: hpbx/hpbx.module:4211;4218;4224;4226;2264 hpbx/includes/hpbx.dashboard.inc:18;64 hpbx/includes/hpbx.subscriber.inc:2324 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:246
+msgid "Subscribers"
+msgstr "Abonati"
+
+#: hpbx/hpbx.module:4435;4619 hpbx/includes/hpbx.autoattendant.inc:326 hpbx/includes/hpbx.subscriber.inc:669
+msgid "Option"
+msgstr "Optiuni"
+
+#: hpbx/hpbx.module:4438;4622 hpbx/includes/hpbx.autoattendant.inc:330 hpbx/includes/hpbx.subscriber.inc:154;673;952
+msgid "Destination"
+msgstr "Destinatie"
+
+#: hpbx/hpbx.module:4482
+msgid "Ported / </br>New number"
+msgstr "Portare  / </br>Numar nou"
+
+#: hpbx/hpbx.module:4485
+msgid "Area code"
+msgstr "Cod zona"
+
+#: hpbx/hpbx.module:4488;5942;6016 hpbx/includes/hpbx.callrecords.inc:57 hpbx/includes/hpbx.fax.inc:304
+msgid "Start"
+msgstr "Start"
+
+#: hpbx/hpbx.module:4491
+msgid "Length"
+msgstr "Lungime"
+
+#: hpbx/hpbx.module:4494
+msgid "Prefix"
+msgstr "Prefix"
+
+#: hpbx/hpbx.module:4544
+msgid "Weekday"
+msgstr "Ziua saptamanii"
+
+#: hpbx/hpbx.module:4548
+msgid "Hour"
+msgstr "Ora"
+
+#: hpbx/hpbx.module:4552
+msgid "Minute"
+msgstr "Minut"
+
+#: hpbx/hpbx.module:4559
+msgid "Sun"
+msgstr "Duminica"
+
+#: hpbx/hpbx.module:4560
+msgid "Mon"
+msgstr "Luni"
+
+#: hpbx/hpbx.module:4561
+msgid "Tue"
+msgstr "Marti"
+
+#: hpbx/hpbx.module:4562
+msgid "Wed"
+msgstr "Miercuri"
+
+#: hpbx/hpbx.module:4563
+msgid "Thu"
+msgstr "Joi"
+
+#: hpbx/hpbx.module:4564
+msgid "Fri"
+msgstr "Vineri"
+
+#: hpbx/hpbx.module:4565
+msgid "Sat"
+msgstr "Sambata"
+
+#: hpbx/hpbx.module:4836;5546 hpbx/includes/hpbx.musiconhold.inc:286
+msgid "Select"
+msgstr "Selecteaza"
+
+#: hpbx/hpbx.module:5202
+msgid "Type URL"
+msgstr "Tasteaza URL"
+
+#: hpbx/hpbx.module:5584
+msgid "total"
+msgstr "total"
+
+#: hpbx/hpbx.module:5626;1655;1665 hpbx/includes/hpbx.callrecords.inc:504 hpbx/includes/hpbx.huntgroup.inc:508 hpbx/includes/hpbx.subscriber.inc:59;876 hpbx/includes/hpbx.voicemail.inc:125
+msgid "Voicemail"
+msgstr "Mesagerie vocala"
+
+#: hpbx/hpbx.module:5756
+msgid "search"
+msgstr "cauta"
+
+#: hpbx/hpbx.module:5765
+msgid "Select all"
+msgstr ""
+
+#: hpbx/hpbx.module:5813 hpbx/includes/hpbx.voicemail.inc:207
+msgid "Show"
+msgstr "Arata"
+
+#: hpbx/hpbx.module:5813;5813
+msgid "Hide"
+msgstr "Ascunde"
+
+#: hpbx/hpbx.module:5864;5900
+msgid "Pick a file"
+msgstr "Alege un fișier"
+
+#: hpbx/hpbx.module:5898
+msgid "File upload"
+msgstr ""
+
+#: hpbx/hpbx.module:5938
+msgid "Add a time slot"
+msgstr "Adaugare interval orar"
+
+#: hpbx/hpbx.module:5948;6022 hpbx/includes/hpbx.callrecords.inc:67 hpbx/includes/hpbx.fax.inc:314
+msgid "End"
+msgstr "Final"
+
+#: hpbx/hpbx.module:5955
+msgid "Use on"
+msgstr "Foloseste pe"
+
+#: hpbx/hpbx.module:5959
+msgid "Monday"
+msgstr "Luni"
+
+#: hpbx/hpbx.module:5963
+msgid "Tuesday"
+msgstr "Marti"
+
+#: hpbx/hpbx.module:5967
+msgid "Wednesday"
+msgstr "Miercuri"
+
+#: hpbx/hpbx.module:5971
+msgid "Thursday"
+msgstr "Joi"
+
+#: hpbx/hpbx.module:5975
+msgid "Friday"
+msgstr "Vineri"
+
+#: hpbx/hpbx.module:5979
+msgid "Saturday"
+msgstr "Sambata"
+
+#: hpbx/hpbx.module:5983
+msgid "Sunday"
+msgstr "Duminica"
+
+#: hpbx/hpbx.module:5992
+msgid "Add another rule"
+msgstr "Adauga regula noua"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Select at least one day for time slot"
+msgstr "Selectati cel putin o zi pentru interval"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Invalid Start time format"
+msgstr ""
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Invalid End time format"
+msgstr ""
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Start time cannot be empty"
+msgstr ""
+
+#: hpbx/hpbx.module:6002;6030
+msgid "End time cannot be empty"
+msgstr ""
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Timeslot overlaps not possible"
+msgstr "Nu sunt permise suprapuneri de intervale timp"
+
+#: hpbx/hpbx.module:6003;6032
+msgid "Set"
+msgstr "Configureaza"
+
+#: hpbx/hpbx.module:6012
+msgid "Edit a time slot"
+msgstr "Editare interval orar"
+
+#: hpbx/hpbx.module:6031 hpbx/includes/hpbx.customer.inc:193;196;202;205
+msgid "Remove"
+msgstr "Elimina"
+
+#: hpbx/hpbx.module:6108;6205 hpbx/includes/hpbx.subscriber.inc:2178
+msgid "No entries found"
+msgstr "Nu s-au gasit intrari"
+
+#: hpbx/hpbx.module:6288
+msgid "<p>This is a one-time login for %user_name and will expire after 24 hours.</p><p>Click on this button to log in to the site and change your password.</p>"
+msgstr ""
+"<p>Aceste date de conectare vor fi utilizate pentru o singura "
+"conectare %user_name si vor expira dupa 24 ore.</p><p>Apasati pe acest "
+"buton pentru conectare la site si schimbati parola.</p>"
+
+#: hpbx/hpbx.module:6357
+msgid "Site Name"
+msgstr ""
+
+#: hpbx/hpbx.module:6368 hpbx/includes/hpbx.customer.inc:592
+msgid "Allowed IPs"
+msgstr ""
+
+#: hpbx/hpbx.module:6379 hpbx/includes/hpbx.customer.inc:715
+msgid "Region"
+msgstr "Regiune"
+
+#: hpbx/hpbx.module:6389 hpbx/includes/hpbx.customer.inc:729
+msgid "Township"
+msgstr ""
+
+#: hpbx/hpbx.module:6399 hpbx/includes/hpbx.customer.inc:742
+msgid "City"
+msgstr ""
+
+#: hpbx/hpbx.module:6409 hpbx/includes/hpbx.customer.inc:754
+msgid "Z gm."
+msgstr ""
+
+#: hpbx/hpbx.module:6584
+msgid "You have exceeded the maximum number of sites "
+msgstr ""
+
+#: (duplicate) hpbx/hpbx.module:5209 
+msgid "Add photo's from the media library"
+msgstr "Adauga fotografii din libraria media"
+
+#: (duplicate) hpbx/hpbx.module:5213 
+msgid "Type filter"
+msgstr "Scrie filtrul"
+
+#: (duplicate) hpbx/hpbx.module:5488 
+msgid "Cance"
+msgstr "Cance"
+
+#: (duplicate) hpbx/hpbx.module:5497 
+msgid "Select URL of Help page"
+msgstr "Selecteaza URL-ul paginii Asistenta"
+
+#: (duplicate) hpbx/hpbx.module:5500 
+msgid "URL"
+msgstr "URL"
+
+#: (duplicate) hpbx/hpbx.module:5563  hpbx/includes/hpbx.autoattendant.inc:446 hpbx/includes/hpbx.business_partner.inc:121;650;916 hpbx/includes/hpbx.conference.inc:162 hpbx/includes/hpbx.customer.inc:971;1014 hpbx/includes/hpbx.fax2email.inc:222 hpbx/includes/hpbx.huntgroup.inc:619 hpbx/includes/hpbx.masquerade.inc:201 hpbx/includes/hpbx.musiconhold.inc:287 hpbx/includes/hpbx.subscriber.inc:793 hpbx/includes/hpbx.user.inc:1337
+msgid "Cancel"
+msgstr "Renunta"
+
+#: hpbx/hpbx.module:689;693
+msgid "hpbx_goto_alter"
+msgstr "hpbx_goto_alter"
+
+#: hpbx/hpbx.module:689
+msgid "rewritten to hpbx/password (non subscribers)"
+msgstr "Rescrie in hpbx/parola (nu pentru clienti)"
+
+#: hpbx/hpbx.module:693
+msgid "rewritten to hpbx/settings"
+msgstr "Rescrie in hpbx/setari"
+
+#: hpbx/hpbx.module:3072
+msgid "sipwise"
+msgstr "sipwise"
+
+#: hpbx/hpbx.module:3072
+msgid "Could not get active customer"
+msgstr "Nu a fost gasit un client activ"
+
+#: hpbx/hpbx.module:6302
+msgid "hpbx_cron"
+msgstr ""
+
+#: hpbx/hpbx.module:6302
+msgid "reseller clear cache cron ran"
+msgstr ""
+
+#: hpbx/hpbx.module:1495
+msgid "Set affiliate independent settings"
+msgstr ""
+
+#: hpbx/hpbx.module:1526
+msgid "Log out"
+msgstr "Deconectare"
+
+#: hpbx/hpbx.module:1532
+msgid "Change password"
+msgstr "Schimba parola"
+
+#: hpbx/hpbx.module:1540 hpbx/includes/hpbx.business_partner.inc:949 hpbx/includes/hpbx.reseller.inc:333
+msgid "Dashboard"
+msgstr "Tablou de bord"
+
+#: hpbx/hpbx.module:1547
+msgid "Download Soft Client"
+msgstr ""
+
+#: hpbx/hpbx.module:1554
+msgid "Download"
+msgstr "Descarcă"
+
+#: hpbx/hpbx.module:1562
+msgid "Edit fax number"
+msgstr ""
+
+#: hpbx/hpbx.module:1570 hpbx/includes/hpbx.dashboard.inc:194 hpbx/includes/hpbx.fax2email.inc:46
+msgid "Create fax number"
+msgstr ""
+
+#: hpbx/hpbx.module:1586 hpbx/includes/hpbx.fax.inc:361
+msgid "Fax"
+msgstr ""
+
+#: hpbx/hpbx.module:1593 hpbx/includes/hpbx.reseller.inc:335
+msgid "Terms and Conditions"
+msgstr "Termeni si Conditii"
+
+#: hpbx/hpbx.module:1600
+msgid "Rewrite rules"
+msgstr "Rescrie regulile"
+
+#: hpbx/hpbx.module:1607;1622;1630;1638;1646
+msgid "Masquerade"
+msgstr "Masca"
+
+#: hpbx/hpbx.module:1615 hpbx/modules/hpbx_rps/hpbx_rps.info:0 hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise"
+msgstr "Sipwise"
+
+#: hpbx/hpbx.module:1693 hpbx/includes/hpbx.callrecords.inc:215
+msgid "Call records"
+msgstr "Istoric apeluri"
+
+#: (duplicate) hpbx/hpbx.module:1702;1710;1726 hpbx/includes/hpbx.dashboard.inc:16;297 ;310  hpbx/includes/hpbx.huntgroup.inc:11
+msgid "Hunt groups"
+msgstr "Grupuri de hunting"
+
+#: (duplicate) hpbx/hpbx.module:1734 hpbx/includes/hpbx.autoattendant.inc:17 hpbx/includes/hpbx.dashboard.inc:14;298 ;318 
+msgid "Auto attendants"
+msgstr "Auto asistent"
+
+#: hpbx/hpbx.module:1742 hpbx/includes/hpbx.callrecords.inc:501
+msgid "Auto attendant"
+msgstr "Asistent automat"
+
+#: (duplicate) hpbx/hpbx.module:1766 hpbx/includes/hpbx.conference.inc:191 hpbx/includes/hpbx.dashboard.inc:15;296 ;302 
+msgid "Conference rooms"
+msgstr "Audio conferinta"
+
+#: hpbx/hpbx.module:1774
+msgid "Conference"
+msgstr "Conferinta"
+
+#: hpbx/hpbx.module:1800 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:235
+msgid "Affiliates"
+msgstr "Asociat"
+
+#: hpbx/hpbx.module:1808;2176;2230;2239;2280;2355;2363 hpbx/includes/hpbx.reseller.inc:643 hpbx/includes/js/hpbx_help.js:0
+msgid "Edit"
+msgstr "Editeaza"
+
+#: hpbx/hpbx.module:1816;2273 hpbx/includes/hpbx.autoattendant.inc:142 hpbx/includes/hpbx.business_partner.inc:375 hpbx/includes/hpbx.conference.inc:75 hpbx/includes/hpbx.defaultforward.inc:31 hpbx/includes/hpbx.fax2email.inc:66 hpbx/includes/hpbx.huntgroup.inc:174 hpbx/includes/hpbx.masquerade.inc:163 hpbx/includes/hpbx.musiconhold.inc:31 hpbx/includes/hpbx.reseller.inc:169 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:245
+msgid "Settings"
+msgstr "Setari"
+
+#: hpbx/hpbx.module:1824;1858 hpbx/includes/hpbx.business_partner.inc:376 hpbx/includes/hpbx.reseller.inc:170 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:247
+msgid "Users"
+msgstr "Utilizatori"
+
+#: hpbx/hpbx.module:1832;1875
+msgid "Create affiliate user "
+msgstr "Creare utilizatori afiliati"
+
+#: hpbx/hpbx.module:1840;1849;1883;1891;1953;1961;1969
+msgid "Edit affiliate user"
+msgstr "Editare utilizator afiliat"
+
+#: hpbx/hpbx.module:1866 hpbx/includes/hpbx.reseller.inc:178
+msgid "Clear cache"
+msgstr "Resetare cache"
+
+#: hpbx/hpbx.module:1899;1907 hpbx/includes/hpbx.reseller.inc:171 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:239
+msgid "Customers"
+msgstr "Clienti"
+
+#: hpbx/hpbx.module:1914;1929
+msgid "Create"
+msgstr "Adauga"
+
+#: hpbx/hpbx.module:1922;2081
+msgid "location"
+msgstr ""
+
+#: hpbx/hpbx.module:1937;1945 hpbx/includes/hpbx.business_partner.inc:19
+msgid "Create Business Partner"
+msgstr "Creare Partener Business"
+
+#: hpbx/hpbx.module:1977;1985 hpbx/includes/hpbx.business_partner.inc:340 hpbx/includes/hpbx.reseller.inc:173;175
+msgid "Business Partners"
+msgstr "Partener Business"
+
+#: hpbx/hpbx.module:1993;2001;2009
+msgid "Business Partner Users"
+msgstr "Utilizatori Partener Business"
+
+#: hpbx/hpbx.module:2016;2024;2032;2040;2048
+msgid "Create Business Partner user "
+msgstr "Creare Utilizatori Partener Business"
+
+#: hpbx/hpbx.module:2056;2064;2072
+msgid "Business Partner settings "
+msgstr "Setari Partener Business"
+
+#: hpbx/hpbx.module:2089;2097;2128;2135 hpbx/includes/hpbx.reseller.inc:643 hpbx/includes/js/hpbx_help.js:0
+msgid "View"
+msgstr "Vizualizeaza"
+
+#: hpbx/hpbx.module:2105 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:243
+msgid "PBX Settings"
+msgstr "Setari PBX"
+
+#: hpbx/hpbx.module:2112
+msgid "Music on Hold"
+msgstr "Muzica in asteptare"
+
+#: hpbx/hpbx.module:2120 hpbx/includes/hpbx.defaultforward.inc:20
+msgid "Default forward"
+msgstr "Redirectionare implicita"
+
+#: hpbx/hpbx.module:2142;2168 hpbx/includes/hpbx.dashboard.inc:98 hpbx/includes/hpbx.pbxdevice.inc:349 hpbx/includes/hpbx.reseller.inc:22
+msgid "Devices"
+msgstr "Echipamente"
+
+#: hpbx/hpbx.module:2151
+msgid "PBX Device Model JSON callback"
+msgstr "Echipament PBX Model JSON callback"
+
+#: hpbx/hpbx.module:2159
+msgid "PBX Device Model Image"
+msgstr "Imagine model echipament PBX"
+
+#: hpbx/hpbx.module:2198 hpbx/includes/hpbx.wizard.inc:963;1125;1218
+msgid "Associate device"
+msgstr "Echipament asociat"
+
+#: hpbx/hpbx.module:2206
+msgid "Device failed to be associated"
+msgstr "Asocierea echipamentului a esuat"
+
+#: hpbx/hpbx.module:2214 hpbx/includes/hpbx.wizard.inc:252
+msgid "Device successfully associated"
+msgstr "Asocierea echipamentului a fost realizata cu succes"
+
+#: hpbx/hpbx.module:2222
+msgid "Play"
+msgstr "Start"
+
+#: hpbx/hpbx.module:2296 hpbx/includes/hpbx.dashboard.inc:46
+msgid "Start wizard"
+msgstr "Porneste asistentul automat"
+
+#: hpbx/hpbx.module:2304;2311;2318;2326
+msgid "Wizard"
+msgstr "Asistent automat"
+
+#: hpbx/hpbx.module:2334 hpbx/includes/hpbx.dashboard.inc:47 hpbx/includes/hpbx.subscriber.bulk.inc:567;1084
+msgid "Bulk import"
+msgstr "Import bulk"
+
+#: hpbx/hpbx.module:2341;2348
+msgid "Bulk"
+msgstr "Bulk"
+
+#: hpbx/hpbx.module:2371;2378
+msgid "Save url"
+msgstr "Salveaza url"
+
+#: hpbx/hpbx.module:2385
+msgid "Help Loader"
+msgstr "Incarcare Asistenta"
+
+#: hpbx/hpbx.module:2392 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:179 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:145
+msgid "Help"
+msgstr "Asistenta"
+
+#: hpbx/hpbx.module:2399
+msgid "Help replicate"
+msgstr "Dubleaza asistenta"
+
+#: hpbx/hpbx.module:2407 hpbx/includes/hpbx.help.inc:929
+msgid "Sitemap"
+msgstr "Harta"
+
+#: hpbx/hpbx.module:2414
+msgid "Help node import"
+msgstr ""
+
+#: hpbx/hpbx.info:0 hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "hpbx"
+msgstr "hpbx"
+
+#: hpbx/hpbx.info:0
+msgid "Hosted PBX"
+msgstr "Hosted PBX"
+
+#: hpbx/hpbx.info:0 hpbx/modules/drop_5/drop_5.info:0 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0 hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "HostedPBX"
+msgstr "HostedPBX"
+
+#: hpbx/includes/hpbx.audio.inc:187
+msgid "The file extension @ext is not supported"
+msgstr "Extensia fisierului @ext nu este permisa"
+
+#: hpbx/includes/hpbx.audio.inc:223
+msgid "Failed to upload the audio file. Possibly this is a corrupt audio file or invalid extension in combination with used audio codec."
+msgstr "A esuat incarcarea fisierului audio. Fisierul poate fi corupt sau extensia este invalida in combinatie cu codecul audio folosit."
+
+#: hpbx/includes/hpbx.autoattendant.inc:25 hpbx/includes/hpbx.dashboard.inc:193
+msgid "Create auto attendant"
+msgstr "Creare auto asistent"
+
+#: hpbx/includes/hpbx.autoattendant.inc:35;165;166;502 hpbx/includes/hpbx.business_partner.inc:58;451 hpbx/includes/hpbx.conference.inc:97;98;209;291 hpbx/includes/hpbx.fax2email.inc:90;259 hpbx/includes/hpbx.huntgroup.inc:27;198;665 hpbx/includes/hpbx.pbxdevice.inc:788;789 hpbx/includes/hpbx.reseller.inc:158;683 hpbx/includes/hpbx.subscriber.bulk.inc:14 hpbx/includes/hpbx.subscriber.inc:271;280;1140;1143;2186 hpbx/includes/hpbx.user.inc:1064 hpbx/includes/hpbx.wizard.inc:107;334;339;789;793
+msgid "Name"
+msgstr "Nume"
+
+#: hpbx/includes/hpbx.autoattendant.inc:38
+msgid "Delete auto attendant"
+msgstr "Stergere auto asistent"
+
+#: hpbx/includes/hpbx.autoattendant.inc:107 hpbx/includes/hpbx.conference.inc:51
+msgid "!external_id"
+msgstr "!external_id"
+
+#: hpbx/includes/hpbx.autoattendant.inc:122
+msgid "Create Auto Attendant"
+msgstr "Creare auto asistent"
+
+#: hpbx/includes/hpbx.autoattendant.inc:182 hpbx/includes/hpbx.conference.inc:115 hpbx/includes/hpbx.fax2email.inc:107 hpbx/includes/hpbx.huntgroup.inc:308
+msgid "Site*"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:255
+msgid "Upload @title"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:303
+msgid "Menu options"
+msgstr "Optiuni meniu"
+
+#: hpbx/includes/hpbx.autoattendant.inc:396 hpbx/includes/hpbx.subscriber.inc:744
+msgid "Delete speed dial"
+msgstr "Sterge formare rapida"
+
+#: hpbx/includes/hpbx.autoattendant.inc:454;880 hpbx/includes/hpbx.wizard.inc:402;655;912
+msgid "Next"
+msgstr "Urmatorul"
+
+#: hpbx/includes/hpbx.autoattendant.inc:483;675 hpbx/includes/hpbx.conference.inc:285;354 hpbx/includes/hpbx.huntgroup.inc:670;804 hpbx/includes/hpbx.subscriber.inc:1038;1348
+msgid "Can't find customer"
+msgstr "Nu se poate gasi clientul"
+
+#: hpbx/includes/hpbx.autoattendant.inc:502 hpbx/includes/hpbx.conference.inc:291 hpbx/includes/hpbx.fax2email.inc:259 hpbx/includes/hpbx.huntgroup.inc:665 hpbx/includes/hpbx.subscriber.inc:1096;1106;1143
+msgid "Semicolon is not allowed in !name."
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:524
+msgid "Menu audio file is required"
+msgstr "Este necesar fisierul audio pentru meniu"
+
+#: hpbx/includes/hpbx.autoattendant.inc:532;670 hpbx/includes/hpbx.conference.inc:276;349 hpbx/includes/hpbx.huntgroup.inc:659;799 hpbx/includes/hpbx.subscriber.inc:1033;1342
+msgid "Can't find the customer ID"
+msgstr "Nu se poate identifica ID client"
+
+#: hpbx/includes/hpbx.autoattendant.inc:548 hpbx/includes/hpbx.conference.inc:317 hpbx/includes/hpbx.fax2email.inc:274 hpbx/includes/hpbx.huntgroup.inc:678
+msgid "You have used up all your available @profile_names"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:555 hpbx/includes/hpbx.conference.inc:324 hpbx/includes/hpbx.fax2email.inc:281 hpbx/includes/hpbx.huntgroup.inc:714 hpbx/includes/hpbx.subscriber.inc:1084
+msgid "Extension is already in use. Please select another extension."
+msgstr "Extensia este deja functionala. Va rog sa alegeti o alta extensie."
+
+#: hpbx/includes/hpbx.autoattendant.inc:569 hpbx/includes/hpbx.huntgroup.inc:738
+msgid "Upload failed"
+msgstr "Incarcare esuata"
+
+#: hpbx/includes/hpbx.autoattendant.inc:576 hpbx/includes/hpbx.customer.inc:1623 hpbx/includes/hpbx.huntgroup.inc:745
+msgid "The file format @ext is not supported"
+msgstr "Formatul fisierului @ext nu este compatibil"
+
+#: hpbx/includes/hpbx.autoattendant.inc:584 hpbx/includes/hpbx.conference.inc:303 hpbx/includes/hpbx.fax2email.inc:257 hpbx/includes/hpbx.huntgroup.inc:704
+msgid "Name must be unique"
+msgstr "Numele/Denumirea trebuie sa fie unic/unica"
+
+#: hpbx/includes/hpbx.autoattendant.inc:610
+msgid "The destination of menu option @slot cannot be assigned to this auto attendant."
+msgstr "Destinatia optiunii din meniu @slot nu poate fi asociata acestui auto asistent"
+
+#: hpbx/includes/hpbx.autoattendant.inc:614 hpbx/includes/hpbx.subscriber.inc:1195;1198;1252
+msgid "Not allowed to set this destination number"
+msgstr "Nu este permisa setarea acesui numar"
+
+#: hpbx/includes/hpbx.autoattendant.inc:623
+msgid "Please enter unique menu options"
+msgstr "Va rugam sa introduceti optiune unice de meniu"
+
+#: hpbx/includes/hpbx.autoattendant.inc:627
+msgid "The Auto attendant must have been provided with at least one menu option."
+msgstr "Auto asistentul trebuia sa fie furnizat cu cel putin o optiune din meniu"
+
+#: hpbx/includes/hpbx.autoattendant.inc:639;644 hpbx/includes/hpbx.huntgroup.inc:780;784
+msgid "Office hours audio file is required"
+msgstr "Este necesar fisierul pentru programul de lucru"
+
+#: hpbx/includes/hpbx.autoattendant.inc:680 hpbx/includes/hpbx.conference.inc:359 hpbx/includes/hpbx.fax2email.inc:299 hpbx/includes/hpbx.huntgroup.inc:809 hpbx/includes/hpbx.subscriber.inc:1353
+msgid "Can't find customer preferences"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:685 hpbx/includes/hpbx.conference.inc:364 hpbx/includes/hpbx.fax2email.inc:304 hpbx/includes/hpbx.huntgroup.inc:814 hpbx/includes/hpbx.subscriber.inc:1359
+msgid "Can't find the pilot subscriber"
+msgstr "Nu se poate identifica abonatul pilot"
+
+#: hpbx/includes/hpbx.autoattendant.inc:856 hpbx/includes/hpbx.conference.inc:530 hpbx/includes/hpbx.fax2email.inc:445 hpbx/includes/hpbx.huntgroup.inc:1146 hpbx/includes/hpbx.pbxdevice.inc:266 hpbx/includes/hpbx.subscriber.inc:1982
+msgid "Failed to update"
+msgstr "Eroare actualizare"
+
+#: hpbx/includes/hpbx.autoattendant.inc:868 hpbx/includes/hpbx.conference.inc:539 hpbx/includes/hpbx.fax2email.inc:454 hpbx/includes/hpbx.huntgroup.inc:1156 hpbx/includes/hpbx.pbxdevice.inc:470 hpbx/includes/hpbx.subscriber.inc:2006;2113;2130
+msgid "Cleared @type with @cid"
+msgstr "Eliminat @type cu @cid"
+
+#: hpbx/includes/hpbx.autoattendant.inc:872 hpbx/includes/hpbx.conference.inc:543 hpbx/includes/hpbx.fax2email.inc:458 hpbx/includes/hpbx.huntgroup.inc:1160 hpbx/includes/hpbx.subscriber.inc:2010;2117
+msgid "Cleared subscribers list with @cid*"
+msgstr "Eliminat lista abonati cu @cid*"
+
+#: hpbx/includes/hpbx.autoattendant.inc:878
+msgid "Auto attendant successfully saved"
+msgstr "Auto asistent salvat cu succes"
+
+#: hpbx/includes/hpbx.business_partner.inc:41
+msgid "Business Partner Settings"
+msgstr "Setari Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:59;356;992
+msgid "Business Partner Name"
+msgstr "Denumire Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:64
+msgid "Business Partner Administrator"
+msgstr "Administrator Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:74 hpbx/includes/hpbx.customer.inc:940
+msgid "Administrative user"
+msgstr "Utilizator administrativ"
+
+#: hpbx/includes/hpbx.business_partner.inc:82;83;601;603 hpbx/includes/hpbx.customer.inc:948;949 hpbx/includes/hpbx.subscriber.bulk.inc:15 hpbx/includes/hpbx.subscriber.inc:295;303;1093;1096 hpbx/includes/hpbx.user.inc:1293;1295 hpbx/includes/hpbx.wizard.inc:304;309
+msgid "First name"
+msgstr "Prenume"
+
+#: hpbx/includes/hpbx.business_partner.inc:90;91;610;612 hpbx/includes/hpbx.customer.inc:956;957 hpbx/includes/hpbx.subscriber.bulk.inc:16 hpbx/includes/hpbx.subscriber.inc:315;323;1103;1106 hpbx/includes/hpbx.user.inc:1302;1304 hpbx/includes/hpbx.wizard.inc:314;319
+msgid "Last name"
+msgstr "Nume"
+
+#: hpbx/includes/hpbx.business_partner.inc:143;676 hpbx/includes/hpbx.user.inc:1358
+msgid "Reseller not found"
+msgstr "Distribuitor neidentificat"
+
+#: hpbx/includes/hpbx.business_partner.inc:159;690 hpbx/includes/hpbx.user.inc:1374
+msgid "A user with the provided first name and last name is already present within the HPBX administrator group."
+msgstr "Un utilizator cu prenumele si numele introduse este deja prezent in grupul de administratori HPBX"
+
+#: hpbx/includes/hpbx.business_partner.inc:164
+msgid "Name is already assigned to Business Partner @bp"
+msgstr "Denumirea este deja alocata unui alt Partener Business @bp"
+
+#: hpbx/includes/hpbx.business_partner.inc:173;706 hpbx/includes/hpbx.user.inc:1385
+msgid "Unable to retrieve existing ldap user %name."
+msgstr "Nu este posibila recuperarea utilizatorului ldap %name"
+
+#: hpbx/includes/hpbx.business_partner.inc:178;712 hpbx/includes/hpbx.user.inc:1391
+msgid "A user - with one of the HPBX roles - with the provided email address is already present."
+msgstr "Un utilizator - cu unul dintre rolurile HPBX - cu adresa email introdusa este deja prezent."
+
+#: hpbx/includes/hpbx.business_partner.inc:185 hpbx/includes/hpbx.customer.inc:1609 hpbx/includes/hpbx.user.inc:1489;1518;1525
+msgid "A user with the provided email address is already present."
+msgstr "Exista deja un user cu adresa de email introdusa"
+
+#: hpbx/includes/hpbx.business_partner.inc:289;754 hpbx/includes/hpbx.user.inc:885;1427
+msgid "Further instructions have been sent to @mail"
+msgstr "Au fost trimise mai multe instructiuni pe @mail"
+
+#: hpbx/includes/hpbx.business_partner.inc:292;757 hpbx/includes/hpbx.user.inc:888;1430
+msgid "Could not sent e-mail with instructions."
+msgstr "Nu este posibila transmiterea email-ului cu instructiuni."
+
+#: hpbx/includes/hpbx.business_partner.inc:299;769
+msgid "Failed to create reseller business partner administrator account"
+msgstr "Crearea contului de administrator pentru partenerul business reseller a esuat"
+
+#: hpbx/includes/hpbx.business_partner.inc:344
+msgid "Create Business Partners"
+msgstr "Creare Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:359
+msgid "Delete Business Partner"
+msgstr "Stergere Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:428
+msgid "Business Partner users"
+msgstr "Utilizatori Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:432 hpbx/includes/hpbx.user.inc:1052
+msgid "Create user"
+msgstr "Creare user"
+
+#: hpbx/includes/hpbx.business_partner.inc:452 hpbx/includes/hpbx.subscriber.inc:2202 hpbx/includes/hpbx.user.inc:1065
+msgid "Login name"
+msgstr "Utilizator"
+
+#: hpbx/includes/hpbx.business_partner.inc:453;593 hpbx/includes/hpbx.user.inc:1066;1285
+msgid "Role"
+msgstr "Rol"
+
+#: hpbx/includes/hpbx.business_partner.inc:455 hpbx/includes/hpbx.user.inc:1068
+msgid "Delete user"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:545 hpbx/includes/hpbx.user.inc:1236
+msgid "User @cn"
+msgstr "Editare utilizator @cn"
+
+#: hpbx/includes/hpbx.business_partner.inc:697
+msgid "A user with the provided email address is already present within the HPBX administrator group."
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:773;792
+msgid "Failed to update Business Partner administrator account"
+msgstr "Actualizarea contului de administrator al Partenerului Business a esuat"
+
+#: hpbx/includes/hpbx.business_partner.inc:795
+msgid "User successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:830;835;845;858;1359;1377;1383 hpbx/includes/hpbx.user.inc:1172;1190;1196
+msgid "Failed to remove the user account"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:948 hpbx/includes/hpbx.reseller.inc:332 hpbx/includes/hpbx.subscriber.inc:57
+msgid "General"
+msgstr "General"
+
+#: hpbx/includes/hpbx.business_partner.inc:1009 hpbx/includes/hpbx.reseller.inc:381
+msgid "Logo & Footer"
+msgstr "Logo & Footer"
+
+#: hpbx/includes/hpbx.business_partner.inc:1019 hpbx/includes/hpbx.reseller.inc:391
+msgid "Logo preview"
+msgstr "Previzualizare imagine"
+
+#: hpbx/includes/hpbx.business_partner.inc:1031 hpbx/includes/hpbx.reseller.inc:398
+msgid "Logo"
+msgstr "Logo"
+
+#: hpbx/includes/hpbx.business_partner.inc:1033 hpbx/includes/hpbx.reseller.inc:400
+msgid "Upload an email logo. Allowed extensions: jpg, jpeg, png"
+msgstr "Incarca o imagine pentru email. Sunt permise extensiile: jpg, jpeg, png"
+
+#: hpbx/includes/hpbx.business_partner.inc:1039 hpbx/includes/hpbx.reseller.inc:406
+msgid "Footer"
+msgstr "Subsol"
+
+#: hpbx/includes/hpbx.business_partner.inc:1051
+msgid "Business Partner Customer Administrator welcome email"
+msgstr "Email bun venit Aministrator Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:1057;1100;1143 hpbx/includes/hpbx.reseller.inc:422;464;506;548;592
+msgid "Subject"
+msgstr "Subiect"
+
+#: hpbx/includes/hpbx.business_partner.inc:1082;1125;1166 hpbx/includes/hpbx.reseller.inc:447;489;529;571;615 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:719 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:562
+msgid "Body"
+msgstr "Continut"
+
+#: hpbx/includes/hpbx.business_partner.inc:1095
+msgid "Business Partner Subscriber welcome email"
+msgstr "Email bun venit Abonat al Partnerului Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:1138
+msgid "Business Partner User welcome email"
+msgstr "Email bun venit Utilizator Partener Business"
+
+#: hpbx/includes/hpbx.business_partner.inc:1176 hpbx/includes/hpbx.reseller.inc:626
+msgid "Replacements"
+msgstr "Inlocuiri"
+
+#: hpbx/includes/hpbx.business_partner.inc:1193 hpbx/includes/hpbx.reseller.inc:650
+msgid "Phonenumber"
+msgstr "Numar telefon"
+
+#: hpbx/includes/hpbx.business_partner.inc:1202 hpbx/includes/hpbx.reseller.inc:659
+msgid "Help website url"
+msgstr "url website Asistenta"
+
+#: hpbx/includes/hpbx.business_partner.inc:1209 hpbx/includes/hpbx.reseller.inc:666
+msgid "Help mail address"
+msgstr "Adresa de email Asistenta"
+
+#: hpbx/includes/hpbx.business_partner.inc:1219 hpbx/includes/hpbx.reseller.inc:673
+msgid "Help name"
+msgstr "Nume Asistenta"
+
+#: hpbx/includes/hpbx.business_partner.inc:1351 hpbx/includes/hpbx.user.inc:1164
+msgid "Not allowed to remove the user account"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1366 hpbx/includes/hpbx.user.inc:56;1179
+msgid "User succesfully removed"
+msgstr "Utilizatorul a fost sters"
+
+#: hpbx/includes/hpbx.business_partner.inc:1370 hpbx/includes/hpbx.user.inc:1183
+msgid "Only partially removed the user account"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1462
+msgid "Failed to change the business partner name"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:833;843;1357;1365;1369;1378;1384 hpbx/includes/hpbx.user.inc:37;51;60;64;208;214;1170;1178;1182;1191;1197
+msgid "hpbx_users"
+msgstr "hbpx_utilizatori"
+
+#: hpbx/includes/hpbx.business_partner.inc:833;1357 hpbx/includes/hpbx.user.inc:37;1170
+msgid "Failed to remove user with username from AD: @username"
+msgstr "Stergerea utilizatorului @username din AD a esuat"
+
+#: hpbx/includes/hpbx.business_partner.inc:843
+msgid "Failed to remove business partner from AD: @username"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1365 hpbx/includes/hpbx.user.inc:1178
+msgid "Successfully removed affiliate user with @username"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1369 hpbx/includes/hpbx.user.inc:1182
+msgid "Failed to remove user with username from drupal: @username @exception_message"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1378 hpbx/includes/hpbx.user.inc:1191
+msgid "Failed to load drupal user with username @username"
+msgstr ""
+
+#: hpbx/includes/hpbx.business_partner.inc:1384 hpbx/includes/hpbx.user.inc:1197
+msgid "Failed to load drupal user with username @username (more then 1 user found?)"
+msgstr ""
+
+#: hpbx/includes/hpbx.callrecords.inc:35 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Own number"
+msgstr "Numar propriu"
+
+#: hpbx/includes/hpbx.callrecords.inc:46
+msgid "All"
+msgstr "Toate"
+
+#: hpbx/includes/hpbx.callrecords.inc:49
+msgid "Subscriber or group"
+msgstr ""
+
+#: hpbx/includes/hpbx.callrecords.inc:56;59 hpbx/includes/hpbx.fax.inc:299;303
+msgid "Date"
+msgstr "Data"
+
+#: hpbx/includes/hpbx.callrecords.inc:65;69 hpbx/includes/hpbx.fax.inc:309;312
+msgid "through"
+msgstr ""
+
+#: hpbx/includes/hpbx.callrecords.inc:76 hpbx/includes/hpbx.fax.inc:321 hpbx/includes/hpbx.voicemail.inc:215;508
+msgid "Change"
+msgstr "Modifica"
+
+#: hpbx/includes/hpbx.callrecords.inc:202 hpbx/includes/hpbx.fax.inc:349
+msgid "Forwarded unconditionally"
+msgstr "Redirectionare neconditionata"
+
+#: hpbx/includes/hpbx.callrecords.inc:203 hpbx/includes/hpbx.fax.inc:350
+msgid "Forwarded due to busy"
+msgstr "Redirectionare in caz de ocupat"
+
+#: hpbx/includes/hpbx.callrecords.inc:204 hpbx/includes/hpbx.fax.inc:351
+msgid "Forwarded due to unavailable"
+msgstr "Redirectionare in caz de indisponibil"
+
+#: hpbx/includes/hpbx.callrecords.inc:205 hpbx/includes/hpbx.fax.inc:352
+msgid "Forwared due to timeout"
+msgstr "Redirectionare in caz de timeout"
+
+#: hpbx/includes/hpbx.callrecords.inc:206 hpbx/includes/hpbx.fax.inc:353
+msgid "Normal call"
+msgstr "Apel normal"
+
+#: hpbx/includes/hpbx.callrecords.inc:207 hpbx/includes/hpbx.fax.inc:354
+msgid "Inbound"
+msgstr "Apeluri de intrare"
+
+#: hpbx/includes/hpbx.callrecords.inc:208 hpbx/includes/hpbx.fax.inc:355
+msgid "Outbound"
+msgstr "Apeluri de iesire"
+
+#: hpbx/includes/hpbx.callrecords.inc:226 hpbx/includes/hpbx.fax.inc:370
+msgid "Date & Time"
+msgstr "Data & Ora"
+
+#: hpbx/includes/hpbx.callrecords.inc:227 hpbx/includes/hpbx.fax.inc:371
+msgid "Information"
+msgstr "Informatii"
+
+#: hpbx/includes/hpbx.callrecords.inc:228 hpbx/includes/hpbx.fax.inc:372
+msgid "Numbers"
+msgstr "Numere"
+
+#: hpbx/includes/hpbx.callrecords.inc:229
+msgid "Caller"
+msgstr "Apelant"
+
+#: hpbx/includes/hpbx.callrecords.inc:230
+msgid "Called"
+msgstr "Apelat"
+
+#: hpbx/includes/hpbx.callrecords.inc:231
+msgid "Call type"
+msgstr "Tip apel"
+
+#: hpbx/includes/hpbx.callrecords.inc:232 hpbx/includes/hpbx.customer.inc:107 hpbx/includes/hpbx.fax.inc:375 hpbx/includes/hpbx.reseller.inc:21
+msgid "Status"
+msgstr "Stare"
+
+#: hpbx/includes/hpbx.callrecords.inc:233
+msgid "Duration"
+msgstr "Durata"
+
+#: hpbx/includes/hpbx.callrecords.inc:492 hpbx/includes/hpbx.voicemail.inc:370
+msgid "Anonymous"
+msgstr "Anonim"
+
+#: hpbx/includes/hpbx.callrecords.inc:495
+msgid "Conference room"
+msgstr "Audio conferinta"
+
+#: hpbx/includes/hpbx.callrecords.inc:498
+msgid "Office hours"
+msgstr "Program de lucru"
+
+#: hpbx/includes/hpbx.callrecords.inc:507
+msgid "Voicemail retrieval"
+msgstr "Extragere mesagerie vocala"
+
+#: hpbx/includes/hpbx.callrecords.inc:510
+msgid "Voicemail deposit"
+msgstr "Stocare mesagerie vocala"
+
+#: hpbx/includes/hpbx.callrecords.inc:513
+msgid "Voicemail via ext."
+msgstr "Mesagerie vocala via ext."
+
+#: hpbx/includes/hpbx.callrecords.inc:521
+msgid "terminated"
+msgstr "finalizat"
+
+#: hpbx/includes/hpbx.conference.inc:66
+msgid "Create Conference room"
+msgstr "Adauga audio conferinta"
+
+#: hpbx/includes/hpbx.conference.inc:129
+msgid "If you enter a PIN, it must consist of 5 digits"
+msgstr "Daca introduceti un cod PIN trebuie sa contina 5 digiti"
+
+#: hpbx/includes/hpbx.conference.inc:147
+msgid "Announcement language"
+msgstr "Limba anunturilor"
+
+#: hpbx/includes/hpbx.conference.inc:199 hpbx/includes/hpbx.dashboard.inc:191
+msgid "Create conference room"
+msgstr "Adauga audio conferinta"
+
+#: hpbx/includes/hpbx.conference.inc:212
+msgid "Delete conference room"
+msgstr "Sterge audio conferinta"
+
+#: hpbx/includes/hpbx.conference.inc:281
+msgid "PIN needs to be exactly 5 digits."
+msgstr "Codul PIN trebuie sa contina exact 5 digiti."
+
+#: hpbx/includes/hpbx.conference.inc:547
+msgid "Conference room successfully saved"
+msgstr "Audio conferinta a fost salvata cu succes"
+
+#: hpbx/includes/hpbx.customer.inc:75;360
+msgid "Create customer"
+msgstr "Adauga client"
+
+#: hpbx/includes/hpbx.customer.inc:95 hpbx/includes/hpbx.reseller.inc:18
+msgid "Company name"
+msgstr "Nume companie"
+
+#: hpbx/includes/hpbx.customer.inc:98;653;660
+msgid "Business Partner"
+msgstr "Partener Business"
+
+#: hpbx/includes/hpbx.customer.inc:100;431;432
+msgid "Customer Id"
+msgstr "ID client"
+
+#: hpbx/includes/hpbx.customer.inc:103;599
+msgid "Multisite"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:183;524 hpbx/includes/hpbx.reseller.inc:62
+msgid "Suspended"
+msgstr "Suspendat"
+
+#: hpbx/includes/hpbx.customer.inc:202
+msgid "Customer is suspended since @suspend_date and can be remove from @remove_date."
+msgstr "Clientul este suspendat din @suspend_date si poate fi eliminat din @remove_date"
+
+#: hpbx/includes/hpbx.customer.inc:205
+msgid "Customer needs to be suspended before it can be removed"
+msgstr "Clientul trebuie sa fie suspendat inainte de a fi sters"
+
+#: hpbx/includes/hpbx.customer.inc:235;237;242;246 hpbx/includes/hpbx.masquerade.inc:208
+msgid "Login"
+msgstr "Conectare"
+
+#: hpbx/includes/hpbx.customer.inc:242
+msgid "Login disabled. This customer is created on another environment"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:352 hpbx/includes/hpbx.reseller.inc:294
+msgid "!name"
+msgstr "!name"
+
+#: hpbx/includes/hpbx.customer.inc:386
+msgid "Customer settings"
+msgstr "Configurare client"
+
+#: hpbx/includes/hpbx.customer.inc:421;422
+msgid "Company Name"
+msgstr "Nume Companie"
+
+#: hpbx/includes/hpbx.customer.inc:453
+msgid "Domain"
+msgstr "Domeniu"
+
+#: hpbx/includes/hpbx.customer.inc:475;802;856
+msgid "Unlimited"
+msgstr "Nelimitat"
+
+#: hpbx/includes/hpbx.customer.inc:495
+msgid "Maximum total concurrent calls"
+msgstr "Numarul total maxim de convorbiri simultane"
+
+#: hpbx/includes/hpbx.customer.inc:515
+msgid "Profile Set"
+msgstr "Setare Profil"
+
+#: hpbx/includes/hpbx.customer.inc:530
+msgid "Since @suspend_date"
+msgstr "Din data @suspend_date"
+
+#: hpbx/includes/hpbx.customer.inc:540
+msgid "Derive extension from DID"
+msgstr "Extensia derivata din DID"
+
+#: hpbx/includes/hpbx.customer.inc:554
+msgid "Extension Length"
+msgstr "Lungime extensie"
+
+#: hpbx/includes/hpbx.customer.inc:574;582
+msgid "Pilot number"
+msgstr "Numar pilot"
+
+#: hpbx/includes/hpbx.customer.inc:579
+msgid "Invalid pilotnumber size"
+msgstr "Numar pilot de marime invalida"
+
+#: hpbx/includes/hpbx.customer.inc:616
+msgid "Site Settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:679
+msgid "Customer Location"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:775
+msgid "Bundle settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:781
+msgid "Profile set"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:782
+msgid "Profile"
+msgstr "Profil"
+
+#: hpbx/includes/hpbx.customer.inc:784
+msgid "Amount"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:803
+msgid "Limit total"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:804
+msgid "Limit per profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:888
+msgid "Number ranges"
+msgstr "Plaja de numerotatie"
+
+#: hpbx/includes/hpbx.customer.inc:929
+msgid "Customer administrator"
+msgstr "Administrator client"
+
+#: hpbx/includes/hpbx.customer.inc:968
+msgid "Prefix of a number range has been changed"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:969
+msgid "Changing the prefix of a number range, results in an update of the extensions of all of the existing subscribers, hunt groups, auto attendants and conference rooms. In order to update the numbers on the devices of the subscribers, the devices need to be rebooted."
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1207;1224
+msgid "@key field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1215
+msgid "The Site Name should be unique"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1252;1258;1673;1679
+msgid "The passed IP address @IP is invalid"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1338
+msgid "Not allowed to set this limit for the @profile_name profile, as the customer currently exceeds this limit"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1343
+msgid "Not allowed to set this limit for the @profile_set_name profile set, as the customer currently exceeds this limit"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1352
+msgid "Invalid Customer ID. Please use a @length digit number"
+msgstr "ID Client invalid. Va rugam sa introduceti un numar de @lenght digiti"
+
+#: hpbx/includes/hpbx.customer.inc:1357;1360
+msgid "The Customer id @customer_id already exists"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1364
+msgid "Company name is already assigned to customer @company"
+msgstr "Numele companiei este deja asociat unui client @company"
+
+#: hpbx/includes/hpbx.customer.inc:1383
+msgid "Invalid pilot number"
+msgstr "Numar pilot invalid"
+
+#: hpbx/includes/hpbx.customer.inc:1423
+msgid "Empty area code"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1426
+msgid "Invalid area code size"
+msgstr "Marime invalida a codului de zona"
+
+#: hpbx/includes/hpbx.customer.inc:1430
+msgid "Empty start number"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1433
+msgid "Invalid start number size"
+msgstr "Marime invalida a numarului de start"
+
+#: hpbx/includes/hpbx.customer.inc:1439
+msgid "Invalid prefix"
+msgstr "Prefix invalid"
+
+#: hpbx/includes/hpbx.customer.inc:1443
+msgid "Please select a number range length"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1451;1458
+msgid "Prefix cannot start with @na"
+msgstr "Prefixul nu poate incepe cu @na"
+
+#: hpbx/includes/hpbx.customer.inc:1482
+msgid "Potential overlap between extensions"
+msgstr "Posibila suprapunere intre extensii"
+
+#: hpbx/includes/hpbx.customer.inc:1493
+msgid "The combination of extension length and the choosen number range results in extensions starting with @na, which is not allowed."
+msgstr "Combinatia lungimii extensiei si numarul ales are ca rezultat extensii incepand cu @na, ceea ce nu este permis."
+
+#: hpbx/includes/hpbx.customer.inc:1499
+msgid "The combination of extension length and the choosen number range results in extensions starting with the digit for national calls which is not allowed."
+msgstr "Combinatia dintre lungimea extensiei si plaja de numerotatie aleasa are ca rezultat extensii incepand cu un digit pentru apeluri nationale, ceea ce nu este permis."
+
+#: hpbx/includes/hpbx.customer.inc:1506
+msgid "The combination of extension length and the choosen numberrange could result in an extension number equal to @na, which is not allowed."
+msgstr "Combinatia dintre lungimea extensiei si plaja de numerotatie aleasa poate conduce la extensii care incep cu @na, ceea ce nu este permis."
+
+#: hpbx/includes/hpbx.customer.inc:1526
+msgid "The number range @range has overlap with a number range assigned to customer @customer"
+msgstr "Plaja de numerotatie @range se suprapune cu plaja de numerotatie asociata clientului @customer"
+
+#: hpbx/includes/hpbx.customer.inc:1538
+msgid "The pilot number @pilot_number is already assigned to customer @customer"
+msgstr "Numar pilot @pilot_number este deja asociat clientului @customer"
+
+#: hpbx/includes/hpbx.customer.inc:1548
+msgid "Possible overlap in extensions. Please review the numberrange prefixes."
+msgstr "Posibila suprapunere in extensii. Va rugam revizuiti plaja de prefixe de numere"
+
+#: hpbx/includes/hpbx.customer.inc:1552
+msgid "Please enter unique number ranges and/or pilot number."
+msgstr "Va rog sa introduceti un numar unic de telefon si/sau un numar pilot."
+
+#: hpbx/includes/hpbx.customer.inc:1557
+msgid "At least one number range must be defined. Enter the number range details and hit the \"Add\" button to add a new number range."
+msgstr "Cel putin o plaja de numerotatie trebuie sa fie definita. Introduceti detaliile plajei de numerotatie si apasati butonul \"Adaugare\" pentru a dauga o noua plaja de numerotatie"
+
+#: hpbx/includes/hpbx.customer.inc:1562
+msgid "If a prefix is set for a number range, all numberranges must have a prefix"
+msgstr ""
+"Daca un prefix este ales pentru o plaja de numerotatie toate numerele "
+"din plaja trebuie sa aiba prefixDaca un prefix este ales pentru o "
+"plaja de numerotatie toate numerele din plaja de numerotatie trebuie "
+"sa aiba prefix"
+
+#: hpbx/includes/hpbx.customer.inc:1572
+msgid "The prefix must have less digits then the choosen extension length"
+msgstr "Prefixul trebuie sa aiba mai putini digiti decat lungimea extensiei aleasa"
+
+#: hpbx/includes/hpbx.customer.inc:1583;1586
+msgid "Overlapping number ranges and/or pilot number are not allowed"
+msgstr "Numerele de telefon selectate au fost deja folosite"
+
+#: hpbx/includes/hpbx.customer.inc:1602
+msgid "Pilot number is already assigned to customer @company"
+msgstr "Numarul pilot este deja alocat clientului @company"
+
+#: hpbx/includes/hpbx.customer.inc:1616
+msgid "Upload of @handle failed"
+msgstr "Incarcarea a esuat @handle failed"
+
+#: hpbx/includes/hpbx.customer.inc:1697
+msgid "You have exceeded the maximum number of @site sites"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1870
+msgid "Failed to change the company name"
+msgstr "Modificarea denumirii companiei a esuat"
+
+#: hpbx/includes/hpbx.customer.inc:1920
+msgid "Failed to disable user accounts"
+msgstr "Dezactivarea contului de utilizator a esuat"
+
+#: hpbx/includes/hpbx.customer.inc:1927
+msgid "Failed to enable user accounts"
+msgstr "Activarea contului de utilizator a esuat"
+
+#: hpbx/includes/hpbx.customer.inc:2150
+msgid "Failed to create AD user"
+msgstr "Crearea utilizatorului AD a esuat"
+
+#: hpbx/includes/hpbx.customer.inc:2161
+msgid "Failed to store the customer"
+msgstr "Inregistrarea clientului a esuat"
+
+#: hpbx/includes/hpbx.customer.inc:2171;2537
+msgid "Cleared customers with @cid"
+msgstr "Stergere clienti cu @cid"
+
+#: hpbx/includes/hpbx.customer.inc:2175;2541
+msgid "Cleared customers_list with @cid*"
+msgstr "Stergere customers_list  cu @cid*"
+
+#: hpbx/includes/hpbx.customer.inc:2180;2546
+msgid "Cleared customerpreferences with @cid"
+msgstr "Stergere preferinte client cu @cid"
+
+#: hpbx/includes/hpbx.customer.inc:2184;2550
+msgid "Cleared customerpreferences list with @cid*"
+msgstr "Stergere lista preferinte client cu @cid*"
+
+#: hpbx/includes/hpbx.customer.inc:2191;2555
+msgid "Cleared customercontacts with @cid"
+msgstr "Stergere contacte clienti cu @cid"
+
+#: hpbx/includes/hpbx.customer.inc:2195;2559
+msgid "Cleared customercontacts list with @cid*"
+msgstr "Stergere lista contacte clienti cu @cid*"
+
+#: hpbx/includes/hpbx.customer.inc:2200
+msgid "Customer successfully saved"
+msgstr "Clientul a fost adaugat cu succes"
+
+#: hpbx/includes/hpbx.customer.inc:2228
+msgid "The customer was not created due to a technical problem. Please contact your system administrator."
+msgstr "Clientul nu a fost creat datorita unei probleme tehnice. Va rugam contactati administratorul de sistem."
+
+#: hpbx/includes/hpbx.customer.inc:2380
+msgid "Find"
+msgstr "Cauta"
+
+#: hpbx/includes/hpbx.customer.inc:2394
+msgid "The internal customer search database table is not in sync with the Sipwise API. The search results may contain incorrect results."
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:2480
+msgid "No customer found that matches the entered search criteria"
+msgstr "Nu a fost gasit nici un client care sa corespunda criteriului de cautare"
+
+#: hpbx/includes/hpbx.customer.inc:2529
+msgid "Customer successfully deleted"
+msgstr "Clientul a fost sters cu succes"
+
+#: hpbx/includes/hpbx.customer.inc:2566
+msgid "Failed to delete the customer"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:2627
+msgid "Customer !name"
+msgstr "Client !name"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:17;252 ;259  hpbx/includes/hpbx.fax.inc:41
+msgid "Fax numbers"
+msgstr "Numerele de fax"
+
+#: hpbx/includes/hpbx.dashboard.inc:65
+msgid "@percentage% of numbers in use"
+msgstr "% numere de telefon folosite"
+
+#: hpbx/includes/hpbx.dashboard.inc:93
+msgctxt "plural2"
+msgid "@count devices"
+msgstr "@count echipamente"
+
+#: hpbx/includes/hpbx.dashboard.inc:192 hpbx/includes/hpbx.huntgroup.inc:148
+msgid "Create Hunt group"
+msgstr "Creare grup de hunting"
+
+#: hpbx/includes/hpbx.dashboard.inc:420;442
+msgid "Need help?"
+msgstr "Asistenta"
+
+#: hpbx/includes/hpbx.dashboard.inc:428;450
+msgid "visit website"
+msgstr "Acceseaza website-ul"
+
+#: hpbx/includes/hpbx.dashboard.inc:431;453
+msgid "mail us"
+msgstr "Trimite un email"
+
+#: hpbx/includes/hpbx.dashboard.inc:435;457
+msgid "start chat"
+msgstr "start chat"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:287 
+msgid "F.A.Q."
+msgstr "Intrebari frecvente"
+
+#: hpbx/includes/hpbx.dashboard.inc:84
+msgid "@count device"
+msgid_plural "@count devices"
+msgstr[0] ""
+msgstr[1] "@count echipamente"
+
+#: hpbx/includes/hpbx.defaultforward.inc:74
+msgid "Forward all numbers not in use to"
+msgstr "Redirectionarea tuturor numerelor neutilizate catre"
+
+#: hpbx/includes/hpbx.defaultforward.inc:155
+msgid "Failed to store default forward "
+msgstr "Esuarea memorare redirectionare implicita"
+
+#: hpbx/includes/hpbx.defaultforward.inc:161
+msgid "Default forward successfully saved"
+msgstr "Redirectionarea implicita a fost salvata cu succes"
+
+#: hpbx/includes/hpbx.download.inc:5
+msgid "For your desktop"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:45
+msgid "Send fax"
+msgstr "Trimite fax"
+
+#: hpbx/includes/hpbx.fax.inc:48 hpbx/includes/js/hpbx.js:0
+msgid "Fax log"
+msgstr "Jurnal fax"
+
+#: hpbx/includes/hpbx.fax.inc:92
+msgid "Create new fax number"
+msgstr "Creeaza un nou numar de fax"
+
+#: hpbx/includes/hpbx.fax.inc:139;280
+msgid "Fax number"
+msgstr "Numarul de fax"
+
+#: hpbx/includes/hpbx.fax.inc:147
+msgid "Destination number"
+msgstr "Numar destinatar"
+
+#: hpbx/includes/hpbx.fax.inc:156
+msgid "Page header"
+msgstr "Antentul paginii"
+
+#: hpbx/includes/hpbx.fax.inc:163
+msgid "Page content"
+msgstr "Continutul paginii"
+
+#: hpbx/includes/hpbx.fax.inc:173
+msgid "Max file size"
+msgstr "Dimensiunea maxima a fisierului"
+
+#: hpbx/includes/hpbx.fax.inc:174
+msgid "The maximum file size is 10MB.</br></br>Supported file type: PDF"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:188
+msgid "Send"
+msgstr "Trimitere"
+
+#: hpbx/includes/hpbx.fax.inc:290 hpbx/includes/hpbx.wizard.inc:454;483
+msgid "Narrow results"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:291
+msgid "No results match"
+msgstr "Niciun rezultat"
+
+#: hpbx/includes/hpbx.fax.inc:373
+msgid "Sender"
+msgstr "Expeditor"
+
+#: hpbx/includes/hpbx.fax.inc:374
+msgid "Receiver"
+msgstr "Destinatar"
+
+#: hpbx/includes/hpbx.fax.inc:376
+msgid "Pages"
+msgstr "Pagini"
+
+#: hpbx/includes/hpbx.fax.inc:593
+msgid "Problem retrieving the originating subscriber"
+msgstr "A intervenit o eroare in identificarea expeditorului"
+
+#: hpbx/includes/hpbx.fax.inc:598 hpbx/includes/hpbx.subscriber.inc:1201
+msgid "Please enter a valid destination number"
+msgstr "Va rugam sa introduceti un numar valid de destinatie"
+
+#: hpbx/includes/hpbx.fax.inc:610;616;621;609
+msgid "Unknown error while uploading the fax file"
+msgstr "Eroare necunoscută în timpul încărcării fișierului de fax"
+
+#: hpbx/includes/hpbx.fax.inc:627;631
+msgid "Please upload a PDF file"
+msgstr "Incarcati un fisier PDF"
+
+#: hpbx/includes/hpbx.fax.inc:649
+msgid "Your fax is being processed. This may take a few minutes."
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:652
+msgid "Failed to sent fax"
+msgstr "Trimiterea faxului a esuat"
+
+#: hpbx/includes/hpbx.fax.inc:609;615;620;626
+msgid "hpbx_fax"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:615
+msgid "Uploaded PDF file does not exist (anymore"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax.inc:620
+msgid "Could not open uploaded PDF file"
+msgstr "Nu s-a putut deschide fisierul PDF incarcat"
+
+#: hpbx/includes/hpbx.fax.inc:626
+msgid "Please upload a valid PDF file"
+msgstr "Incarcati un fisier PDF valid"
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This fax number has no members"
+msgstr "Acest numar de fax nu are membri"
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0} person is eligible to use this fax number"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0}  persons are eligible to use this fax number"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This Fax group is empty"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax2email.inc:89 hpbx/includes/hpbx.huntgroup.inc:194 hpbx/includes/hpbx.subscriber.inc:270
+msgid "Name*"
+msgstr "Nume*"
+
+#: hpbx/includes/hpbx.fax2email.inc:118
+msgid "Email destination for incoming faxes"
+msgstr "Email-ul configurat pentru faxurile primite"
+
+#: hpbx/includes/hpbx.fax2email.inc:119 hpbx/includes/hpbx.subscriber.inc:2196
+msgid "Email destination"
+msgstr "Email destinatar"
+
+#: hpbx/includes/hpbx.fax2email.inc:130
+msgid "Receive a copy of outgoing faxes"
+msgstr "Solicita o copie a fax-urilor trimise"
+
+#: hpbx/includes/hpbx.fax2email.inc:137
+msgid "Receive reports of outgoing and incoming faxes"
+msgstr "Solicitati rapoarte despre faxurile trimise si primite"
+
+#: hpbx/includes/hpbx.fax2email.inc:144 hpbx/includes/hpbx.huntgroup.inc:541
+msgid "Members"
+msgstr "Membri"
+
+#: hpbx/includes/hpbx.fax2email.inc:157
+msgid "Select the subscribers that are eligable to use this fax number"
+msgstr "Selectati abonatii eligibili pentru a utiliza acest numar de fax"
+
+#: hpbx/includes/hpbx.fax2email.inc:158 hpbx/includes/hpbx.huntgroup.inc:554
+msgid "No subscribers found"
+msgstr "Nu au fost gasiti abonati"
+
+#: hpbx/includes/hpbx.fax2email.inc:415
+msgid "Can't load faxserversettings"
+msgstr ""
+
+#: hpbx/includes/hpbx.fax2email.inc:462
+msgid "Fax number successfully saved"
+msgstr "Numarul de fax salvat cu succes"
+
+#: hpbx/includes/hpbx.help.inc:432
+msgid "Copy - @title"
+msgstr "Copiaza - @title"
+
+#: hpbx/includes/hpbx.help.inc:438
+msgid "Failed to replicate the help article"
+msgstr "Crearea unei copii de rezerva a articolului asistenta a esuat"
+
+#: hpbx/includes/hpbx.help.inc:508 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:24;32
+msgid "Title"
+msgstr "Titlu"
+
+#: hpbx/includes/hpbx.help.inc:1014
+msgid "No url"
+msgstr "Lipsa url"
+
+#: hpbx/includes/hpbx.help.inc:1018
+msgid "No user_access"
+msgstr "Lipsa user_access"
+
+#: hpbx/includes/hpbx.help.inc:382;755;875;880
+msgid "hpbx_help"
+msgstr "hpbx_help"
+
+#: hpbx/includes/hpbx.help.inc:382;880
+msgid "Created new field_hpbx_block field_collection item"
+msgstr "Creaza un nou articol field_hpbx_block field_collection"
+
+#: hpbx/includes/hpbx.help.inc:454
+msgid "hpbx_help_count"
+msgstr "hpbx_help_count"
+
+#: hpbx/includes/hpbx.help.inc:454;875
+msgid "Loaded existing field_hpbx_block field_collection item with id "
+msgstr "Incarcare field_hpbx_block cu id articol field_collection"
+
+#: hpbx/includes/hpbx.help.inc:755
+msgid "Created new instruction_photo field_collection item"
+msgstr "Creaza un nou articol new instruction_photo field_collection"
+
+#: hpbx/includes/hpbx.huntgroup.inc:17
+msgid "Create hunt group"
+msgstr ""
+
+#: hpbx/includes/hpbx.huntgroup.inc:30
+msgid "Delete hunt group"
+msgstr "Stergere grup de hunting"
+
+#: hpbx/includes/hpbx.huntgroup.inc:37
+msgid "Hunting Policy"
+msgstr "Reguli Hunting"
+
+#: hpbx/includes/hpbx.huntgroup.inc:38
+msgid "Time out"
+msgstr "A expirat timpul"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132;132
+msgid "This Hunt group is empty"
+msgstr "Acest grup de hunting este gol"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} person in this Hunt group"
+msgstr "{0} persoane fac parte din acest grup de Hunting"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} persons in this Hunt group"
+msgstr "{0} persoane fac parte din acest grup de Hunting"
+
+#: hpbx/includes/hpbx.huntgroup.inc:208
+msgid "Serial Ringing"
+msgstr "Apelare consecutiv seriala"
+
+#: hpbx/includes/hpbx.huntgroup.inc:209
+msgid "Parallel Ringing"
+msgstr "Apelare in paralel"
+
+#: hpbx/includes/hpbx.huntgroup.inc:210
+msgid "Random"
+msgstr "Apelare aleatorie"
+
+#: hpbx/includes/hpbx.huntgroup.inc:211
+msgid "Circular"
+msgstr "Apelare circulara"
+
+#: hpbx/includes/hpbx.huntgroup.inc:215;216
+msgid "The selected policy does not support ordering"
+msgstr "Politica selectata nu suporta comanda"
+
+#: hpbx/includes/hpbx.huntgroup.inc:227
+msgid "Hunting Policy*"
+msgstr "Politica de Hunting*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:245
+msgid "Time out (sec)"
+msgstr "Durata Hunting (sec)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:260 hpbx/includes/hpbx.subscriber.bulk.inc:27 hpbx/includes/hpbx.subscriber.inc:607 hpbx/includes/hpbx.wizard.inc:51
+msgid "Language of Voicemail announcements"
+msgstr "Limba in care se fac anunturile Casutei Vocale"
+
+#: hpbx/includes/hpbx.huntgroup.inc:345
+msgid "Out of office destination"
+msgstr "Destinatie in afara orelor de program"
+
+#: hpbx/includes/hpbx.huntgroup.inc:358
+msgid "No out of office destination"
+msgstr "Destinatia nu este in afara orelor de program"
+
+#: hpbx/includes/hpbx.huntgroup.inc:368
+msgid "Announcement"
+msgstr "Anunt"
+
+#: hpbx/includes/hpbx.huntgroup.inc:377
+msgid "Destination (Voicemail or Number)"
+msgstr "Destinatie (Mesagerie Vocala sau Numar)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:515
+msgid "PIN*"
+msgstr "PIN*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:519
+msgid "No Answer Settings"
+msgstr "Setari pentru No Answer"
+
+#: hpbx/includes/hpbx.huntgroup.inc:553
+msgid "Drag members in the correct dialing sequence"
+msgstr "Selecteaza membrii in secventa corecta de formare"
+
+#: hpbx/includes/hpbx.huntgroup.inc:730
+msgid "Please select one or more members for this hunt group."
+msgstr "Va rog sa selectati unul sau mai multi membri ai grupului de Hunting."
+
+#: hpbx/includes/hpbx.huntgroup.inc:759
+msgid "Please provide a valid numeric voicemail pin"
+msgstr ""
+
+#: hpbx/includes/hpbx.huntgroup.inc:819 hpbx/includes/hpbx.subscriber.inc:1365
+msgid "Can't find the pilot subscriber preferences"
+msgstr "Nu se gasesc optiunile pilotului abonatului"
+
+#: hpbx/includes/hpbx.huntgroup.inc:1164
+msgid "Hunt group successfully saved"
+msgstr "Grup de Hunting salvat cu succes"
+
+#: hpbx/includes/hpbx.masquerade.inc:121
+msgid "Could not find administrative user for selected customer"
+msgstr ""
+"Nu a fost gasit nici un utilizator de tip administrator pentru "
+"clientul selectat"
+
+#: hpbx/includes/hpbx.masquerade.inc:178
+msgid "Customer Administrator"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:20
+msgid "Music on hold"
+msgstr "Muzica apel in asteptare"
+
+#: hpbx/includes/hpbx.musiconhold.inc:97
+msgid "Upload Music on Hold audio"
+msgstr "Incarcati Muzica pentru apel in asteptare"
+
+#: hpbx/includes/hpbx.musiconhold.inc:115
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>The maximum allowed duration of the audio file is 60 minutes.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:121
+msgid "Clear upload"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:128
+msgid "Or choose a song from our default !icon !ml_link"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:130
+msgid "music library"
+msgstr "libraria de muzica"
+
+#: hpbx/includes/hpbx.musiconhold.inc:285
+msgid "Choose your music on hold media"
+msgstr ""
+
+#: hpbx/includes/hpbx.musiconhold.inc:336;355
+msgid "Upload of Music on Hold failed"
+msgstr "Incarca muzica cand punerea in asteptare esueaza"
+
+#: hpbx/includes/hpbx.musiconhold.inc:343
+msgid "The extension '@ext' is not supported"
+msgstr "Extensia '@ext' nu este permisa"
+
+#: hpbx/includes/hpbx.musiconhold.inc:351
+msgid "The audio file you tried to upload is too big"
+msgstr "Fisierul audio pe care incercati sa il incarcati este prea mare"
+
+#: hpbx/includes/hpbx.musiconhold.inc:365
+msgid "File not found"
+msgstr "Fiserul nu a fost gasit"
+
+#: hpbx/includes/hpbx.musiconhold.inc:368
+msgid "Access denied"
+msgstr "Accesul interzis"
+
+#: hpbx/includes/hpbx.musiconhold.inc:529
+msgid "Failed to store music on hold"
+msgstr "Incercarea  de a stoca muzica pentru punerea in asteptare a esuat"
+
+#: hpbx/includes/hpbx.musiconhold.inc:535
+msgid "Music on hold successfully saved"
+msgstr "Incarcarea muzica pentru punerea in asteptare a fost efectuata cu succes"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:32
+msgid "Private Line"
+msgstr "Linie privata"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:35
+msgid "Shared Line"
+msgstr "Linie utilizata in comun"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:38
+msgid "Busy Lamp Field"
+msgstr "Indicator luminos aparat"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:81
+msgid "At lease one line must be defined. Enter the line details and hit the \"Add\" button to add a new line."
+msgstr "Cel putin o linie trebuie definita. Introduceti detaliile liniei si apasati butonul \"Adaugare\" pentru a adauga o noua linie."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:91
+msgid "Invalid subscriber"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:94
+msgid "A hunt group can only be assigned to a BLF key"
+msgstr "Un grup de hunting poate fi asignat unei taste Indicator luminos "
+
+#: hpbx/includes/hpbx.pbxdevice.inc:97
+msgid "Subscriber cannot be assigned to a BLF key, as it is not allowed for the subscriber profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:108;112;158;252
+msgid "MAC address is invalid, please check the MAC address"
+msgstr "Adresa MAC este invalida, va rugam sa verificati adresa MAC"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:124
+msgid "MAC address is already assigned to device with device name @station_name"
+msgstr "Adresa MAC este deja alocata echipamentului cu numele @station_name"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:127
+msgid "MAC Address is already assigned to another device"
+msgstr "Adresa MAC este deja alocata unui alt echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:357
+msgid "Create device"
+msgstr "Creare echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:367 hpbx/includes/hpbx.subscriber.bulk.inc:28;255
+msgid "Device name"
+msgstr "Nume echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:368
+msgid "Brand and model"
+msgstr "Marca si model"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:369;867;871 hpbx/includes/hpbx.subscriber.bulk.inc:31 hpbx/includes/js/hpbx_devices.js:0
+msgid "MAC address"
+msgstr "Adresa MAC"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:372
+msgid "Delete device"
+msgstr "Stergere echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:400 hpbx/includes/hpbx.wizard.inc:1019;1182;1273
+msgid "Sync"
+msgstr "Sincronizare"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:456
+msgid "Device successfully deleted"
+msgstr "Echipamentul a fost sters"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:474
+msgid "Cleared @type list with @cid*"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:555
+msgid "1. Pick up the phone connected to the ATA and call * * * *"
+msgstr "1. Alege un telefon conectat la ATA si formeaza * * * *"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:556
+msgid "2. Enter 1 1 0 #"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:557
+msgid "3. You will now hear a message giving you the IP address"
+msgstr "3. Acum veti auzi un mesaj care va comunica adresa IP"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:560
+msgid "1. Enter the phone menu"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:561
+msgid "2. Scroll to settings and press select"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:562
+msgid "3. Scroll to phone info and press select"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:563
+msgid "4. Scroll to view IP Address. This is the IP address of your device"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:566
+msgid "1. Press the Setup button."
+msgstr "1. Apasati butonul Setup."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:567
+msgid "2. Scroll to Network and press select."
+msgstr "2. Derulati la retea si selectati"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:568
+msgid "3. Scroll to view Current IP. This is the IP address of your device."
+msgstr "3. Derulati pentru a vizualiza IP-ul curent. Aceasta este adresa IP a echipamentului dumneavoastra."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:574;579
+msgid "IP Address"
+msgstr "Adresa IP"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:580
+msgid "This field is mandatory___The given value must be a valid IP address"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:596 hpbx/includes/hpbx.wizard.inc:1031;1194;1285
+msgid "Sync device"
+msgstr "Sincronizeaza echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:628
+msgid "The request could not be sent to the device. Possible causes: <br/><br/>The device is already associated.<br/>The device is not connected to the LAN<br/>The IP adress is incorrect"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:634
+msgid "The request is successfully sent to device. The device will now try to retrieve the profile and one or more firmware versions."
+msgstr "Cererea a fost transmisa catre echipament. Echipamentul va incerca sa incarce profilul si versiunile de licente asociate."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:757 hpbx/includes/hpbx.wizard.inc:761
+msgid "Add device"
+msgstr "Adauga echipament"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:830 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:724 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:565
+msgid "Type"
+msgstr "Tip"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:832
+msgid "Choose a brand"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:834 hpbx/includes/hpbx.subscriber.bulk.inc:29 hpbx/includes/hpbx.wizard.inc:110;838;848;850
+msgid "Brand"
+msgstr "Marca"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:849;853 hpbx/includes/hpbx.subscriber.bulk.inc:30 hpbx/includes/hpbx.wizard.inc:857;865;867
+msgid "Model"
+msgstr "Model"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:851
+msgid "Choose a model"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:872
+msgid "This field is mandatory___The given value must be of the MAC address type"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:908
+msgid "Next step"
+msgstr "Pasul urmator"
+
+#: hpbx/includes/hpbx.reseller.inc:19
+msgid "PTSID"
+msgstr "PTSID"
+
+#: hpbx/includes/hpbx.reseller.inc:20
+msgid "Concurrent Max"
+msgstr "Numar maxim de convorbiri simultane"
+
+#: hpbx/includes/hpbx.reseller.inc:104;110;121
+msgid "Cleared @type with @cid*"
+msgstr "Stergere @type cu @cid*"
+
+#: hpbx/includes/hpbx.reseller.inc:113
+msgid "Cleared the cache for API type @api_type for @reseller_id (list)"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:123
+msgid "Cleared the cache for API type @api_type for @reseller_id (entity)"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:175
+msgid "You are not authorised to create Business Partners"
+msgstr "Nu sunteti autorizat sa create Partener Business"
+
+#: hpbx/includes/hpbx.reseller.inc:336
+msgid "Emergency Settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:416
+msgid "Administrator welcome email"
+msgstr "Email-ul de bun venit pentru administrator"
+
+#: hpbx/includes/hpbx.reseller.inc:459
+msgid "Subscriber welcome email"
+msgstr "Email-ul de bun venit catre abonat"
+
+#: hpbx/includes/hpbx.reseller.inc:501
+msgid "Affiliate user welcome email"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:543
+msgid "Business Partner welcome email"
+msgstr "Email bun venit Partener Business"
+
+#: hpbx/includes/hpbx.reseller.inc:587
+msgid "Reset Password"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:689
+msgid "Time Zone"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:699
+msgid "Time Zone correction required"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:711
+msgid "Domain ID"
+msgstr "ID Domeniu"
+
+#: hpbx/includes/hpbx.reseller.inc:722
+msgid "digit_for_national_calls"
+msgstr "digit_pentru_apeluri_nationale"
+
+#: hpbx/includes/hpbx.reseller.inc:730
+msgid "country_code"
+msgstr "cod_tara"
+
+#: hpbx/includes/hpbx.reseller.inc:738
+msgid "area_code_min_digits"
+msgstr "cod _zona_min_digiti"
+
+#: hpbx/includes/hpbx.reseller.inc:741;750;775;784
+msgid "Number of digits includes the digit for national calls"
+msgstr "Numarul de digiti include digiti pentru convorbiri nationale"
+
+#: hpbx/includes/hpbx.reseller.inc:747
+msgid "area_code_max_digits"
+msgstr "cod_zona_max_digiti"
+
+#: hpbx/includes/hpbx.reseller.inc:756
+msgid "subscriber_number_min_digits"
+msgstr "numar_abonat_min_digiti"
+
+#: hpbx/includes/hpbx.reseller.inc:764
+msgid "subscriber_number_max_digits"
+msgstr "subscriber_number_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:772
+msgid "pilot_subscriber_number_min_digits"
+msgstr "pilot_abonat_numar_min_digiti"
+
+#: hpbx/includes/hpbx.reseller.inc:781
+msgid "pilot_subscriber_number_max_digits"
+msgstr "pilot_abonat_numar_maxim_digiti"
+
+#: hpbx/includes/hpbx.reseller.inc:790
+msgid "automatic_pilot_number_generation"
+msgstr "pilot_automat_numar_generatie"
+
+#: hpbx/includes/hpbx.reseller.inc:798
+msgid "automatic_pilot_number_generation_prefix"
+msgstr "pilot_automat_numar_generatie_prefix"
+
+#: hpbx/includes/hpbx.reseller.inc:806
+msgid "customer_concurrent_max"
+msgstr "client_concurent_max"
+
+#: hpbx/includes/hpbx.reseller.inc:809
+msgid "Number of concurrent max calls."
+msgstr "Numar maxim de convorbiri simultane."
+
+#: hpbx/includes/hpbx.reseller.inc:814
+msgid "customer_max_extension_length"
+msgstr "client_lungime_maxima_extensie"
+
+#: hpbx/includes/hpbx.reseller.inc:817
+msgid "Max extension length."
+msgstr "Lungime maxima extensie"
+
+#: hpbx/includes/hpbx.reseller.inc:823
+msgid "extensions_are_not_allowed_to_start_with"
+msgstr "extensiile_nu_sunt_permise_pentru_start_cu"
+
+#: hpbx/includes/hpbx.reseller.inc:830
+msgid "exclude_extensions"
+msgstr "extensii_excluse"
+
+#: hpbx/includes/hpbx.reseller.inc:836
+msgid "polish_emergency_routing"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:844
+msgid "bundle_settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:852
+msgid "emergency_prefix"
+msgstr "prefixe_deurgenta"
+
+#: hpbx/includes/hpbx.reseller.inc:859
+msgid "execute_logic_for_area_code_dependant_emergency_suffix"
+msgstr "executea_logic_pentru_cod_arie_functie_sufix_urgenta"
+
+#: hpbx/includes/hpbx.reseller.inc:873
+msgid "suspend_ncos_level"
+msgstr "suspendare_ncos_nivel"
+
+#: hpbx/includes/hpbx.reseller.inc:883
+msgid "default_subscriber_ncos_level"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:893
+msgid "mail_from_address"
+msgstr "email_dela_adresa"
+
+#: hpbx/includes/hpbx.reseller.inc:909
+msgid "generic_profile_set_id"
+msgstr "generic_profil_setare_id"
+
+#: hpbx/includes/hpbx.reseller.inc:918
+msgid "pilot_subscriber_profile_id"
+msgstr "pilot_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:926
+msgid "hunt_group_subscriber_profile_id"
+msgstr "hunt_grup_abonat_profil_id"
+
+#: hpbx/includes/hpbx.reseller.inc:935
+msgid "auto_attendant_subscriber_profile_id"
+msgstr "auto_asistent_abonat_profil_id"
+
+#: hpbx/includes/hpbx.reseller.inc:943
+msgid "fax_subscriber_profile_id"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:952
+msgid "conference_room_subscriber_profile_id"
+msgstr "audio_conferinta_abonat_profil_id"
+
+#: hpbx/includes/hpbx.reseller.inc:960
+msgid "can be configured as a BLF line type"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:961
+msgid "can be a HuntGroup member"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:962
+msgid "can set the CLI"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:963
+msgid "can send faxes"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:964
+msgid "can use mobile softclient"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:965
+msgid "can use desktop softclient"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1017
+msgid "customer_id_length"
+msgstr "lungime_id_client"
+
+#: hpbx/includes/hpbx.reseller.inc:1029
+msgid "Terms & Conditions Drupal node ID"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1038
+msgid "enable_restricted_access"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1047
+msgid "Enable Business Partners"
+msgstr "Activare Partener Business"
+
+#: hpbx/includes/hpbx.reseller.inc:1056
+msgid "Enable Multisite"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1064
+msgid "Number of Sites"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1079
+msgid "Stretto group"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1089
+msgid "Stretto Desktop profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1099
+msgid "Stretto Mobile profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1109
+msgid "Stretto Mobile & Desktop profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1142
+msgid "Emergency Routing"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1151
+msgid "Default emergency suffix"
+msgstr "Sufix implicit de urgenta"
+
+#: hpbx/includes/hpbx.reseller.inc:1164
+msgid "Emergency Suffixes"
+msgstr "Sufixe de urgenta"
+
+#: hpbx/includes/hpbx.reseller.inc:1177
+msgid "Location CSV"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1179
+msgid "Upload the CSV containing the Location information"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1191
+msgid "Emergency Number Mapping CSV"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1194
+msgid "Upload the CSV containing the Emergency Numbers and Prefix information"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1225
+msgid "Only digits allowed: @profile_id"
+msgstr "Numai digitii permisi: @profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:1238;1250;1265
+msgid "Only digits allowed"
+msgstr "Numai digitii permisi"
+
+#: hpbx/includes/hpbx.reseller.inc:1282
+msgid "Only digits allowed for field @field"
+msgstr "Numai digitii permisi pentru campul @field"
+
+#: hpbx/includes/hpbx.reseller.inc:1287
+msgid "Customer max extension length must be less than subscriber number min digits."
+msgstr "Lungimea maxima a extensiei clientului trebuie sa fie mai mica decat numarul minim de digiti ai abonatului"
+
+#: hpbx/includes/hpbx.reseller.inc:1302
+msgid "Unknown error while uploading the polish emergency indexes CSV file"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1307
+msgid "The uploaded indexes file does not exist (anymore)"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1311
+msgid "Could not open uploaded indexes file"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1319
+msgid "Unknown error while uploading the mappings file"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1324
+msgid "The uploaded mappings file does not exist (anymore)"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1328
+msgid "Could not open uploaded mappings file"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1468
+msgid "Cleared resellers with @cid"
+msgstr "Stergere distribuitor clienti cu @cid"
+
+#: hpbx/includes/hpbx.reseller.inc:1472
+msgid "Cleared resellers_list with @cid*"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1476
+msgid "Cleared contracts with @cid"
+msgstr "Stergere contacte cu @cid"
+
+#: hpbx/includes/hpbx.reseller.inc:1481
+msgid "Cleared systemcontacts with @cid"
+msgstr "Stergere sistem  contacte cu @cid"
+
+#: hpbx/includes/hpbx.reseller.inc:1495
+msgid "Affiliate settings successfully saved"
+msgstr "Setarile asociate au fost salvate cu succes"
+
+#: hpbx/includes/hpbx.reseller.inc:214 hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "sipwise_api"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:214
+msgid "Failed to load emergencymappings"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:30
+msgid "Script Name"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:93;95
+msgid "Customer"
+msgstr "Client"
+
+#: hpbx/includes/hpbx.scripts.inc:94
+msgid "All Customers"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:106
+msgid "New Provision URL"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:107
+msgid "Provisioning URL"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:113
+msgid "New Provision Server"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:114
+msgid "Provisioning Server"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:135
+msgid "Run"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:147
+msgid "Reseller field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:152
+msgid "New Provisiong URL field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:155
+msgid "Select Panasonic RDS"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:160
+msgid "New Provisiong Server field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:211
+msgid "Webpassword has been successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:215
+msgid "Softphone auto provision option has been successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:219
+msgid "Display name has been successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:223
+msgid "Reseller settings fields successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:227
+msgid "Customer Settings fields successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:231
+msgid "Provisioning URL for Panasonic successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.scripts.inc:235
+msgid "Provisioning URL for Yealink successfully updated"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:12
+msgid "Valid?"
+msgstr "Este valid?"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:13 hpbx/includes/hpbx.subscriber.inc:207;218 hpbx/includes/hpbx.wizard.inc:293
+msgid "Disable self care rights"
+msgstr "Dezactivare drepturi auto intretinere"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:18 hpbx/includes/hpbx.subscriber.inc:436 hpbx/includes/hpbx.wizard.inc:41;478
+msgid "Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:19 hpbx/includes/hpbx.subscriber.inc:354;366
+msgid "Administrative"
+msgstr "Administrativ"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:22
+msgid "Caller line identification"
+msgstr "Identificarea liniei apelantului"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:23;263 hpbx/includes/hpbx.subscriber.inc:190;507;2214 hpbx/includes/hpbx.wizard.inc:48;113;543
+msgid "Subscriber profile"
+msgstr "Profilul abonatului"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:24 hpbx/includes/hpbx.subscriber.inc:525;532 hpbx/includes/hpbx.wizard.inc:579
+msgid "Block anonymous inbound calls"
+msgstr "Blocarea apelurilor de intrare cu numar ascuns"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:25 hpbx/includes/hpbx.subscriber.inc:576;589 hpbx/includes/hpbx.wizard.inc:568
+msgid "Call barrings"
+msgstr "Restrictionari apeluri"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:26
+msgid "PIN for overriding call barrings"
+msgstr "Codul PIN pentru suprascriere blocare apeluri"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:96;857 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Restricted"
+msgstr "Restrictionat"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:117;138;857
+msgid "Own"
+msgstr "Propriu"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:247
+msgid "Device key can't be determined. "
+msgstr "Identificarea echipamentului nu poate fi realizata"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:255;263;271 hpbx/includes/hpbx.subscriber.inc:1093;1103;1113;1140 hpbx/includes/hpbx.wizard.inc:37;41;45;48;51;107;110;113;116
+msgid "!name field is required."
+msgstr "Campul !name este necesar."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:271 hpbx/includes/hpbx.wizard.inc:116;872;876
+msgid "MAC Address"
+msgstr "Adresa MAC"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:321
+msgid "Device not created"
+msgstr "Echipamentul nu a fost creat"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:402
+msgid "Subscriber not created"
+msgstr "Abonatul nu a fost creat"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:422;630 hpbx/includes/js/hpbx-wizard.js:0
+msgid "Device"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:534
+msgid "Input error"
+msgstr "Eroare de introducere"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:535
+msgid "Value is not in list"
+msgstr "Valoarea nu este in lista "
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:536
+msgid "Pick a value from the list"
+msgstr "Alegeti o valoare din lista"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:537
+msgid "Please pick a value from the drop-down list."
+msgstr "Va rugam sa alegeti o valoare din lista derulanta"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:657
+msgid "Failed to retrieve entries from Excel file"
+msgstr "Incercarea de incarcare din fiserul Excel a esuat"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:702;719;736
+msgid "This field is mandatory___The maximum length of this field is 255"
+msgstr "Acest camp este necesar___Lungimea maxima a acestui camp este 255"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:753
+msgid "This field is mandatory___The given value must be of the email type___The maximum length of this field is 255"
+msgstr "Acest camp este necesar___Ceea ce introducetoi trebuie sa fie o adresa de email___LUngimea maxima a acestui camp este 255"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:754;814;1035
+msgid "One of the values is not unique"
+msgstr "Una dintre valori nu este unica"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:813
+msgid "The given value must be of the phone number type"
+msgstr "Valoarea pe care o introduceti trebuie sa fie un numar de telefon"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:907
+msgid "The maximum length of this field is 4___The given value is not completely a digit string"
+msgstr "Lungimea maxima a acestui camp este 4___Valoare introdusa nu este un sir de digiti"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:957
+msgid "The maximum length of this field is 255"
+msgstr "Lungimea maxima a acestui camp este 255"
+
+#: hpbx/includes/hpbx.subscriber.inc:41;2327
+msgid "Create subscriber"
+msgstr "Creare abonat"
+
+#: hpbx/includes/hpbx.subscriber.inc:58
+msgid "Call forwards"
+msgstr "Redirectionari apeluri"
+
+#: hpbx/includes/hpbx.subscriber.inc:60
+msgid "Speed dials"
+msgstr "Formare rapida"
+
+#: hpbx/includes/hpbx.subscriber.inc:111
+msgid "Subscriber settings"
+msgstr "Setari abonat"
+
+#: hpbx/includes/hpbx.subscriber.inc:151
+msgid "When"
+msgstr "Cand"
+
+#: hpbx/includes/hpbx.subscriber.inc:152;927
+msgid "Destination type"
+msgstr "Tip destinatie"
+
+#: hpbx/includes/hpbx.subscriber.inc:153
+msgid "During"
+msgstr "In timpul"
+
+#: hpbx/includes/hpbx.subscriber.inc:155
+msgid "Disconnect after"
+msgstr "Deconectare dupa"
+
+#: hpbx/includes/hpbx.subscriber.inc:251 hpbx/includes/hpbx.wizard.inc:370
+msgid "Assign to current user"
+msgstr "Aloca utilizator curent"
+
+#: hpbx/includes/hpbx.subscriber.inc:258
+msgid "When you as an administrator would like to have a phone number created for this account, please check this box"
+msgstr "Cand tu in calitate de administrator vei dori sa ai un numar de telefon creat pentru acest cont, verifica aceasta fereastra"
+
+#: hpbx/includes/hpbx.subscriber.inc:290
+msgid "First name*"
+msgstr "Prenume*"
+
+#: hpbx/includes/hpbx.subscriber.inc:312
+msgid "Last name*"
+msgstr "Nume*"
+
+#: hpbx/includes/hpbx.subscriber.inc:331
+msgid "Email*"
+msgstr "Email*"
+
+#: hpbx/includes/hpbx.subscriber.inc:497 hpbx/includes/hpbx.wizard.inc:45;59;520
+msgid "Caller Line Identification"
+msgstr "Identificarea liniei apelantului"
+
+#: hpbx/includes/hpbx.subscriber.inc:543;551
+msgid "Softclient"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:599 hpbx/includes/hpbx.wizard.inc:587;593
+msgid "PIN for overriding (temporary) call barrings"
+msgstr "Codul PIN pentru evitarea restrictionarii temporare a apelurilor"
+
+#: hpbx/includes/hpbx.subscriber.inc:859
+msgid "Unconditional"
+msgstr "Neconditionat"
+
+#: hpbx/includes/hpbx.subscriber.inc:860
+msgid "Busy"
+msgstr "Ocupat"
+
+#: hpbx/includes/hpbx.subscriber.inc:861
+msgid "Unavailable"
+msgstr "Indisponibil"
+
+#: hpbx/includes/hpbx.subscriber.inc:862
+msgid "Timeout"
+msgstr "Fara raspuns"
+
+#: hpbx/includes/hpbx.subscriber.inc:896
+msgid "voicemail"
+msgstr "mesagerie vocala"
+
+#: hpbx/includes/hpbx.subscriber.inc:907
+msgid "Not active"
+msgstr "Nu este activ"
+
+#: hpbx/includes/hpbx.subscriber.inc:912
+msgid "@cf_title"
+msgstr "@cf_title"
+
+#: hpbx/includes/hpbx.subscriber.inc:968
+msgid "After (sec)"
+msgstr "Dupa (sec)"
+
+#: hpbx/includes/hpbx.subscriber.inc:977
+msgid "Call forward active during"
+msgstr "Redirectionare activa (zilele saptamanii)"
+
+#: hpbx/includes/hpbx.subscriber.inc:1064;1073
+msgid "You have used up all your available @profile_name subscribers"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1100;1110;1151
+msgid "Only UTF-8 characters are allowed"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1116
+msgid "The email address you specified is not valid."
+msgstr "Adresa de email specificata nu este valida"
+
+#: hpbx/includes/hpbx.subscriber.inc:1120
+msgid "The amount of characters entered for the First name and Last name exceeds the limit."
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1147
+msgid "The entered Name may not exceed 125 characters."
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1172
+msgid "Invalid number"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1180
+msgid "Invalid area code"
+msgstr "Prefix de zona invalid"
+
+#: hpbx/includes/hpbx.subscriber.inc:1192
+msgid "Destination number is required"
+msgstr "Este necesar numar destinatie"
+
+#: hpbx/includes/hpbx.subscriber.inc:1210
+msgid "Please enter a valid ring time out"
+msgstr "Va rugam sa introduceti o durata de timp pentru sonerie "
+
+#: hpbx/includes/hpbx.subscriber.inc:1236
+msgid "Please choose a slot for the speed dial destination."
+msgstr "Va rugam sa alegeti un slot pentru formarea rapida a destinatiei"
+
+#: hpbx/includes/hpbx.subscriber.inc:1248
+msgid "Only numeric characters are allowed as destination number."
+msgstr "Doar caractere numerice sunt permise ca numar de destinatie."
+
+#: hpbx/includes/hpbx.subscriber.inc:1258
+msgid "Options need to be unique"
+msgstr "Este necesar ca optiunile sa fie unice"
+
+#: hpbx/includes/hpbx.subscriber.inc:1264
+msgid "The voicemail PIN should consist of exactly 4 numbers"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1271
+msgid "Please provide a valid email address"
+msgstr "Va rugam sa furnizati o adresa email valida"
+
+#: hpbx/includes/hpbx.subscriber.inc:1290
+msgid "An internal error occurred"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1291
+msgid "Could not find location id for passed polish emergency routing arguments"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1639
+msgid "User does not exist"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:1833
+msgid "Failed to create user"
+msgstr "A esuat crearea utilizatorului"
+
+#: hpbx/includes/hpbx.subscriber.inc:1852
+msgid "Failed to update user"
+msgstr "A esuat actualizarea utilizatorului"
+
+#: hpbx/includes/hpbx.subscriber.inc:1994
+msgid "Failed to restore the alias_number on the PilotSubscriber. Exception: @e"
+msgstr "A esuat incercarea de a restaura alias_number pe PilotSubscriber. Exceptie: @e"
+
+#: hpbx/includes/hpbx.subscriber.inc:1995
+msgid "Failed to restore the number"
+msgstr "A esuat restaurarea numarului"
+
+#: hpbx/includes/hpbx.subscriber.inc:2014
+msgid "User successfully saved"
+msgstr "Utilizator salvat cu succes"
+
+#: hpbx/includes/hpbx.subscriber.inc:2106
+msgid "Failed to remove the subscriber"
+msgstr "Stergerea abonatului a esuat"
+
+#: hpbx/includes/hpbx.subscriber.inc:2208
+msgid "Admin"
+msgstr "Admin"
+
+#: hpbx/includes/hpbx.subscriber.inc:2219
+msgid "Delete fax number"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:2219
+msgid "Delete subscriber"
+msgstr "Stergere abonat"
+
+#: hpbx/includes/hpbx.subscriber.inc:2355;2360 hpbx/includes/hpbx.voicemail.inc:120
+msgid "Create an administrative subscriber first"
+msgstr "Va rugam sa creati mai intai un nou abonat administrator"
+
+#: hpbx/includes/hpbx.subscriber.inc:2083;2091
+msgid "hpbx_subscriber_delete"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:2083
+msgid "Failed to remove soundset"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.inc:2091
+msgid "Will not remove pilotsubscriber soundset"
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:108
+msgid "Your password must contain at least one uppercase letter."
+msgstr "Parola dumneavoastra trebuie contina cel putin o litera mare"
+
+#: hpbx/includes/hpbx.user.inc:112
+msgid "Your password must contain at least one lowercase letter."
+msgstr "Parola dumneavoastra trebuie contina cel putin o litera mica"
+
+#: hpbx/includes/hpbx.user.inc:116
+msgid "Your password must contain at least one number."
+msgstr "Parola dumneavoastra trebuie contina cel putin o cifra"
+
+#: hpbx/includes/hpbx.user.inc:120
+msgid "Your password must contain at least one special character."
+msgstr "Parola dumneavoastra trebuie contina cel putin un caracter special"
+
+#: hpbx/includes/hpbx.user.inc:124
+msgid "Your password must be at least 8 characters in length total."
+msgstr "Parola dumneavoastra trebuie contina cel putin opt caractere in total"
+
+#: hpbx/includes/hpbx.user.inc:134
+msgid "The passwords do not match"
+msgstr "Parola eronata"
+
+#: hpbx/includes/hpbx.user.inc:140;162
+msgid "Your current password is missing or incorrect"
+msgstr "Parola ta curenta lipseste sau este incorecta"
+
+#: hpbx/includes/hpbx.user.inc:185
+msgid "Password successfully changed"
+msgstr "Parola a fost schimbata cu succes"
+
+#: hpbx/includes/hpbx.user.inc:259
+msgid "Failed to remove group assignment."
+msgstr "Incercarea de eliminare a grupului de asignare a esuat."
+
+#: hpbx/includes/hpbx.user.inc:275;323
+msgid "Failed to modify user @username"
+msgstr "Eroare modificare utilizator @user"
+
+#: hpbx/includes/hpbx.user.inc:284
+msgid "Failed to rename user @username"
+msgstr "Redenumirea userului @username a esuat"
+
+#: hpbx/includes/hpbx.user.inc:300;666;822
+msgid "Failed to add role."
+msgstr "Adaugarea permisiunii a esuat."
+
+#: hpbx/includes/hpbx.user.inc:407
+msgid "No Reseller name set, so can't create OU"
+msgstr ""
+
+#: hpbx/includes/hpbx.user.inc:510
+msgid "No company name set, so can't create OU"
+msgstr "Numele companiei nu a fost introdus, deci nu putem crea OU"
+
+#: hpbx/includes/hpbx.user.inc:647;803
+msgid "Failed to add a user account for @firstname @lastname"
+msgstr "Incercarea de a adauga un cont de utilizator pentru @firstname @lastname a esuat"
+
+#: hpbx/includes/hpbx.user.inc:1048
+msgid "Affiliate users"
+msgstr "Utilizatori asociati"
+
+#: hpbx/includes/hpbx.user.inc:1437
+msgid "Failed to create reseller administrator account"
+msgstr "Nu a putut fi creat contul de administrator al distribuitorului"
+
+#: hpbx/includes/hpbx.user.inc:1443;1462
+msgid "Failed to update reseller administrator account"
+msgstr "Actualizarea contului de administrator al distribuitorului a esuat "
+
+#: hpbx/includes/hpbx.user.inc:1465
+msgid "User succesfully updated"
+msgstr "Utilizatorul a fost actualizat cu succes"
+
+#: hpbx/includes/hpbx.user.inc:1479;1508
+msgid "A user with the provided first name and last name is already present."
+msgstr "Un utilizator cu prenumele si numele introduse este deja prezent"
+
+#: hpbx/includes/hpbx.user.inc:51
+msgid "Failed to remove user with username from drupal: @username @exception_msg"
+msgstr "Eliminarea utilizatorului cu nume utilizator din drupal @username a esuat cu eraoarea @exception_msg"
+
+#: hpbx/includes/hpbx.user.inc:60
+msgid "Failed to remove user with username: @username (not found in AD)"
+msgstr "Incercarea de eliminare a utilizatorului: @username a esuat (nu a fost gasit in AD)"
+
+#: hpbx/includes/hpbx.user.inc:64
+msgid "Failed to remove user with empty web username"
+msgstr "Incercarea de eliminare a utilizatorului cu nume utilizator web necompletat a esuat"
+
+#: hpbx/includes/hpbx.user.inc:208;214
+msgid "Failed to remove organisation unit: @company"
+msgstr "Stergerea clientului @company a esuat"
+
+#: hpbx/includes/hpbx.voicemail.inc:41
+msgid "Voicemail successfully deleted"
+msgstr "Mesageria vocala a fost stearsa"
+
+#: hpbx/includes/hpbx.voicemail.inc:191
+msgid "Voicemail group"
+msgstr "Grup Mesagerie Vocala"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Unheard"
+msgstr "Neascultat"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Heard"
+msgstr "Ascultat"
+
+#: hpbx/includes/hpbx.voicemail.inc:204
+msgid "All messages"
+msgstr "Toate mesajele"
+
+#: hpbx/includes/hpbx.voicemail.inc:244
+msgid "Personal"
+msgstr "Personal"
+
+#: hpbx/includes/hpbx.voicemail.inc:256
+msgid "Huntgroup"
+msgstr "Grup de hunting"
+
+#: hpbx/includes/hpbx.voicemail.inc:268
+msgid "Time"
+msgstr "Timp"
+
+#: hpbx/includes/hpbx.voicemail.inc:375
+msgid "Delete voicemail"
+msgstr "Sterge mesagerie vocala"
+
+#: hpbx/includes/hpbx.voicemail.inc:388;523
+msgid "Mark selected as heard"
+msgstr "Marcheaza selectia ca ascultata"
+
+#: hpbx/includes/hpbx.voicemail.inc:396;542
+msgid "Mark selected as unheard"
+msgstr "Marcheaza selectia ca neascultata"
+
+#: hpbx/includes/hpbx.voicemail.inc:405;559
+msgid "Delete selected"
+msgstr "Sterge selectia"
+
+#: hpbx/includes/hpbx.wizard.inc:59
+msgid "!name not allowed value."
+msgstr "valoare nepermisa pentru !name ."
+
+#: hpbx/includes/hpbx.wizard.inc:121;175;224
+msgid "Unknown error occurred. Please try again."
+msgstr "A aparut o eroare necunoscuta. Va rugam sa reincercati."
+
+#: hpbx/includes/hpbx.wizard.inc:253
+msgid "Provisioning can take up to 5 minutes."
+msgstr "Alocarea poate dura mai mult de 5 minute"
+
+#: hpbx/includes/hpbx.wizard.inc:256
+msgid "Failed to associate device"
+msgstr "Incercarea de alocare echipament a esuat"
+
+#: hpbx/includes/hpbx.wizard.inc:260;960;1122;1215
+msgid "Device successfully created"
+msgstr "Echipamentul a fost creat cu succes"
+
+#: hpbx/includes/hpbx.wizard.inc:282;438
+msgid "Create a subscriber"
+msgstr "Adauga un abonat"
+
+#: hpbx/includes/hpbx.wizard.inc:285
+msgid "Subscriber details"
+msgstr "Detalii abonat"
+
+#: hpbx/includes/hpbx.wizard.inc:385
+msgid "Administrative account"
+msgstr "Cont adiministrativ"
+
+#: hpbx/includes/hpbx.wizard.inc:411;666
+msgid "Next Step"
+msgstr "Pasul urmator"
+
+#: hpbx/includes/hpbx.wizard.inc:441
+msgid "Specifications"
+msgstr "Specificatii"
+
+#: hpbx/includes/hpbx.wizard.inc:456
+msgid "Choose number"
+msgstr "Alege numar"
+
+#: hpbx/includes/hpbx.wizard.inc:464
+msgid "Fill in Extension"
+msgstr "Completeaza in Extensie"
+
+#: hpbx/includes/hpbx.wizard.inc:485
+msgid "Choose Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:526
+msgid "Choose Caller Line Identification"
+msgstr "Alege Identificarea Liniei Apelantului"
+
+#: hpbx/includes/hpbx.wizard.inc:549
+msgid "Choose Subscriber Profile"
+msgstr "Alege Profilul Abonat"
+
+#: hpbx/includes/hpbx.wizard.inc:574
+msgid "Choose Call Barring"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:603
+msgid "Choose language of Voicemail announcements"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:634
+msgid "Previous"
+msgstr "Precedentul"
+
+#: hpbx/includes/hpbx.wizard.inc:643
+msgid "Previous Step"
+msgstr "Pasul Anterior"
+
+#: hpbx/includes/hpbx.wizard.inc:724
+msgid "Subscriber successfully created"
+msgstr "Abonat creat cu succes"
+
+#: hpbx/includes/hpbx.wizard.inc:727
+msgid "Would you like to add a device to this subscriber?"
+msgstr "Doriti sa adaugati un echipament la acest abonat?"
+
+#: hpbx/includes/hpbx.wizard.inc:748
+msgid "No, I'm done!"
+msgstr "Nu, am terminat!"
+
+#: hpbx/includes/hpbx.wizard.inc:780
+msgid "Create a device"
+msgstr "Adauga un echipmanet"
+
+#: hpbx/includes/hpbx.wizard.inc:783
+msgid "Setup new device"
+msgstr "Configureaza unui nou echipament"
+
+#: hpbx/includes/hpbx.wizard.inc:891;998;1078;1161;1252
+msgid "Done!"
+msgstr "Finalizat!"
+
+#: hpbx/includes/hpbx.wizard.inc:899;1006;1086;1169;1260
+msgid "OK, I'm done!"
+msgstr "Da, am finalizat!"
+
+#: hpbx/includes/hpbx.wizard.inc:930
+msgid "Finish"
+msgstr "Finalizat"
+
+#: hpbx/includes/hpbx.wizard.inc:968
+msgid "Press the Setup button."
+msgstr "Apasa butonul de Setup"
+
+#: hpbx/includes/hpbx.wizard.inc:969
+msgid "Scroll to Network and press select."
+msgstr "Deruleaza pana la Retea si apasa selectare"
+
+#: hpbx/includes/hpbx.wizard.inc:970
+msgid "Scroll to view Current IP. This is the IP address of your device."
+msgstr "Deruleaza pentru a vedea IP-ul curent. Aceasta este adresa IP a echipamentului dumneavoastra. "
+
+#: hpbx/includes/hpbx.wizard.inc:981;985;1144;1148;1235;1239
+msgid "IP address"
+msgstr "Adresă IP"
+
+#: hpbx/includes/hpbx.wizard.inc:1100
+msgid "Add another"
+msgstr "Adauga altul"
+
+#: hpbx/includes/hpbx.wizard.inc:1130
+msgid "Enter the phone menu."
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1131
+msgid "Scroll to settings and press select."
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1132
+msgid "Scroll to phone info and press select."
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1133
+msgid "Scroll to view IP Address. This is the IP address of your device."
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1223
+msgid " Pick up the phone connected to the ATA and call * * * *"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1224
+msgid "Enter 1 1 0 #"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:1225
+msgid "You will now hear a message giving you the IP address."
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:120;174
+msgid "hpbx_wizard"
+msgstr "hpbx_wizard"
+
+#: hpbx/includes/hpbx.wizard.inc:120
+msgid "Subscriber ID not found, so can't assign to device"
+msgstr "ID Abonatului nu a fost gasit, ca urmare nu se poate aloca un echipament"
+
+#: hpbx/includes/hpbx.wizard.inc:174
+msgid "Device ID not found, so can't sync device"
+msgstr "ID-ul echipamentului nu a fost gasit, astfel incat nu putem sincroniza echipamentul"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Subscriber"
+msgstr "Abonat"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Please wait"
+msgstr ""
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "The @type is currently being created."
+msgstr ""
+
+#: hpbx/includes/js/hpbx.js:0
+msgid "Are you sure you want to remove this item? This action cannot be undone."
+msgstr "Sunteti sigur ca doriti eliminarea acestui articol? Aceasta actiune este definitiva"
+
+#: hpbx/includes/js/hpbx.stats.js:0
+msgid "Failed to retrieve stats"
+msgstr "Incercarea de recuperare statistici a esuat"
+
+#: hpbx/includes/js/hpbx_devices.js:0;0
+msgid "Unassigned"
+msgstr "Nealocat"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device !station_name"
+msgstr "Echipament !station_name"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Line selection button !button"
+msgstr "Tasta de selectarae liniei !button"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Private"
+msgstr "Privat"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Shared"
+msgstr "Disponibil in comun"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "BLF"
+msgstr "Camp de semnalizare pentru ocupat"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device profile"
+msgstr "Profil echipament"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Processing"
+msgstr "În procesare"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "This can take a while."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device successfully saved"
+msgstr "Echipamentul a fost adaugat cu succes"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Exit"
+msgstr "Iesire"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Reboot your phone to provision the device"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Please fill in the IP address of your phone in order to provision it"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "In case the device is already synced, reboot<br/>your phone to provision the device."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Otherwise, please fill in the IP address of your phone in order to provision it"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "IP-Address"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Got it!"
+msgstr "Am inteles"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "There should be at least one line provisioned on the device. Please adjust and save the configuration."
+msgstr "Va rugam sa adugati cel putin un numar de telefon. Dupa adaugare, va rugam salvati configuratia."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Replicate"
+msgstr "Duplica"
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Enter the URL of your video here..."
+msgstr "Introdu URL fisier video aici..."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Type your text here..."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add files"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add next step"
+msgstr ""
+
+#: hpbx/includes/js/hpbx_subscriber_bulk.js:0
+msgid "Uploading data failed for an unknown reason. Please try again."
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:144
+msgid "HPBX MoH audio category"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:145 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:726
+msgid "View counter"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.info:0
+msgid "Drop 5"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:720
+msgid "File"
+msgstr "Fișier"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:721
+msgid "Instruction + Photo"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:722
+msgid "Photo"
+msgstr "Fotografie"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:725
+msgid "Video"
+msgstr "Video"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:727
+msgid "hpbx block"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:20 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:20
+msgid "HPBX Help article"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:24
+msgid "Titel"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:178 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:144
+msgid "Master"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:180 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:146
+msgid "more"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:181 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:147
+msgid "Apply"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:182
+msgid "Opnieuw instellen"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:183 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:149
+msgid "Sort by"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:184 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:150
+msgid "Asc"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:185 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:151
+msgid "Desc"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:186
+msgid "Inhoud toevoegen"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:187
+msgid "<?php\r\nglobal $user;\r\n$account = $user;\r\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\r\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\r\n}\r\n\r\nif (user_access('edit any hpbx_help_article content', $account)) {\r\n\r\n  echo '<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n<div class=\"col-xs-5 col-xxs-12 col-sm-4 col-md-3\">' . l(t('Add help article'),'node/add/hpbx-help-article', array('attributes' => array('class' => array('sg-btn sg-btn-wizard')))) . '</div></br>\r\n<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n';\r\n\r\n}\r\n\r\n?>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:206 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:168
+msgid "term"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:207
+msgid "<a class=\"hpbx-help-category-item\" href=\"[path]\">[title]</a>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:208 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:170
+msgid "HPBX Help frontpage"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0
+msgid "HPBX help 2.0"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:564
+msgid "Step"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:566
+msgid "step_image"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:28
+msgid "HPBX Help article steps"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:148
+msgid "Reset"
+msgstr "Resetează"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:152
+msgid "Add content"
+msgstr "Adăugare conţinut"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:153
+msgid "<?php\nglobal $user;\n$account = $user;\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\n}\n\nif (user_access('edit any hpbx_help_article content', $account)) {\n  echo '<ul>';\n  echo '<li>'. l(t('Add help article'),'node/add/hpbx-help-article') . '</li>';\n  echo  '<li>'. l(t('Add help article (steps)'),'node/add/hpbx-help-article-steps'). '</li>';\n  echo  '</ul>';\n}\n\n?>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:169
+msgid "<a class=\"hpbx-help-category-item\" href=\"/node/[nid]\">[title]</a>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0
+msgid "HPBX Help content-types"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:31
+msgid "HostedPBX Management"
+msgstr "Management HostedPBX"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:32
+msgid "Main menu Hosted PBX"
+msgstr "Meniu principal Hosted PBX"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:236
+msgid "Auto Attendants"
+msgstr "Autoasistenti"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:237
+msgid "Call Records"
+msgstr "Lista detaliata a  convorbirilor"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:238
+msgid "Conference Rooms"
+msgstr "Audioconferinte"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:240
+msgid "Home"
+msgstr "Acasa"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:241
+msgid "Hunting Groups"
+msgstr "Grupuri de hunting"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:242
+msgid "PBX Devices"
+msgstr "Echipamente"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:244
+msgid "Resellers"
+msgstr "Distribuitori"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:248
+msgid "Voicemails"
+msgstr "Casute vocale"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "hpbx_permissions"
+msgstr ""
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "Hosted PBX Permissions"
+msgstr "Hosted PBX Autorizari"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "RPS provisioning"
+msgstr "RPS furnizare"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "Redirect and Provisioning Service Provisioning module"
+msgstr "Redirectare si Furnizare-Modul pentru servicii de Furnizare"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:126
+msgid "Read @type list from cache (@cid). request=@request"
+msgstr "Citeste @type lista din memoria cache (@cid). cerere=@request"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:136
+msgid "@type list NOT written to cache (@cid) as we received an error message @message"
+msgstr ""
+"Lista @type nu a fost scrisa in memoria cache (@cid) daca ati primit "
+"mesajul de eroare @message"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:144
+msgid "Write @type list to cache (@cid). source=@source"
+msgstr "Scrie lista @type in memoria cache  (@cid). sursa=@source"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "could not find active reseller id"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise API"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise NGCP HTTP API implementation"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "cant find active reseller_id"
+msgstr ""
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:251
+msgid "Read @type (@id) entity from cache (@cid). request=@request"
+msgstr ""
+"Citeste @type (@id) entitate din memoria cache (@cid). Cererea=@request"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:262
+msgid "@type (@id) entity NOT written to cache (@cid) as we received an error message @message"
+msgstr "Entitatea @type (@id) NU a fost scrisa in memoria cache (@cid) daca am primit un mesaj de eroare @message"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:266
+msgid "Write @type (@id) entity to cache (@cid). source=@source"
+msgstr "Scrieentitatea @type (@id) in memoria cache (@cid). Sursa=@source"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:468;478
+msgid "Cleared @table with @cid"
+msgstr "Stergere @table cu @cid"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:485;571
+msgid "Cleared @table_list with @cid*"
+msgstr "Stergere @table_list cu @cid*"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:508;534;558
+msgid "Failed to set gpp chunks"
+msgstr ""
+
+#: hpbx/modules/stretto_api/stretto_api.info:0
+msgid "Stretto HTTP API implementation"
+msgstr ""
+
+#: template.php:45
+msgid "!total search results for !keys"
+msgstr "total rezultate pentru !keys"
+
+#: template.php:209
+msgid "Device profile"
+msgstr "Profil echipament"
+
+#: template.php:213
+msgid "MAC address"
+msgstr "Adresa MAC"
+
+#: template.php:231 templates/subscriber-import-form.tpl.php:28 templates/user-pass-reset-form.tpl.php:31
+msgid "Save"
+msgstr "Salveaza"
+
+#: template.php:232 templates/page--hpbx-help-article--edit.tpl.php:165;167 templates/page--hpbx-subscriber-bulk.tpl.php:31 templates/user-pass-reset-form.tpl.php:34
+msgid "Cancel"
+msgstr "Renunta"
+
+#: template.php:247
+msgid "Subscriber"
+msgstr "Abonat"
+
+#: template.php:251;263
+msgid "Choose an option"
+msgstr "Alege o optiune"
+
+#: template.php:259
+msgid "Type"
+msgstr "Tip"
+
+#: template.php:272
+msgid "Remove"
+msgstr "Elimina"
+
+#: template.php:273
+msgid "Set"
+msgstr "Configureaza"
+
+#: template.php:452
+msgid "Username"
+msgstr "Nume utilizator"
+
+#: template.php:456 templates/user-login.tpl.php:18;19
+msgid "Password"
+msgstr "Parola"
+
+#: template.php:472
+msgid "Status message"
+msgstr "Mesaj de status"
+
+#: template.php:473
+msgid "Error message"
+msgstr "Mesaj de eroare"
+
+#: template.php:474
+msgid "Warning message"
+msgstr "Mesaj de avertizare"
+
+#: template.php:504
+msgid "Got it!"
+msgstr "Am inteles"
+
+#: template.php:998
+msgid "« first"
+msgstr "« primul"
+
+#: template.php:998
+msgid "Go to first page"
+msgstr "Mergi la prima pagina"
+
+#: template.php:999
+msgid "‹ previous"
+msgstr "‹ anterior"
+
+#: template.php:999
+msgid "Go to previous page"
+msgstr "Mergi la pagina anterioara"
+
+#: template.php:1000
+msgid "next ›"
+msgstr "continua ›"
+
+#: template.php:1000
+msgid "Go to next page"
+msgstr "Mergi la pagina urmatoare"
+
+#: template.php:1001
+msgid "last »"
+msgstr "final »"
+
+#: template.php:1001
+msgid "Go to last page"
+msgstr "Mergi la ultima pagina"
+
+#: template.php:1008
+msgid "Go to page @number"
+msgstr "Mergi la pagina @ cu numarul"
+
+#: hpbx_theme.info:0
+msgid "HPBX Theme"
+msgstr "Tema HPBX"
+
+#: hpbx_theme.info:0
+msgid "Look & Feel Theme for HostedPBX"
+msgstr "Accesibilitate tema HostedPBX"
+
+#: hpbx_theme.info:0
+msgid "Right sidebar"
+msgstr "Bara dreapta"
+
+#: hpbx_theme.info:0
+msgid "Content"
+msgstr "Continut"
+
+#: hpbx_theme.info:0
+msgid "Header"
+msgstr "Antet"
+
+#: hpbx_theme.info:0
+msgid "Footer"
+msgstr "Subsol"
+
+#: templates/node--hpbx-help-article.tpl.php:102
+msgid "Files"
+msgstr "Fişiere"
+
+#: templates/page--hpbx--help.tpl.php:16 templates/page--hpbx-help-article--edit.tpl.php:24 templates/page--hpbx-help-article.tpl.php:15
+msgid "Back to all help articles"
+msgstr "Inapoi in sectiunea de asistenta"
+
+#: templates/page--hpbx--help.tpl.php:20
+msgid "Help"
+msgstr "Asistenta"
+
+#: templates/page--hpbx--help.tpl.php:26 templates/page--hpbx-help-article.tpl.php:20
+msgid "Search"
+msgstr "Cauta"
+
+#: templates/page--hpbx--wizard.tpl.php:3 templates/page--hpbx-subscriber-bulk.tpl.php:83
+msgid "Exit"
+msgstr "Iesire"
+
+#: templates/page--hpbx--wizard.tpl.php:45 templates/page.tpl.php:65
+msgid "Help is loading..."
+msgstr "Sectiunea Asistenta se incarca"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:35 templates/page--hpbx-help-article.tpl.php:43
+msgid "Edit"
+msgstr "Editeaza"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:36
+msgid "Sitemap"
+msgstr "Harta"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:37
+msgid "Details"
+msgstr "Detalii"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:57;138;514
+msgid "Text block"
+msgstr "Blocare text"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:58;139;515
+msgid "Photo"
+msgstr "Fotografie"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:59;140;516
+msgid "Video"
+msgstr "Video"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:60;141;517
+msgid "File"
+msgstr "Fișier"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:61;142;518
+msgid "Instruction"
+msgstr "Instructiuni"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:127;500
+msgid "Remove block"
+msgstr "Inlatura blocaj"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:199
+msgid "Node ID"
+msgstr "ID Nod"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:211
+msgid "Edited"
+msgstr "Editat"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:236
+msgid "Edited by"
+msgstr "Editat de"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:249
+msgid "Visibility"
+msgstr "Vizibilitate"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:275
+msgid "Frontpage"
+msgstr "Pagina de inceput"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:301
+msgid "Language"
+msgstr "Limba"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:319
+msgid "Reseller"
+msgstr "Distribuitor"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:335
+msgid "Frontpage type"
+msgstr "Tip pagina de inceput"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:350
+msgid "Pages"
+msgstr "Pagini"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:417
+msgid "Add photos"
+msgstr "Adauga fotografii"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:428
+msgid "Drag and drop files here or <a href=\"\" class=\"hpbx-file-upload-link\">upload</a> them"
+msgstr "Trage fisierele aici sau <a href=\"\" " class=\"hpbx-file-upload-link\">incarcarea</a> lor "
+
+#: templates/page--hpbx-help-article--edit.tpl.php:448
+msgid "Add video"
+msgstr "Adauga video"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:459
+msgid "URL of your video"
+msgstr "URL fisier video"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:460
+msgid "Enter the URL of your video here..."
+msgstr "Introdu URL fisier video aici..."
+
+#: templates/page--hpbx-help-article.tpl.php:46
+msgid "Replicate"
+msgstr "Duplica"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:4
+msgid "Bulk import"
+msgstr "Import bulk"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:11
+msgid "Download template"
+msgstr "Descarca template"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:15
+msgid "Upload xlsx"
+msgstr "Incarca xlsx"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:34
+msgid "Start"
+msgstr "Start"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:38
+msgid "Processing"
+msgstr "În procesare"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:38
+msgid "This can take some time. Please do not close your browser."
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:55
+msgid "Upload finished"
+msgstr "Incarcare finalizata"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:56
+msgid "###successful### out of ###total### rows were successfully added."
+msgstr "###successful### in afara ###total### randuri au fost adaugate."
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:58
+msgid "OK"
+msgstr "Da"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:66
+msgid "Bulk import completed"
+msgstr "Import bulk finalizat"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:69
+msgid "Devices"
+msgstr "Echipamente"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:70
+msgid "In case you have added Cisco devices to the portal via the bulk import, you need to sync these devices seperately. In order to do so, please enter the device overview, click on sync and follow the instructions. In case you have added Yealink and Panasonic devices, you should restart the devices."
+msgstr ""
+"In caz ca aveti adaugate echipamente Cisco la portal cu import bulk, "
+"aveti nevoie de sincronizare sync separata a acestor echipamente. "
+"Pentru a face acest lucru, adaugati datele echipamentului, apasati pe "
+"sync si urmati instructiunile. In caz ca aveti echipamente Yealink sau "
+"Panasonic, ar trebui sa restartatiechipamentele."
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:72
+msgid "Device overview"
+msgstr "Vedere de ansamblu echipamente"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:76
+msgid "Subscribers"
+msgstr "Abonati"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:77
+msgid "After succesfully having uploaded your subscribers, you can configure options like call forwards, voicemail or speed dials for each subscriber. In order to do so, please enter the subscriber overview and choose the subscriber you want to edit."
+msgstr ""
+"Dupa ce ati incarcat cu succes abonatii, puteti configura optiuni ca "
+"redirectionarea apelurilor, mesagerie vocala sau formare rapida pentru "
+"fiecare abonat. Pentru a face acest lucru, va rugam sa introduceti "
+"datele abonatului si sa alegeti abonatul pe care doriti sa il editati"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:79
+msgid "Subscriber overview"
+msgstr "Datele abonatului"
+
+#: templates/page.tpl.php:165
+msgid "Are you sure you want to delete?"
+msgstr "Sunteti sigur ca doriti sa stergeti?"
+
+#: templates/page.tpl.php:167
+msgid "Yes"
+msgstr "Da"
+
+#: templates/page.tpl.php:168
+msgid "No"
+msgstr "Nu"
+
+#: templates/search-api-page-results.tpl.php:44
+msgid "1 search result for @keys"
+msgid_plural "@result_count search results for @keys"
+msgstr[0] "1 cauta rezultatul pentru @keys"
+msgstr[1] "@result_count cauta rezultatul pentru @keys"
+
+#: templates/subscriber-import-form.tpl.php:8
+msgid "Password reset"
+msgstr "Resetare parola"
+
+#: templates/subscriber-import-form.tpl.php:15;16 templates/user-pass-reset-form.tpl.php:17;18
+msgid "Current password"
+msgstr "Parola curenta"
+
+#: templates/subscriber-import-form.tpl.php:20;21 templates/user-pass-reset-form.tpl.php:22;23
+msgid "New password"
+msgstr "Noua parola"
+
+#: templates/subscriber-import-form.tpl.php:24;25 templates/user-pass-reset-form.tpl.php:26;27
+msgid "Repeat password"
+msgstr "Repeta parola"
+
+#: templates/user-login.tpl.php:10
+msgid "Log in"
+msgstr "Conectare"
+
+#: templates/user-login.tpl.php:14;15 templates/user-pass.tpl.php:16;17
+msgid "Email or username"
+msgstr "Email sau Nume utilizator"
+
+#: templates/user-login.tpl.php:26
+msgid "Forgot password?"
+msgstr "Ai uitat parola?"
+
+#: templates/user-pass-reset-form.tpl.php:10
+msgid "Change password"
+msgstr "Schimba parola"
+
+#: templates/user-pass-reset-form.tpl.php:29
+msgid "Your password must be at least eight characters, including one uppercase letter, one lowercase letter, one special character and one digit."
+msgstr "Paola dumneavoastra trebuie sa contina minim opt caractere, cel putin o litera mare, o litera mica, un caracter special si o cifra."
+
+#: templates/user-pass-reset-form.tpl.php:29
+msgid "Your password must be at least 7 characters long."
+msgstr "Parola trebuie sa contina cel putin 7 caractere"
+
+#: templates/user-pass.tpl.php:8
+msgid "Password recovery"
+msgstr "Recuperare parola"
+
+#: templates/user-pass.tpl.php:13
+msgid "A one time login link will be sent to your email address."
+msgstr "Link-ul pentru conectare va fi transmis  pe adresa dumneavoastra de email"
+
+#: templates/user-pass.tpl.php:20
+msgid "Request"
+msgstr "Solicita"
+
+#: templates/user-pass.tpl.php:25
+msgid "Back to login"
+msgstr "Inapoi la conectare"
+
+#: templates/views-view--hpbx-help.tpl.php:21
+msgid "Add help article"
+msgstr ""
+
+#: templates/views-view--hpbx-help.tpl.php:26
+msgid "Go to sitemap"
+msgstr ""
+
+#:
+msgid "Select an Option"
+msgstr "Selecteaza o optiune"
+
+#:
+msgid "Success"
+msgstr "Trimis cu succes"
+
+#:
+msgid "Failed"
+msgstr "Faxul nu a fost trimis"
+
+#:
+msgid "Undefined"
+msgstr "Nedefinit"

@@ -1,0 +1,6 @@
+name = RPS provisioning
+description = "Redirect and Provisioning Service Provisioning module" 
+package = Sipwise
+version = VERSION
+core = 7.x
+files[] = hpbx_rps.module

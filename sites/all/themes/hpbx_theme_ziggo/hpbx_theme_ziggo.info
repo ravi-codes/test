@@ -1,0 +1,11 @@
+name = Ziggo HPBX Sub theme
+description = HPBX Ziggo sub theme
+core = 7.x
+engine = phptemplate
+stylesheets[all][] = dist/css/all-ziggo.min.css
+regions[sidebar_right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+base theme = hpbx_theme
+features[] = favicon

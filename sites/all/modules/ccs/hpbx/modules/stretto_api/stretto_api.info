@@ -1,0 +1,6 @@
+name = Stretto
+description = Stretto HTTP API implementation
+package = Stretto
+version = VERSION
+core = 7.x 
+files[] = stretto_api.module

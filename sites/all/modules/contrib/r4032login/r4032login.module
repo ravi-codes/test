@@ -1,0 +1,156 @@
+<?php
+
+/**
+ * @file
+ * Redirect denied pages to the user login form.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function r4032login_menu() {
+  $items = array();
+  $items['r4032login'] = array(
+    'page callback' => 'r4032login_redirect',
+    'access callback' => 'r4032login_access_callback',
+    'type' => MENU_CALLBACK,
+    'title' => 'Access denied',
+    'description' => 'You are not authorized to access this page.',
+  );
+  return $items;
+}
+
+/**
+ * Without an access callback on the menu item for r4032login_redirect,
+ * the redirect will be 403 and just have the default access denied page anyway.
+ */
+function r4032login_access_callback() {
+  return TRUE;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function r4032login_form_system_site_information_settings_alter(&$form, &$form_state, $form_id) {
+  $form['error_page']['r4032login_display_denied_message'] = array(
+    '#type' => 'checkbox',
+    '#weight' => 5,
+    '#title' => t('Display access denied message on login page'),
+    '#default_value' => variable_get('r4032login_display_denied_message', TRUE),
+  );
+  $form['error_page']['r4032login_access_denied_message'] = array(
+    '#type' => 'textfield',
+    '#weight' => 6,
+    '#title' => t("User login 'access denied' message"),
+    '#default_value' => variable_get('r4032login_access_denied_message', t('Access denied. You must login to view this page.')),
+    '#states' => array(
+      'invisible' => array('input[name="r4032login_display_denied_message"]' => array(
+        'checked' => FALSE,
+      )),
+    ),
+  );
+  $form['error_page']['r4032login_redirect_authenticated_users_to'] = array(
+    '#type' => 'textfield',
+    '#weight' => 7,
+    '#title' => t("Rediect authenticated users to"),
+    '#description' => t('If an authenticated user tries to access a page they can not, redirect them to the given page. Use &lt;front&gt; for the front page, leave blank for a default access denied page.'),
+    '#default_value' => variable_get('r4032login_redirect_authenticated_users_to', ''),
+  );
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_theme().
+ */
+function r4032login_theme() {
+  return array(
+    'r4032login_denied' => array(
+      'variables' => array(),
+    ),
+  );
+}
+
+/**
+ * MENU_CALLBACK for /r4032login
+ *
+ * Redirect anonymous users from 403 Access Denied pages to the /user/login page
+ * with a message explaining that they must login to view the requested page
+ * and a query string parameter appended to the url to return after login.
+ */
+function r4032login_redirect() {
+  global $user, $language;
+  if (user_is_anonymous()) {
+    if (variable_get('r4032login_display_denied_message', TRUE)) {
+      $message = variable_get('r4032login_access_denied_message', t('Access denied. You must login to view this page.'));
+      drupal_set_message(t($message), 'error');
+    }
+    // using drupal_goto() with destination set causes a recursive redirect loop
+    header('Location: ' . url('user/login', array('query' => array('destination' => _r4032login_destination()), 'absolute' => TRUE)), TRUE, 302);
+    drupal_exit();
+  }
+  else {
+    // Check to see if we are to redirect the user.
+    $redirect = variable_get('r4032login_redirect_authenticated_users_to', '');
+    if (empty($redirect)) {
+      // Display the default access denied page.
+      return drupal_set_page_content(theme('r4032login_denied'));
+    }
+    else {
+      // Custom access denied page for logged in users.
+      header('Location: ' . url($redirect, array('absolute' => TRUE)));
+      drupal_exit();
+    }
+  }
+}
+
+/**
+ * Version of drupal_get_destination which works inside of a 403 callback
+ *
+ */
+function _r4032login_destination() {
+  // decode URL to prevent double-encoding https://drupal.org/node/1403616
+  $destination = urldecode(request_uri());
+
+  // Remove basepath
+  global $base_path;
+  if (strpos($destination, $base_path) === 0) {
+    $destination = substr($destination, strlen($base_path));
+  }  
+
+  if (!variable_get('clean_url', 0)) {
+    // Clean URLs disabled, so break apart the query string and
+    // pull out the path.
+    $destination = parse_url($destination);
+    $queryarray = explode('&', $destination['query']);
+    $path = str_replace('q=', '', $queryarray[0]);
+    unset($queryarray[0]);
+    $query = !empty($queryarray) ? '?' . implode('&', $queryarray) : '';
+    $destination = $path . $query;
+  }
+
+  // If the language path prefixing is enabled remove it from the path.
+  if (variable_get('language_negotiation', FALSE)) {
+    $args = explode('/', $destination);
+    $prefix = array_shift($args);
+
+    // Search prefix within enabled languages.
+    $languages = language_list('enabled');
+    foreach ($languages[1] as $language) {
+      if (!empty($language->prefix) && $language->prefix == $prefix) {
+        // Found a match, rebuild the path without the language.
+        $destination = implode('/', $args);
+        break;
+      }
+    }
+  }
+
+  return $destination;
+}
+
+/**
+ * Display themed Access denied page.
+ */
+function theme_r4032login_denied() {
+  drupal_set_title(t('Access denied'));
+  return '<p>' . t('You are not authorized to access this page.') . '</p>';
+}

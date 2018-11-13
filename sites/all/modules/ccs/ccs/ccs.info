@@ -1,0 +1,8 @@
+name = CCS
+description = "General module" 
+package = CCS
+version = VERSION
+core = 7.x
+files[] = ccs.module
+files[] = language.inc.php
+files[] = LdapCCS.class.php

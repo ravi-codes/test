@@ -1,0 +1,6 @@
+name = Sipwise API
+description = "Sipwise NGCP HTTP API implementation" 
+package = Sipwise
+version = VERSION
+core = 7.x
+files[] = sipwise_api.module

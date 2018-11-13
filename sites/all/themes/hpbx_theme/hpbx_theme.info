@@ -1,0 +1,8 @@
+name = HPBX Theme
+description = Look & Feel Theme for HostedPBX
+core = 7.x
+engine = phptemplate
+regions[sidebar_right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer

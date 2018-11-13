@@ -1,0 +1,4584 @@
+# $Id$
+#
+# German translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  ccs/ccs.module: n/a
+#  hpbx/includes/hpbx.user.inc: n/a
+#  ccs/ccs.info: n/a
+#  hpbx/hpbx.module: n/a
+#  hpbx/includes/hpbx.conference.inc: n/a
+#  hpbx/includes/hpbx.subscriber.inc: n/a
+#  hpbx/includes/hpbx.business_partner.inc: n/a
+#  hpbx/includes/hpbx.customer.inc: n/a
+#  hpbx/includes/hpbx.reseller.inc: n/a
+#  hpbx/includes/hpbx.subscriber.bulk.inc: n/a
+#  hpbx/includes/hpbx.wizard.inc: n/a
+#  hpbx/includes/hpbx.scripts.inc: n/a
+#  hpbx/includes/hpbx.download.inc: n/a
+#  hpbx/includes/hpbx.help.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc: n/a
+#  hpbx/includes/hpbx.callrecords.inc: n/a
+#  hpbx/includes/hpbx.defaultforward.inc: n/a
+#  hpbx/includes/hpbx.fax.inc: n/a
+#  hpbx/includes/hpbx.huntgroup.inc: n/a
+#  hpbx/includes/hpbx.masquerade.inc: n/a
+#  hpbx/includes/hpbx.pbxdevice.inc: n/a
+#  hpbx/includes/hpbx.voicemail.inc: n/a
+#  hpbx/includes/hpbx.autoattendant.inc: n/a
+#  hpbx/includes/hpbx.musiconhold.inc: n/a
+#  hpbx/modules/stretto_api/stretto_api.info: n/a
+#  hpbx/includes/hpbx.fax2email.inc: n/a
+#  hpbx/includes/js/hpbx.js: n/a
+#  hpbx/includes/hpbx.dashboard.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc: n/a
+#  hpbx/modules/hpbx_rps/hpbx_rps.info: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.info: n/a
+#  hpbx/includes/js/hpbx_help.js: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc: n/a
+#  hpbx/hpbx.info: n/a
+#  hpbx/modules/sipwise_api/includes/Sipwise.class.php: n/a
+#  hpbx/modules/drop_5/drop_5.info: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.info: n/a
+#  hpbx/includes/hpbx.audio.inc: n/a
+#  hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc: n/a
+#  hpbx/includes/js/hpbx_devices.js: n/a
+#  hpbx/modules/sipwise_api/sipwise_api.module: n/a
+#  hpbx/includes/js/hpbx-wizard.js: n/a
+#  hpbx/includes/js/hpbx.stats.js: n/a
+#  hpbx/includes/js/hpbx_subscriber_bulk.js: n/a
+#  hpbx/modules/drop_5/drop_5.features.field.inc: n/a
+#  hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc: n/a
+#  hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc: n/a
+#  hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2018-05-30 10:21+0200\n"
+"PO-Revision-Date: 2018-05-30 10:21+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: German <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: ccs/ccs.module:40
+msgid "Username"
+msgstr "Benutzername"
+
+#: ccs/ccs.module:44
+msgid "Please enter your username or e-mail address. A one-time login link</br>will be send to your e-mail address."
+msgstr "Bitte geben Sie Ihren Benutzernamen oder Ihre E-Mail-Adresse ein. Ein einmaliger Login-Link</br>wird an ihre E-Mail-Adresse gesendet."
+
+#: ccs/ccs.module:78
+msgid "View webserver current hostname by triggering easter-egg."
+msgstr "Durch Auslösen des Easter Eggs den aktuellen Hostnamen des Webservers anzeigen."
+
+#: ccs/ccs.module:81
+msgid "ccs icm number overview"
+msgstr "ccs icm-Nummernüberblick"
+
+#: ccs/ccs.module:135;142
+msgid "Sorry, %name is not recognized as a user name."
+msgstr "%name wird leider nicht als Benutzername erkannt."
+
+#: ccs/ccs.module:147;269
+msgid "Sorry, we don't have a valid e-mail address attached to the user account. Please contact the support desk."
+msgstr "Leider ist dem Benutzerkonto keine gültige E-Mail-Adresse zugeordnet. Wenden Sie sich bitte an den Support Desk."
+
+#: ccs/ccs.module:193
+msgid "Invalid customer definition id."
+msgstr "Ungültige Kundendefinitions-ID."
+
+#: ccs/ccs.module:261
+msgid "Further instructions have been sent to your e-mail address."
+msgstr "Das Passwort und weitere Hinweise wurden an die angegebene E-Mail-Adresse gesendet."
+
+#: ccs/ccs.module:264;680
+msgid "Could not reset password"
+msgstr "Das Passwort konnte nicht zurückgesetzt werden."
+
+#: ccs/ccs.module:279
+msgid "Replacement login information for @name at www.ccswebtool.com"
+msgstr "Ersatzlogindaten für @name auf www.ccswebtool.com"
+
+#: ccs/ccs.module:280
+msgid ""
+"@name,\n"
+"\n"
+"        A request to reset the password for your account has been made at www.ccswebtool.com.\n"
+"\n"
+"        Username: @name\n"
+"        Password: @password\n"
+"\n"
+"        --  www.ccswebtool.com team"
+msgstr ""
+"@name,\n"
+"\n"
+"        Unter www.ccswebtool.com wurde eine Anforderung zum Zurücksetzen des Passworts für Ihr Konto gestellt.\n"
+"\n"
+"        Benutzername: @name\n"
+"        Passwort: @password\n"
+"\n"
+"        --  Das Team von www.ccswebtool.com"
+
+#: ccs/ccs.module:327
+msgid "Tools"
+msgstr "Tools"
+
+#: ccs/ccs.module:333
+msgid "Database"
+msgstr "Datenbank"
+
+#: ccs/ccs.module:339
+msgid "Change Language"
+msgstr "Sprache ändern"
+
+#: ccs/ccs.module:345
+msgid "Get current hostname"
+msgstr "Aktuellen Hostnamen abrufen"
+
+#: ccs/ccs.module:502
+msgid "Within the tools section, some essentials tools can be found to manupulate various settings involving your (service)numbers."
+msgstr "Innerhalb des Abschnitts Tools befinden sich einige wichtige Tools für die Bearbeitung verschiedener Einstellungen mit Ihren (Service-)Nummern."
+
+#: ccs/ccs.module:514
+msgid "Currently, we don't have your e-mail\n        address. Please enter a valid e-mail address at the !link page."
+msgstr ""
+"Aktuell haben wir Ihre E-Mail-\n"
+"        Adresse nicht. Geben Sie bitte eine gültige E-Mail-Adresse "
+"auf der !Link-Seite ein."
+
+#: ccs/ccs.module:516
+msgid "account settings"
+msgstr "Kontoeinstellungen"
+
+#: ccs/ccs.module:555
+msgid "Request new password"
+msgstr "Neues Passwort anfordern"
+
+#: ccs/ccs.module:675
+msgid "Your password has been reset by the system administrator. Please check your e-mail for details on how to reset your password. If further information is required, please contact your administrator."
+msgstr ""
+
+#: ccs/ccs.module:785
+msgid "Enter your current password to change the E-mail address or Password."
+msgstr "Geben Sie Ihr aktuelles Passwort ein, um die E-Mail-Adresse oder das Passwort zu ändern."
+
+#: ccs/ccs.module:839
+msgid "Your current password is missing or incorrect; it's required to change the %name."
+msgstr "Das aktuelle Passwort fehlt oder ist falsch. Dieses ist erforderlich, um %name zu ändern."
+
+#: ccs/ccs.module:849
+msgid "The e-mail address @mail is not valid."
+msgstr "Die E-Mail-Adresse @mail ist nicht zulässig."
+
+#: ccs/ccs.module:859
+msgid "Problem while trying to update the e-mail address, please try again or contact the support desk."
+msgstr ""Problem beim Versuch, die E-Mail-Adresse zu aktualisieren. Bitte versuchen Sie es erneut oder wenden Sie sich an den Support Desk."
+
+#: ccs/ccs.module:864 hpbx/includes/hpbx.user.inc:174
+msgid "Will enable user %user"
+msgstr "Ermöglicht dem Benutzer %user"
+
+#: ccs/ccs.module:869
+msgid "Problem while trying to change the password, please try again or contact the support desk."
+msgstr "Problem beim Versuch, das Passwort zu ändern. Bitte versuchen Sie es erneut oder wenden Sie sich an den Support Desk."
+
+#: ccs/ccs.module:877
+msgid "Will validate user %user"
+msgstr "Bestätigt Benutzer %user"
+
+#: ccs/ccs.module:901
+msgid "The password does not meet the password policy requirements."
+msgstr "Das Passwort erfüllt die Anforderungen der Passwortrichtlinie nicht."
+
+#: ccs/ccs.module:994
+msgid "Changing status for @name to @uac was successfully"
+msgstr "Status für @name erfolgreich auf @uac geändert"
+
+#: ccs/ccs.module:1065
+msgid "Change enabled/disabled status for @name failed"
+msgstr "Änderung des Status aktiviert/deaktiviert für @name fehlgeschlagen"
+
+#: ccs/ccs.module:1107
+msgid "Unlock for @name was successfully"
+msgstr "Entsperren für @name war erfolgreich"
+
+#: ccs/ccs.module:1113
+msgid "Unlock for @name failed"
+msgstr "Entsperren für @name fehlgeschlagen"
+
+#: ccs/ccs.module:260
+msgid "user"
+msgstr "Benutzer"
+
+#: ccs/ccs.module:260
+msgid "Password reset instructions mailed to %name at %email."
+msgstr "Ein neues Passwort für %name wurde an %email versendet."
+
+#: ccs/ccs.module:918
+msgid "ldap_authentication"
+msgstr "ldap_authentication"
+
+#: ccs/ccs.module:918
+msgid "Failed to get valid ldap authentication configuration."
+msgstr "Gültige ldap-Authentifizierungskonfiguration konnte nicht abgerufen werden."
+
+#: ccs/ccs.info:0;0
+msgid "CCS"
+msgstr "CCS"
+
+#: ccs/ccs.info:0
+msgid "General module"
+msgstr "Allgemeines Modul"
+
+#: hpbx/hpbx.module:66
+msgid "The PIN used to enter the voicemail from external numbers."
+msgstr "Die zum Aufrufen der Voicemail von externen Nummern aus verwendete PIN."
+
+#: hpbx/hpbx.module:67;69 hpbx/includes/hpbx.conference.inc:128;130 hpbx/includes/hpbx.subscriber.inc:579
+msgid "PIN"
+msgstr "PIN"
+
+#: hpbx/hpbx.module:74
+msgid "The email address to which notifications and the recordings (if attach is enabled) are sent."
+msgstr "Die E-Mail-Adresse, an die Benachrichtigungen und Aufzeichnungen gesendet werden (wenn Anhänge aktiviert sind)."
+
+#: hpbx/hpbx.module:75;78 hpbx/includes/hpbx.business_partner.inc:97;101;623;624;950 hpbx/includes/hpbx.customer.inc:963;964 hpbx/includes/hpbx.reseller.inc:334 hpbx/includes/hpbx.subscriber.bulk.inc:17 hpbx/includes/hpbx.subscriber.inc:336;346;1092 hpbx/includes/hpbx.user.inc:1315;1316 hpbx/includes/hpbx.wizard.inc:324;329
+msgid "Email"
+msgstr "E-Mail"
+
+#: hpbx/hpbx.module:88
+msgid "Attach recordings (wav file) to the notification emails."
+msgstr "Aufzeichnungen (.wav-Datei) an die Benachrichtigungs-E-Mails anhängen."
+
+#: hpbx/hpbx.module:89
+msgid "Attach"
+msgstr "Anhängen"
+
+#: hpbx/hpbx.module:100
+msgid "Delete voicemails from the voicemail box after sending the recording via email. Note that if delete is enabled and the mail cannot be delivered, the voicemail is lost."
+msgstr "Voicemail-Nachrichten löschen, nachdem die Aufzeichnung per E-Mail verschickt wurde. Beachten Sie, dass die Voicemail-Nachricht verloren geht, wenn Löschen aktiviert ist, die Mail aber nicht zugestellt werden kann."
+
+#: hpbx/hpbx.module:101;1243;4666;4759;6071;6426;6483;1578;1674;1683;1718;1750;1782;2184;2248;2256 hpbx/includes/hpbx.subscriber.bulk.inc:32
+msgid "Delete"
+msgstr "Löschen"
+
+#: hpbx/hpbx.module:131
+msgid "General settings"
+msgstr "Allgemeine Einstellungen"
+
+#: hpbx/hpbx.module:138
+msgid "Maintenance mode"
+msgstr "Wartungsmodus"
+
+#: hpbx/hpbx.module:139
+msgid "In case hpbx is in maintenance mode, only the LGI admin can login to deactivate this mode"
+msgstr "Wenn sich hpbx im Wartungsmodus befindet, kann nur der LGI-Admin sich einloggen, um diesen Modus zu deaktivieren."
+
+#: hpbx/hpbx.module:146
+msgid "Show version number"
+msgstr "Versionsnummer anzeigen"
+
+#: hpbx/hpbx.module:147
+msgid "Show hpbx version number (top-left, dev only)"
+msgstr "Siehe hpbx-Versionsnummer (oben links, nur Entw.)"
+
+#: hpbx/hpbx.module:154
+msgid "Bypass cooldown period"
+msgstr "Cooldown-Phase umgehen"
+
+#: hpbx/hpbx.module:155
+msgid "Allow deleting of customers before the cooldown periode has passed"
+msgstr "Löschen von Kunden vor dem Ende der Cooldown-Phase zulassen."
+
+#: hpbx/hpbx.module:161
+msgid "Verify masquerade login button"
+msgstr "Masquerade-Login-Button verifizieren"
+
+#: hpbx/hpbx.module:162
+msgid "Before displaying the login button on the customer overview page, check if it actually can be used"
+msgstr "Bevor der Login-Button auf der Überblicksseite des Kunden angezeigt wird, prüfen, ob er wirklich verwendet werden kann."
+
+#: hpbx/hpbx.module:171;173 hpbx/includes/hpbx.scripts.inc:120;122
+msgid "Panasonic RDS"
+msgstr "Panasonic RDS"
+
+#: hpbx/hpbx.module:178
+msgid "Password Policy"
+msgstr ""
+
+#: hpbx/hpbx.module:179
+msgid "Enable more complex password requirements for users"
+msgstr ""
+
+#: hpbx/hpbx.module:186
+msgid "Password Reset while login"
+msgstr ""
+
+#: hpbx/hpbx.module:187
+msgid "Trigger the password reset mail while login"
+msgstr ""
+
+#: hpbx/hpbx.module:308
+msgid "Offline"
+msgstr "Offline"
+
+#: hpbx/hpbx.module:310
+msgid "Due to planned work the portal is currently offline...."
+msgstr "Das Portal ist aktuell aufgrund geplanter Arbeiten offline...."
+
+#: hpbx/hpbx.module:314 hpbx/includes/hpbx.download.inc:67
+msgid "Whoops"
+msgstr "Ups."
+
+#: hpbx/hpbx.module:316 hpbx/includes/hpbx.download.inc:69
+msgid "the page you're trying to reach doesn't exist..."
+msgstr "Die Seite, die Sie aufrufen wollten, existiert nicht..."
+
+#: hpbx/hpbx.module:339
+msgid "HostedPBX logged-in user info."
+msgstr "HostedPBX Informationen des eingeloggten Benutzers."
+
+#: hpbx/hpbx.module:344
+msgid "HostedPBX masquerade."
+msgstr "HostedPBX Masquerade."
+
+#: hpbx/hpbx.module:349
+msgid "HostedPBX customer search."
+msgstr "HostedPBX Kundensuche."
+
+#: hpbx/hpbx.module:356
+msgid "HostedPBX subscribers"
+msgstr "HostedPBX Teilnehmer"
+
+#: hpbx/hpbx.module:484
+msgid "Logout"
+msgstr "Abmelden"
+
+#: hpbx/hpbx.module:489 hpbx/includes/hpbx.customer.inc:2368 hpbx/includes/hpbx.help.inc:1031;1039
+msgid "Search"
+msgstr "Suche"
+
+#: hpbx/hpbx.module:773
+msgid "Extension number may consist of digits only"
+msgstr ""
+
+#: hpbx/hpbx.module:780;787;795
+msgid "Extension cannot start with @na"
+msgstr "Die Durchwahl kann nicht mit @na beginnen."
+
+#: hpbx/hpbx.module:800 hpbx/includes/hpbx.subscriber.bulk.inc:833
+msgid "Extension requires length of @length digits"
+msgstr "Die Durchwahl muss @length Zeichen lang sein."
+
+#: hpbx/hpbx.module:977 hpbx/includes/hpbx.scripts.inc:76 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:723 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:563
+msgid "Reseller"
+msgstr "Wiederverkäufer"
+
+#: hpbx/hpbx.module:982
+msgid "Subscriber ID"
+msgstr "Teilnehmerkennung"
+
+#: hpbx/hpbx.module:987;1026 hpbx/includes/hpbx.customer.inc:858
+msgid "Input"
+msgstr "Eingabe"
+
+#: hpbx/hpbx.module:994
+msgid "Apply rewrite rules"
+msgstr "Regeln zum Neuschreiben anwenden"
+
+#: hpbx/hpbx.module:1061
+msgid "Queue"
+msgstr "Warteschlange"
+
+#: hpbx/hpbx.module:1076;1086;1206;6380;6390;6400;6410 hpbx/includes/hpbx.callrecords.inc:47 hpbx/includes/hpbx.customer.inc:546;557;718;732;745;757 hpbx/includes/hpbx.defaultforward.inc:75;77 hpbx/includes/hpbx.fax.inc:289 hpbx/includes/hpbx.huntgroup.inc:225;234 hpbx/includes/hpbx.masquerade.inc:182 hpbx/includes/hpbx.pbxdevice.inc:837;855 hpbx/includes/hpbx.scripts.inc:34;79;82;121 hpbx/includes/hpbx.subscriber.inc:899 hpbx/includes/hpbx.voicemail.inc:187;189;205
+msgid "Choose an option"
+msgstr "Eine Option wählen"
+
+#: hpbx/hpbx.module:1078
+msgid "Wrap up time (sec)*"
+msgstr "Abwicklungszeit (s)*"
+
+#: hpbx/hpbx.module:1079
+msgid "Wrap up time (sec)"
+msgstr "Abwicklungszeit (s)"
+
+#: hpbx/hpbx.module:1088
+msgid "Max. number of calls in queue"
+msgstr "Max. Anzahl Anrufe in der Warteschlange"
+
+#: hpbx/hpbx.module:1112 hpbx/includes/hpbx.autoattendant.inc:236 hpbx/includes/hpbx.huntgroup.inc:411 hpbx/includes/hpbx.musiconhold.inc:79
+msgid "Delete upload"
+msgstr "Upload löschen"
+
+#: hpbx/hpbx.module:1106 hpbx/includes/hpbx.huntgroup.inc:405
+msgid "Upload @title audio"
+msgstr "Tondatei @title hochladen"
+
+#: hpbx/hpbx.module:1144 hpbx/includes/hpbx.autoattendant.inc:270 hpbx/includes/hpbx.huntgroup.inc:441 hpbx/includes/hpbx.musiconhold.inc:114
+msgid "File requirements"
+msgstr "Dateianforderungen"
+
+#: hpbx/hpbx.module:1145 hpbx/includes/hpbx.autoattendant.inc:271 hpbx/includes/hpbx.huntgroup.inc:442
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr "Wenn Sie eine Tondatei hochladen, stellen Sie sicher, dass Sie die Inhaltsrechte für die Tondatei bezahlen oder besitzen.</br></br>Unterstützte Dateitypen: wav, mp3, flac, ogg, raw"
+
+#: hpbx/hpbx.module:1146 hpbx/includes/hpbx.autoattendant.inc:272 hpbx/includes/hpbx.customer.inc:970 hpbx/includes/hpbx.fax.inc:175 hpbx/includes/hpbx.huntgroup.inc:443 hpbx/includes/hpbx.musiconhold.inc:116
+msgid "OK"
+msgstr "OK"
+
+#: hpbx/hpbx.module:1200 hpbx/includes/hpbx.customer.inc:652;659;857 hpbx/includes/hpbx.reseller.inc:1082;1092;1102;1112
+msgid "None"
+msgstr "Keine"
+
+#: hpbx/hpbx.module:1203 hpbx/includes/hpbx.autoattendant.inc:36 hpbx/includes/hpbx.conference.inc:210 hpbx/includes/hpbx.huntgroup.inc:28 hpbx/includes/hpbx.subscriber.bulk.inc:20 hpbx/includes/hpbx.subscriber.inc:402;418;856;2113 hpbx/includes/hpbx.voicemail.inc:267 hpbx/includes/hpbx.wizard.inc:37;449
+msgid "Number"
+msgstr "Zahl"
+
+#: hpbx/hpbx.module:1212 hpbx/includes/hpbx.autoattendant.inc:42 hpbx/includes/hpbx.conference.inc:216 hpbx/includes/hpbx.huntgroup.inc:34 hpbx/includes/hpbx.subscriber.bulk.inc:21 hpbx/includes/hpbx.subscriber.inc:407;2117
+msgid "Extension"
+msgstr "Durchwahl"
+
+#: hpbx/hpbx.module:1243;4041;4746;4847;6474;6553;1758;1790;2288 hpbx/includes/hpbx.autoattendant.inc:423 hpbx/includes/hpbx.subscriber.inc:750
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: hpbx/hpbx.module:1314
+msgid "hpbx basic"
+msgstr "hpbx-Grundlagen"
+
+#: hpbx/hpbx.module:1315
+msgid "hpbx import help"
+msgstr "hpbx-Importhilfe"
+
+#: hpbx/hpbx.module:1316
+msgid "hpbx view reseller"
+msgstr "hpbx Ansicht Wiederverkäufer"
+
+#: hpbx/hpbx.module:1317
+msgid "hpbx edit reseller"
+msgstr "hpbx Wiederverkäufer bearbeiten"
+
+#: hpbx/hpbx.module:1318
+msgid "hpbx edit own reseller"
+msgstr "hpbx eigenen Wiederverkäufer bearbeiten"
+
+#: hpbx/hpbx.module:1320
+msgid "hpbx edit own reseller users"
+msgstr "hpbx eigene Wiederverkäufer-Benutzer bearbeiten"
+
+#: hpbx/hpbx.module:1321
+msgid "hpbx edit general reseller settings"
+msgstr "hpbx allgemeine Wiederverkäufereinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1322
+msgid "hpbx edit dashboard reseller settings"
+msgstr "hpbx Wiederverkäufer-Dashboard-Einstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1323
+msgid "hpbx edit mail reseller settings"
+msgstr "hpbx Wiederverkäufer-Mail-Einstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1324
+msgid "hpbx edit terms reseller settings"
+msgstr "hpbx Einstellungen der Bedingungen für Wiederverkäufer bearbeiten"
+
+#: hpbx/hpbx.module:1325
+msgid "hpbx edit emergency reseller settings"
+msgstr "hpbx Notfalleinstellungen für Wiederverkäufer bearbeiten"
+
+#: hpbx/hpbx.module:1327
+msgid "hpbx add reseller"
+msgstr "hpbx Wiederverkäufer hinzufügen"
+
+#: hpbx/hpbx.module:1328
+msgid "hpbx delete reseller"
+msgstr "hpbx Wiederverkäufer löschen"
+
+#: hpbx/hpbx.module:1330
+msgid "hpbx view customer"
+msgstr "hpbx Kunde anzeigen"
+
+#: hpbx/hpbx.module:1331
+msgid "hpbx add customer"
+msgstr "hpbx Kunde hinzufügen"
+
+#: hpbx/hpbx.module:1332
+msgid "hpbx edit customer"
+msgstr "hpbx Kunde bearbeiten"
+
+#: hpbx/hpbx.module:1333
+msgid "hpbx delete customer"
+msgstr "hpbx Kunde löschen"
+
+#: hpbx/hpbx.module:1335
+msgid "hpbx view business partners"
+msgstr "hpbx Geschäftspartner anzeigen"
+
+#: hpbx/hpbx.module:1336
+msgid "hpbx view business partner customer"
+msgstr "hpbx Kunde des Geschäftspartners anzeigen"
+
+#: hpbx/hpbx.module:1337
+msgid "hpbx add business partner customer"
+msgstr "hpbx Kunde des Geschäftspartners hinzufügen"
+
+#: hpbx/hpbx.module:1338
+msgid "hpbx edit business partner customer"
+msgstr "hpbx Kunde des Geschäftspartners bearbeiten"
+
+#: hpbx/hpbx.module:1339
+msgid "hpbx delete business partner customer"
+msgstr "hpbx Kunde des Geschäftspartners löschen"
+
+#: hpbx/hpbx.module:1340
+msgid "hpbx edit business partner users"
+msgstr "hpbx Benutzer des Geschäftspartners bearbeiten"
+
+#: hpbx/hpbx.module:1341
+msgid "hpbx edit business partner settings"
+msgstr "hpbx Geschäftspartnereinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1342
+msgid "hpbx delete business partner"
+msgstr "hpbx Geschäftspartner löschen"
+
+#: hpbx/hpbx.module:1344
+msgid "hpbx edit own business partner users"
+msgstr "hpbx eigene Geschäftspartnerbenutzer bearbeiten"
+
+#: hpbx/hpbx.module:1345
+msgid "hpbx edit own business partner settings"
+msgstr "hpbx eigene Geschäftspartnereinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1347
+msgid "hpbx edit general business partner settings"
+msgstr "hpbx allgemeine Geschäftspartnereinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1348
+msgid "hpbx edit dashboard business partner settings"
+msgstr "hpbx Geschäftspartner-Dashboardeinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1349
+msgid "hpbx edit mail business partner settings"
+msgstr "hpbx Geschäftspartner-Mail-Einstellungen"
+
+#: hpbx/hpbx.module:1351
+msgid "hpbx delete customer override"
+msgstr "hpbx Kundenoverride löschen"
+
+#: hpbx/hpbx.module:1353
+msgid "hpbx masquerade customer"
+msgstr "hpbx Kunde maskieren"
+
+#: hpbx/hpbx.module:1355
+msgid "hpbx view reseller customer"
+msgstr "hpbx Wiederverkäuferkunden anzeigen"
+
+#: hpbx/hpbx.module:1356
+msgid "hpbx add reseller customer"
+msgstr "hpbx Wiederverkäuferkunden hinzufügen"
+
+#: hpbx/hpbx.module:1357
+msgid "hpbx edit reseller customer"
+msgstr "hpbx Wiederverkäuferkunden bearbeiten"
+
+#: hpbx/hpbx.module:1358
+msgid "hpbx delete reseller customer"
+msgstr "hpbx Wiederverkäuferkunden löschen"
+
+#: hpbx/hpbx.module:1361
+msgid "hpbx view subscriber"
+msgstr "hpbx Teilnehmer löschen"
+
+#: hpbx/hpbx.module:1362
+msgid "hpbx edit own subscriber settings"
+msgstr "hpbx eigene Teilnehmereinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1363
+msgid "hpbx edit own customer settings"
+msgstr "hpbx eigene Kundeneinstellungen bearbeiten"
+
+#: hpbx/hpbx.module:1365
+msgid "hpbx edit subscriber"
+msgstr "hpbx Teilnehmer bearbeiten"
+
+#: hpbx/hpbx.module:1366
+msgid "hpbx delete subscriber"
+msgstr "hpbx Teilnehmer löschen"
+
+#: hpbx/hpbx.module:1367
+msgid "hpbx view pbxdevice"
+msgstr "hpbx pbxdevice anzeigen"
+
+#: hpbx/hpbx.module:1368
+msgid "hpbx edit pbxdevice"
+msgstr "hpbx pbxdevice bearbeiten"
+
+#: hpbx/hpbx.module:1369
+msgid "hpbx delete pbxdevice"
+msgstr "hpbx pbxdevice löschen"
+
+#: hpbx/hpbx.module:1370
+msgid "hpbx sync pbxdevice"
+msgstr "hpbx pbxdevice synchronisieren"
+
+#: hpbx/hpbx.module:1371
+msgid "hpbx view call records"
+msgstr "hpbx Anrufaufzeichnungen anzeigen"
+
+#: hpbx/hpbx.module:1373
+msgid "hpbx view huntgroup"
+msgstr "hpbx Sammelanrufgruppe anzeigen"
+
+#: hpbx/hpbx.module:1374
+msgid "hpbx edit huntgroup"
+msgstr "hpbx Sammelanrufgruppe bearbeiten"
+
+#: hpbx/hpbx.module:1375
+msgid "hpbx delete huntgroup"
+msgstr "hpbx Sammelanrufgruppe löschen"
+
+#: hpbx/hpbx.module:1377
+msgid "hpbx view auto attendant"
+msgstr "hpbx automatischen Teilnehmer anzeigen"
+
+#: hpbx/hpbx.module:1378
+msgid "hpbx edit auto attendant"
+msgstr "hpbx automatischen Teilnehmer bearbeiten"
+
+#: hpbx/hpbx.module:1379
+msgid "hpbx delete auto attendant"
+msgstr "hpbx automatischen Teilnehmer löschen"
+
+#: hpbx/hpbx.module:1381
+msgid "hpbx view conference"
+msgstr "hpbx Konferenz anzeigen"
+
+#: hpbx/hpbx.module:1382
+msgid "hpbx edit conference"
+msgstr "hpbx Konferenz bearbeiten"
+
+#: hpbx/hpbx.module:1383
+msgid "hpbx delete conference"
+msgstr "hpbx Konferenz löschen"
+
+#: hpbx/hpbx.module:1385
+msgid "hpbx view numbers"
+msgstr "hpbx Nummern anzeigen"
+
+#: hpbx/hpbx.module:1386
+msgid "hpbx edit audio"
+msgstr "hpbx Ton bearbeiten"
+
+#: hpbx/hpbx.module:1388
+msgid "hpbx view administrator user"
+msgstr "hpbx Administratorbenutzer anzeigen"
+
+#: hpbx/hpbx.module:1389
+msgid "hpbx edit administrator user"
+msgstr "hpbx Administratorbenutzer bearbeiten"
+
+#: hpbx/hpbx.module:1391
+msgid "hpbx administer reseller"
+msgstr "hpbx Wiederverkäufer verwalten"
+
+#: hpbx/hpbx.module:1393
+msgid "hpbx change password (as non subscriber)"
+msgstr "hpbx Passwort ändern (als Nicht-Teilnehmer)"
+
+#: hpbx/hpbx.module:1395
+msgid "hpbx view dashboard"
+msgstr "hpbx Dashboard anzeigen"
+
+#: hpbx/hpbx.module:1397
+msgid "hpbx send fax"
+msgstr "hpbx Fax versenden"
+
+#: hpbx/hpbx.module:1398
+msgid "hpbx view fax log"
+msgstr "hpbx Faxlog anzeigen"
+
+#: hpbx/hpbx.module:1399
+msgid "hpbx view fax2email"
+msgstr "hpbx Fax2Email anzeigen"
+
+#: hpbx/hpbx.module:1400
+msgid "hpbx edit fax2email"
+msgstr "hpbx Fax2Email bearbeiten"
+
+#: hpbx/hpbx.module:1401
+msgid "hpbx delete fax2email"
+msgstr "hpbx Fax2Email löschen"
+
+#: hpbx/hpbx.module:1437
+msgid "Terms not found"
+msgstr "Bedingungen nicht gefunden"
+
+#: hpbx/hpbx.module:1461
+msgid "I agree"
+msgstr "Ich stimme zu"
+
+#: hpbx/hpbx.module:1494
+msgid "HPBX general settings"
+msgstr "HPBX allgemeine Einstellungen"
+
+#: hpbx/hpbx.module:1502;1510;1518
+msgid "Report"
+msgstr "Bericht"
+
+#: hpbx/hpbx.module:2422 hpbx/includes/hpbx.scripts.inc:23
+msgid "Sipwise Scripts"
+msgstr "Sipwise-Scripts"
+
+#: hpbx/hpbx.module:2430 hpbx/modules/stretto_api/stretto_api.info:0;0
+msgid "Stretto"
+msgstr "Stretto"
+
+#: hpbx/hpbx.module:2644
+msgid "Welcome"
+msgstr "Willkommen"
+
+#: (duplicate) hpbx/hpbx.module:2841;5485 ;5560  hpbx/includes/hpbx.autoattendant.inc:454;877 hpbx/includes/hpbx.business_partner.inc:129;657;924 hpbx/includes/hpbx.conference.inc:169 hpbx/includes/hpbx.customer.inc:1022 hpbx/includes/hpbx.defaultforward.inc:89 hpbx/includes/hpbx.fax2email.inc:229 hpbx/includes/hpbx.help.inc:801 hpbx/includes/hpbx.huntgroup.inc:626 hpbx/includes/hpbx.musiconhold.inc:174 hpbx/includes/hpbx.pbxdevice.inc:916 hpbx/includes/hpbx.reseller.inc:314 hpbx/includes/hpbx.subscriber.inc:779 hpbx/includes/hpbx.user.inc:93;1344
+msgid "Save"
+msgstr "Speichern"
+
+#: hpbx/hpbx.module:2868 hpbx/includes/hpbx.customer.inc:544;603 hpbx/includes/hpbx.reseller.inc:700;791;837;845;860;1039;1048;1057 hpbx/includes/hpbx.subscriber.bulk.inc:99;114;119;129;141;694;798;884 hpbx/includes/hpbx.subscriber.inc:364;371;530 hpbx/includes/js/hpbx.js:0
+msgid "Yes"
+msgstr "Ja"
+
+#: hpbx/hpbx.module:2868 hpbx/includes/hpbx.customer.inc:543;602 hpbx/includes/hpbx.reseller.inc:700;791;837;845;860;1039;1048;1057 hpbx/includes/hpbx.subscriber.bulk.inc:87;93;98;108;120;140;693;797;883 hpbx/includes/hpbx.subscriber.inc:219;364;530 hpbx/includes/hpbx.wizard.inc:740 hpbx/includes/js/hpbx.js:0
+msgid "No"
+msgstr "Nein"
+
+#: hpbx/hpbx.module:3810
+msgid "<strong>@name</strong>&nbsp;<i>@role</i>"
+msgstr "<strong>@name</strong>&nbsp;<i>@role</i>"
+
+#: hpbx/hpbx.module:3918
+msgid "Werkdagen > Werktijden"
+msgstr "Arbeitstage > Arbeitszeit"
+
+#: hpbx/hpbx.module:3919
+msgid "Werkdagen > Lunchtijd"
+msgstr "Arbeitstage > Mittagszeit"
+
+#: hpbx/hpbx.module:3920
+msgid "Werkdagen > Koffiepauzes"
+msgstr "Arbeitstage > Kaffeepause"
+
+#: hpbx/hpbx.module:3921
+msgid "Werkdagen > Buiten werktijd"
+msgstr "Werkdagen > Außerhalb der Arbeitszeit"
+
+#: hpbx/hpbx.module:3922
+msgid "Weekend"
+msgstr "Wochenende"
+
+#: hpbx/hpbx.module:3994
+msgid "Office hours (during)"
+msgstr "Bürozeiten (während)"
+
+#: hpbx/hpbx.module:4040
+msgid "Add timeslot(s)"
+msgstr "Zeitfenster hinzufügen"
+
+#: hpbx/hpbx.module:4203;4229;4231 hpbx/includes/hpbx.voicemail.inc:174;175;459
+msgid "Groups"
+msgstr "Gruppen"
+
+#: hpbx/hpbx.module:4211;4218;4224;4226;2264 hpbx/includes/hpbx.dashboard.inc:18;64 hpbx/includes/hpbx.subscriber.inc:2250 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:246
+msgid "Subscribers"
+msgstr "Teilnehmer"
+
+#: hpbx/hpbx.module:4435;4619 hpbx/includes/hpbx.autoattendant.inc:326 hpbx/includes/hpbx.subscriber.inc:648
+msgid "Option"
+msgstr "Option"
+
+#: hpbx/hpbx.module:4438;4622 hpbx/includes/hpbx.autoattendant.inc:330 hpbx/includes/hpbx.subscriber.inc:154;652;931
+msgid "Destination"
+msgstr "Ziel"
+
+#: hpbx/hpbx.module:4482
+msgid "Ported / </br>New number"
+msgstr "Portierte / </br>neue Nummer"
+
+#: hpbx/hpbx.module:4485
+msgid "Area code"
+msgstr "Vorwahl"
+
+#: hpbx/hpbx.module:4488;5942;6016 hpbx/includes/hpbx.callrecords.inc:57 hpbx/includes/hpbx.fax.inc:304
+msgid "Start"
+msgstr "Start"
+
+#: hpbx/hpbx.module:4491
+msgid "Length"
+msgstr "Länge"
+
+#: hpbx/hpbx.module:4494
+msgid "Prefix"
+msgstr "Präfix"
+
+#: hpbx/hpbx.module:4544
+msgid "Weekday"
+msgstr "Wochentag"
+
+#: hpbx/hpbx.module:4548
+msgid "Hour"
+msgstr "Stunde"
+
+#: hpbx/hpbx.module:4552
+msgid "Minute"
+msgstr "Minute"
+
+#: hpbx/hpbx.module:4559
+msgid "Sun"
+msgstr "So"
+
+#: hpbx/hpbx.module:4560
+msgid "Mon"
+msgstr "Mo"
+
+#: hpbx/hpbx.module:4561
+msgid "Tue"
+msgstr "Di"
+
+#: hpbx/hpbx.module:4562
+msgid "Wed"
+msgstr "Mi"
+
+#: hpbx/hpbx.module:4563
+msgid "Thu"
+msgstr "Do"
+
+#: hpbx/hpbx.module:4564
+msgid "Fri"
+msgstr "Fr"
+
+#: hpbx/hpbx.module:4565
+msgid "Sat"
+msgstr "Sa"
+
+#: hpbx/hpbx.module:4836;5546 hpbx/includes/hpbx.musiconhold.inc:286
+msgid "Select"
+msgstr "Auswahl"
+
+#: hpbx/hpbx.module:5202
+msgid "Type URL"
+msgstr "URL-Typ"
+
+#: hpbx/hpbx.module:5584
+msgid "total"
+msgstr "gesamt"
+
+#: hpbx/hpbx.module:5626;1655;1665 hpbx/includes/hpbx.callrecords.inc:504 hpbx/includes/hpbx.huntgroup.inc:508 hpbx/includes/hpbx.subscriber.inc:59;855 hpbx/includes/hpbx.voicemail.inc:125
+msgid "Voicemail"
+msgstr "Voicemail"
+
+#: hpbx/hpbx.module:5756
+msgid "search"
+msgstr "Suchen"
+
+#: hpbx/hpbx.module:5765
+msgid "Select all"
+msgstr "Alle wählen"
+
+#: hpbx/hpbx.module:5813 hpbx/includes/hpbx.voicemail.inc:207
+msgid "Show"
+msgstr "Anzeigen"
+
+#: hpbx/hpbx.module:5813;5813
+msgid "Hide"
+msgstr "Ausblenden"
+
+#: hpbx/hpbx.module:5864;5900
+msgid "Pick a file"
+msgstr "Datei auswählen"
+
+#: hpbx/hpbx.module:5898
+msgid "File upload"
+msgstr "Datei hochladen"
+
+#: hpbx/hpbx.module:5938
+msgid "Add a time slot"
+msgstr "Zeitfenster hinzufügen"
+
+#: hpbx/hpbx.module:5948;6022 hpbx/includes/hpbx.callrecords.inc:67 hpbx/includes/hpbx.fax.inc:314
+msgid "End"
+msgstr "Ende"
+
+#: hpbx/hpbx.module:5955
+msgid "Use on"
+msgstr "Benutzen am"
+
+#: hpbx/hpbx.module:5959
+msgid "Monday"
+msgstr "Montag"
+
+#: hpbx/hpbx.module:5963
+msgid "Tuesday"
+msgstr "Dienstag"
+
+#: hpbx/hpbx.module:5967
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+#: hpbx/hpbx.module:5971
+msgid "Thursday"
+msgstr "Donnerstag"
+
+#: hpbx/hpbx.module:5975
+msgid "Friday"
+msgstr "Freitag"
+
+#: hpbx/hpbx.module:5979
+msgid "Saturday"
+msgstr "Samstag"
+
+#: hpbx/hpbx.module:5983
+msgid "Sunday"
+msgstr "Sonntag"
+
+#: hpbx/hpbx.module:5992
+msgid "Add another rule"
+msgstr "Weitere Regel hinzufügen"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Select at least one day for time slot"
+msgstr "Wenigstes einen Tag für das Zeitfenster wählen"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Invalid Start time format"
+msgstr "Ungültiges Startzeitformat"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Invalid End time format"
+msgstr "Ungültiges Endzeitformat"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Start time cannot be empty"
+msgstr "Startzeit darf nicht leer sein"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "End time cannot be empty"
+msgstr "Endzeit darf nicht leer sein"
+
+#: hpbx/hpbx.module:6002;6030
+msgid "Timeslot overlaps not possible"
+msgstr "Zeitfenster dürfen sich nicht überlappen"
+
+#: hpbx/hpbx.module:6003;6032
+msgid "Set"
+msgstr "Einstellen"
+
+#: hpbx/hpbx.module:6012
+msgid "Edit a time slot"
+msgstr "Zeitfenster bearbeiten"
+
+#: hpbx/hpbx.module:6031 hpbx/includes/hpbx.customer.inc:193;196;202;205
+msgid "Remove"
+msgstr "Entfernen"
+
+#: hpbx/hpbx.module:6108;6205 hpbx/includes/hpbx.subscriber.inc:2104
+msgid "No entries found"
+msgstr "Keine Einträge gefunden"
+
+#: hpbx/hpbx.module:6288
+msgid "<p>This is a one-time login for %user_name and will expire after 24 hours.</p><p>Click on this button to log in to the site and change your password.</p>"
+msgstr "<p>Dies ist ein einmaliger Login für %user_name, der nach 24 Stunden abläuft.</p><p>Klicken Sie auf diesen Button, um sich auf der Seite einzuloggen und Ihr Passwort zu ändern.</p>"
+
+#: hpbx/hpbx.module:6357
+msgid "Site Name"
+msgstr "Standort Name"
+
+#: hpbx/hpbx.module:6368 hpbx/includes/hpbx.customer.inc:592
+msgid "Allowed IPs"
+msgstr "Zulässige IPs"
+
+#: hpbx/hpbx.module:6379 hpbx/includes/hpbx.customer.inc:715
+msgid "Region"
+msgstr "Region"
+
+#: hpbx/hpbx.module:6389 hpbx/includes/hpbx.customer.inc:729
+msgid "Township"
+msgstr "Gemeinde"
+
+#: hpbx/hpbx.module:6399 hpbx/includes/hpbx.customer.inc:742
+msgid "City"
+msgstr "Stadt"
+
+#: hpbx/hpbx.module:6409 hpbx/includes/hpbx.customer.inc:754
+msgid "Z gm."
+msgstr "Z gm."
+
+#: hpbx/hpbx.module:6584
+msgid "You have exceeded the maximum number of sites "
+msgstr ""
+
+#: (duplicate) hpbx/hpbx.module:5209 
+msgid "Add photo's from the media library"
+msgstr "Fügen Sie Fotos aus der Medienbibliothek hinzu"
+
+#: (duplicate) hpbx/hpbx.module:5213 
+msgid "Type filter"
+msgstr "Filtertyp"
+
+#: (duplicate) hpbx/hpbx.module:5488 
+msgid "Cance"
+msgstr "Abbrechen"
+
+#: (duplicate) hpbx/hpbx.module:5497 
+msgid "Select URL of Help page"
+msgstr "URL der Hilfeseite wählen"
+
+#: (duplicate) hpbx/hpbx.module:5500 
+msgid "URL"
+msgstr "URL"
+
+#: (duplicate) hpbx/hpbx.module:5563  hpbx/includes/hpbx.autoattendant.inc:446 hpbx/includes/hpbx.business_partner.inc:121;650;916 hpbx/includes/hpbx.conference.inc:162 hpbx/includes/hpbx.customer.inc:971;1014 hpbx/includes/hpbx.fax2email.inc:222 hpbx/includes/hpbx.huntgroup.inc:619 hpbx/includes/hpbx.masquerade.inc:201 hpbx/includes/hpbx.musiconhold.inc:287 hpbx/includes/hpbx.subscriber.inc:772 hpbx/includes/hpbx.user.inc:1337
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: hpbx/hpbx.module:689;693
+msgid "hpbx_goto_alter"
+msgstr "hpbx_goto_alter"
+
+#: hpbx/hpbx.module:689
+msgid "rewritten to hpbx/password (non subscribers)"
+msgstr "Umgeschrieben auf hpbx/Passwort (Nicht-Teilnehmer)"
+
+#: hpbx/hpbx.module:693
+msgid "rewritten to hpbx/settings"
+msgstr "Umgeschrieben auf hpbx/Einstellungen"
+
+#: hpbx/hpbx.module:3072
+msgid "sipwise"
+msgstr "sipwise"
+
+#: hpbx/hpbx.module:3072
+msgid "Could not get active customer"
+msgstr "Aktiver Kunde konnte nicht abgerufen werden"
+
+#: hpbx/hpbx.module:6302
+msgid "hpbx_cron"
+msgstr "hpbx_cron"
+
+#: hpbx/hpbx.module:6302
+msgid "reseller clear cache cron ran"
+msgstr "Wiederverkäufer Cache löschen Cron ausgeführt"
+
+#: hpbx/hpbx.module:1495
+msgid "Set affiliate independent settings"
+msgstr "Unabhängige Partnereinstellungen vornehmen"
+
+#: hpbx/hpbx.module:1526
+msgid "Log out"
+msgstr "Abmelden"
+
+#: hpbx/hpbx.module:1532
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: hpbx/hpbx.module:1540 hpbx/includes/hpbx.business_partner.inc:949 hpbx/includes/hpbx.reseller.inc:333
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: hpbx/hpbx.module:1547
+msgid "Download Soft Client"
+msgstr "Soft-Client herunterladen"
+
+#: hpbx/hpbx.module:1554
+msgid "Download"
+msgstr "Speichern"
+
+#: hpbx/hpbx.module:1562
+msgid "Edit fax number"
+msgstr "Faxnummer bearbeiten"
+
+#: hpbx/hpbx.module:1570 hpbx/includes/hpbx.dashboard.inc:194 hpbx/includes/hpbx.fax2email.inc:46
+msgid "Create fax number"
+msgstr "Faxnummer erstellen"
+
+#: hpbx/hpbx.module:1586 hpbx/includes/hpbx.fax.inc:361
+msgid "Fax"
+msgstr "Fax"
+
+#: hpbx/hpbx.module:1593 hpbx/includes/hpbx.reseller.inc:335
+msgid "Terms and Conditions"
+msgstr "Geschäftsbedingungen"
+
+#: hpbx/hpbx.module:1600
+msgid "Rewrite rules"
+msgstr "Regeln umschreiben"
+
+#: hpbx/hpbx.module:1607;1622;1630;1638;1646
+msgid "Masquerade"
+msgstr "Masquerade"
+
+#: hpbx/hpbx.module:1615 hpbx/modules/hpbx_rps/hpbx_rps.info:0 hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise"
+msgstr "Sipwise"
+
+#: hpbx/hpbx.module:1693 hpbx/includes/hpbx.callrecords.inc:215
+msgid "Call records"
+msgstr "Anruflisten"
+
+#: (duplicate) hpbx/hpbx.module:1702;1710;1726 hpbx/includes/hpbx.dashboard.inc:16;297 ;310  hpbx/includes/hpbx.huntgroup.inc:11
+msgid "Hunt groups"
+msgstr "Sammelanrufgruppen"
+
+#: (duplicate) hpbx/hpbx.module:1734 hpbx/includes/hpbx.autoattendant.inc:17 hpbx/includes/hpbx.dashboard.inc:14;298 ;318 
+msgid "Auto attendants"
+msgstr "Automatische Teilnehmer"
+
+#: hpbx/hpbx.module:1742 hpbx/includes/hpbx.callrecords.inc:501
+msgid "Auto attendant"
+msgstr "Automatischer Teilnehmer"
+
+#: (duplicate) hpbx/hpbx.module:1766 hpbx/includes/hpbx.conference.inc:191 hpbx/includes/hpbx.dashboard.inc:15;296 ;302 
+msgid "Conference rooms"
+msgstr "Konferenzräume"
+
+#: hpbx/hpbx.module:1774
+msgid "Conference"
+msgstr "Konferenz"
+
+#: hpbx/hpbx.module:1800 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:235
+msgid "Affiliates"
+msgstr "Partner"
+
+#: hpbx/hpbx.module:1808;2176;2230;2239;2280;2355;2363 hpbx/includes/hpbx.reseller.inc:643 hpbx/includes/js/hpbx_help.js:0
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: hpbx/hpbx.module:1816;2273 hpbx/includes/hpbx.autoattendant.inc:142 hpbx/includes/hpbx.business_partner.inc:375 hpbx/includes/hpbx.conference.inc:75 hpbx/includes/hpbx.defaultforward.inc:31 hpbx/includes/hpbx.fax2email.inc:66 hpbx/includes/hpbx.huntgroup.inc:174 hpbx/includes/hpbx.masquerade.inc:163 hpbx/includes/hpbx.musiconhold.inc:31 hpbx/includes/hpbx.reseller.inc:169 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:245
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: hpbx/hpbx.module:1824;1858 hpbx/includes/hpbx.business_partner.inc:376 hpbx/includes/hpbx.reseller.inc:170 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:247
+msgid "Users"
+msgstr "Benutzer"
+
+#: hpbx/hpbx.module:1832;1875
+msgid "Create affiliate user "
+msgstr "Partnerbenutzer erstellen"
+
+#: hpbx/hpbx.module:1840;1849;1883;1891;1953;1961;1969
+msgid "Edit affiliate user"
+msgstr "Partnerbenutzer bearbeiten"
+
+#: hpbx/hpbx.module:1866 hpbx/includes/hpbx.reseller.inc:178
+msgid "Clear cache"
+msgstr "Cache löschen"
+
+#: hpbx/hpbx.module:1899;1907 hpbx/includes/hpbx.reseller.inc:171 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:239
+msgid "Customers"
+msgstr "Kunden"
+
+#: hpbx/hpbx.module:1914;1929
+msgid "Create"
+msgstr "Erstellen"
+
+#: hpbx/hpbx.module:1922;2081
+msgid "location"
+msgstr "Standort"
+
+#: hpbx/hpbx.module:1937;1945 hpbx/includes/hpbx.business_partner.inc:19
+msgid "Create Business Partner"
+msgstr "Geschäftspartner erstellen"
+
+#: hpbx/hpbx.module:1977;1985 hpbx/includes/hpbx.business_partner.inc:340 hpbx/includes/hpbx.reseller.inc:173;175
+msgid "Business Partners"
+msgstr "Geschäftspartner"
+
+#: hpbx/hpbx.module:1993;2001;2009
+msgid "Business Partner Users"
+msgstr "Geschäftspartnerbenutzer"
+
+#: hpbx/hpbx.module:2016;2024;2032;2040;2048
+msgid "Create Business Partner user "
+msgstr "Geschäftspartnerbenutzer erstellen"
+
+#: hpbx/hpbx.module:2056;2064;2072
+msgid "Business Partner settings "
+msgstr "Geschäftspartnereinstellungen"
+
+#: hpbx/hpbx.module:2089;2097;2128;2135 hpbx/includes/hpbx.reseller.inc:643 hpbx/includes/js/hpbx_help.js:0
+msgid "View"
+msgstr "Ansicht"
+
+#: hpbx/hpbx.module:2105 hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:243
+msgid "PBX Settings"
+msgstr "PBX-Einstellungen"
+
+#: hpbx/hpbx.module:2112
+msgid "Music on Hold"
+msgstr "Warteschleifenmusik"
+
+#: hpbx/hpbx.module:2120 hpbx/includes/hpbx.defaultforward.inc:20
+msgid "Default forward"
+msgstr "Standardweiterleitung"
+
+#: hpbx/hpbx.module:2142;2168 hpbx/includes/hpbx.dashboard.inc:98 hpbx/includes/hpbx.pbxdevice.inc:349 hpbx/includes/hpbx.reseller.inc:22
+msgid "Devices"
+msgstr "Geräte"
+
+#: hpbx/hpbx.module:2151
+msgid "PBX Device Model JSON callback"
+msgstr "PBX Gerätemodell JSON-Rückruf"
+
+#: hpbx/hpbx.module:2159
+msgid "PBX Device Model Image"
+msgstr "PBX Gerätemodell-Image"
+
+#: hpbx/hpbx.module:2198 hpbx/includes/hpbx.wizard.inc:963;1125;1218
+msgid "Associate device"
+msgstr "Partnergerät"
+
+#: hpbx/hpbx.module:2206
+msgid "Device failed to be associated"
+msgstr "Gerät konnte nicht zugeordnet werden."
+
+#: hpbx/hpbx.module:2214 hpbx/includes/hpbx.wizard.inc:252
+msgid "Device successfully associated"
+msgstr "Gerät erfolgreich zugeordnet"
+
+#: hpbx/hpbx.module:2222
+msgid "Play"
+msgstr "Abspielen"
+
+#: hpbx/hpbx.module:2296 hpbx/includes/hpbx.dashboard.inc:46
+msgid "Start wizard"
+msgstr "Startassistent"
+
+#: hpbx/hpbx.module:2304;2311;2318;2326
+msgid "Wizard"
+msgstr "Assistent"
+
+#: hpbx/hpbx.module:2334 hpbx/includes/hpbx.dashboard.inc:47 hpbx/includes/hpbx.subscriber.bulk.inc:567;1084
+msgid "Bulk import"
+msgstr "Massenimport"
+
+#: hpbx/hpbx.module:2341;2348
+msgid "Bulk"
+msgstr "Masse"
+
+#: hpbx/hpbx.module:2371;2378
+msgid "Save url"
+msgstr "URL speichern"
+
+#: hpbx/hpbx.module:2385
+msgid "Help Loader"
+msgstr "Helploader"
+
+#: hpbx/hpbx.module:2392 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:179 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:145
+msgid "Help"
+msgstr "Hilfe"
+
+#: hpbx/hpbx.module:2399
+msgid "Help replicate"
+msgstr "Hilfe replizieren"
+
+#: hpbx/hpbx.module:2407 hpbx/includes/hpbx.help.inc:929
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: hpbx/hpbx.module:2414
+msgid "Help node import"
+msgstr "Hilfeknotenpunkt importieren"
+
+#: hpbx/hpbx.info:0 hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "hpbx"
+msgstr "hpbx"
+
+#: hpbx/hpbx.info:0
+msgid "Hosted PBX"
+msgstr "Hosted PBX"
+
+#: hpbx/hpbx.info:0 hpbx/modules/drop_5/drop_5.info:0 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0 hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "HostedPBX"
+msgstr "HostedPBX"
+
+#: hpbx/includes/hpbx.audio.inc:187
+msgid "The file extension @ext is not supported"
+msgstr "Die Dateinamenerweiterung @ext wird nicht unterstützt."
+
+#: hpbx/includes/hpbx.audio.inc:223
+msgid "Failed to upload the audio file. Possibly this is a corrupt audio file or invalid extension in combination with used audio codec."
+msgstr "Die Tondatei konnte nicht hochgeladen werden. Die Tondatei ist möglicherweise korrupt oder hat eine ungültige Erweiterung in Kombination mit dem verwendeten Audio-Codec."
+
+#: hpbx/includes/hpbx.autoattendant.inc:25 hpbx/includes/hpbx.dashboard.inc:193
+msgid "Create auto attendant"
+msgstr "Automatischen Anwesenden erstellen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:35;165;166;502 hpbx/includes/hpbx.business_partner.inc:58;451 hpbx/includes/hpbx.conference.inc:97;98;209;291 hpbx/includes/hpbx.fax2email.inc:90;259 hpbx/includes/hpbx.huntgroup.inc:27;198;665 hpbx/includes/hpbx.pbxdevice.inc:788;789 hpbx/includes/hpbx.reseller.inc:158;683 hpbx/includes/hpbx.subscriber.bulk.inc:14 hpbx/includes/hpbx.subscriber.inc:271;280;1119;1122;2112 hpbx/includes/hpbx.user.inc:1064 hpbx/includes/hpbx.wizard.inc:107;334;339;789;793
+msgid "Name"
+msgstr "Name"
+
+#: hpbx/includes/hpbx.autoattendant.inc:38
+msgid "Delete auto attendant"
+msgstr "Automatischen Anwesenden löschen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:107 hpbx/includes/hpbx.conference.inc:51
+msgid "!external_id"
+msgstr "!external_id"
+
+#: hpbx/includes/hpbx.autoattendant.inc:122
+msgid "Create Auto Attendant"
+msgstr "Automatischen Anwesenden erstellen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:182 hpbx/includes/hpbx.conference.inc:115 hpbx/includes/hpbx.fax2email.inc:107 hpbx/includes/hpbx.huntgroup.inc:308
+msgid "Site*"
+msgstr ""
+
+#: hpbx/includes/hpbx.autoattendant.inc:255
+msgid "Upload @title"
+msgstr "@title aktualisieren"
+
+#: hpbx/includes/hpbx.autoattendant.inc:303
+msgid "Menu options"
+msgstr "Menüoptionen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:396 hpbx/includes/hpbx.subscriber.inc:723
+msgid "Delete speed dial"
+msgstr "Kurzwahl löschen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:454;880 hpbx/includes/hpbx.wizard.inc:402;655;912
+msgid "Next"
+msgstr "Nächste"
+
+#: hpbx/includes/hpbx.autoattendant.inc:483;675 hpbx/includes/hpbx.conference.inc:285;354 hpbx/includes/hpbx.huntgroup.inc:670;804 hpbx/includes/hpbx.subscriber.inc:1017;1327
+msgid "Can't find customer"
+msgstr "Kunde kann nicht gefunden werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:502 hpbx/includes/hpbx.conference.inc:291 hpbx/includes/hpbx.fax2email.inc:259 hpbx/includes/hpbx.huntgroup.inc:665 hpbx/includes/hpbx.subscriber.inc:1075;1085;1122
+msgid "Semicolon is not allowed in !name."
+msgstr "Strichpunkt ist in !name nicht zulässig."
+
+#: hpbx/includes/hpbx.autoattendant.inc:524
+msgid "Menu audio file is required"
+msgstr "Tondatei für Menü ist erforderlich."
+
+#: hpbx/includes/hpbx.autoattendant.inc:532;670 hpbx/includes/hpbx.conference.inc:276;349 hpbx/includes/hpbx.huntgroup.inc:659;799 hpbx/includes/hpbx.subscriber.inc:1012;1321
+msgid "Can't find the customer ID"
+msgstr "Die Kunden-ID kann nicht gefunden werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:548 hpbx/includes/hpbx.conference.inc:317 hpbx/includes/hpbx.fax2email.inc:274 hpbx/includes/hpbx.huntgroup.inc:678
+msgid "You have used up all your available @profile_names"
+msgstr "Sie haben alle verfügbaren @profile_names verwendet."
+
+#: hpbx/includes/hpbx.autoattendant.inc:555 hpbx/includes/hpbx.conference.inc:324 hpbx/includes/hpbx.fax2email.inc:281 hpbx/includes/hpbx.huntgroup.inc:714 hpbx/includes/hpbx.subscriber.inc:1063
+msgid "Extension is already in use. Please select another extension."
+msgstr "Die Durchwahl ist bereits in Verwendung. Wählen Sie eine andere Durchwahl."
+
+#: hpbx/includes/hpbx.autoattendant.inc:569 hpbx/includes/hpbx.huntgroup.inc:738
+msgid "Upload failed"
+msgstr "Upload fehlgeschlagen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:576 hpbx/includes/hpbx.customer.inc:1623 hpbx/includes/hpbx.huntgroup.inc:745
+msgid "The file format @ext is not supported"
+msgstr "Das Dateiformat @ext wird nicht unterstützt."
+
+#: hpbx/includes/hpbx.autoattendant.inc:584 hpbx/includes/hpbx.conference.inc:303 hpbx/includes/hpbx.fax2email.inc:257 hpbx/includes/hpbx.huntgroup.inc:704
+msgid "Name must be unique"
+msgstr "Der Name muss eindeutig sein."
+
+#: hpbx/includes/hpbx.autoattendant.inc:610
+msgid "The destination of menu option @slot cannot be assigned to this auto attendant."
+msgstr ""Das Ziel der Menüoption @slot kann diesem automatischen Anwesenden nicht zugeordnet werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:614 hpbx/includes/hpbx.subscriber.inc:1174;1177;1231
+msgid "Not allowed to set this destination number"
+msgstr "Diese Zielnummer darf nicht eingestellt werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:623
+msgid "Please enter unique menu options"
+msgstr "Geben Sie bitte eindeutige Menüoptionen ein."
+
+#: hpbx/includes/hpbx.autoattendant.inc:627
+msgid "The Auto attendant must have been provided with at least one menu option."
+msgstr ""Der automatische Teilnehmer muss wenigstens eine Menüoption erhalten haben."
+
+#: hpbx/includes/hpbx.autoattendant.inc:639;644 hpbx/includes/hpbx.huntgroup.inc:780;784
+msgid "Office hours audio file is required"
+msgstr "Eine Tondatei für Bürozeiten ist erforderlich."
+
+#: hpbx/includes/hpbx.autoattendant.inc:680 hpbx/includes/hpbx.conference.inc:359 hpbx/includes/hpbx.fax2email.inc:299 hpbx/includes/hpbx.huntgroup.inc:809 hpbx/includes/hpbx.subscriber.inc:1332
+msgid "Can't find customer preferences"
+msgstr "Die Kundenvoreinstellungen können nicht gefunden werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:685 hpbx/includes/hpbx.conference.inc:364 hpbx/includes/hpbx.fax2email.inc:304 hpbx/includes/hpbx.huntgroup.inc:814 hpbx/includes/hpbx.subscriber.inc:1338
+msgid "Can't find the pilot subscriber"
+msgstr "Der Pilotteilnehmer kann nicht gefunden werden."
+
+#: hpbx/includes/hpbx.autoattendant.inc:856 hpbx/includes/hpbx.conference.inc:530 hpbx/includes/hpbx.fax2email.inc:445 hpbx/includes/hpbx.huntgroup.inc:1146 hpbx/includes/hpbx.pbxdevice.inc:266 hpbx/includes/hpbx.subscriber.inc:1908
+msgid "Failed to update"
+msgstr "Update fehlgeschlagen"
+
+#: hpbx/includes/hpbx.autoattendant.inc:868 hpbx/includes/hpbx.conference.inc:539 hpbx/includes/hpbx.fax2email.inc:454 hpbx/includes/hpbx.huntgroup.inc:1156 hpbx/includes/hpbx.pbxdevice.inc:470 hpbx/includes/hpbx.subscriber.inc:1932;2039;2056
+msgid "Cleared @type with @cid"
+msgstr "@type mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.autoattendant.inc:872 hpbx/includes/hpbx.conference.inc:543 hpbx/includes/hpbx.fax2email.inc:458 hpbx/includes/hpbx.huntgroup.inc:1160 hpbx/includes/hpbx.subscriber.inc:1936;2043
+msgid "Cleared subscribers list with @cid*"
+msgstr "Teilnehmerliste mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.autoattendant.inc:878
+msgid "Auto attendant successfully saved"
+msgstr "Automatische Teilnehmer erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.business_partner.inc:41
+msgid "Business Partner Settings"
+msgstr "Geschäftspartnereinstellungen"
+
+#: hpbx/includes/hpbx.business_partner.inc:59;356;992
+msgid "Business Partner Name"
+msgstr "Name des Geschäftspartners"
+
+#: hpbx/includes/hpbx.business_partner.inc:64
+msgid "Business Partner Administrator"
+msgstr "Administrator des Geschäftspartners"
+
+#: hpbx/includes/hpbx.business_partner.inc:74 hpbx/includes/hpbx.customer.inc:940
+msgid "Administrative user"
+msgstr "Administrativer Benutzer"
+
+#: hpbx/includes/hpbx.business_partner.inc:82;83;601;603 hpbx/includes/hpbx.customer.inc:948;949 hpbx/includes/hpbx.subscriber.bulk.inc:15 hpbx/includes/hpbx.subscriber.inc:295;303;1072;1075 hpbx/includes/hpbx.user.inc:1293;1295 hpbx/includes/hpbx.wizard.inc:304;309
+msgid "First name"
+msgstr "Vorname"
+
+#: hpbx/includes/hpbx.business_partner.inc:90;91;610;612 hpbx/includes/hpbx.customer.inc:956;957 hpbx/includes/hpbx.subscriber.bulk.inc:16 hpbx/includes/hpbx.subscriber.inc:315;323;1082;1085 hpbx/includes/hpbx.user.inc:1302;1304 hpbx/includes/hpbx.wizard.inc:314;319
+msgid "Last name"
+msgstr "Nachname"
+
+#: hpbx/includes/hpbx.business_partner.inc:143;676 hpbx/includes/hpbx.user.inc:1358
+msgid "Reseller not found"
+msgstr "Wiederverkäufer nicht gefunden"
+
+#: hpbx/includes/hpbx.business_partner.inc:159;690 hpbx/includes/hpbx.user.inc:1374
+msgid "A user with the provided first name and last name is already present within the HPBX administrator group."
+msgstr ""
+"Ein Benutzer mit dem angegebenen Vornamen und Nachnamen existiert "
+"bereits in der HPBX-Administratorengruppe."
+
+#: hpbx/includes/hpbx.business_partner.inc:164
+msgid "Name is already assigned to Business Partner @bp"
+msgstr "Der Name ist dem Geschäftspartner @bp bereits zugeordnet."
+
+#: hpbx/includes/hpbx.business_partner.inc:173;706 hpbx/includes/hpbx.user.inc:1385
+msgid "Unable to retrieve existing ldap user %name."
+msgstr "Kann bestehenden ldap-Benutzer nicht abrufen %name."
+
+#: hpbx/includes/hpbx.business_partner.inc:178;712 hpbx/includes/hpbx.user.inc:1391
+msgid "A user - with one of the HPBX roles - with the provided email address is already present."
+msgstr ""Ein Benutzer - mit einer der HPBX-Rollen - mit der angegebenen E-Mail-Adresse ist bereits vorhanden."
+
+#: hpbx/includes/hpbx.business_partner.inc:185 hpbx/includes/hpbx.customer.inc:1609 hpbx/includes/hpbx.user.inc:1489;1518;1525
+msgid "A user with the provided email address is already present."
+msgstr "Ein Benutzer mit der angegebenen E-Mail-Adresse ist bereits vorhanden."
+
+#: hpbx/includes/hpbx.business_partner.inc:289;754 hpbx/includes/hpbx.user.inc:885;1427
+msgid "Further instructions have been sent to @mail"
+msgstr "Weitere Hinweise wurden an @mail gesendet."
+
+#: hpbx/includes/hpbx.business_partner.inc:292;757 hpbx/includes/hpbx.user.inc:888;1430
+msgid "Could not sent e-mail with instructions."
+msgstr "E-Mail mit Anweisungen konnte nicht verschickt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:299;769
+msgid "Failed to create reseller business partner administrator account"
+msgstr "Administratorkonto für Wiederverkäufer Geschäftspartner konnte nicht erstellt werden"
+
+#: hpbx/includes/hpbx.business_partner.inc:344
+msgid "Create Business Partners"
+msgstr "Geschäftspartner erstellen"
+
+#: hpbx/includes/hpbx.business_partner.inc:359
+msgid "Delete Business Partner"
+msgstr "Geschäftspartner löschen"
+
+#: hpbx/includes/hpbx.business_partner.inc:428
+msgid "Business Partner users"
+msgstr "Geschäftspartnerbenutzer"
+
+#: hpbx/includes/hpbx.business_partner.inc:432 hpbx/includes/hpbx.user.inc:1052
+msgid "Create user"
+msgstr "Benutzer erstellen"
+
+#: hpbx/includes/hpbx.business_partner.inc:452 hpbx/includes/hpbx.subscriber.inc:2128 hpbx/includes/hpbx.user.inc:1065
+msgid "Login name"
+msgstr "Login-Name"
+
+#: hpbx/includes/hpbx.business_partner.inc:453;593 hpbx/includes/hpbx.user.inc:1066;1285
+msgid "Role"
+msgstr "Rolle"
+
+#: hpbx/includes/hpbx.business_partner.inc:455 hpbx/includes/hpbx.user.inc:1068
+msgid "Delete user"
+msgstr "Benutzer löschen"
+
+#: hpbx/includes/hpbx.business_partner.inc:545 hpbx/includes/hpbx.user.inc:1236
+msgid "User @cn"
+msgstr "Benutzer @cn"
+
+#: hpbx/includes/hpbx.business_partner.inc:697
+msgid "A user with the provided email address is already present within the HPBX administrator group."
+msgstr "Ein Benutzer mit der angegebenen E-Mail-Adresse existiert bereits in der HPBX-Administratorengruppe."
+
+#: hpbx/includes/hpbx.business_partner.inc:773;792
+msgid "Failed to update Business Partner administrator account"
+msgstr ""Das Geschäftspartneradministratorkonto konnte nicht aktualisiert werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:795
+msgid "User successfully updated"
+msgstr "Benutzer erfolgreich aktualisiert"
+
+#: hpbx/includes/hpbx.business_partner.inc:830;835;845;858;1359;1377;1383 hpbx/includes/hpbx.user.inc:1172;1190;1196
+msgid "Failed to remove the user account"
+msgstr "Das Benutzerkonto konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:948 hpbx/includes/hpbx.reseller.inc:332 hpbx/includes/hpbx.subscriber.inc:57
+msgid "General"
+msgstr "Allgemein"
+
+#: hpbx/includes/hpbx.business_partner.inc:1009 hpbx/includes/hpbx.reseller.inc:381
+msgid "Logo & Footer"
+msgstr "Logo & Fußzeile"
+
+#: hpbx/includes/hpbx.business_partner.inc:1019 hpbx/includes/hpbx.reseller.inc:391
+msgid "Logo preview"
+msgstr "Logovorschau"
+
+#: hpbx/includes/hpbx.business_partner.inc:1031 hpbx/includes/hpbx.reseller.inc:398
+msgid "Logo"
+msgstr "Logo"
+
+#: hpbx/includes/hpbx.business_partner.inc:1033 hpbx/includes/hpbx.reseller.inc:400
+msgid "Upload an email logo. Allowed extensions: jpg, jpeg, png"
+msgstr "E-Mail-Logo hochladen. Zulässige Dateinamenerweiterungen: jpg, jpeg, png"
+
+#: hpbx/includes/hpbx.business_partner.inc:1039 hpbx/includes/hpbx.reseller.inc:406
+msgid "Footer"
+msgstr "Fußbereich"
+
+#: hpbx/includes/hpbx.business_partner.inc:1051
+msgid "Business Partner Customer Administrator welcome email"
+msgstr "Willkommens-E-Mail an Kundenadministrator des Geschäftspartners"
+
+#: hpbx/includes/hpbx.business_partner.inc:1057;1100;1143 hpbx/includes/hpbx.reseller.inc:422;464;506;548;592
+msgid "Subject"
+msgstr "Betreff"
+
+#: hpbx/includes/hpbx.business_partner.inc:1082;1125;1166 hpbx/includes/hpbx.reseller.inc:447;489;529;571;615 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:719 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:562
+msgid "Body"
+msgstr "Textkörper"
+
+#: hpbx/includes/hpbx.business_partner.inc:1095
+msgid "Business Partner Subscriber welcome email"
+msgstr "Willkommens-E-Mail an Teilnehmer des Geschäftspartners"
+
+#: hpbx/includes/hpbx.business_partner.inc:1138
+msgid "Business Partner User welcome email"
+msgstr "Willkommens-E-Mail an Benutzer des Geschäftspartners"
+
+#: hpbx/includes/hpbx.business_partner.inc:1176 hpbx/includes/hpbx.reseller.inc:626
+msgid "Replacements"
+msgstr "Ersatz"
+
+#: hpbx/includes/hpbx.business_partner.inc:1193 hpbx/includes/hpbx.reseller.inc:650
+msgid "Phonenumber"
+msgstr "Telefonnummer"
+
+#: hpbx/includes/hpbx.business_partner.inc:1202 hpbx/includes/hpbx.reseller.inc:659
+msgid "Help website url"
+msgstr "URL der Hilfewebsite"
+
+#: hpbx/includes/hpbx.business_partner.inc:1209 hpbx/includes/hpbx.reseller.inc:666
+msgid "Help mail address"
+msgstr "E-Mail-Adresse der Hilfe"
+
+#: hpbx/includes/hpbx.business_partner.inc:1219 hpbx/includes/hpbx.reseller.inc:673
+msgid "Help name"
+msgstr "Name der Hilfe"
+
+#: hpbx/includes/hpbx.business_partner.inc:1351 hpbx/includes/hpbx.user.inc:1164
+msgid "Not allowed to remove the user account"
+msgstr "Das Benutzerkonto darf nicht entfernt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:1366 hpbx/includes/hpbx.user.inc:56;1179
+msgid "User succesfully removed"
+msgstr "Benutzer erfolgreich entfernt"
+
+#: hpbx/includes/hpbx.business_partner.inc:1370 hpbx/includes/hpbx.user.inc:1183
+msgid "Only partially removed the user account"
+msgstr "Das Benutzerkonto wurde nur teilweise entfernt."
+
+#: hpbx/includes/hpbx.business_partner.inc:1462
+msgid "Failed to change the business partner name"
+msgstr "Der Name des Geschäftspartners konnte nicht geändert werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:833;843;1357;1365;1369;1378;1384 hpbx/includes/hpbx.user.inc:37;51;60;64;208;214;1170;1178;1182;1191;1197
+msgid "hpbx_users"
+msgstr "hpbx_users"
+
+#: hpbx/includes/hpbx.business_partner.inc:833;1357 hpbx/includes/hpbx.user.inc:37;1170
+msgid "Failed to remove user with username from AD: @username"
+msgstr "Der Benutzer mit Benutzername aus AD: @username konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:843
+msgid "Failed to remove business partner from AD: @username"
+msgstr "Der Geschäftspartner mit Benutzername aus AD: @username konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:1365 hpbx/includes/hpbx.user.inc:1178
+msgid "Successfully removed affiliate user with @username"
+msgstr "Partnerbenutzer mit @username erfolgreich entfernt"
+
+#: hpbx/includes/hpbx.business_partner.inc:1369 hpbx/includes/hpbx.user.inc:1182
+msgid "Failed to remove user with username from drupal: @username @exception_message"
+msgstr "Der Benutzer mit Benutzername aus drupal: @username @exception_message konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.business_partner.inc:1378 hpbx/includes/hpbx.user.inc:1191
+msgid "Failed to load drupal user with username @username"
+msgstr "drupal-Benutzer mit Benutzername @username konnte nicht geladen werden"
+
+#: hpbx/includes/hpbx.business_partner.inc:1384 hpbx/includes/hpbx.user.inc:1197
+msgid "Failed to load drupal user with username @username (more then 1 user found?)"
+msgstr "drupal-Benutzer mit Benutzername @username konnte nicht geladen werden (mehr als 1 Benutzer gefunden?)."
+
+#: hpbx/includes/hpbx.callrecords.inc:35 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Own number"
+msgstr "Eigene Nummer"
+
+#: hpbx/includes/hpbx.callrecords.inc:46
+msgid "All"
+msgstr "Alles"
+
+#: hpbx/includes/hpbx.callrecords.inc:49
+msgid "Subscriber or group"
+msgstr "Teilnehmer oder Gruppe"
+
+#: hpbx/includes/hpbx.callrecords.inc:56;59 hpbx/includes/hpbx.fax.inc:299;303
+msgid "Date"
+msgstr "Datum"
+
+#: hpbx/includes/hpbx.callrecords.inc:65;69 hpbx/includes/hpbx.fax.inc:309;312
+msgid "through"
+msgstr "durch"
+
+#: hpbx/includes/hpbx.callrecords.inc:76 hpbx/includes/hpbx.fax.inc:321 hpbx/includes/hpbx.voicemail.inc:215;508
+msgid "Change"
+msgstr "Ändern"
+
+#: hpbx/includes/hpbx.callrecords.inc:202 hpbx/includes/hpbx.fax.inc:349
+msgid "Forwarded unconditionally"
+msgstr "Bedingungslos weitergeleitet"
+
+#: hpbx/includes/hpbx.callrecords.inc:203 hpbx/includes/hpbx.fax.inc:350
+msgid "Forwarded due to busy"
+msgstr "Weitergeleitet weil belegt"
+
+#: hpbx/includes/hpbx.callrecords.inc:204 hpbx/includes/hpbx.fax.inc:351
+msgid "Forwarded due to unavailable"
+msgstr "Weitergeleitet weil nicht verfügbar"
+
+#: hpbx/includes/hpbx.callrecords.inc:205 hpbx/includes/hpbx.fax.inc:352
+msgid "Forwared due to timeout"
+msgstr "Weitergeleitet wegen Timeout"
+
+#: hpbx/includes/hpbx.callrecords.inc:206 hpbx/includes/hpbx.fax.inc:353
+msgid "Normal call"
+msgstr "Normaler Anruf"
+
+#: hpbx/includes/hpbx.callrecords.inc:207 hpbx/includes/hpbx.fax.inc:354
+msgid "Inbound"
+msgstr "Eingehend"
+
+#: hpbx/includes/hpbx.callrecords.inc:208 hpbx/includes/hpbx.fax.inc:355
+msgid "Outbound"
+msgstr "Ausgehend"
+
+#: hpbx/includes/hpbx.callrecords.inc:226 hpbx/includes/hpbx.fax.inc:370
+msgid "Date & Time"
+msgstr "Datum & Uhrzeit"
+
+#: hpbx/includes/hpbx.callrecords.inc:227 hpbx/includes/hpbx.fax.inc:371
+msgid "Information"
+msgstr "Information"
+
+#: hpbx/includes/hpbx.callrecords.inc:228 hpbx/includes/hpbx.fax.inc:372
+msgid "Numbers"
+msgstr "Nummern"
+
+#: hpbx/includes/hpbx.callrecords.inc:229
+msgid "Caller"
+msgstr "Anrufer"
+
+#: hpbx/includes/hpbx.callrecords.inc:230
+msgid "Called"
+msgstr "Angerufen"
+
+#: hpbx/includes/hpbx.callrecords.inc:231
+msgid "Call type"
+msgstr "Anruftyp"
+
+#: hpbx/includes/hpbx.callrecords.inc:232 hpbx/includes/hpbx.customer.inc:107 hpbx/includes/hpbx.fax.inc:375 hpbx/includes/hpbx.reseller.inc:21
+msgid "Status"
+msgstr "Status"
+
+#: hpbx/includes/hpbx.callrecords.inc:233
+msgid "Duration"
+msgstr "Dauer"
+
+#: hpbx/includes/hpbx.callrecords.inc:492 hpbx/includes/hpbx.voicemail.inc:370
+msgid "Anonymous"
+msgstr "Gast"
+
+#: hpbx/includes/hpbx.callrecords.inc:495
+msgid "Conference room"
+msgstr "Konferenzraum"
+
+#: hpbx/includes/hpbx.callrecords.inc:498
+msgid "Office hours"
+msgstr "Bürozeiten"
+
+#: hpbx/includes/hpbx.callrecords.inc:507
+msgid "Voicemail retrieval"
+msgstr "Voicemail abrufen"
+
+#: hpbx/includes/hpbx.callrecords.inc:510
+msgid "Voicemail deposit"
+msgstr "Voicemail-Nachricht hinterlegen"
+
+#: hpbx/includes/hpbx.callrecords.inc:513
+msgid "Voicemail via ext."
+msgstr "Voicemail über Ext."
+
+#: hpbx/includes/hpbx.callrecords.inc:521
+msgid "terminated"
+msgstr "beendet"
+
+#: hpbx/includes/hpbx.conference.inc:66
+msgid "Create Conference room"
+msgstr "Konferenzraum erstellen"
+
+#: hpbx/includes/hpbx.conference.inc:129
+msgid "If you enter a PIN, it must consist of 5 digits"
+msgstr "Wenn Sie eine PIN eingeben, muss diese aus 5 Ziffern bestehen."
+
+#: hpbx/includes/hpbx.conference.inc:147
+msgid "Announcement language"
+msgstr "Mitteilungssprache"
+
+#: hpbx/includes/hpbx.conference.inc:199 hpbx/includes/hpbx.dashboard.inc:191
+msgid "Create conference room"
+msgstr "Konferenzraum erstellen"
+
+#: hpbx/includes/hpbx.conference.inc:212
+msgid "Delete conference room"
+msgstr "Konferenzraum löschen"
+
+#: hpbx/includes/hpbx.conference.inc:281
+msgid "PIN needs to be exactly 5 digits."
+msgstr "Die PIN braucht genau 5 Ziffern."
+
+#: hpbx/includes/hpbx.conference.inc:547
+msgid "Conference room successfully saved"
+msgstr "Konferenzraum erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.customer.inc:75;360
+msgid "Create customer"
+msgstr "Kunden erstellen"
+
+#: hpbx/includes/hpbx.customer.inc:95 hpbx/includes/hpbx.reseller.inc:18
+msgid "Company name"
+msgstr "Unternehmensname"
+
+#: hpbx/includes/hpbx.customer.inc:98;653;660
+msgid "Business Partner"
+msgstr "Geschäftspartner"
+
+#: hpbx/includes/hpbx.customer.inc:100;431;432
+msgid "Customer Id"
+msgstr "Kundenkennung"
+
+#: hpbx/includes/hpbx.customer.inc:103;599
+msgid "Multisite"
+msgstr "Multiple Standorte"
+
+#: hpbx/includes/hpbx.customer.inc:183;524 hpbx/includes/hpbx.reseller.inc:62
+msgid "Suspended"
+msgstr "suspendiert"
+
+#: hpbx/includes/hpbx.customer.inc:202
+msgid "Customer is suspended since @suspend_date and can be remove from @remove_date."
+msgstr "Der Kunde ist seit @suspend_date suspendiert und kann ab @remove_date entfernt werden."
+
+#: hpbx/includes/hpbx.customer.inc:205
+msgid "Customer needs to be suspended before it can be removed"
+msgstr "Der Kunde muss suspendiert werden, bevor er entfernt werden kann."
+
+#: hpbx/includes/hpbx.customer.inc:235;237;242;246 hpbx/includes/hpbx.masquerade.inc:208
+msgid "Login"
+msgstr "Login"
+
+#: hpbx/includes/hpbx.customer.inc:242
+msgid "Login disabled. This customer is created on another environment"
+msgstr "Login deaktiviert. Der Kunde wurde in einer anderen Umgebung erstellt."
+
+#: hpbx/includes/hpbx.customer.inc:352 hpbx/includes/hpbx.reseller.inc:294
+msgid "!name"
+msgstr "!name"
+
+#: hpbx/includes/hpbx.customer.inc:386
+msgid "Customer settings"
+msgstr "Kundeneinstellungen"
+
+#: hpbx/includes/hpbx.customer.inc:421;422
+msgid "Company Name"
+msgstr "Unternehmensname"
+
+#: hpbx/includes/hpbx.customer.inc:453
+msgid "Domain"
+msgstr "Domäne"
+
+#: hpbx/includes/hpbx.customer.inc:475;802;856
+msgid "Unlimited"
+msgstr "Unbegrenzt"
+
+#: hpbx/includes/hpbx.customer.inc:495
+msgid "Maximum total concurrent calls"
+msgstr "Maximale Anzahl gleichzeitiger Anrufe"
+
+#: hpbx/includes/hpbx.customer.inc:515
+msgid "Profile Set"
+msgstr "Profilsatz"
+
+#: hpbx/includes/hpbx.customer.inc:530
+msgid "Since @suspend_date"
+msgstr "Seit @suspend_date"
+
+#: hpbx/includes/hpbx.customer.inc:540
+msgid "Derive extension from DID"
+msgstr "Durchwahl von DID ableiten"
+
+#: hpbx/includes/hpbx.customer.inc:554
+msgid "Extension Length"
+msgstr "Länge der Durchwahl"
+
+#: hpbx/includes/hpbx.customer.inc:574;582
+msgid "Pilot number"
+msgstr "Pilotnummer"
+
+#: hpbx/includes/hpbx.customer.inc:579
+msgid "Invalid pilotnumber size"
+msgstr "Ungültige Größe der Pilotnummer"
+
+#: hpbx/includes/hpbx.customer.inc:572
+msgid "Allowed IPs"
+msgstr "Zulässige IPs"
+
+#: hpbx/includes/hpbx.customer.inc:616
+msgid "Site Settings"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:679
+msgid "Customer Location"
+msgstr "Kundenort"
+
+#: hpbx/includes/hpbx.customer.inc:775
+msgid "Bundle settings"
+msgstr "Bundle-Einstellungen"
+
+#: hpbx/includes/hpbx.customer.inc:781
+msgid "Profile set"
+msgstr "Profilsatz"
+
+#: hpbx/includes/hpbx.customer.inc:782
+msgid "Profile"
+msgstr "Profil"
+
+#: hpbx/includes/hpbx.customer.inc:784
+msgid "Amount"
+msgstr "Menge"
+
+#: hpbx/includes/hpbx.customer.inc:803
+msgid "Limit total"
+msgstr "Grenzwert gesamt"
+
+#: hpbx/includes/hpbx.customer.inc:804
+msgid "Limit per profile"
+msgstr "Grenzwert pro Profil"
+
+#: hpbx/includes/hpbx.customer.inc:888
+msgid "Number ranges"
+msgstr "Nummernbereiche"
+
+#: hpbx/includes/hpbx.customer.inc:929
+msgid "Customer administrator"
+msgstr "Kundenadministrator"
+
+#: hpbx/includes/hpbx.customer.inc:968
+msgid "Prefix of a number range has been changed"
+msgstr "Das Präfix eines Nummernbereichs wurde geändert."
+
+#: hpbx/includes/hpbx.customer.inc:969
+msgid "Changing the prefix of a number range, results in an update of the extensions of all of the existing subscribers, hunt groups, auto attendants and conference rooms. In order to update the numbers on the devices of the subscribers, the devices need to be rebooted."
+msgstr "Eine Änderung des Präfixes eines Nummernbereichs führt zu einer Aktualisierung der bestehenden Teilnehmer, Sammelanrufgruppen, automatischen Anwesenden und Konferenzräume. Um die Nummern der Geräte der Teilnehmer zu aktualisieren, müssen die Geräte neu gebootet werden."
+
+#: hpbx/includes/hpbx.customer.inc:1207;1224
+msgid "@key field is required"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1215
+msgid "The Site Name should be unique"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1252;1258;1673;1679
+msgid "The passed IP address @IP is invalid"
+msgstr "Die weitergeleitete IP-Adresse @IP ist ungültig."
+
+#: hpbx/includes/hpbx.customer.inc:1338
+msgid "Not allowed to set this limit for the @profile_name profile, as the customer currently exceeds this limit"
+msgstr "Dieser Grenzwert kann für das Profil @profile_name nicht eingestellt werden, da der Kunde den Wert aktuell überschreitet."
+
+#: hpbx/includes/hpbx.customer.inc:1343
+msgid "Not allowed to set this limit for the @profile_set_name profile set, as the customer currently exceeds this limit"
+msgstr "Dieser Grenzwert kann für den Profilsatz @profile_set_name nicht eingestellt werden, da der Kunde den Wert aktuell überschreitet."
+
+#: hpbx/includes/hpbx.customer.inc:1352
+msgid "Invalid Customer ID. Please use a @length digit number"
+msgstr "Ungültige Kunden-ID. Verwenden Sie bitte eine Nummer mit @length Ziffern."
+
+#: hpbx/includes/hpbx.customer.inc:1357;1360
+msgid "The Customer id @customer_id already exists"
+msgstr "Die Kundenkennung @customer_id existiert bereits."
+
+#: hpbx/includes/hpbx.customer.inc:1364
+msgid "Company name is already assigned to customer @company"
+msgstr "Der Unternehmensname ist bereits dem Kunden @company zugeordnet."
+
+#: hpbx/includes/hpbx.customer.inc:1383
+msgid "Invalid pilot number"
+msgstr "Ungültige Pilotnummer"
+
+#: hpbx/includes/hpbx.customer.inc:1423
+msgid "Empty area code"
+msgstr "Leere Vorwahl"
+
+#: hpbx/includes/hpbx.customer.inc:1426
+msgid "Invalid area code size"
+msgstr "Ungültige Vorwahllänge"
+
+#: hpbx/includes/hpbx.customer.inc:1430
+msgid "Empty start number"
+msgstr "Leere Startnummer"
+
+#: hpbx/includes/hpbx.customer.inc:1433
+msgid "Invalid start number size"
+msgstr "Ungültige Startnummerngröße"
+
+#: hpbx/includes/hpbx.customer.inc:1439
+msgid "Invalid prefix"
+msgstr "Ungültiges Präfix"
+
+#: hpbx/includes/hpbx.customer.inc:1443
+msgid "Please select a number range length"
+msgstr "Bitte wählen Sie eine Länge für den Nummernbereich."
+
+#: hpbx/includes/hpbx.customer.inc:1451;1458
+msgid "Prefix cannot start with @na"
+msgstr "Das Präfix kann nicht mit @na beginnen."
+
+#: hpbx/includes/hpbx.customer.inc:1482
+msgid "Potential overlap between extensions"
+msgstr "Mögliche Überlappung zwischen Durchwahlen"
+
+#: hpbx/includes/hpbx.customer.inc:1493
+msgid "The combination of extension length and the choosen number range results in extensions starting with @na, which is not allowed."
+msgstr "Die Kombination der Durchwahllänge und des gewählten Nummernbereichs führt dazu, dass Durchwahlen mit @na beginnen, was nicht zulässig ist."
+
+#: hpbx/includes/hpbx.customer.inc:1499
+msgid "The combination of extension length and the choosen number range results in extensions starting with the digit for national calls which is not allowed."
+msgstr "Die Kombination der Durchwahllänge und des gewählten Nummernbereichs führt dazu, dass Durchwahlen mit der Ziffer für nationale Anrufe beginnen, was nicht zulässig ist."
+
+#: hpbx/includes/hpbx.customer.inc:1506
+msgid "The combination of extension length and the choosen numberrange could result in an extension number equal to @na, which is not allowed."
+msgstr "Die Kombination der Durchwahllänge und des gewählten Nummernbereichs kann dazu führen, dass eine Durchwahlnummer @na entspricht, was nicht zulässig ist."
+
+#: hpbx/includes/hpbx.customer.inc:1526
+msgid "The number range @range has overlap with a number range assigned to customer @customer"
+msgstr "Der Nummernbereich @range überlappt einen Nummernbereich, der dem Kunden @customer zugewiesen wurde."
+
+#: hpbx/includes/hpbx.customer.inc:1538
+msgid "The pilot number @pilot_number is already assigned to customer @customer"
+msgstr "Die Pilotnummer @pilot_number ist bereits dem Kunden @customer zugeordnet."
+
+#: hpbx/includes/hpbx.customer.inc:1548
+msgid "Possible overlap in extensions. Please review the numberrange prefixes."
+msgstr "Mögliche Überlappung der Durchwahlen. Bitte prüfen Sie die Präfixe des Nummernbereichs."
+
+#: hpbx/includes/hpbx.customer.inc:1552
+msgid "Please enter unique number ranges and/or pilot number."
+msgstr "Bitte geben Sie eindeutige Nummernbereiche und/oder die Pilotnummer ein."
+
+#: hpbx/includes/hpbx.customer.inc:1557
+msgid "At least one number range must be defined. Enter the number range details and hit the \"Add\" button to add a new number range."
+msgstr "Wenigstens ein Nummernbereich muss definiert sein. Geben Sie die Details des Nummernbereichs ein und drücken Sie die Taste \"Hinzufügen\", um einen neuen Nummernbereich einzugeben."
+
+#: hpbx/includes/hpbx.customer.inc:1562
+msgid "If a prefix is set for a number range, all numberranges must have a prefix"
+msgstr "Ist ein Präfix für einen Nummernbereich eingestellt, müssen alle Nummernbereiche ein Präfix besitzen."
+
+#: hpbx/includes/hpbx.customer.inc:1572
+msgid "The prefix must have less digits then the choosen extension length"
+msgstr "Das Präfix muss weniger Ziffern haben, als die gewählte Durchwahllänge."
+
+#: hpbx/includes/hpbx.customer.inc:1583;1586
+msgid "Overlapping number ranges and/or pilot number are not allowed"
+msgstr "Überlappende Nummernbereiche und/oder Pilotnummern sind nicht gestattet."
+
+#: hpbx/includes/hpbx.customer.inc:1602
+msgid "Pilot number is already assigned to customer @company"
+msgstr "Die Pilotnummer ist bereits dem Kunden @company zugeordnet."
+
+#: hpbx/includes/hpbx.customer.inc:1616
+msgid "Upload of @handle failed"
+msgstr "Hochladen von @handle fehlgeschlagen"
+
+#: hpbx/includes/hpbx.customer.inc:1496;1502
+msgid "The passed IP address @IP is invalid"
+msgstr "Die weitergeleitete IP-Adresse @IP ist ungültig."
+
+#: hpbx/includes/hpbx.customer.inc:1697
+msgid "You have exceeded the maximum number of @site sites"
+msgstr ""
+
+#: hpbx/includes/hpbx.customer.inc:1870
+msgid "Failed to change the company name"
+msgstr "Der Unternehmensname konnte nicht geändert werden."
+
+#: hpbx/includes/hpbx.customer.inc:1920
+msgid "Failed to disable user accounts"
+msgstr "Die Benutzerkonten konnten nicht deaktiviert werden."
+
+#: hpbx/includes/hpbx.customer.inc:1927
+msgid "Failed to enable user accounts"
+msgstr "Die Benutzerkonten konnten nicht aktiviert werden."
+
+#: hpbx/includes/hpbx.customer.inc:2150
+msgid "Failed to create AD user"
+msgstr "AD-Benutzer konnte nicht erstellt werden."
+
+#: hpbx/includes/hpbx.customer.inc:2161
+msgid "Failed to store the customer"
+msgstr "Der Kunde konnte nicht gespeichert werden."
+
+#: hpbx/includes/hpbx.customer.inc:2171;2537
+msgid "Cleared customers with @cid"
+msgstr "Kunden mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2175;2541
+msgid "Cleared customers_list with @cid*"
+msgstr "customers_list mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2180;2546
+msgid "Cleared customerpreferences with @cid"
+msgstr "Kundenvoreinstellungen mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2184;2550
+msgid "Cleared customerpreferences list with @cid*"
+msgstr "Kundenvoreinstellungsliste mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2191;2555
+msgid "Cleared customercontacts with @cid"
+msgstr "Kundenkontakte mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2195;2559
+msgid "Cleared customercontacts list with @cid*"
+msgstr "Kundenkontaktliste mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.customer.inc:2200
+msgid "Customer successfully saved"
+msgstr "Der Kunde wurde erfolgreich gespeichert."
+
+#: hpbx/includes/hpbx.customer.inc:2228
+msgid "The customer was not created due to a technical problem. Please contact your system administrator."
+msgstr "Der Kunde wurde aufgrund eines technischen Problems nicht erstellt. Wenden Sie sich an Ihren Systemadministrator."
+
+#: hpbx/includes/hpbx.customer.inc:2380
+msgid "Find"
+msgstr "Suche"
+
+#: hpbx/includes/hpbx.customer.inc:2394
+msgid "The internal customer search database table is not in sync with the Sipwise API. The search results may contain incorrect results."
+msgstr "Die Kundensuchdatenbanktabelle ist nicht mit der Sipwise API synchronisiert. Die Suchergebnisse können falsche Ergebnisse enthalten."
+
+#: hpbx/includes/hpbx.customer.inc:2480
+msgid "No customer found that matches the entered search criteria"
+msgstr "Es wurde kein Kunde gefunden, der den eingegebenen Suchkriterien entspricht."
+
+#: hpbx/includes/hpbx.customer.inc:2529
+msgid "Customer successfully deleted"
+msgstr "Der Kunde wurde erfolgreich gelöscht."
+
+#: hpbx/includes/hpbx.customer.inc:2566
+msgid "Failed to delete the customer"
+msgstr "Der Kunde konnte nicht gelöscht werden."
+
+#: hpbx/includes/hpbx.customer.inc:2627
+msgid "Customer !name"
+msgstr "Kunde !name"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:17;252 ;259  hpbx/includes/hpbx.fax.inc:41
+msgid "Fax numbers"
+msgstr "Faxnummern"
+
+#: hpbx/includes/hpbx.dashboard.inc:65
+msgid "@percentage% of numbers in use"
+msgstr "@percentage% der verwendeten Nummern"
+
+#: hpbx/includes/hpbx.dashboard.inc:93
+msgctxt "plural2"
+msgid "@count devices"
+msgstr "@count Geräte"
+
+#: hpbx/includes/hpbx.dashboard.inc:192 hpbx/includes/hpbx.huntgroup.inc:148
+msgid "Create Hunt group"
+msgstr "Sammelanrufgruppe erstellen"
+
+#: hpbx/includes/hpbx.dashboard.inc:420;442
+msgid "Need help?"
+msgstr "Brauchen Sie Hilfe?"
+
+#: hpbx/includes/hpbx.dashboard.inc:428;450
+msgid "visit website"
+msgstr "Website besuchen"
+
+#: hpbx/includes/hpbx.dashboard.inc:431;453
+msgid "mail us"
+msgstr "Senden Sie uns eine E-Mail."
+
+#: hpbx/includes/hpbx.dashboard.inc:435;457
+msgid "start chat"
+msgstr "Chat starten"
+
+#: (duplicate) hpbx/includes/hpbx.dashboard.inc:287 
+msgid "F.A.Q."
+msgstr "F.A.Q."
+
+#: hpbx/includes/hpbx.dashboard.inc:84
+msgid "@count device"
+msgid_plural "@count devices"
+msgstr[0] "@count Gerät"
+msgstr[1] "@count Geräte"
+
+#: hpbx/includes/hpbx.defaultforward.inc:74
+msgid "Forward all numbers not in use to"
+msgstr "Alle nicht verwendeten Nummern weiterleiten an"
+
+#: hpbx/includes/hpbx.defaultforward.inc:155
+msgid "Failed to store default forward "
+msgstr "Standardweiterleitung konnte nicht gespeichert werden."
+
+#: hpbx/includes/hpbx.defaultforward.inc:161
+msgid "Default forward successfully saved"
+msgstr "Standardweiterleitung erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.download.inc:5
+msgid "For your desktop"
+msgstr "Für Ihren Desktop"
+
+#: hpbx/includes/hpbx.fax.inc:45
+msgid "Send fax"
+msgstr "Fax senden"
+
+#: hpbx/includes/hpbx.fax.inc:48 hpbx/includes/js/hpbx.js:0
+msgid "Fax log"
+msgstr "Faxlog"
+
+#: hpbx/includes/hpbx.fax.inc:92
+msgid "Create new fax number"
+msgstr "Neue Faxnummer erstellen"
+
+#: hpbx/includes/hpbx.fax.inc:139;280
+msgid "Fax number"
+msgstr "Faxnummer"
+
+#: hpbx/includes/hpbx.fax.inc:147
+msgid "Destination number"
+msgstr "Zielnummer"
+
+#: hpbx/includes/hpbx.fax.inc:156
+msgid "Page header"
+msgstr "Seitenüberschrift"
+
+#: hpbx/includes/hpbx.fax.inc:163
+msgid "Page content"
+msgstr "Seiteninhalt"
+
+#: hpbx/includes/hpbx.fax.inc:173
+msgid "Max file size"
+msgstr "Max- Dateigröße"
+
+#: hpbx/includes/hpbx.fax.inc:174
+msgid "The maximum file size is 10MB.</br></br>Supported file type: PDF"
+msgstr "Die maximale Dateigröße beträgt 10MB.</br></br>Unterstützter Dateityp: PDF"
+
+#: hpbx/includes/hpbx.fax.inc:188
+msgid "Send"
+msgstr "Senden"
+
+#: hpbx/includes/hpbx.fax.inc:290 hpbx/includes/hpbx.wizard.inc:454;483
+msgid "Narrow results"
+msgstr "Ergebnisse eingrenzen"
+
+#: hpbx/includes/hpbx.fax.inc:291
+msgid "No results match"
+msgstr "Keine Übereinstimmungen mit der Suchanfrage"
+
+#: hpbx/includes/hpbx.fax.inc:373
+msgid "Sender"
+msgstr "Absender"
+
+#: hpbx/includes/hpbx.fax.inc:374
+msgid "Receiver"
+msgstr "Empfänger"
+
+#: hpbx/includes/hpbx.fax.inc:376
+msgid "Pages"
+msgstr "Seiten"
+
+#: hpbx/includes/hpbx.fax.inc:593
+msgid "Problem retrieving the originating subscriber"
+msgstr "Problem beim Abrufen des Ausgangsteilnehmers"
+
+#: hpbx/includes/hpbx.fax.inc:598 hpbx/includes/hpbx.subscriber.inc:1180
+msgid "Please enter a valid destination number"
+msgstr "Geben Sie bitte eine gültige Zielnummer ein."
+
+#: hpbx/includes/hpbx.fax.inc:610;616;621;609
+msgid "Unknown error while uploading the fax file"
+msgstr "Unbekannter Fehler beim Hochladen der Faxdatei"
+
+#: hpbx/includes/hpbx.fax.inc:627;631
+msgid "Please upload a PDF file"
+msgstr "Bitte laden Sie eine PDF-Datei hoch"
+
+#: hpbx/includes/hpbx.fax.inc:649
+msgid "Your fax is being processed. This may take a few minutes."
+msgstr "Ihr Fax wird bearbeitet. Dies kann einige Minuten dauern."
+
+#: hpbx/includes/hpbx.fax.inc:652
+msgid "Failed to sent fax"
+msgstr "Das Fax konnte nicht verschickt werden."
+
+#: hpbx/includes/hpbx.fax.inc:609;615;620;626
+msgid "hpbx_fax"
+msgstr "hpbx_fax"
+
+#: hpbx/includes/hpbx.fax.inc:615
+msgid "Uploaded PDF file does not exist (anymore"
+msgstr "Die hochgeladene PDF-Datei existiert nicht (mehr)."
+
+#: hpbx/includes/hpbx.fax.inc:620
+msgid "Could not open uploaded PDF file"
+msgstr "Die hochgeladene PDF-Datei konnte nicht geöffnet werden."
+
+#: hpbx/includes/hpbx.fax.inc:626
+msgid "Please upload a valid PDF file"
+msgstr "Bitte laden Sie eine gültige PDF-Datei hoch."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This fax number has no members"
+msgstr "Diese Faxnummer hat keine Mitglieder."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0} person is eligible to use this fax number"
+msgstr "{0} Person ist zur Verwendung dieser Faxnummer autorisiert."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "{0}  persons are eligible to use this fax number"
+msgstr "{0} Personen sind zur Verwendung dieser Faxnummer autorisiert."
+
+#: hpbx/includes/hpbx.fax2email.inc:39
+msgid "This Fax group is empty"
+msgstr "Diese Faxgruppe ist leer."
+
+#: hpbx/includes/hpbx.fax2email.inc:89 hpbx/includes/hpbx.huntgroup.inc:194 hpbx/includes/hpbx.subscriber.inc:270
+msgid "Name*"
+msgstr "Name*"
+
+#: hpbx/includes/hpbx.fax2email.inc:118
+msgid "Email destination for incoming faxes"
+msgstr "E-Mail-Ziel für eingehende Faxe"
+
+#: hpbx/includes/hpbx.fax2email.inc:119 hpbx/includes/hpbx.subscriber.inc:2122
+msgid "Email destination"
+msgstr "E-Mail-Ziel"
+
+#: hpbx/includes/hpbx.fax2email.inc:130
+msgid "Receive a copy of outgoing faxes"
+msgstr "Eine Kopie ausgehender Faxe erhalten"
+
+#: hpbx/includes/hpbx.fax2email.inc:137
+msgid "Receive reports of outgoing and incoming faxes"
+msgstr "Berichte für aus- und eingehende Faxe erhalten"
+
+#: hpbx/includes/hpbx.fax2email.inc:144 hpbx/includes/hpbx.huntgroup.inc:541
+msgid "Members"
+msgstr "Mitglieder"
+
+#: hpbx/includes/hpbx.fax2email.inc:157
+msgid "Select the subscribers that are eligable to use this fax number"
+msgstr "Die Teilnehmer auswählen, die für die Benutzung dieser Faxnummer autorisiert sind."
+
+#: hpbx/includes/hpbx.fax2email.inc:158 hpbx/includes/hpbx.huntgroup.inc:554
+msgid "No subscribers found"
+msgstr "Keine Teilnehmer gefunden"
+
+#: hpbx/includes/hpbx.fax2email.inc:415
+msgid "Can't load faxserversettings"
+msgstr "Faxservereinstellungen können nicht geladen werden."
+
+#: hpbx/includes/hpbx.fax2email.inc:462
+msgid "Fax number successfully saved"
+msgstr "Faxnummer erfolgreich geladen"
+
+#: hpbx/includes/hpbx.help.inc:432
+msgid "Copy - @title"
+msgstr "Kopieren - @title"
+
+#: hpbx/includes/hpbx.help.inc:438
+msgid "Failed to replicate the help article"
+msgstr "Der Hilfeartikel konnte nicht repliziert werden."
+
+#: hpbx/includes/hpbx.help.inc:508 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:24;32
+msgid "Title"
+msgstr "Titel"
+
+#: hpbx/includes/hpbx.help.inc:1014
+msgid "No url"
+msgstr "Keine URL"
+
+#: hpbx/includes/hpbx.help.inc:1018
+msgid "No user_access"
+msgstr "Kein user_access"
+
+#: hpbx/includes/hpbx.help.inc:382;755;875;880
+msgid "hpbx_help"
+msgstr "hpbx_help"
+
+#: hpbx/includes/hpbx.help.inc:382;880
+msgid "Created new field_hpbx_block field_collection item"
+msgstr "Neues field_hpbx_block field_collection Element wurde angelegt"
+
+#: hpbx/includes/hpbx.help.inc:454
+msgid "hpbx_help_count"
+msgstr "hpbx_help_count"
+
+#: hpbx/includes/hpbx.help.inc:454;875
+msgid "Loaded existing field_hpbx_block field_collection item with id "
+msgstr "Bestehendes field_hpbx_block field_collection Element mit ID wurde geladen"
+
+#: hpbx/includes/hpbx.help.inc:755
+msgid "Created new instruction_photo field_collection item"
+msgstr "Neues instruction_photo field_collection Element wurde angelegt"
+
+#: hpbx/includes/hpbx.huntgroup.inc:17
+msgid "Create hunt group"
+msgstr "Sammelanrufgruppe erstellen"
+
+#: hpbx/includes/hpbx.huntgroup.inc:30
+msgid "Delete hunt group"
+msgstr "Sammelanrufgruppe löschen"
+
+#: hpbx/includes/hpbx.huntgroup.inc:37
+msgid "Hunting Policy"
+msgstr "Sammelanrufrichtlinie"
+
+#: hpbx/includes/hpbx.huntgroup.inc:38
+msgid "Time out"
+msgstr "Timeout"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132;132
+msgid "This Hunt group is empty"
+msgstr "Diese Sammelanrufgruppe ist leer."
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} person in this Hunt group"
+msgstr "{0} Person in dieser Sammelanrufgruppe"
+
+#: hpbx/includes/hpbx.huntgroup.inc:132
+msgid "{0} persons in this Hunt group"
+msgstr "{0} Personen in dieser Sammelanrufgruppe"
+
+#: hpbx/includes/hpbx.huntgroup.inc:208
+msgid "Serial Ringing"
+msgstr "Serielles Klingeln"
+
+#: hpbx/includes/hpbx.huntgroup.inc:209
+msgid "Parallel Ringing"
+msgstr "Paralleles Klingeln"
+
+#: hpbx/includes/hpbx.huntgroup.inc:210
+msgid "Random"
+msgstr "Zufall"
+
+#: hpbx/includes/hpbx.huntgroup.inc:211
+msgid "Circular"
+msgstr "Zirkulierend"
+
+#: hpbx/includes/hpbx.huntgroup.inc:215;216
+msgid "The selected policy does not support ordering"
+msgstr "Die gewählte Richtlinie unterstützt Bestellungen nicht."
+
+#: hpbx/includes/hpbx.huntgroup.inc:227
+msgid "Hunting Policy*"
+msgstr "Sammelanrufrichtlinie*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:245
+msgid "Time out (sec)"
+msgstr "Timeout (s)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:260 hpbx/includes/hpbx.subscriber.bulk.inc:27 hpbx/includes/hpbx.subscriber.inc:586 hpbx/includes/hpbx.wizard.inc:51
+msgid "Language of Voicemail announcements"
+msgstr "Sprache der Voicemail-Meldungen"
+
+#: hpbx/includes/hpbx.huntgroup.inc:345
+msgid "Out of office destination"
+msgstr "Zielort außerhalb des Büros"
+
+#: hpbx/includes/hpbx.huntgroup.inc:358
+msgid "No out of office destination"
+msgstr "Kein Zielort außerhalb des Büros"
+
+#: hpbx/includes/hpbx.huntgroup.inc:368
+msgid "Announcement"
+msgstr "Ankündigung"
+
+#: hpbx/includes/hpbx.huntgroup.inc:377
+msgid "Destination (Voicemail or Number)"
+msgstr "Zielort (Voicemail oder Nummer)"
+
+#: hpbx/includes/hpbx.huntgroup.inc:515
+msgid "PIN*"
+msgstr "PIN*"
+
+#: hpbx/includes/hpbx.huntgroup.inc:519
+msgid "No Answer Settings"
+msgstr "Einstellungen für fehlende Antwort"
+
+#: hpbx/includes/hpbx.huntgroup.inc:553
+msgid "Drag members in the correct dialing sequence"
+msgstr "Mitglieder in die richtige Anrufsequenz ziehen"
+
+#: hpbx/includes/hpbx.huntgroup.inc:730
+msgid "Please select one or more members for this hunt group."
+msgstr "Wählen Sie ein oder mehrere Mitglieder für diese Sammelanrufgruppe."
+
+#: hpbx/includes/hpbx.huntgroup.inc:759
+msgid "Please provide a valid numeric voicemail pin"
+msgstr "Stellen Sie einen gültigen numerischen Pin für die Voicemail zur Verfügung"
+
+#: hpbx/includes/hpbx.huntgroup.inc:819 hpbx/includes/hpbx.subscriber.inc:1344
+msgid "Can't find the pilot subscriber preferences"
+msgstr "Die Pilotteilnehmervoreinstellungen konnten nicht gefunden werden."
+
+#: hpbx/includes/hpbx.huntgroup.inc:1164
+msgid "Hunt group successfully saved"
+msgstr "Sammelanrufgruppe erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.masquerade.inc:121
+msgid "Could not find administrative user for selected customer"
+msgstr "Administrativer Benutzer für ausgewählten Kunden konnte nicht gefunden werden"
+
+#: hpbx/includes/hpbx.masquerade.inc:178
+msgid "Customer Administrator"
+msgstr "Kundenadministrator"
+
+#: hpbx/includes/hpbx.musiconhold.inc:20
+msgid "Music on hold"
+msgstr "Warteschleifenmusik"
+
+#: hpbx/includes/hpbx.musiconhold.inc:97
+msgid "Upload Music on Hold audio"
+msgstr "Tondatei für Musik in der Warteschleife hochladen"
+
+#: hpbx/includes/hpbx.musiconhold.inc:115
+msgid "If you upload an audio file, make sure you pay for or own the content rights for this audio file.</br></br>The maximum allowed duration of the audio file is 60 minutes.</br></br>Supported file types: wav, mp3, flac, ogg, raw"
+msgstr "Wenn Sie eine Tondatei hochladen, sicherstellen, dass Sie die Inhaltsrechte für die Tondatei bezahlen oder besitzen.</br></br>Die Tondatei darf maximal 60 Minuten lang sein.</br></br>Unterstützte Dateitypen: wav, mp3, flac, ogg, raw"
+
+#: hpbx/includes/hpbx.musiconhold.inc:121
+msgid "Clear upload"
+msgstr "Upload löschen"
+
+#: hpbx/includes/hpbx.musiconhold.inc:128
+msgid "Or choose a song from our default !icon !ml_link"
+msgstr "Oder wählen Sie ein Lied aus unserer Standard- !icon !ml_link."
+
+#: hpbx/includes/hpbx.musiconhold.inc:130
+msgid "music library"
+msgstr "Musikbibliothek"
+
+#: hpbx/includes/hpbx.musiconhold.inc:285
+msgid "Choose your music on hold media"
+msgstr "Wählen Sie Ihr Medium für die Musik in der Warteschleife."
+
+#: hpbx/includes/hpbx.musiconhold.inc:336;355
+msgid "Upload of Music on Hold failed"
+msgstr "Upload der Musik für die Warteschleife fehlgeschlagen."
+
+#: hpbx/includes/hpbx.musiconhold.inc:343
+msgid "The extension '@ext' is not supported"
+msgstr "Die Erweiterung @ext wird nicht unterstützt."
+
+#: hpbx/includes/hpbx.musiconhold.inc:351
+msgid "The audio file you tried to upload is too big"
+msgstr "Die Tondatei, die Sie hochladen wollten, ist zu groß."
+
+#: hpbx/includes/hpbx.musiconhold.inc:365
+msgid "File not found"
+msgstr "Datei nicht gefunden"
+
+#: hpbx/includes/hpbx.musiconhold.inc:368
+msgid "Access denied"
+msgstr "Zugriff verweigert"
+
+#: hpbx/includes/hpbx.musiconhold.inc:529
+msgid "Failed to store music on hold"
+msgstr "Musik für die Warteschleife konnte nicht gespeichert werden."
+
+#: hpbx/includes/hpbx.musiconhold.inc:535
+msgid "Music on hold successfully saved"
+msgstr "Musik für die Warteschleife erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:32
+msgid "Private Line"
+msgstr "Private Leitung"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:35
+msgid "Shared Line"
+msgstr "Geteilte Leitung"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:38
+msgid "Busy Lamp Field"
+msgstr "Feld für die Lampe zum Anzeigen einer belegten Leitung"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:81
+msgid "At lease one line must be defined. Enter the line details and hit the \"Add\" button to add a new line."
+msgstr "Wenigstens eine Leitung muss definiert sein. Geben Sie die Details für die Leitung ein und drücken Sie die Taste \"Hinzufügen\", um eine neue Leitung einzugeben."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:91
+msgid "Invalid subscriber"
+msgstr "Ungültiger Teilnehmer"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:94
+msgid "A hunt group can only be assigned to a BLF key"
+msgstr "Eine Sammelanrufgruppe kann nur einem BLF-Schlüssel zugeordnet werden."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:97
+msgid "Subscriber cannot be assigned to a BLF key, as it is not allowed for the subscriber profile"
+msgstr "Der Teilnehmer kann keinem BLF-Schlüssel zugeordnet werden, da dieser für das Teilnehmerprofil nicht zulässig ist."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:108;112;158;252
+msgid "MAC address is invalid, please check the MAC address"
+msgstr "Die MAC-Adresse ist ungültig. Prüfen Sie die MAC-Adresse"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:124
+msgid "MAC address is already assigned to device with device name @station_name"
+msgstr "Die MAC-Adresse ist dem Gerät mit Gerätenamen @station_name bereits zugeordnet."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:127
+msgid "MAC Address is already assigned to another device"
+msgstr "Die MAC-Adresse ist bereits einem anderen Gerät zugeordnet."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:357
+msgid "Create device"
+msgstr "Gerät erstellen"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:367 hpbx/includes/hpbx.subscriber.bulk.inc:28;255
+msgid "Device name"
+msgstr "Gerätename"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:368
+msgid "Brand and model"
+msgstr "Marke und Modell"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:369;867;871 hpbx/includes/hpbx.subscriber.bulk.inc:31 hpbx/includes/js/hpbx_devices.js:0
+msgid "MAC address"
+msgstr "MAC-Adresse"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:372
+msgid "Delete device"
+msgstr "Gerät löschen"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:400 hpbx/includes/hpbx.wizard.inc:1019;1182;1273
+msgid "Sync"
+msgstr "Synchronisieren"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:456
+msgid "Device successfully deleted"
+msgstr "Gerät erfolgreich gelöscht"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:474
+msgid "Cleared @type list with @cid*"
+msgstr "Liste @type mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:555
+msgid "1. Pick up the phone connected to the ATA and call * * * *"
+msgstr "1. Nehmen Sie das mit dem ATA verbundene Telefon ab und rufen Sie * * * * an."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:556
+msgid "2. Enter 1 1 0 #"
+msgstr "2. Geben Sie 1 1 0 # ein."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:557
+msgid "3. You will now hear a message giving you the IP address"
+msgstr "3. Nun hören Sie eine Meldung, die Ihnen die IP-Adresse vorliest."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:560
+msgid "1. Enter the phone menu"
+msgstr "1. Gehen Sie in das Telefonmenü."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:561
+msgid "2. Scroll to settings and press select"
+msgstr "2. Scrollen Sie zu den Einstellungen und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:562
+msgid "3. Scroll to phone info and press select"
+msgstr "3. Scrollen Sie zur Telefoninformation und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:563
+msgid "4. Scroll to view IP Address. This is the IP address of your device"
+msgstr "4. Scrollen Sie zu IP-Adresse anzeigen. Dies ist die IP-Adresse Ihres Geräts."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:566
+msgid "1. Press the Setup button."
+msgstr "1. Drücken Sie die Taste Setup."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:567
+msgid "2. Scroll to Network and press select."
+msgstr "2. Scrollen Sie zu Netzwerk und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:568
+msgid "3. Scroll to view Current IP. This is the IP address of your device."
+msgstr "3. Scrollen Sie zu aktuelle IP anzeigen. Dies ist die IP-Adresse Ihres Geräts,"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:574;579
+msgid "IP Address"
+msgstr "IP-Adresse"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:580
+msgid "This field is mandatory___The given value must be a valid IP address"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:596 hpbx/includes/hpbx.wizard.inc:1031;1194;1285
+msgid "Sync device"
+msgstr "Gerät synchronisieren"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:628
+msgid "The request could not be sent to the device. Possible causes: <br/><br/>The device is already associated.<br/>The device is not connected to the LAN<br/>The IP adress is incorrect"
+msgstr "Diese Anfrage konnte nicht an das Gerät gesendet werden. Mögliche Ursachen: <br/><br/>Das Gerät ist bereits zugeordnet.<br/>Das Gerät ist nicht mit dem LAN verbunden.<br/>Die IP-Adresse ist falsch."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:634
+msgid "The request is successfully sent to device. The device will now try to retrieve the profile and one or more firmware versions."
+msgstr "Die Anfrage wird erfolgreich an das Gerät geschickt. Das Gerät versucht nun, das Produkt und eine oder mehrere Firmwareversionen abzurufen."
+
+#: hpbx/includes/hpbx.pbxdevice.inc:757 hpbx/includes/hpbx.wizard.inc:761
+msgid "Add device"
+msgstr "Gerät hinzufügen"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:830 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:724 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:565
+msgid "Type"
+msgstr "Typ"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:832
+msgid "Choose a brand"
+msgstr "Marke wählen"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:834 hpbx/includes/hpbx.subscriber.bulk.inc:29 hpbx/includes/hpbx.wizard.inc:110;838;848;850
+msgid "Brand"
+msgstr "Marke"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:849;853 hpbx/includes/hpbx.subscriber.bulk.inc:30 hpbx/includes/hpbx.wizard.inc:857;865;867
+msgid "Model"
+msgstr "Modell"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:851
+msgid "Choose a model"
+msgstr "Modell wählen"
+
+#: hpbx/includes/hpbx.pbxdevice.inc:872
+msgid "This field is mandatory___The given value must be of the MAC address type"
+msgstr ""
+
+#: hpbx/includes/hpbx.pbxdevice.inc:908
+msgid "Next step"
+msgstr "Nächster Schritt"
+
+#: hpbx/includes/hpbx.reseller.inc:19
+msgid "PTSID"
+msgstr "PTSID"
+
+#: hpbx/includes/hpbx.reseller.inc:20
+msgid "Concurrent Max"
+msgstr "Gleichzeitige Max"
+
+#: hpbx/includes/hpbx.reseller.inc:104;110;121
+msgid "Cleared @type with @cid*"
+msgstr "@type mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.reseller.inc:113
+msgid "Cleared the cache for API type @api_type for @reseller_id (list)"
+msgstr "Das Cache für API-Typ @api_type für @Wiederverkäufer_id (Liste) wurde gelöscht."
+
+#: hpbx/includes/hpbx.reseller.inc:123
+msgid "Cleared the cache for API type @api_type for @reseller_id (entity)"
+msgstr "Das Cache für API-Typ @api_type für @Wiederverkäufer_id (Entität) wurde gelöscht."
+
+#: hpbx/includes/hpbx.reseller.inc:175
+msgid "You are not authorised to create Business Partners"
+msgstr "Sie sind nicht berechtigt, Geschäftspartner zu erstellen."
+
+#: hpbx/includes/hpbx.reseller.inc:336
+msgid "Emergency Settings"
+msgstr "Notfalleinstellungen"
+
+#: hpbx/includes/hpbx.reseller.inc:416
+msgid "Administrator welcome email"
+msgstr "Willkommens-E-Mail für den Administrator"
+
+#: hpbx/includes/hpbx.reseller.inc:459
+msgid "Subscriber welcome email"
+msgstr "Willkommens-E-Mail für den Teilnehmer"
+
+#: hpbx/includes/hpbx.reseller.inc:501
+msgid "Affiliate user welcome email"
+msgstr "Willkommens-E-Mail für den Partnerbenutzer"
+
+#: hpbx/includes/hpbx.reseller.inc:543
+msgid "Business Partner welcome email"
+msgstr "Willkommens-E-Mail für den Geschäftspartner"
+
+#: hpbx/includes/hpbx.reseller.inc:587
+msgid "Reset Password"
+msgstr "Passwort zurücksetzen"
+
+#: hpbx/includes/hpbx.reseller.inc:689
+msgid "Time Zone"
+msgstr "Zeitzone"
+
+#: hpbx/includes/hpbx.reseller.inc:699
+msgid "Time Zone correction required"
+msgstr "Zeitzone muss korrigiert werden."
+
+#: hpbx/includes/hpbx.reseller.inc:711
+msgid "Domain ID"
+msgstr "Domain-Kennung"
+
+#: hpbx/includes/hpbx.reseller.inc:722
+msgid "digit_for_national_calls"
+msgstr "digit_for_national_calls"
+
+#: hpbx/includes/hpbx.reseller.inc:730
+msgid "country_code"
+msgstr "country_code"
+
+#: hpbx/includes/hpbx.reseller.inc:738
+msgid "area_code_min_digits"
+msgstr "area_code_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:741;750;775;784
+msgid "Number of digits includes the digit for national calls"
+msgstr "Die Ziffernanzahl umfasst die Ziffer für nationale Anrufe."
+
+#: hpbx/includes/hpbx.reseller.inc:747
+msgid "area_code_max_digits"
+msgstr "area_code_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:756
+msgid "subscriber_number_min_digits"
+msgstr "subscriber_number_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:764
+msgid "subscriber_number_max_digits"
+msgstr "subscriber_number_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:772
+msgid "pilot_subscriber_number_min_digits"
+msgstr "pilot_subscriber_number_min_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:781
+msgid "pilot_subscriber_number_max_digits"
+msgstr "pilot_subscriber_number_max_digits"
+
+#: hpbx/includes/hpbx.reseller.inc:790
+msgid "automatic_pilot_number_generation"
+msgstr "automatic_pilot_number_generation"
+
+#: hpbx/includes/hpbx.reseller.inc:798
+msgid "automatic_pilot_number_generation_prefix"
+msgstr "automatic_pilot_number_generation_prefix"
+
+#: hpbx/includes/hpbx.reseller.inc:806
+msgid "customer_concurrent_max"
+msgstr "customer_concurrent_max"
+
+#: hpbx/includes/hpbx.reseller.inc:809
+msgid "Number of concurrent max calls."
+msgstr "Maximale Anzahl gleichzeitiger Anrufe."
+
+#: hpbx/includes/hpbx.reseller.inc:814
+msgid "customer_max_extension_length"
+msgstr "customer_max_extension_length"
+
+#: hpbx/includes/hpbx.reseller.inc:817
+msgid "Max extension length."
+msgstr "Maximale Länge der Durchwahl."
+
+#: hpbx/includes/hpbx.reseller.inc:823
+msgid "extensions_are_not_allowed_to_start_with"
+msgstr "extensions_are_not_allowed_to_start_with"
+
+#: hpbx/includes/hpbx.reseller.inc:830
+msgid "exclude_extensions"
+msgstr "exclude_extensions"
+
+#: hpbx/includes/hpbx.reseller.inc:836
+msgid "polish_emergency_routing"
+msgstr "polish_emergency_routing"
+
+#: hpbx/includes/hpbx.reseller.inc:844
+msgid "bundle_settings"
+msgstr "bundle_settings"
+
+#: hpbx/includes/hpbx.reseller.inc:852
+msgid "emergency_prefix"
+msgstr "emergency_prefix"
+
+#: hpbx/includes/hpbx.reseller.inc:859
+msgid "execute_logic_for_area_code_dependant_emergency_suffix"
+msgstr "execute_logic_for_area_code_dependant_emergency_suffix"
+
+#: hpbx/includes/hpbx.reseller.inc:873
+msgid "suspend_ncos_level"
+msgstr "suspend_ncos_level"
+
+#: hpbx/includes/hpbx.reseller.inc:883
+msgid "default_subscriber_ncos_level"
+msgstr "default_subscriber_ncos_level"
+
+#: hpbx/includes/hpbx.reseller.inc:893
+msgid "mail_from_address"
+msgstr "mail_from_address"
+
+#: hpbx/includes/hpbx.reseller.inc:909
+msgid "generic_profile_set_id"
+msgstr "generic_profile_set_id"
+
+#: hpbx/includes/hpbx.reseller.inc:918
+msgid "pilot_subscriber_profile_id"
+msgstr "pilot_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:926
+msgid "hunt_group_subscriber_profile_id"
+msgstr "hunt_group_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:935
+msgid "auto_attendant_subscriber_profile_id"
+msgstr "auto_attendant_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:943
+msgid "fax_subscriber_profile_id"
+msgstr "fax_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:952
+msgid "conference_room_subscriber_profile_id"
+msgstr "conference_room_subscriber_profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:960
+msgid "can be configured as a BLF line type"
+msgstr "Kann als BLF-Leitungstyp konfiguriert werden"
+
+#: hpbx/includes/hpbx.reseller.inc:961
+msgid "can be a HuntGroup member"
+msgstr "Kann ein Mitglied der Sammelanrufgruppe sein"
+
+#: hpbx/includes/hpbx.reseller.inc:962
+msgid "can set the CLI"
+msgstr "Kann CLI einstellen"
+
+#: hpbx/includes/hpbx.reseller.inc:963
+msgid "can send faxes"
+msgstr "Kann Faxnachrichten versenden"
+
+#: hpbx/includes/hpbx.reseller.inc:964
+msgid "can use mobile softclient"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:965
+msgid "can use desktop softclient"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1017
+msgid "customer_id_length"
+msgstr "customer_id_length"
+
+#: hpbx/includes/hpbx.reseller.inc:1029
+msgid "Terms & Conditions Drupal node ID"
+msgstr "Geschäftsbedingungen Drupal-Knotenpunktkennung"
+
+#: hpbx/includes/hpbx.reseller.inc:1038
+msgid "enable_restricted_access"
+msgstr "enable_restricted_access"
+
+#: hpbx/includes/hpbx.reseller.inc:1047
+msgid "Enable Business Partners"
+msgstr "Aktivieren von Geschäftspartnern"
+
+#: hpbx/includes/hpbx.reseller.inc:1056
+msgid "Enable Multisite"
+msgstr "Ermöglichen Sie multiple Standorte"
+
+#: hpbx/includes/hpbx.reseller.inc:1064
+msgid "Number of Sites"
+msgstr "Standortanzahl"
+
+#: hpbx/includes/hpbx.reseller.inc:1079
+msgid "Stretto group"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1089
+msgid "Stretto Desktop profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1099
+msgid "Stretto Mobile profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1109
+msgid "Stretto Mobile & Desktop profile"
+msgstr ""
+
+#: hpbx/includes/hpbx.reseller.inc:1142
+msgid "Emergency Routing"
+msgstr "Notfallrouting"
+
+#: hpbx/includes/hpbx.reseller.inc:1151
+msgid "Default emergency suffix"
+msgstr "Standard-Notfallsuffix"
+
+#: hpbx/includes/hpbx.reseller.inc:1164
+msgid "Emergency Suffixes"
+msgstr "Notfallsuffixe"
+
+#: hpbx/includes/hpbx.reseller.inc:1177
+msgid "Location CSV"
+msgstr "Standort-CSV"
+
+#: hpbx/includes/hpbx.reseller.inc:1179
+msgid "Upload the CSV containing the Location information"
+msgstr "Hochladen der CSV mit den Standortdaten"
+
+#: hpbx/includes/hpbx.reseller.inc:1191
+msgid "Emergency Number Mapping CSV"
+msgstr "CSV zur Notfallnummernzuordnung"
+
+#: hpbx/includes/hpbx.reseller.inc:1194
+msgid "Upload the CSV containing the Emergency Numbers and Prefix information"
+msgstr "Hochladen der CSV mit den Notfallnummern und Präfixinformationen"
+
+#: hpbx/includes/hpbx.reseller.inc:1225
+msgid "Only digits allowed: @profile_id"
+msgstr "Nur Ziffern zulässig: @profile_id"
+
+#: hpbx/includes/hpbx.reseller.inc:1238;1250;1265
+msgid "Only digits allowed"
+msgstr "Nur Ziffern zulässig"
+
+#: hpbx/includes/hpbx.reseller.inc:1282
+msgid "Only digits allowed for field @field"
+msgstr "Nur Ziffern zulässig für Feld @field"
+
+#: hpbx/includes/hpbx.reseller.inc:1287
+msgid "Customer max extension length must be less than subscriber number min digits."
+msgstr "Die max. Durchwahllänge des Kunden muss weniger sein als die Mindestziffern der Teilnehmernummer."
+
+#: hpbx/includes/hpbx.reseller.inc:1302
+msgid "Unknown error while uploading the polish emergency indexes CSV file"
+msgstr "Unbekannter Fehler beim Hochladen der CSV-Datei für den Polish-Notfallindex"
+
+#: hpbx/includes/hpbx.reseller.inc:1307
+msgid "The uploaded indexes file does not exist (anymore)"
+msgstr "Die hochgeladene Indexdatei existiert nicht (mehr)."
+
+#: hpbx/includes/hpbx.reseller.inc:1311
+msgid "Could not open uploaded indexes file"
+msgstr "Die hochgeladene Indexdatei konnte nicht geöffnet werden."
+
+#: hpbx/includes/hpbx.reseller.inc:1319
+msgid "Unknown error while uploading the mappings file"
+msgstr "Unbekannter Fehler beim Hochladen der Zuordnungsdatei"
+
+#: hpbx/includes/hpbx.reseller.inc:1324
+msgid "The uploaded mappings file does not exist (anymore)"
+msgstr "Die hochgeladene Zuordnungsdatei existiert nicht (mehr)."
+
+#: hpbx/includes/hpbx.reseller.inc:1328
+msgid "Could not open uploaded mappings file"
+msgstr "Die hochgeladene Zuordnungsdatei konnte nicht geöffnet werden."
+
+#: hpbx/includes/hpbx.reseller.inc:1468
+msgid "Cleared resellers with @cid"
+msgstr "Wiederverkäufer mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.reseller.inc:1472
+msgid "Cleared resellers_list with @cid*"
+msgstr "resellers_list mit @cid* gelöscht"
+
+#: hpbx/includes/hpbx.reseller.inc:1476
+msgid "Cleared contracts with @cid"
+msgstr "Verträge mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.reseller.inc:1481
+msgid "Cleared systemcontacts with @cid"
+msgstr "Systemkontakte mit @cid gelöscht"
+
+#: hpbx/includes/hpbx.reseller.inc:1495
+msgid "Affiliate settings successfully saved"
+msgstr "Partnereinstellungen erfolgreich gespeichert"
+
+#: hpbx/includes/hpbx.reseller.inc:214 hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "sipwise_api"
+msgstr "sipwise_api"
+
+#: hpbx/includes/hpbx.reseller.inc:214
+msgid "Failed to load emergencymappings"
+msgstr "Notfallzuordnungen konnten nicht geladen werden."
+
+#: hpbx/includes/hpbx.scripts.inc:30
+msgid "Script Name"
+msgstr "Scriptname"
+
+#: hpbx/includes/hpbx.scripts.inc:93;95
+msgid "Customer"
+msgstr "Kunde"
+
+#: hpbx/includes/hpbx.scripts.inc:94
+msgid "All Customers"
+msgstr "Alle Kunden"
+
+#: hpbx/includes/hpbx.scripts.inc:106
+msgid "New Provision URL"
+msgstr "Neubereitstellungs-URL"
+
+#: hpbx/includes/hpbx.scripts.inc:107
+msgid "Provisioning URL"
+msgstr "Bereitstellungs-URL"
+
+#: hpbx/includes/hpbx.scripts.inc:113
+msgid "New Provision Server"
+msgstr "Neubereitstellungsserver"
+
+#: hpbx/includes/hpbx.scripts.inc:114
+msgid "Provisioning Server"
+msgstr "Bereitstellungsserver"
+
+#: hpbx/includes/hpbx.scripts.inc:135
+msgid "Run"
+msgstr "Ausführen"
+
+#: hpbx/includes/hpbx.scripts.inc:147
+msgid "Reseller field is required"
+msgstr "Das Wiederverkäuferfeld ist ein Pflichtfeld."
+
+#: hpbx/includes/hpbx.scripts.inc:152
+msgid "New Provisiong URL field is required"
+msgstr "Das Neubereitstellungs-URL-Feld ist ein Pflichtfeld."
+
+#: hpbx/includes/hpbx.scripts.inc:155
+msgid "Select Panasonic RDS"
+msgstr "Wählen Sie Panasonic RDS"
+
+#: hpbx/includes/hpbx.scripts.inc:160
+msgid "New Provisiong Server field is required"
+msgstr "Das Neubereitstellungsserverfeld ist ein Pflichtfeld."
+
+#: hpbx/includes/hpbx.scripts.inc:211
+msgid "Webpassword has been successfully updated"
+msgstr "Das Webpasswort wurde erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:215
+msgid "Softphone auto provision option has been successfully updated"
+msgstr "Die Softphone-Autobereitstellungsoption wurde erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:219
+msgid "Display name has been successfully updated"
+msgstr "Der Anzeigename wurde erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:223
+msgid "Reseller settings fields successfully updated"
+msgstr "Die Wiederverkäufereinstellungsfelder wurden erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:227
+msgid "Customer Settings fields successfully updated"
+msgstr "Die Kundeneinstellungsfelder wurden erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:231
+msgid "Provisioning URL for Panasonic successfully updated"
+msgstr "Die Bereitstellungs-URL für Panasonic wurde erfolgreich aktualisiert."
+
+#: hpbx/includes/hpbx.scripts.inc:235
+msgid "Provisioning URL for Yealink successfully updated"
+msgstr "Die Bereitstellungs-URL für Yealink wurde erfolgreich aktualisiert"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:12
+msgid "Valid?"
+msgstr "Gültig?"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:13 hpbx/includes/hpbx.subscriber.inc:207;218 hpbx/includes/hpbx.wizard.inc:293
+msgid "Disable self care rights"
+msgstr "Selbstbedienungsrechte deaktivieren"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:18 hpbx/includes/hpbx.subscriber.inc:436 hpbx/includes/hpbx.wizard.inc:41;478
+msgid "Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:19 hpbx/includes/hpbx.subscriber.inc:354;366
+msgid "Administrative"
+msgstr "Administrativ"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:22
+msgid "Caller line identification"
+msgstr "Anruferidentifizierung"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:23;263 hpbx/includes/hpbx.subscriber.inc:190;507;2140 hpbx/includes/hpbx.wizard.inc:48;113;543
+msgid "Subscriber profile"
+msgstr "Teilnehmerprofil"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:24 hpbx/includes/hpbx.subscriber.inc:525;532 hpbx/includes/hpbx.wizard.inc:579
+msgid "Block anonymous inbound calls"
+msgstr "Anonyme eingehende Anrufe blockieren"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:25 hpbx/includes/hpbx.subscriber.inc:555;568 hpbx/includes/hpbx.wizard.inc:568
+msgid "Call barrings"
+msgstr "Anrufsperren"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:26
+msgid "PIN for overriding call barrings"
+msgstr "PIN zur Umgehung von Anrufsperren"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:96;857 hpbx/includes/hpbx.subscriber.inc:449;470 hpbx/includes/hpbx.wizard.inc:56;516
+msgid "Restricted"
+msgstr "Eingeschränkt"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:117;138;857
+msgid "Own"
+msgstr "Eigene"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:247
+msgid "Device key can't be determined. "
+msgstr "Geräteschlüssel kann nicht bestimmt werden."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:255;263;271 hpbx/includes/hpbx.subscriber.inc:1072;1082;1092;1119 hpbx/includes/hpbx.wizard.inc:37;41;45;48;51;107;110;113;116
+msgid "!name field is required."
+msgstr "Das Feld !name ist erforderlich."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:271 hpbx/includes/hpbx.wizard.inc:116;872;876
+msgid "MAC Address"
+msgstr "MAC-Adresse"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:321
+msgid "Device not created"
+msgstr "Gerät nicht erstellt"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:402
+msgid "Subscriber not created"
+msgstr "Teilnehmer nicht erstellt"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:422;630 hpbx/includes/js/hpbx-wizard.js:0
+msgid "Device"
+msgstr "Gerät"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:534
+msgid "Input error"
+msgstr "Eingabefehler"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:535
+msgid "Value is not in list"
+msgstr "Wert ist nicht in der Liste"
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:536
+msgid "Pick a value from the list"
+msgstr "Wählen Sie einen Wert aus der Liste."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:537
+msgid "Please pick a value from the drop-down list."
+msgstr "Wählen Sie einen Wert aus der Dropdown-Liste."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:657
+msgid "Failed to retrieve entries from Excel file"
+msgstr "Einträge aus der Excel-Datei konnten nicht abgerufen werden."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:702;719;736
+msgid "This field is mandatory___The maximum length of this field is 255"
+msgstr "Dieses Feld ist ein Pflichtfeld___Die maximale Länge dieses Felds ist 255."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:753
+msgid "This field is mandatory___The given value must be of the email type___The maximum length of this field is 255"
+msgstr "Dieses Feld ist ein Pflichtfeld___Der angegebene Wert muss Typ E-Mail sein___Die maximale Länge dieses Felds beträgt 255."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:754;814;1035
+msgid "One of the values is not unique"
+msgstr "Einer dieser Werte ist nicht eindeutig."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:813
+msgid "The given value must be of the phone number type"
+msgstr "Der angegebene Wert muss vom Typ eine Telefonnummer sein."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:907
+msgid "The maximum length of this field is 4___The given value is not completely a digit string"
+msgstr "Die maximale Länge dieses Felds ist 4___Der angegebene Wert ist nicht vollständig ein Ziffernstring."
+
+#: hpbx/includes/hpbx.subscriber.bulk.inc:957
+msgid "The maximum length of this field is 255"
+msgstr "Die maximale Länge dieses Felds ist 255."
+
+#: hpbx/includes/hpbx.subscriber.inc:41;2253
+msgid "Create subscriber"
+msgstr "Teilnehmer erstellen"
+
+#: hpbx/includes/hpbx.subscriber.inc:58
+msgid "Call forwards"
+msgstr "Rufweiterleitungen"
+
+#: hpbx/includes/hpbx.subscriber.inc:60
+msgid "Speed dials"
+msgstr "Kurzwahlen"
+
+#: hpbx/includes/hpbx.subscriber.inc:111
+msgid "Subscriber settings"
+msgstr "Teilnehmereinstellungen"
+
+#: hpbx/includes/hpbx.subscriber.inc:151
+msgid "When"
+msgstr "Wenn"
+
+#: hpbx/includes/hpbx.subscriber.inc:152;906
+msgid "Destination type"
+msgstr "Zielorttyp"
+
+#: hpbx/includes/hpbx.subscriber.inc:153
+msgid "During"
+msgstr "Während"
+
+#: hpbx/includes/hpbx.subscriber.inc:155
+msgid "Disconnect after"
+msgstr "Trennen nach"
+
+#: hpbx/includes/hpbx.subscriber.inc:251 hpbx/includes/hpbx.wizard.inc:370
+msgid "Assign to current user"
+msgstr "Aktuellem Benutzer zuweisen"
+
+#: hpbx/includes/hpbx.subscriber.inc:258
+msgid "When you as an administrator would like to have a phone number created for this account, please check this box"
+msgstr "Wenn Sie als Administrator eine Telefonnummer für dieses Konto erstellen wollen, klicken Sie dieses Feld an."
+
+#: hpbx/includes/hpbx.subscriber.inc:290
+msgid "First name*"
+msgstr "Vorname*"
+
+#: hpbx/includes/hpbx.subscriber.inc:312
+msgid "Last name*"
+msgstr "Nachname*"
+
+#: hpbx/includes/hpbx.subscriber.inc:331
+msgid "Email*"
+msgstr "E-Mail*"
+
+#: hpbx/includes/hpbx.subscriber.inc:497 hpbx/includes/hpbx.wizard.inc:45;59;520
+msgid "Caller Line Identification"
+msgstr "Anrufer-Leitungsidentifizierung"
+
+#: hpbx/includes/hpbx.subscriber.inc:578 hpbx/includes/hpbx.wizard.inc:587;593
+msgid "PIN for overriding (temporary) call barrings"
+msgstr "PIN zur Umgehung von (temporären) Anrufsperren"
+
+#: hpbx/includes/hpbx.subscriber.inc:838
+msgid "Unconditional"
+msgstr "Bedingungslos"
+
+#: hpbx/includes/hpbx.subscriber.inc:839
+msgid "Busy"
+msgstr "Belegt"
+
+#: hpbx/includes/hpbx.subscriber.inc:840
+msgid "Unavailable"
+msgstr "Nicht verfügbar"
+
+#: hpbx/includes/hpbx.subscriber.inc:841
+msgid "Timeout"
+msgstr "Timeout"
+
+#: hpbx/includes/hpbx.subscriber.inc:875
+msgid "voicemail"
+msgstr "Voicemail"
+
+#: hpbx/includes/hpbx.subscriber.inc:886
+msgid "Not active"
+msgstr "Nicht aktiv"
+
+#: hpbx/includes/hpbx.subscriber.inc:891
+msgid "@cf_title"
+msgstr "@cf_title"
+
+#: hpbx/includes/hpbx.subscriber.inc:947
+msgid "After (sec)"
+msgstr "Nach (s)"
+
+#: hpbx/includes/hpbx.subscriber.inc:956
+msgid "Call forward active during"
+msgstr "Rufweiterleitung aktiv während"
+
+#: hpbx/includes/hpbx.subscriber.inc:1043;1052
+msgid "You have used up all your available @profile_name subscribers"
+msgstr "Sie haben alle verfügbaren Teilnehmer für @profile_name verwendet"
+
+#: hpbx/includes/hpbx.subscriber.inc:1079;1089;1130
+msgid "Only UTF-8 characters are allowed"
+msgstr "Nur UTF-8-Zeichen sind erlaubt"
+
+#: hpbx/includes/hpbx.subscriber.inc:1095
+msgid "The email address you specified is not valid."
+msgstr "Die angegebene E-Mail-Adresse ist nicht gültig."
+
+#: hpbx/includes/hpbx.subscriber.inc:1099
+msgid "The amount of characters entered for the First name and Last name exceeds the limit."
+msgstr "Die für den Vor- und Nachnamen eingegebene Zeichenanzahl überschreitet den Grenzwert."
+
+#: hpbx/includes/hpbx.subscriber.inc:1126
+msgid "The entered Name may not exceed 125 characters."
+msgstr "Der eingegebene Name darf 125 Zeichen nicht überschreiten."
+
+#: hpbx/includes/hpbx.subscriber.inc:1151
+msgid "Invalid number"
+msgstr "Ungültige Nummer"
+
+#: hpbx/includes/hpbx.subscriber.inc:1159
+msgid "Invalid area code"
+msgstr "Ungültige Vorwahl"
+
+#: hpbx/includes/hpbx.subscriber.inc:1171
+msgid "Destination number is required"
+msgstr "Eine Zielnummer ist erforderlich."
+
+#: hpbx/includes/hpbx.subscriber.inc:1189
+msgid "Please enter a valid ring time out"
+msgstr "Geben Sie einen gültigen Timeout for das Klingeln ein."
+
+#: hpbx/includes/hpbx.subscriber.inc:1215
+msgid "Please choose a slot for the speed dial destination."
+msgstr "Wählen Sie einen Slot für das Kurzwahlziel."
+
+#: hpbx/includes/hpbx.subscriber.inc:1227
+msgid "Only numeric characters are allowed as destination number."
+msgstr "Nur numerische Zeichen sind als Zielnummer zulässig."
+
+#: hpbx/includes/hpbx.subscriber.inc:1237
+msgid "Options need to be unique"
+msgstr "Die Optionen müssen eindeutig sein."
+
+#: hpbx/includes/hpbx.subscriber.inc:1243
+msgid "The voicemail PIN should consist of exactly 4 numbers"
+msgstr "Die PIN für die Voicemail sollte genau 4 Ziffern haben."
+
+#: hpbx/includes/hpbx.subscriber.inc:1250
+msgid "Please provide a valid email address"
+msgstr "Geben Sie eine gültige E-Mail-Adresse an."
+
+#: hpbx/includes/hpbx.subscriber.inc:1269
+msgid "An internal error occurred"
+msgstr "Es ist ein interner Fehler aufgetreten."
+
+#: hpbx/includes/hpbx.subscriber.inc:1270
+msgid "Could not find location id for passed polish emergency routing arguments"
+msgstr "Die Ortskennung für vergangene Polish-Notfallroutingargumente konnte nicht gefunden werden."
+
+#: hpbx/includes/hpbx.subscriber.inc:1759
+msgid "Failed to create user"
+msgstr "Benutzer konnte nicht erstellt werden"
+
+#: hpbx/includes/hpbx.subscriber.inc:1778
+msgid "Failed to update user"
+msgstr "Benutzer konnte nicht aktualisiert werden"
+
+#: hpbx/includes/hpbx.subscriber.inc:1920
+msgid "Failed to restore the alias_number on the PilotSubscriber. Exception: @e"
+msgstr "Die alias_number des PilotSubscriber konnte nicht wiederhergestellt werden. Ausnahme: @e."
+
+#: hpbx/includes/hpbx.subscriber.inc:1921
+msgid "Failed to restore the number"
+msgstr "Die Nummer konnte nicht wiederhergestellt werden."
+
+#: hpbx/includes/hpbx.subscriber.inc:1940
+msgid "User successfully saved"
+msgstr "Der Benutzer wurde erfolgreich gespeichert."
+
+#: hpbx/includes/hpbx.subscriber.inc:2032
+msgid "Failed to remove the subscriber"
+msgstr "Der Teilnehmer konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.subscriber.inc:2134
+msgid "Admin"
+msgstr "Admin"
+
+#: hpbx/includes/hpbx.subscriber.inc:2145
+msgid "Delete fax number"
+msgstr "Faxnummer löschen"
+
+#: hpbx/includes/hpbx.subscriber.inc:2145
+msgid "Delete subscriber"
+msgstr "Teilnehmer löschen"
+
+#: hpbx/includes/hpbx.subscriber.inc:2281;2286 hpbx/includes/hpbx.voicemail.inc:120
+msgid "Create an administrative subscriber first"
+msgstr "Erst einen administrativen Teilnehmer erstellen"
+
+#: hpbx/includes/hpbx.subscriber.inc:2009;2017
+msgid "hpbx_subscriber_delete"
+msgstr "hpbx_subscriber_delete"
+
+#: hpbx/includes/hpbx.subscriber.inc:2009
+msgid "Failed to remove soundset"
+msgstr "Soundset konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.subscriber.inc:2017
+msgid "Will not remove pilotsubscriber soundset"
+msgstr "Pilotteilnehmer-Soundset wird nicht gelöscht."
+
+#: hpbx/includes/hpbx.user.inc:108
+msgid "Your password must contain at least one uppercase letter."
+msgstr "Ihr Passwort muss mindestens einen Großbuchstaben enthalten"
+
+#: hpbx/includes/hpbx.user.inc:112
+msgid "Your password must contain at least one lowercase letter."
+msgstr "Ihr Passwort muss mindestens einen Kleinbuchstaben enthalten"
+
+#: hpbx/includes/hpbx.user.inc:116
+msgid "Your password must contain at least one number."
+msgstr "Ihr Passwort muss mindestens eine Zahl enthalten"
+
+#: hpbx/includes/hpbx.user.inc:120
+msgid "Your password must contain at least one special character."
+msgstr "Ihr Passwort muss mindestens ein Sonderzeichen enthalten"
+
+#: hpbx/includes/hpbx.user.inc:124
+msgid "Your password must be at least 8 characters in length total."
+msgstr "Ihr Passwort muss mindestens 8 Zeichen lang sein"
+
+#: hpbx/includes/hpbx.user.inc:134
+msgid "The passwords do not match"
+msgstr "Die Passwörter stimmen nicht überein."
+
+#: hpbx/includes/hpbx.user.inc:140;162
+msgid "Your current password is missing or incorrect"
+msgstr "Ihr aktuelles Passwort fehlt oder ist falsch."
+
+#: hpbx/includes/hpbx.user.inc:185
+msgid "Password successfully changed"
+msgstr "Passwort erfolgreich geändert"
+
+#: hpbx/includes/hpbx.user.inc:259
+msgid "Failed to remove group assignment."
+msgstr "Gruppenzuordnung wurde nicht entfernt."
+
+#: hpbx/includes/hpbx.user.inc:275;323
+msgid "Failed to modify user @username"
+msgstr "Benutzer @username wurde nicht geändert."
+
+#: hpbx/includes/hpbx.user.inc:284
+msgid "Failed to rename user @username"
+msgstr "Benutzer @username wurde nicht umbenannt."
+
+#: hpbx/includes/hpbx.user.inc:300;666;822
+msgid "Failed to add role."
+msgstr "Rolle wurde nicht hinzugefügt."
+
+#: hpbx/includes/hpbx.user.inc:407
+msgid "No Reseller name set, so can't create OU"
+msgstr "Es wurde kein Wiederverkäufername eingestellt. Daher können Sie keinen OU erstellen."
+
+#: hpbx/includes/hpbx.user.inc:510
+msgid "No company name set, so can't create OU"
+msgstr "Es wurde kein Unternehmensname eingestellt. Daher können Sie keinen OU erstellen."
+
+#: hpbx/includes/hpbx.user.inc:647;803
+msgid "Failed to add a user account for @firstname @lastname"
+msgstr "Es wurde kein Benutzerkonto für @firstname @lastname hinzugefügt."
+
+#: hpbx/includes/hpbx.user.inc:1048
+msgid "Affiliate users"
+msgstr "Partnerbenutzer"
+
+#: hpbx/includes/hpbx.user.inc:1437
+msgid "Failed to create reseller administrator account"
+msgstr "Administratorkonto für Wiederverkäufer konnte nicht erstellt werden"
+
+#: hpbx/includes/hpbx.user.inc:1443;1462
+msgid "Failed to update reseller administrator account"
+msgstr "Administratorkonto für Wiederverkäufer konnte nicht aktualisiert werden"
+
+#: hpbx/includes/hpbx.user.inc:1465
+msgid "User succesfully updated"
+msgstr "Benutzer erfolgreich aktualisiert"
+
+#: hpbx/includes/hpbx.user.inc:1479;1508
+msgid "A user with the provided first name and last name is already present."
+msgstr "Ein Benutzer mit dem angegebenen Vornamen und Nachnamen existiert bereits."
+
+#: hpbx/includes/hpbx.user.inc:51
+msgid "Failed to remove user with username from drupal: @username @exception_msg"
+msgstr "Der Benutzer mit Benutzername aus drupal: @username @exception_msg konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.user.inc:60
+msgid "Failed to remove user with username: @username (not found in AD)"
+msgstr "Der Benutzer mit Benutzername: @username konnte nicht entfernt werden (in AD nicht gefunden)."
+
+#: hpbx/includes/hpbx.user.inc:64
+msgid "Failed to remove user with empty web username"
+msgstr "Der Benutzer mit leerem Web-Benutzernamen konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.user.inc:208;214
+msgid "Failed to remove organisation unit: @company"
+msgstr "Die Organisationseinheit: @company konnte nicht entfernt werden."
+
+#: hpbx/includes/hpbx.voicemail.inc:41
+msgid "Voicemail successfully deleted"
+msgstr "Voicemail erfolgreich gelöscht"
+
+#: hpbx/includes/hpbx.voicemail.inc:191
+msgid "Voicemail group"
+msgstr "Voicemail-Gruppe"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Unheard"
+msgstr "Nicht angehört"
+
+#: hpbx/includes/hpbx.voicemail.inc:202
+msgid "Heard"
+msgstr "Angehört"
+
+#: hpbx/includes/hpbx.voicemail.inc:204
+msgid "All messages"
+msgstr "Alle Nachrichten"
+
+#: hpbx/includes/hpbx.voicemail.inc:244
+msgid "Personal"
+msgstr "Persönlich"
+
+#: hpbx/includes/hpbx.voicemail.inc:256
+msgid "Huntgroup"
+msgstr "Sammelanruf"
+
+#: hpbx/includes/hpbx.voicemail.inc:268
+msgid "Time"
+msgstr "Zeit"
+
+#: hpbx/includes/hpbx.voicemail.inc:375
+msgid "Delete voicemail"
+msgstr "Voicemail löschen"
+
+#: hpbx/includes/hpbx.voicemail.inc:388;523
+msgid "Mark selected as heard"
+msgstr "Auswahl als angehört markieren"
+
+#: hpbx/includes/hpbx.voicemail.inc:396;542
+msgid "Mark selected as unheard"
+msgstr "Auswahl als nicht angehört markieren"
+
+#: hpbx/includes/hpbx.voicemail.inc:405;559
+msgid "Delete selected"
+msgstr "Auswahl löschen"
+
+#: hpbx/includes/hpbx.wizard.inc:59
+msgid "!name not allowed value."
+msgstr "!name ist kein zulässiger Wert."
+
+#: hpbx/includes/hpbx.wizard.inc:121;175;224
+msgid "Unknown error occurred. Please try again."
+msgstr "Es ist ein unbekannter Fehler aufgetreten. Bitte versuchen Sie es erneut."
+
+#: hpbx/includes/hpbx.wizard.inc:253
+msgid "Provisioning can take up to 5 minutes."
+msgstr "Die Bereitstellung kann bis zu 5 Minuten dauern."
+
+#: hpbx/includes/hpbx.wizard.inc:256
+msgid "Failed to associate device"
+msgstr "Das Gerät konnte nicht zugeordnet werden."
+
+#: hpbx/includes/hpbx.wizard.inc:260;960;1122;1215
+msgid "Device successfully created"
+msgstr "Gerät erfolgreich erstellt"
+
+#: hpbx/includes/hpbx.wizard.inc:282;438
+msgid "Create a subscriber"
+msgstr "Teilnehmer erstellen"
+
+#: hpbx/includes/hpbx.wizard.inc:285
+msgid "Subscriber details"
+msgstr "Teilnehmerdaten"
+
+#: hpbx/includes/hpbx.wizard.inc:385
+msgid "Administrative account"
+msgstr "Administratorkonto"
+
+#: hpbx/includes/hpbx.wizard.inc:411;666
+msgid "Next Step"
+msgstr "Nächster Schritt"
+
+#: hpbx/includes/hpbx.wizard.inc:441
+msgid "Specifications"
+msgstr "Vorgaben"
+
+#: hpbx/includes/hpbx.wizard.inc:456
+msgid "Choose number"
+msgstr "Nummer wählen"
+
+#: hpbx/includes/hpbx.wizard.inc:464
+msgid "Fill in Extension"
+msgstr "Durchwahl ausfüllen"
+
+#: hpbx/includes/hpbx.wizard.inc:485
+msgid "Choose Site"
+msgstr ""
+
+#: hpbx/includes/hpbx.wizard.inc:526
+msgid "Choose Caller Line Identification"
+msgstr "Anrufer-Leitungsidentifizierung wählen"
+
+#: hpbx/includes/hpbx.wizard.inc:549
+msgid "Choose Subscriber Profile"
+msgstr "Teilnehmerprofil wählen"
+
+#: hpbx/includes/hpbx.wizard.inc:574
+msgid "Choose Call Barring"
+msgstr "Anrufsperre wählen"
+
+#: hpbx/includes/hpbx.wizard.inc:603
+msgid "Choose language of Voicemail announcements"
+msgstr "Sprache der Voicemail-Meldungen wählen"
+
+#: hpbx/includes/hpbx.wizard.inc:634
+msgid "Previous"
+msgstr "Zurück"
+
+#: hpbx/includes/hpbx.wizard.inc:643
+msgid "Previous Step"
+msgstr "Vorheriger Schritt"
+
+#: hpbx/includes/hpbx.wizard.inc:724
+msgid "Subscriber successfully created"
+msgstr "Teilnehmer erfolgreich erstellt"
+
+#: hpbx/includes/hpbx.wizard.inc:727
+msgid "Would you like to add a device to this subscriber?"
+msgstr "Wollen Sie diesem Teilnehmer ein Gerät hinzufügen?"
+
+#: hpbx/includes/hpbx.wizard.inc:748
+msgid "No, I'm done!"
+msgstr "Nein, ich bin fertig!"
+
+#: hpbx/includes/hpbx.wizard.inc:780
+msgid "Create a device"
+msgstr "Gerät erstellen"
+
+#: hpbx/includes/hpbx.wizard.inc:783
+msgid "Setup new device"
+msgstr "Neues Gerät einstellen"
+
+#: hpbx/includes/hpbx.wizard.inc:891;998;1078;1161;1252
+msgid "Done!"
+msgstr "Fertig!"
+
+#: hpbx/includes/hpbx.wizard.inc:899;1006;1086;1169;1260
+msgid "OK, I'm done!"
+msgstr "OK, ich bin fertig!"
+
+#: hpbx/includes/hpbx.wizard.inc:930
+msgid "Finish"
+msgstr "Abschließen"
+
+#: hpbx/includes/hpbx.wizard.inc:968
+msgid "Press the Setup button."
+msgstr "Drücken Sie die Taste Setup."
+
+#: hpbx/includes/hpbx.wizard.inc:969
+msgid "Scroll to Network and press select."
+msgstr "Scrollen Sie zu Netzwerk und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.wizard.inc:970
+msgid "Scroll to view Current IP. This is the IP address of your device."
+msgstr "Scrollen Sie zu aktuelle IP anzeigen. Dies ist die IP-Adresse Ihres Geräts,"
+
+#: hpbx/includes/hpbx.wizard.inc:981;985;1144;1148;1235;1239
+msgid "IP address"
+msgstr "IP-Adresse"
+
+#: hpbx/includes/hpbx.wizard.inc:1100
+msgid "Add another"
+msgstr "Weitere hinzufügen"
+
+#: hpbx/includes/hpbx.wizard.inc:1130
+msgid "Enter the phone menu."
+msgstr "Gehen Sie in das Telefonmenü."
+
+#: hpbx/includes/hpbx.wizard.inc:1131
+msgid "Scroll to settings and press select."
+msgstr "Scrollen Sie zu Einstellungen und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.wizard.inc:1132
+msgid "Scroll to phone info and press select."
+msgstr "Scrollen Sie zur Telefoninformation und drücken Sie auf Auswählen."
+
+#: hpbx/includes/hpbx.wizard.inc:1133
+msgid "Scroll to view IP Address. This is the IP address of your device."
+msgstr "Scrollen Sie zu IP-Adresse anzeigen. Dies ist die IP-Adresse Ihres Geräts."
+
+#: hpbx/includes/hpbx.wizard.inc:1223
+msgid " Pick up the phone connected to the ATA and call * * * *"
+msgstr "Nehmen Sie das mit dem ATA verbundene Telefon ab und rufen Sie * * * * an."
+
+#: hpbx/includes/hpbx.wizard.inc:1224
+msgid "Enter 1 1 0 #"
+msgstr "Geben Sie 1 1 0 # ein."
+
+#: hpbx/includes/hpbx.wizard.inc:1225
+msgid "You will now hear a message giving you the IP address."
+msgstr "Nun hören Sie eine Meldung, die Ihnen die IP-Adresse vorliest."
+
+#: hpbx/includes/hpbx.wizard.inc:120;174
+msgid "hpbx_wizard"
+msgstr "hpbx_wizard"
+
+#: hpbx/includes/hpbx.wizard.inc:120
+msgid "Subscriber ID not found, so can't assign to device"
+msgstr "Teilnehmer-ID nicht gefunden; daher kann sie dem Gerät nicht zugeordnet werden."
+
+#: hpbx/includes/hpbx.wizard.inc:174
+msgid "Device ID not found, so can't sync device"
+msgstr "Geräte-ID nicht gefunden; daher kann das Gerät nicht synchronisiert werden"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Subscriber"
+msgstr "Teilnehmer"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "Please wait"
+msgstr "Bitte warten"
+
+#: hpbx/includes/js/hpbx-wizard.js:0
+msgid "The @type is currently being created."
+msgstr "@type wird aktuell erstellt."
+
+#: hpbx/includes/js/hpbx.js:0
+msgid "Are you sure you want to remove this item? This action cannot be undone."
+msgstr "Sind Sie sicher, dass sie diesen Punkt entfernen wollen? Diese Aktion kann nicht rückgängig gemacht werden."
+
+#: hpbx/includes/js/hpbx.stats.js:0
+msgid "Failed to retrieve stats"
+msgstr "Daten konnten nicht abgerufen werden."
+
+#: hpbx/includes/js/hpbx_devices.js:0;0
+msgid "Unassigned"
+msgstr "Nicht zugeordnet"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device !station_name"
+msgstr "Gerät !station_name"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Line selection button !button"
+msgstr "Leitungsauswahltaste !button"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Private"
+msgstr "Privat"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Shared"
+msgstr "Geteilt"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "BLF"
+msgstr "BLF"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device profile"
+msgstr "Geräteprofil"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Processing"
+msgstr "in Bearbeitung"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "This can take a while."
+msgstr ""
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Device successfully saved"
+msgstr "Gerät erfolgreich gespeichert"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Exit"
+msgstr "Ende"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Reboot your phone to provision the device"
+msgstr "Telefon zur Bereitstellung des Geräts neu booten"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Please fill in the IP address of your phone in order to provision it"
+msgstr "Bitte tragen Sie die IP-Adresse Ihres Telefons ein, um es bereitzustellen."
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "In case the device is already synced, reboot<br/>your phone to provision the device."
+msgstr "Wenn das Gerät bereits synchronisiert wurde, starten Sie<br/>Ihr Telefon neu, um das Gerät bereitzustellen."
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Otherwise, please fill in the IP address of your phone in order to provision it"
+msgstr "Bitte tragen Sie andernfalls die IP-Adresse Ihres Telefons ein, um es bereitzustellen."
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "IP-Address"
+msgstr "IP-Adresse"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "Got it!"
+msgstr "Alles klar!"
+
+#: hpbx/includes/js/hpbx_devices.js:0
+msgid "There should be at least one line provisioned on the device. Please adjust and save the configuration."
+msgstr "Es sollte wenigstens eine Leitung auf dem Gerät bereitgestellt sein. Bitte stellen Sie die Konfiguration ein und speichern Sie sie."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Replicate"
+msgstr "Replizieren"
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Enter the URL of your video here..."
+msgstr "Geben Sie die URL Ihres Videos hier ein..."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Type your text here..."
+msgstr "Geben Sie Ihren Text hier ein..."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add files"
+msgstr "Fügen Sie Dateien hinzu."
+
+#: hpbx/includes/js/hpbx_help.js:0
+msgid "Add next step"
+msgstr "Fügen Sie den nächsten Schritt hinzu."
+
+#: hpbx/includes/js/hpbx_subscriber_bulk.js:0
+msgid "Uploading data failed for an unknown reason. Please try again."
+msgstr "Hochladen von Daten aus unbekanntem Grund fehlgeschlagen. Bitte erneut versuchen."
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:144
+msgid "HPBX MoH audio category"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.features.field.inc:145 hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:726
+msgid "View counter"
+msgstr ""
+
+#: hpbx/modules/drop_5/drop_5.info:0
+msgid "Drop 5"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:720
+msgid "File"
+msgstr "Datei"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:721
+msgid "Instruction + Photo"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:722
+msgid "Photo"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:725
+msgid "Video"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.field.inc:727
+msgid "hpbx block"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:20 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:20
+msgid "HPBX Help article"
+msgstr "HPBX Hilfeartikel"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.features.inc:24
+msgid "Titel"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:178 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:144
+msgid "Master"
+msgstr "Master"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:180 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:146
+msgid "more"
+msgstr "mehr"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:181 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:147
+msgid "Apply"
+msgstr "Anwenden"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:183 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:149
+msgid "Sort by"
+msgstr "Sortieren nach"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:184 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:150
+msgid "Asc"
+msgstr "Aufst."
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:185 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:151
+msgid "Desc"
+msgstr "Abst."
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:187
+msgid "<?php\r\nglobal $user;\r\n$account = $user;\r\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\r\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\r\n}\r\n\r\nif (user_access('edit any hpbx_help_article content', $account)) {\r\n\r\n  echo '<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n<div class=\"col-xs-5 col-xxs-12 col-sm-4 col-md-3\">' . l(t('Add help article'),'node/add/hpbx-help-article', array('attributes' => array('class' => array('sg-btn sg-btn-wizard')))) . '</div></br>\r\n<div class=\"col-xs-1 col-sm-2 col-md-3 hidden-xxs\"></div>\r\n\r\n';\r\n\r\n}\r\n\r\n?>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:206 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:168
+msgid "term"
+msgstr "Laufzeit"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:207
+msgid "<a class=\"hpbx-help-category-item\" href=\"[path]\">[title]</a>"
+msgstr ""
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.views_default.inc:208 hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:170
+msgid "HPBX Help frontpage"
+msgstr "HPBX Hilfe Frontpage"
+
+#: hpbx/modules/hpbx_help_2_0/hpbx_help_2_0.info:0
+msgid "HPBX help 2.0"
+msgstr "HPBX Hilfe 2.0"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:564
+msgid "Step"
+msgstr "Schritt"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.field.inc:566
+msgid "step_image"
+msgstr "step_image"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.features.inc:28
+msgid "HPBX Help article steps"
+msgstr "HPBX Schritte aus dem Hilfeartikel"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:148
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:152
+msgid "Add content"
+msgstr "Inhalt hinzufügen"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:153
+msgid "<?php\nglobal $user;\n$account = $user;\nif (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\n    $account = user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\n}\n\nif (user_access('edit any hpbx_help_article content', $account)) {\n  echo '<ul>';\n  echo '<li>'. l(t('Add help article'),'node/add/hpbx-help-article') . '</li>';\n  echo  '<li>'. l(t('Add help article (steps)'),'node/add/hpbx-help-article-steps'). '</li>';\n  echo  '</ul>';\n}\n\n?>"
+msgstr ""
+"<?php\n"
+"global $user;\n"
+"$account = $user;\n"
+"if (!empty($_SESSION['ccs']['hpbx']['masquerading_from'])) {\n"
+"    $account = "
+"user_load($_SESSION['ccs']['hpbx']['masquerading_from']);\n"
+"}\n"
+"\n"
+"if (user_access('edit any hpbx_help_article content', $account)) {\n"
+"  echo '<ul>';\n"
+"  echo '<li>'. l(t('Add help article'),'node/add/hpbx-help-article') . "
+"'</li>';\n"
+"  echo  '<li>'. l(t('Add help article "
+"(steps)'),'node/add/hpbx-help-article-steps'). '</li>';\n"
+"  echo  '</ul>';\n"
+"}\n"
+"\n"
+"?>"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:168
+msgid "term"
+msgstr "Laufzeit"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:169
+msgid "<a class=\"hpbx-help-category-item\" href=\"/node/[nid]\">[title]</a>"
+msgstr "<a class=\"hpbx-help-category-item\" href=\"/node/[nid]\">[Titel]</a>"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.views_default.inc:170
+msgid "HPBX Help frontpage"
+msgstr "HPBX Hilfe Frontpage"
+
+#: hpbx/modules/hpbx_help_content_types/hpbx_help_content_types.info:0
+msgid "HPBX Help content-types"
+msgstr "HPBX Hilfe Inhaltstypen"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:31
+msgid "HostedPBX Management"
+msgstr "HostedPBX-Management"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc:32
+msgid "Main menu Hosted PBX"
+msgstr "Hauptmenü Hosted PBX"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:236
+msgid "Auto Attendants"
+msgstr "Automatische Teilnehmer"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:237
+msgid "Call Records"
+msgstr "Anruflisten"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:238
+msgid "Conference Rooms"
+msgstr "Konferenzräume"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:240
+msgid "Home"
+msgstr "Startseite"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:241
+msgid "Hunting Groups"
+msgstr "Sammelanrufgruppen"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:242
+msgid "PBX Devices"
+msgstr "PBX-Geräte"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:244
+msgid "Resellers"
+msgstr "Wiederverkäufer"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc:248
+msgid "Voicemails"
+msgstr "Voicemails"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "hpbx_permissions"
+msgstr "hpbx_permissions"
+
+#: hpbx/modules/hpbx_permissions/hpbx_permissions.info:0
+msgid "Hosted PBX Permissions"
+msgstr "Hosted PBX-Genehmigungen"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "RPS provisioning"
+msgstr "RPS-Bereitstellung"
+
+#: hpbx/modules/hpbx_rps/hpbx_rps.info:0
+msgid "Redirect and Provisioning Service Provisioning module"
+msgstr "Umleitungs- und Bereitstellungsdienst für Bereitstellungsmodul"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:126
+msgid "Read @type list from cache (@cid). request=@request"
+msgstr "@type-Liste aus dem Cache (@cid) auslesen. Anfrage=@request"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:136
+msgid "@type list NOT written to cache (@cid) as we received an error message @message"
+msgstr "Die @type-Liste wurde NICHT in das Cache (@cid) geschrieben, da eine Fehlermeldung @message eingegangen ist."
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:144
+msgid "Write @type list to cache (@cid). source=@source"
+msgstr "@type-Liste in das Cache (@cid) schreiben. Quelle=@source"
+
+#: hpbx/modules/sipwise_api/sipwise_api.module:105
+msgid "could not find active reseller id"
+msgstr "Aktive Wiederverkäuferkennung konnte nicht gefunden werden."
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise API"
+msgstr "Sipwise API"
+
+#: hpbx/modules/sipwise_api/sipwise_api.info:0
+msgid "Sipwise NGCP HTTP API implementation"
+msgstr "Sipwise NGCP HTTP API-Umsetzung"
+
+#: hpbx/modules/sipwise_api/includes/Sipwise.class.php:57
+msgid "cant find active reseller_id"
+msgstr "Aktive reseller_id kann nicht gefunden werden."
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:251
+msgid "Read @type (@id) entity from cache (@cid). request=@request"
+msgstr "@type (@id)-Entität aus dem Cache (@cid) auslesen. Anfrage=@request"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:262
+msgid "@type (@id) entity NOT written to cache (@cid) as we received an error message @message"
+msgstr "Die @type (@id)-Entität wurde NICHT in das Cache (@cid) geschrieben, da eine Fehlermeldung @message eingegangen ist."
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:266
+msgid "Write @type (@id) entity to cache (@cid). source=@source"
+msgstr "@type (@id)-Entität in das Cache (@cid) schreiben. Quelle=@source"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:468;478
+msgid "Cleared @table with @cid"
+msgstr "@table mit @cid gelöscht"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:485;571
+msgid "Cleared @table_list with @cid*"
+msgstr "@table_list mit @cid* gelöscht"
+
+#: hpbx/modules/sipwise_api/includes/SipwiseEntity.class.php:508;534;558
+msgid "Failed to set gpp chunks"
+msgstr "gpp-Chunks konnten nicht gesetzt werden."
+
+msgid "Go to sitemap"
+msgstr "Zu Sitemap wechseln" 
+
+#: hpbx/modules/stretto_api/stretto_api.info:0
+msgid "Stretto HTTP API implementation"
+msgstr ""
+
+#: template.php:45
+msgid "!total search results for !keys"
+msgstr ""
+
+#: template.php:209
+msgid "Device profile"
+msgstr "Geräteprofil"
+
+#: template.php:213
+msgid "MAC address"
+msgstr "MAC-Adresse"
+
+#: template.php:231 templates/subscriber-import-form.tpl.php:28 templates/user-pass-reset-form.tpl.php:31
+msgid "Save"
+msgstr "Speichern"
+
+#: template.php:232 templates/page--hpbx-help-article--edit.tpl.php:165;167 templates/page--hpbx-subscriber-bulk.tpl.php:31 templates/user-pass-reset-form.tpl.php:34
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: template.php:247
+msgid "Subscriber"
+msgstr "Teilnehmer"
+
+#: template.php:251;263
+msgid "Choose an option"
+msgstr "Eine Option wählen"
+
+#: template.php:259
+msgid "Type"
+msgstr "Typ"
+
+#: template.php:272
+msgid "Remove"
+msgstr "Entfernen"
+
+#: template.php:273
+msgid "Set"
+msgstr "Einstellen"
+
+#: template.php:452
+msgid "Username"
+msgstr "Benutzername"
+
+#: template.php:456 templates/user-login.tpl.php:18;19
+msgid "Password"
+msgstr "Passwort"
+
+#: template.php:472
+msgid "Status message"
+msgstr "Statusmeldung"
+
+#: template.php:473
+msgid "Error message"
+msgstr "Fehlermeldung"
+
+#: template.php:474
+msgid "Warning message"
+msgstr "Warnung"
+
+#: template.php:504
+msgid "Got it!"
+msgstr "Alles klar!"
+
+#: template.php:998
+msgid "« first"
+msgstr "« erste Seite"
+
+#: template.php:998
+msgid "Go to first page"
+msgstr "Zur ersten Seite"
+
+#: template.php:999
+msgid "‹ previous"
+msgstr "‹ vorherige Seite"
+
+#: template.php:999
+msgid "Go to previous page"
+msgstr "Zur vorherigen Seite"
+
+#: template.php:1000
+msgid "next ›"
+msgstr "nächste Seite ›"
+
+#: template.php:1000
+msgid "Go to next page"
+msgstr "Zur nächsten Seite"
+
+#: template.php:1001
+msgid "last »"
+msgstr "letzte Seite »"
+
+#: template.php:1001
+msgid "Go to last page"
+msgstr "Zur letzten Seite"
+
+#: template.php:1008
+msgid "Go to page @number"
+msgstr "Gehe zu Seite @number"
+
+#: hpbx_theme.info:0
+msgid "HPBX Theme"
+msgstr ""
+
+#: hpbx_theme.info:0
+msgid "Look & Feel Theme for HostedPBX"
+msgstr ""
+
+#: hpbx_theme.info:0
+msgid "Right sidebar"
+msgstr "Rechte Seitenleiste"
+
+#: hpbx_theme.info:0
+msgid "Content"
+msgstr "Inhalt"
+
+#: hpbx_theme.info:0
+msgid "Header"
+msgstr "Kopfbereich"
+
+#: hpbx_theme.info:0
+msgid "Footer"
+msgstr "Fußbereich"
+
+#: templates/node--hpbx-help-article.tpl.php:102
+msgid "Files"
+msgstr "Dateien"
+
+#: templates/page--hpbx--help.tpl.php:16 templates/page--hpbx-help-article--edit.tpl.php:24 templates/page--hpbx-help-article.tpl.php:15
+msgid "Back to all help articles"
+msgstr ""
+
+#: templates/page--hpbx--help.tpl.php:20
+msgid "Help"
+msgstr "Hilfe"
+
+#: templates/page--hpbx--help.tpl.php:26 templates/page--hpbx-help-article.tpl.php:20
+msgid "Search"
+msgstr "Suche"
+
+#: templates/page--hpbx--wizard.tpl.php:3 templates/page--hpbx-subscriber-bulk.tpl.php:83
+msgid "Exit"
+msgstr "Ende"
+
+#: templates/page--hpbx--wizard.tpl.php:45 templates/page.tpl.php:65
+msgid "Help is loading..."
+msgstr "Hilfe wird geladen..."
+
+#: templates/page--hpbx-help-article--edit.tpl.php:35 templates/page--hpbx-help-article.tpl.php:43
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:36
+msgid "Sitemap"
+msgstr "Sitemap"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:37
+msgid "Details"
+msgstr "Details"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:57;138;514
+msgid "Text block"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:58;139;515
+msgid "Photo"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:59;140;516
+msgid "Video"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:60;141;517
+msgid "File"
+msgstr "Datei"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:61;142;518
+msgid "Instruction"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:127;500
+msgid "Remove block"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:199
+msgid "Node ID"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:211
+msgid "Edited"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:236
+msgid "Edited by"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:249
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:275
+msgid "Frontpage"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:301
+msgid "Language"
+msgstr "Sprache"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:319
+msgid "Reseller"
+msgstr "Wiederverkäufer"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:335
+msgid "Frontpage type"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:350
+msgid "Pages"
+msgstr "Seiten"
+
+#: templates/page--hpbx-help-article--edit.tpl.php:417
+msgid "Add photos"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:428
+msgid "Drag and drop files here or <a href=\"\" class=\"hpbx-file-upload-link\">upload</a> them"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:448
+msgid "Add video"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:459
+msgid "URL of your video"
+msgstr ""
+
+#: templates/page--hpbx-help-article--edit.tpl.php:460
+msgid "Enter the URL of your video here..."
+msgstr "Geben Sie die URL Ihres Videos hier ein..."
+
+#: templates/page--hpbx-help-article.tpl.php:46
+msgid "Replicate"
+msgstr "Replizieren"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:4
+msgid "Bulk import"
+msgstr "Massenimport"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:11
+msgid "Download template"
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:15
+msgid "Upload xlsx"
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:34
+msgid "Start"
+msgstr "Start"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:38
+msgid "Processing"
+msgstr "in Bearbeitung"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:38
+msgid "This can take some time. Please do not close your browser."
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:55
+msgid "Upload finished"
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:56
+msgid "###successful### out of ###total### rows were successfully added."
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:58
+msgid "OK"
+msgstr "OK"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:66
+msgid "Bulk import completed"
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:69
+msgid "Devices"
+msgstr "Geräte"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:70
+msgid "In case you have added Cisco devices to the portal via the bulk import, you need to sync these devices seperately. In order to do so, please enter the device overview, click on sync and follow the instructions. In case you have added Yealink and Panasonic devices, you should restart the devices."
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:72
+msgid "Device overview"
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:76
+msgid "Subscribers"
+msgstr "Teilnehmer"
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:77
+msgid "After succesfully having uploaded your subscribers, you can configure options like call forwards, voicemail or speed dials for each subscriber. In order to do so, please enter the subscriber overview and choose the subscriber you want to edit."
+msgstr ""
+
+#: templates/page--hpbx-subscriber-bulk.tpl.php:79
+msgid "Subscriber overview"
+msgstr ""
+
+#: templates/page.tpl.php:165
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: templates/page.tpl.php:167
+msgid "Yes"
+msgstr "Ja"
+
+#: templates/page.tpl.php:168
+msgid "No"
+msgstr "Nein"
+
+#: templates/search-api-page-results.tpl.php:44
+msgid "1 search result for @keys"
+msgid_plural "@result_count search results for @keys"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/subscriber-import-form.tpl.php:8
+msgid "Password reset"
+msgstr ""
+
+#: templates/subscriber-import-form.tpl.php:15;16 templates/user-pass-reset-form.tpl.php:17;18
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#: templates/subscriber-import-form.tpl.php:20;21 templates/user-pass-reset-form.tpl.php:22;23
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: templates/subscriber-import-form.tpl.php:24;25 templates/user-pass-reset-form.tpl.php:26;27
+msgid "Repeat password"
+msgstr "Passwort wiederholen"
+
+#: templates/user-login.tpl.php:10
+msgid "Log in"
+msgstr "Anmelden"
+
+#: templates/user-login.tpl.php:14;15 templates/user-pass.tpl.php:16;17
+msgid "Email or username"
+msgstr ""
+
+#: templates/user-login.tpl.php:26
+msgid "Forgot password?"
+msgstr ""
+
+#: templates/user-pass-reset-form.tpl.php:10
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: templates/user-pass-reset-form.tpl.php:29
+msgid "Your password must be at least eight characters, including one uppercase letter, one lowercase letter, one special character and one digit."
+msgstr "Ihr Passwort muss mindestens 8 Zeichen lang sein und mindestens einen Großbuchstaben, einen Kleinbuchstaben, eine Zahl sowie ein Sonderzeichen enthalten."
+
+#: templates/user-pass.tpl.php:8
+msgid "Password recovery"
+msgstr "Passwort-Wiederherstellung"
+
+#: templates/user-pass.tpl.php:13
+msgid "A one time login link will be sent to your email address."
+msgstr ""
+
+#: templates/user-pass.tpl.php:20
+msgid "Request"
+msgstr ""
+
+#: templates/user-pass.tpl.php:25
+msgid "Back to login"
+msgstr ""
+
+#: templates/views-view--hpbx-help.tpl.php:21
+msgid "Add help article"
+msgstr "Hilfe-Artikel hinzufügen"
+
+msgid "This field is mandatory / The given value must be of the MAC address type"
+msgstr "Dieses Feld ist ein Pflichtfeld / Der angegebene Wert muss Typ MAC-Adresse sein" 
+
+msgid "CBL0 - Allow all calls"
+msgstr "CBL0 - Alle Anrufe zulassen" 
+
+msgid "CBL1 - Block all calls to 0900"
+msgstr "CBL1 - Alle Anrufe an 0900-Nummern blockieren" 
+
+msgid "CBL2 - Block all international calls"
+msgstr "CBL2 - Alle Anrufe an internationale Nummern blockieren"
+
+msgid "CBL3 - Block ranges 015, 016, 017"
+msgstr "CBL3 - Bereiche 015, 016, 017 blockieren" 
+
+msgid "CBL4 - Block ranges 0900, 0137, 0138"
+msgstr "CBL4 - Bereiche 0900, 0137, 0138 blockieren" 
+
+msgid "CBL5 - Block ranges 0900, 0137, 0138, (012), 118, 0181-0189"
+msgstr "CBL5 - Bereiche 0900, 0137, 0138, (012), 118, 0181-0189, blockieren" 
+
+msgid "CBL6 - Block ranges 0900, 0137, 0138, (012), 118, 0181-0189, 00"
+msgstr "CBL6 - Bereiche 0900, 0137, 0138, (012), 118, 0181-0189, 00 blockieren" 
+
+msgid "CBL7 - Block ranges 0900, 0137, 0138, (012), 118, 0181-0189, 00 , 015,016, 017, 0700, 0191-0194, 0180,032"
+msgstr "CBL7 - Bereiche 0900, 0137, 0138, (012), 118, 0181-0189, 00 , 015,016, 017, 0700, 0191-0194, 0180,032 blockieren" 
+
+msgid "CBL8 - Emergency calls only"
+msgstr "CBL8 - Nur Notrufe" 
+
+msgid "- Select -"
+msgstr "- Auswahl-"
+
+msgid "Noanswer"
+msgstr "Nicht angenommen"
+
+msgid "Other"
+msgstr "Other"
+
+msgid "Success"
+msgstr "Erfolgreich"
+
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+msgid "callee busy"
+msgstr "Besetzt"
+
+msgid "Set the site name for all domains"
+msgstr "Setzen Sie den Standortnamen für alle Domänen"

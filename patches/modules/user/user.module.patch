@@ -1,0 +1,12 @@
+diff -r 3c0a49aadd42 modules/user/user.module
+--- a/modules/user/user.module	Wed Nov 05 14:00:30 2014 +0100
++++ b/modules/user/user.module	Wed Nov 05 14:01:56 2014 +0100
+@@ -2674,7 +2674,7 @@
+ 
+   if ($admin_setting = variable_get('user_mail_' . $key, FALSE)) {
+     // An admin setting overrides the default string.
+-    $text = $admin_setting;
++    $text = t($admin_setting,  array(), array('langcode' => $langcode));
+   }
+   else {
+     // No override, return default string.

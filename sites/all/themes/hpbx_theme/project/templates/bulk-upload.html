@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>
+<html lang="en" class="no-js ltie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js non-ie" lang="en">
+<!--<![endif]-->    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../../dist/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../../dist/img/lgi-styleguide-upc-business/dist/img/favicon.ico" type="image/x-icon" />
+        <title>HPBX UPC Business - Bulk upload</title>
+    </head>
+    <body class="hpbx-page-full-screen hpbx-page-bulk-upload">
+        <div class="hpbx-full-screen-header">
+            <div class="hpbx-full-screen-header-title">
+                <div class="hpbx-full-screen-header-title-icon"><span class="LGI-iconb-upload-large"></span></div>
+                <div class="hpbx-full-screen-header-title-text">Bulk upload</div>
+            </div>
+            <div class="hpbx-full-screen-header-links">
+                <a class="hpbx-full-screen-header-link" href="#">
+                    <div class="hpbx-full-screen-header-link-icon"><span class="LGI-icondownload"></span></div>
+                    <div class="hpbx-full-screen-header-link-text">Download template</div>
+                </a>
+                <a class="hpbx-full-screen-header-link" href="#">
+                    <div class="hpbx-full-screen-header-link-icon"><span class="LGI-iconupload"></span></div>
+                    <div class="hpbx-full-screen-header-link-text">Upload xlsx</div>
+                </a>
+            </div>
+        </div>
+        <div class="hpbx-full-screen-content">
+            <div class="hpbx-scrollable-container hpbx-also-horizontal">
+                <table class="hpbx-bulk-upload-table" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th class="hpbx-bulk-column-checkmark">
+                                Valid?
+                            </th>
+                            <th class="hpbx-bulk-column-select">Create account</th>
+                            <th>Name</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                            <th class="hpbx-bulk-column-select">Administrative</th>
+                            <th>Number</th>
+                            <th class="hpbx-bulk-column-select">Extension</th>
+                            <th class="hpbx-bulk-column-select">Caller line identification</th>
+                            <th class="hpbx-bulk-column-select">Subscriber profile</th>
+                            <th class="hpbx-bulk-column-select">Block anonymous inbound calls</th>
+                            <th class="hpbx-bulk-column-select">Call barrings</th>
+                            <th>PIN for overriding call barrings</th>
+                            <th>Device name</th>
+                            <th class="hpbx-bulk-column-select">Brand</th>
+                            <th class="hpbx-bulk-column-select">Type</th>
+                            <th>MAC address</th>
+                            <th class="hpbx-bulk-column-delete">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hpbx-bulk-upload-data-row">
+                            <td class="hpbx-bulk-upload-status-container">
+                                <div class="hpbx-bulk-upload-status-icon"></div>
+                                <div class="hpbx-bulk-upload-status-icon hpbx-bulk-upload-second-checkmark"></div>
+                                <div class="hpbx-bulk-upload-status-upload-failure-message"></div>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-create-account" data-field-name="createAccount">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="name" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example first name" class="hpbx-bulk-upload-field-first-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="firstName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example last name" class="hpbx-bulk-upload-field-last-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="lastName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The given value must be of the email type___The maximum length of this field is 255" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="example@test.com" class="hpbx-bulk-upload-field-email" data-regex="^(?!\s*$).+___[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?___^.{0,255}$" data-field-name="email" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-administrative" data-field-name="administrative">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the phone number type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="+31201234567" class="hpbx-autocomplete hpbx-delay-init hpbx-bulk-upload-field-number" placeholder="" data-values='[{"value":"+31201234567","label":"+31201234567"},{"value":"+31201234568","label":"+31201234568"},{"value":"+31201234569","label":"+31201234569"},{"value":"+31201234560","label":"+31201234560"}]' data-regex="^\+?[1-9]\d{1,14}$" data-field-name="number">
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-extension" data-field-name="extension">
+                                    <option value="NCOS Level 1">Blokkeren betaal nummers (090x)</option>
+                                    <option value="NCOS Level 2">Blokkeren betaalnummers (090x) en internationale
+                                        bestemingen (00)
+                                    </option>
+                                    <option value="NCOS Level 3">Blokkeren Internationaal (00)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-caller-line-identification" data-field-name="callerLineIdentification">
+                                    <option>Own number</option>
+                                    <option>Restricted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-subscriber-profile" data-field-name="subscriberProfile">
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-block-anonymous-inbound-calls" data-field-name="blockAnonymousInboundCalls">
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-call-barrings" data-field-name="callBarrings">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The length of this field must be exactly 5___The given value is not completely a digit string">
+                                <input type="text" value="12345" class="hpbx-bulk-upload-field-pin" data-regex="^.{5}$___^[0-9]*$" data-field-name="pin" />
+                            </td>
+                            <td data-invalid-messages="The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-name" data-regex="^.{0,255}$" data-field-name="deviceName" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-brand" data-field-name="deviceBrand" data-device-list='{"cisco":{"label":"Cisco","types":[{"value":1,"label":"Cisco ATA112"},{"value":2,"label":"Cisco ATA122"},{"value":3,"label":"Cisco SPA232D"}]},"panasonic":{"label":"Panasonic","types":[{"value":17,"label":"Panasonic KX-UT123"},{"value":82,"label":"Panasonic KX-UT123 (Lab Config)"}]},"yealink":{"label":"Yealink","types":[{"value":25,"label":"Panasonic SIP-T19P"},{"value":27,"label":"Panasonic SIP-T20P"}]}}'>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-type" data-field-name="deviceBrand">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the MAC address type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="01:23:45:67:89:ab" class="hpbx-bulk-upload-field-device-mac-address" data-regex="^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$" data-field-name="deviceMacAddress" />
+                            </td>
+                            <td class="hpbx-bulk-upload-remove-container"><span class="LGI-iconbin hpbx-bulk-upload-remove-icon"></span></td>
+                        </tr>
+                        <tr class="hpbx-bulk-upload-data-row">
+                            <td class="hpbx-bulk-upload-status-container">
+                                <div class="hpbx-bulk-upload-status-icon"></div>
+                                <div class="hpbx-bulk-upload-status-icon hpbx-bulk-upload-second-checkmark"></div>
+                                <div class="hpbx-bulk-upload-status-upload-failure-message"></div>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-create-account" data-field-name="createAccount">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="name" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example first name" class="hpbx-bulk-upload-field-first-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="firstName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example last name" class="hpbx-bulk-upload-field-last-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="lastName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The given value must be of the email type___The maximum length of this field is 255" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="example@test.nl" class="hpbx-bulk-upload-field-email" data-regex="^(?!\s*$).+___[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?___^.{0,255}$" data-field-name="email" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-administrative" data-field-name="administrative">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the phone number type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="+31201234560" class="hpbx-autocomplete hpbx-bulk-upload-field-number" placeholder="" data-values='[{"value":"+31201234567","label":"+31201234567"},{"value":"+31201234568","label":"+31201234568"},{"value":"+31201234569","label":"+31201234569"},{"value":"+31201234560","label":"+31201234560"}]' data-regex="^\+?[1-9]\d{1,14}$" data-field-name="number">
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-extension" data-field-name="extension">
+                                    <option value="NCOS Level 1">Blokkeren betaal nummers (090x)</option>
+                                    <option value="NCOS Level 2" selected>Blokkeren betaalnummers (090x) en internationale
+                                        bestemingen (00)
+                                    </option>
+                                    <option value="NCOS Level 3">Blokkeren Internationaal (00)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-caller-line-identification" data-field-name="callerLineIdentification">
+                                    <option>Own number</option>
+                                    <option>Restricted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-subscriber-profile" data-field-name="subscriberProfile">
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-block-anonymous-inbound-calls" data-field-name="blockAnonymousInboundCalls">
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-call-barrings" data-field-name="callBarrings">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The length of this field must be exactly 5___The given value is not completely a digit string">
+                                <input type="text" value="12345" class="hpbx-bulk-upload-field-pin" data-regex="^.{5}$___^[0-9]*$" data-field-name="pin" />
+                            </td>
+                            <td data-invalid-messages="The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-name" data-regex="^.{0,255}$" data-field-name="deviceName" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-brand" data-field-name="deviceBrand" data-device-list='{"cisco":{"label":"Cisco","types":[{"value":1,"label":"Cisco ATA112"},{"value":2,"label":"Cisco ATA122"},{"value":3,"label":"Cisco SPA232D"}]},"panasonic":{"label":"Panasonic","types":[{"value":17,"label":"Panasonic KX-UT123"},{"value":82,"label":"Panasonic KX-UT123 (Lab Config)"}]},"yealink":{"label":"Yealink","types":[{"value":25,"label":"Panasonic SIP-T19P"},{"value":27,"label":"Panasonic SIP-T20P"}]}}'>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-type" data-field-name="deviceBrand">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the MAC address type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="01:23:45:67:89:ab" class="hpbx-bulk-upload-field-device-mac-address" data-regex="^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$" data-field-name="deviceMacAddress" />
+                            </td>
+                            <td class="hpbx-bulk-upload-remove-container"><span class="LGI-iconbin hpbx-bulk-upload-remove-icon"></span></td>
+                        </tr>
+                        <tr class="hpbx-bulk-upload-data-row">
+                            <td class="hpbx-bulk-upload-status-container">
+                                <div class="hpbx-bulk-upload-status-icon"></div>
+                                <div class="hpbx-bulk-upload-status-icon hpbx-bulk-upload-second-checkmark"></div>
+                                <div class="hpbx-bulk-upload-status-upload-failure-message"></div>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-create-account" data-field-name="createAccount">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="name" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example first name" class="hpbx-bulk-upload-field-first-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="firstName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example last name" class="hpbx-bulk-upload-field-last-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="lastName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The given value must be of the email type___The maximum length of this field is 255" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="example@test.de" class="hpbx-bulk-upload-field-email" data-regex="^(?!\s*$).+___[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?___^.{0,255}$" data-field-name="email" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-administrative" data-field-name="administrative">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the phone number type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="+31201234569" class="hpbx-autocomplete hpbx-bulk-upload-field-number" placeholder="" data-values='[{"value":"+31201234567","label":"+31201234567"},{"value":"+31201234568","label":"+31201234568"},{"value":"+31201234569","label":"+31201234569"},{"value":"+31201234560","label":"+31201234560"}]' data-regex="^\+?[1-9]\d{1,14}$" data-field-name="number">
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-extension" data-field-name="extension">
+                                    <option value="NCOS Level 1">Blokkeren betaal nummers (090x)</option>
+                                    <option value="NCOS Level 2">Blokkeren betaalnummers (090x) en internationale
+                                        bestemingen (00)
+                                    </option>
+                                    <option value="NCOS Level 3" selected>Blokkeren Internationaal (00)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-caller-line-identification" data-field-name="callerLineIdentification">
+                                    <option>Own number</option>
+                                    <option>Restricted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-subscriber-profile" data-field-name="subscriberProfile">
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-block-anonymous-inbound-calls" data-field-name="blockAnonymousInboundCalls">
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-call-barrings" data-field-name="callBarrings">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The length of this field must be exactly 5___The given value is not completely a digit string">
+                                <input type="text" value="12345" class="hpbx-bulk-upload-field-pin" data-regex="^.{5}$___^[0-9]*$" data-field-name="pin" />
+                            </td>
+                            <td data-invalid-messages="The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-name" data-regex="^.{0,255}$" data-field-name="deviceName" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-brand" data-field-name="deviceBrand" data-device-list='{"cisco":{"label":"Cisco","types":[{"value":1,"label":"Cisco ATA112"},{"value":2,"label":"Cisco ATA122"},{"value":3,"label":"Cisco SPA232D"}]},"panasonic":{"label":"Panasonic","types":[{"value":17,"label":"Panasonic KX-UT123"},{"value":82,"label":"Panasonic KX-UT123 (Lab Config)"}]},"yealink":{"label":"Yealink","types":[{"value":25,"label":"Panasonic SIP-T19P"},{"value":27,"label":"Panasonic SIP-T20P"}]}}'>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-type" data-field-name="deviceBrand">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the MAC address type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="01:23:45:67:89:ab" class="hpbx-bulk-upload-field-device-mac-address" data-regex="^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$" data-field-name="deviceMacAddress" />
+                            </td>
+                            <td class="hpbx-bulk-upload-remove-container"><span class="LGI-iconbin hpbx-bulk-upload-remove-icon"></span></td>
+                        </tr>
+                        <tr class="hpbx-bulk-upload-data-row">
+                            <td class="hpbx-bulk-upload-status-container">
+                                <div class="hpbx-bulk-upload-status-icon"></div>
+                                <div class="hpbx-bulk-upload-status-icon hpbx-bulk-upload-second-checkmark"></div>
+                                <div class="hpbx-bulk-upload-status-upload-failure-message"></div>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-create-account" data-field-name="createAccount">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="name" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example first name" class="hpbx-bulk-upload-field-first-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="firstName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="Example last name" class="hpbx-bulk-upload-field-last-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="lastName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The given value must be of the email type___The maximum length of this field is 255" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="example@test.fr" class="hpbx-bulk-upload-field-email" data-regex="^(?!\s*$).+___[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?___^.{0,255}$" data-field-name="email" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-administrative" data-field-name="administrative">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the phone number type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="+31201234568" class="hpbx-autocomplete hpbx-bulk-upload-field-number" placeholder="" data-values='[{"value":"+31201234567","label":"+31201234567"},{"value":"+31201234568","label":"+31201234568"},{"value":"+31201234569","label":"+31201234569"},{"value":"+31201234560","label":"+31201234560"}]' data-regex="^\+?[1-9]\d{1,14}$" data-field-name="number">
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-extension" data-field-name="extension">
+                                    <option value="NCOS Level 1">Blokkeren betaal nummers (090x)</option>
+                                    <option value="NCOS Level 2">Blokkeren betaalnummers (090x) en internationale
+                                        bestemingen (00)
+                                    </option>
+                                    <option value="NCOS Level 3">Blokkeren Internationaal (00)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-caller-line-identification" data-field-name="callerLineIdentification">
+                                    <option>Own number</option>
+                                    <option>Restricted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-subscriber-profile" data-field-name="subscriberProfile">
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-block-anonymous-inbound-calls" data-field-name="blockAnonymousInboundCalls">
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-call-barrings" data-field-name="callBarrings">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The length of this field must be exactly 5___The given value is not completely a digit string">
+                                <input type="text" value="12345" class="hpbx-bulk-upload-field-pin" data-regex="^.{5}$___^[0-9]*$" data-field-name="pin" />
+                            </td>
+                            <td data-invalid-messages="The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-name" data-regex="^.{0,255}$" data-field-name="deviceName" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-brand" data-field-name="deviceBrand" data-device-list='{"cisco":{"label":"Cisco","types":[{"value":1,"label":"Cisco ATA112"},{"value":2,"label":"Cisco ATA122"},{"value":3,"label":"Cisco SPA232D"}]},"panasonic":{"label":"Panasonic","types":[{"value":17,"label":"Panasonic KX-UT123"},{"value":82,"label":"Panasonic KX-UT123 (Lab Config)"}]},"yealink":{"label":"Yealink","types":[{"value":25,"label":"Panasonic SIP-T19P"},{"value":27,"label":"Panasonic SIP-T20P"}]}}'>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-type" data-field-name="deviceBrand">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the MAC address type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="01:23:45:67:89:ab" class="hpbx-bulk-upload-field-device-mac-address" data-regex="^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$" data-field-name="deviceMacAddress" />
+                            </td>
+                            <td class="hpbx-bulk-upload-remove-container"><span class="LGI-iconbin hpbx-bulk-upload-remove-icon"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="hpbx-bulk-upload-add">
+                    <span class="LGI-iconplus hpbx-bulk-upload-add-icon"></span>
+                    <table class="hpbx-bulk-upload-add-table">
+                        <tr class="hpbx-bulk-upload-data-row">
+                            <td class="hpbx-bulk-upload-status-container">
+                                <div class="hpbx-bulk-upload-status-icon"></div>
+                                <div class="hpbx-bulk-upload-status-icon hpbx-bulk-upload-second-checkmark"></div>
+                                <div class="hpbx-bulk-upload-status-upload-failure-message"></div>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-create-account" data-field-name="createAccount">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="name" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255" >
+                                <input type="text" value="" class="hpbx-bulk-upload-field-first-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="firstName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-last-name" data-regex="^(?!\s*$).+___^.{0,255}$" data-field-name="lastName" />
+                            </td>
+                            <td data-invalid-messages="This field is mandatory___The given value must be of the email type___The maximum length of this field is 255" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-email" data-regex="^(?!\s*$).+___[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?___^.{0,255}$" data-field-name="email" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-administrative" data-field-name="administrative">
+                                    <option value="1">Yes</option>
+                                    <option value="0">No</option>
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the phone number type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" class="hpbx-autocomplete hpbx-bulk-upload-field-number hpbx-delay-init" placeholder="" data-values='[{"value":"+31201234567","label":"+31201234567"},{"value":"+31201234568","label":"+31201234568"},{"value":"+31201234569","label":"+31201234569"},{"value":"+31201234560","label":"+31201234560"}]' data-regex="^\+?[1-9]\d{1,14}$" data-field-name="number">
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-extension" data-field-name="extension">
+                                    <option value="NCOS Level 1">Blokkeren betaal nummers (090x)</option>
+                                    <option value="NCOS Level 2">Blokkeren betaalnummers (090x) en internationale
+                                        bestemingen (00)
+                                    </option>
+                                    <option value="NCOS Level 3">Blokkeren Internationaal (00)</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-caller-line-identification" data-field-name="callerLineIdentification">
+                                    <option>Own number</option>
+                                    <option>Restricted</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-subscriber-profile" data-field-name="subscriberProfile">
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-block-anonymous-inbound-calls" data-field-name="blockAnonymousInboundCalls">
+                                    <option value="1">Yes</option>
+                                    <option value="0" selected>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-call-barrings" data-field-name="callBarrings">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The length of this field must be exactly 5___The given value is not completely a digit string">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-call-barrings" data-regex="^.{5}$___^[0-9]*$" data-field-name="pin" />
+                            </td>
+                            <td data-invalid-messages="The maximum length of this field is 255">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-name" data-regex="^.{0,255}$" data-field-name="deviceName" />
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-brand" data-field-name="deviceBrand" data-device-list='{"cisco":{"label":"Cisco","types":[{"value":1,"label":"Cisco ATA112"},{"value":2,"label":"Cisco ATA122"},{"value":3,"label":"Cisco SPA232D"}]},"panasonic":{"label":"Panasonic","types":[{"value":17,"label":"Panasonic KX-UT123"},{"value":82,"label":"Panasonic KX-UT123 (Lab Config)"}]},"yealink":{"label":"Yealink","types":[{"value":25,"label":"Panasonic SIP-T19P"},{"value":27,"label":"Panasonic SIP-T20P"}]}}'>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="chzn-select chzn-done sg-element no-search hpbx-bulk-upload-field-device-type" data-field-name="deviceBrand">
+                                </select>
+                            </td>
+                            <td data-invalid-messages="The given value must be of the MAC address type" data-not-unique-message="One of the values is not unique">
+                                <input type="text" value="" class="hpbx-bulk-upload-field-device-mac-address" data-regex="^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$" data-field-name="deviceMacAddress" />
+                            </td>
+                            <td class="hpbx-bulk-upload-remove-container"><span class="LGI-iconbin hpbx-bulk-upload-remove-icon"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="hpbx-bulk-upload-custom-select-expand-space"></div>
+            </div>
+        </div>
+        <div class="hpbx-full-screen-footer">
+            <div class="hpbx-full-screen-footer-buttons">
+                <div class="hpbx-full-screen-footer-button">
+                    <a class="hpbx-full-screen-footer-link-button" href="dashboard.html">Cancel</a>
+                </div>
+                <div class="hpbx-full-screen-footer-button">
+                    <input type="button" class="sg-btn sg-without-icon sg-btn-primary hpbx-full-screen-footer-button-start" value="Start" />
+                </div>
+            </div>
+        </div>
+        <div class="hpbx-loader" data-title="Processing...", data-subtitle="This can take some time. Please do not close your browser.">
+            <div class="hpbx-loader-box">
+                <div class="hpbx-loader-animation">
+                </div>
+                <div class="hpbx-loader-progress">
+                    <div class="hpbx-loader-progress-line"></div>
+                    <div class="hpbx-loader-progress-dot"></div>
+                </div>
+                <div class="hpbx-loader-content">
+                    <div class="hpbx-loader-title"></div>
+                    <div class="hpbx-loader-subtitle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hpbx-alert hpbx-alert-small hpbx-notification-info">
+            <div class="hpbx-alert-box">
+                <div class="hpbx-notification-icon"></div>
+                <div class="hpbx-notification-title">Upload finished</div>
+                <div class="hpbx-notification-message" data-message="###successful### out of ###total### rows were successfully added."></div>
+                <div class="hpbx-notification-button">
+                    <button class="sg-btn sg-without-icon sg-white hpbx-alert-close-button">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="hpbx-alert hpbx-alert-big hpbx-notification-success">
+            <div class="hpbx-alert-box">
+                <div class="hpbx-alert-header">
+                    <div class="hpbx-notification-icon"></div>
+                    <div class="hpbx-notification-title">Bulk upload completed</div>
+                </div>
+                <div class="hpbx-alert-message-section hpbx-first">
+                    <div class="hpbx-notification-title">Cisco devices</div>
+                    <div class="hpbx-alert-message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec porttitor nibh. Aliquam semper mauris libero sollicitudin.</div>
+                    <ul class="hpbx-alert-message-links">
+                        <li class="hpbx-alert-message-link"><a href="#">Cisco configuration</a></li>
+                    </ul>
+                </div>
+                <div class="hpbx-alert-message-section">
+                    <div class="hpbx-notification-title">Subscribers</div>
+                    <div class="hpbx-alert-message-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec porttitor nibh. Aliquam semper mauris libero sollicitudin.</div>
+                    <ul class="hpbx-alert-message-links">
+                        <li class="hpbx-alert-message-link"><a href="default-forward.html">Forwards</a></li>
+                        <li class="hpbx-alert-message-link"><a href="voicemail-inbox.html">Voicemail</a></li>
+                        <li class="hpbx-alert-message-link"><a href="#">Speed dials</a></li>
+                    </ul>
+                </div>
+                <div class="hpbx-alert-footer">
+                    <span class="hpbx-alert-close-button">Exit</span>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]>
+        <script src="../../dependencies/jquery-legacy/dist/jquery.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]><!-->
+        <script src="../../dependencies/jquery/dist/jquery.js"></script>
+        <!--<![endif]-->
+        <script type="text/javascript" src="../../dist/js/all.js"></script>
+    </body>
+</html>
