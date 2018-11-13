@@ -1,0 +1,264 @@
+# $Id$
+#
+# Dutch translation of Drupal (general)
+# Copyright Liberty Global
+# Generated from files:
+#  hpbx.module: n/a
+#  includes/hpbx.customer.inc: n/a
+#  includes/hpbx.subscriber.inc: n/a
+#  includes/hpbx.autoattendant.inc: n/a
+#  includes/hpbx.conference.inc: n/a
+#  includes/hpbx.huntgroup.inc: n/a
+#  includes/hpbx.voicemail.inc: n/a
+#  includes/hpbx.defaultforward.inc: n/a
+#  includes/hpbx.pbxdevice.inc: n/a
+#  includes/hpbx.musiconhold.inc: n/a
+#  includes/hpbx.reseller.inc: n/a
+#  includes/hpbx.user.inc: n/a
+#  includes/js/hpbx_devices.js: n/a
+#  modules/hpbx_permissions/hpbx_permissions.features.menu_links.inc: n/a
+#  modules/hpbx_rps/hpbx_rps.info: n/a
+#  modules/sipwise_api/sipwise_api.info: n/a
+#  includes/hpbx.callrecords.inc: n/a
+#  hpbx.info: n/a
+#  modules/hpbx_permissions/hpbx_permissions.info: n/a
+#  includes/hpbx.audio.inc: n/a
+#  includes/hpbx.masquerade.inc: n/a
+#  includes/js/hpbx.js: n/a
+#  includes/js/hpbx.stats.js: n/a
+#  modules/hpbx_permissions/hpbx_permissions.features.menu_custom.inc: n/a
+#  modules/sipwise_api/sipwise_api.module: n/a
+#  modules/sipwise_api/includes/SipwiseEntity.class.php: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-04-10 13:36+0200\n"
+"PO-Revision-Date: 2015-04-10 13:36+0200\n"
+"Last-Translator: Ramon Kampinga <ramon@vdvl.nl>\n"
+"Language-Team: Dutch <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: hpbx.module:42
+msgid "Whoops"
+msgstr "Oeps"
+
+#: hpbx.module:43
+msgid "the page you're trying to reach doesn't exist..."
+msgstr "de pagina die u probeert te bereiken bestaat niet..."
+
+#: hpbx.module:2480
+msgid "Office hours (during)"
+msgstr "Kantooruren (tijdens)"
+
+#: hpbx.module:2510
+msgid "Add a timeslot"
+msgstr "Voeg een tijdslot toe"
+
+#: hpbx.module:2893
+msgid "Ported/New number"
+msgstr "Geporteerd / Nieuw nummer"
+
+#: hpbx.module:3666
+msgid "Pick a file"
+msgstr "Kies een bestand"
+
+#: hpbx.module:3703
+msgid "Add a time slot"
+msgstr "Voeg een tijdslot toe"
+
+#: hpbx.module:3720
+msgid "Use on"
+msgstr "Gebruik op"
+
+#: hpbx.module:3756
+msgid "Add another rule"
+msgstr "Voeg nog een regel toe"
+
+#: hpbx.module:3764
+msgid "Select as least one day for timeslot"
+msgstr "Selecteer minimaal 1 dag voor het tijdslot"
+
+#: hpbx.module:3764
+msgid "Invalid time format"
+msgstr "Verkeerd tijdformaat"
+
+#: hpbx.module:3764
+msgid "Time cannot be empty"
+msgstr "Tijd can niet leeg zijn"
+
+#: hpbx.module:3764
+msgid "Timeslot overlaps not possible"
+msgstr "Tijdsloten mogen elkaar niet overlappen"
+
+#: hpbx.module:3832
+msgid "Delete slot"
+msgstr "Verwijder"
+
+#: includes/hpbx.autoattendant.inc:239
+msgid "Create Auto attendant"
+msgstr "Creëer Keuzemenu (IVR)"
+
+#: includes/hpbx.conference.inc:45
+msgid "Create Conference room"
+msgstr "Creëer telefonische vergaderruimte"
+
+#: includes/hpbx.conference.inc:376
+msgid "Conference room successfully saved"
+msgstr "Telefonische vergaderruimte succesvol opgeslagen"
+
+#: includes/hpbx.customer.inc:737
+msgid "At lease one number range must be defined. Enter the number range details and hit the \"Add\" button to add a new number range."
+msgstr "Minstens 1 nummerreeks moet worden bepaald. Voeg de nummerreeks details toe en klik op de \"Voeg toe\" knop om deze nummerreeks toe te voegen."
+
+#: includes/hpbx.customer.inc:742
+msgid "If a prefix is set for a number range, all numberranges must have a prefix"
+msgstr "Indien een voorvoegsel voor een nummerreeks is geplaatst, dan moeten alle nummerreeksen een voorvoegsel hebben."
+
+#: includes/hpbx.customer.inc:759;762
+msgid "Overlapping number ranges and/or pilot number are provided"
+msgstr ""
+
+#: includes/hpbx.customer.inc:1044
+msgid "Failed to change the company name"
+msgstr "Wijzigen van de bedrijfsnaam is mislukt"
+
+#: includes/hpbx.customer.inc:1257
+msgid "The customer was not created due to a technical problem. Please contact your system administrator."
+msgstr "De klant is niet toegevoegd doordat er een technisch probleem is opgetreden, neem contact op met de systeem administrator."
+
+#: includes/hpbx.defaultforward.inc:154
+msgid "Failed to store default forward "
+msgstr "Het opslaan van de standaard doorschakeling is mislukt"
+
+#: includes/hpbx.defaultforward.inc:160
+msgid "Default forward successfully saved"
+msgstr "De standaard doorschakeling is opgeslagen"
+
+#: includes/hpbx.huntgroup.inc:182
+msgid "Hunting Policy"
+msgstr "Hoe worden de subscribers gebeld"
+
+#: includes/hpbx.huntgroup.inc:199
+msgid "Timeout (sec)"
+msgstr "Hoe lang gaan de toestellen over (sec)"
+
+#: includes/hpbx.masquerade.inc:18
+msgid "Restore admin session"
+msgstr "Herstel admin sessie"
+
+#: includes/hpbx.musiconhold.inc:20
+msgid "Music on hold"
+msgstr "Wachtmuziek"
+
+#: includes/hpbx.musiconhold.inc:253
+msgid "Failed to store music on hold"
+msgstr "Het opslaan van de wachtmuziek is mislukt"
+
+#: includes/hpbx.musiconhold.inc:259
+msgid "Music on hold successfully saved"
+msgstr "Wachtmuziek succesvol toegevoegd"
+
+#: includes/hpbx.pbxdevice.inc:89
+msgid "A hunt group can only be assigned to a BLF key"
+msgstr "Een belgroep kan alleen aan een BLF knop toegevoegd worden"
+
+#: includes/hpbx.pbxdevice.inc:512
+msgid "1. Press the Setup button."
+msgstr "1. Klik op de configuratie knop"
+
+#: includes/hpbx.pbxdevice.inc:513
+msgid "2. Scroll to network and press select."
+msgstr "2. Scroll naar netwerk en klik op selecteer"
+
+#: includes/hpbx.pbxdevice.inc:566
+msgid "The request could not be sent to the device. Possible causes: <br/><br/>The device is already associated.<br/>The device is not connected to the LAN"
+msgstr "Het verzoek kon niet naar het toestel verzonden worden. Mogelijke redenen: <br/><br/>Het toestel is al gekoppeld.<br/>Het toestel is niet aan het (juiste) LAN aangesloten"
+
+#: includes/hpbx.pbxdevice.inc:572
+msgid "The request is successfully sent to device. The device will now try to retrieve the profile and one or more firmware versions."
+msgstr "Het verzoek is succesvol naar het toestel verstuurd. Het toestel gaat nu het profiel en mogelijk een of meerdere firmware versies ophalen. Dit kan enige tijd duren en het toestel kan meerder malen opnieuw opstarten."
+
+#: includes/hpbx.subscriber.inc:203;797
+msgid "Destination type"
+msgstr "Bestemming type"
+
+#: includes/hpbx.subscriber.inc:304
+msgid "Name*"
+msgstr "Naam*"
+
+#: includes/hpbx.subscriber.inc:518
+msgid "New password"
+msgstr "Nieuw wachtwoord"
+
+#: includes/hpbx.subscriber.inc:863
+msgid "Destination after"
+msgstr "Bestemming na"
+
+#: includes/hpbx.subscriber.inc:1107
+msgid "Confirm password must be the same as password"
+msgstr "Bevestigingswachtwoord moet het zelfde zijn als het wachtwoord"
+
+#: includes/hpbx.subscriber.inc:1111
+msgid "Your current password is missing or incorrect"
+msgstr "Uw huidige wachtwoord ontbreekt of is niet correct"
+
+#: includes/hpbx.subscriber.inc:1131
+msgid "Your current password is missing or incorrect"
+msgstr "Uw huidige wachtwoord ontbreekt of is niet correct"
+
+#: includes/hpbx.subscriber.inc:1179
+msgid "Can't find the pilot subscriber preferences"
+msgstr "Kan de hoofdgebruiker niet vinden"
+
+#: includes/hpbx.subscriber.inc:1522
+msgid "Will enable user %user"
+msgstr "Zet gebruiker %user aan"
+
+#: includes/hpbx.subscriber.inc:1527
+msgid "Problem while trying to change the password, please try again or contact the support desk."
+msgstr "Er heeft zich een probleem voorgedaan tijdens het wijzigen van het wachtwoord, probeer nogmaals."
+
+#: includes/hpbx.subscriber.inc:1552
+msgid "Failed to restore the alias_number on the PilotSubscriber. Exception: @e"
+msgstr "Het is niet gelukt het alias nummer van de hoofdgebruiker te herstellen. Exceptie: @e"
+
+#: includes/hpbx.subscriber.inc:1553
+msgid "Failed to restore the number"
+msgstr "Het is niet gelukt het nummer te herstellen"
+
+#: includes/hpbx.user.inc:374
+msgid "No company name set, so can't create OU"
+msgstr "Geen bedrijfsnaam opgegeven."
+
+#: includes/hpbx.user.inc:837
+msgid "User @cn"
+msgstr "Gebruiker @cn"
+
+#: includes/hpbx.voicemail.inc:124
+msgid "New messages"
+msgstr "Nieuw bericht"
+
+#: includes/hpbx.voicemail.inc:125;155
+msgid "Read messages"
+msgstr "Lees berichten"
+
+#: includes/hpbx.voicemail.inc:182
+msgid "Delete voicemail"
+msgstr "Verwijder voicemail"
+
+#: includes/js/hpbx.js:0
+msgid "Are you sure you want to remove this item? This action cannot be undone."
+msgstr "Weet u zeker dat u dit item verwijderen wilt? Deze actie kan niet ongedaan gemaakt worden!"
+
+#: includes/js/hpbx.stats.js:0
+msgid "Failed to retrieve stats"
+msgstr "Mislukt om statestieken op te halen"
+
+#: includes/js/hpbx_devices.js:0
+msgid "BLF"
+msgstr "BLF"

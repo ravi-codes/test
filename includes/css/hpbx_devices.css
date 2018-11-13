@@ -1,0 +1,330 @@
+/*
+body.page-hpbx fieldset#edit-subscribers {
+  display: none;
+}
+
+
+body.page-hpbx div#hpbx-device-model-image-wrapper {
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+
+body.page-hpbx .hpbx-device-key {
+  position: absolute;
+  background-color: #F0EEF2;
+  height: 16px;
+  border-radius: 3px;
+  width: 24px;
+  text-align: center;
+  cursor: pointer;
+}
+
+body.page-hpbx .hpbx-device-key-line {
+  position: absolute;
+  height: 1px;
+  border: 0;
+  cursor: default;
+}
+
+
+
+body.page-hpbx .hpbx-device-key.active,
+body.page-hpbx .hpbx-device-key.active + .hpbx-device-key-line {
+  background-color: #00AADD;
+}
+
+body.page-hpbx .hpbx-device-key.inactive,
+body.page-hpbx .hpbx-device-key.inactive + .hpbx-device-key-line {
+	background-color: #F0EEF2;
+}
+
+
+body.page-hpbx div#edit-subscribers-display-identifier label,
+body.page-hpbx div#edit-subscribers-display-profile label {
+  display: block;
+}
+
+html body div#main .upc-menu-sidebar.clearfix#block-hpbx-hpbx_device_subscribers {
+  display:none;
+}
+
+div#block-hpbx-hpbx_device_subscribers {
+  width: 272px;
+}
+
+table#hpbx-device-subscriber-table {
+  font-size: 13px;
+  margin: 0 0 10px;
+  border: 0;
+  margin-top: -1px;
+}
+
+body.page-hpbx div#block-hpbx-hpbx_device_subscribers div.right {
+  display: none;
+}
+
+
+body.page-hpbx div#block-hpbx-hpbx_device_subscribers h2.block-title {
+  height: 28px;
+  padding-top: 17px;
+  width: 272px;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table tr {
+  height: 45px;
+}
+body.page-hpbx table#hpbx-device-subscriber-table td.hpbx-device-key-subscriber-num {
+  width: 40px;
+  text-align: center;
+  border-left: 0;
+}
+body.page-hpbx table#hpbx-device-subscriber-table td.hpbx-device-key-subscriber-data {
+  text-align: left;
+  padding-left: 5px;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.inactive.hpbx-device-key-unassigned,
+body.page-hpbx table#hpbx-device-subscriber-table tr.inactive td.hpbx-device-key-subscriber-data p.hpbx-device-key-subscriber-number {
+  color: #999;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table td.hpbx-device-key-subscriber-actions {
+  width: 80px;
+  border-right: 0;
+  padding-right: 10px;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table td.hpbx-device-key-subscriber-actions div {
+	float:right;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table tr td {
+  color: inherit;
+  padding: inherit;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid #F1F1F3;
+}
+body.page-hpbx table#hpbx-device-subscriber-table tr.active {
+  background-color:#0ad;
+  color:#FFF;
+  text-decoration:none;
+  outline: none; 
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.active .hpbx-device-key-subscriber-number {
+  color: 	#FFF;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.inactive {
+  line-height: 1;
+  color: #666;
+  background-color: none;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.inactive .hpbx-device-delete,
+body.page-hpbx table#hpbx-device-subscriber-table tr.active .hpbx-device-key-subscriber-actions div.hpbx-device-capability {
+	display: none;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.hpbx-device-key-unassigned.active .hpbx-device-delete {
+	display:none;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table p {
+  margin: 0;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table tr.hpbx-device-key-unassigned .hpbx-device-key-subscriber-data p.hpbx-device-key-subscriber-name {
+  font-style: italic;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table .hpbx-device-capability {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  float:left;
+  padding-right: 6px;
+}
+
+body.page-hpbx table#hpbx-device-subscriber-table tr .hpbx-device-delete-img {
+  background: url(../images/del.png) no-repeat;
+    padding-right: 21px;
+}
+
+
+
+body.page-hpbx table#hpbx-device-subscriber-table .hpbx-device-capability-private {
+  background: url(../images/private_disabled.png) no-repeat;
+}
+body.page-hpbx table#hpbx-device-subscriber-table .hpbx-device-capability-shared {
+  background: url(../images/shared_disabled.png) no-repeat;
+}
+body.page-hpbx table#hpbx-device-subscriber-table .hpbx-device-capability-blf {
+  background: url(../images/blf_disabled.png) no-repeat;
+}
+
+
+body.page-hpbx table#hpbx-device-subscriber-table .line-type-private .hpbx-device-capability-private {
+  background: url(../images/private_enabled.png) no-repeat;
+}
+body.page-hpbx table#hpbx-device-subscriber-table .line-type-shared .hpbx-device-capability-shared {
+  background: url(../images/shared_enabled.png) no-repeat;
+}
+body.page-hpbx table#hpbx-device-subscriber-table .line-type-blf  .hpbx-device-capability-blf {
+  background: url(../images/blf_enabled.png) no-repeat;
+}
+*/
+
+body.page-hpbx div.ui-dialog {
+	box-shadow: none;
+}
+body.page-hpbx .ui-widget-content {
+	border:0;
+}
+
+body.page-hpbx .ui-dialog-title {
+  width: 400px;
+  white-space: initial;
+  text-align: left;
+  font-size: 23px;
+  font-weight: normal;
+  margin: 8px 30px 0 0;
+  font-family: speak_bold, Helvetica, Arial, sans-serif;
+  color: #249;
+  
+}
+body.page-hpbx .ui-widget-header{ 
+  text-transform: initial;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -webkit-border-radius: 0;
+  border-radius: none;
+  background-color: #fff;
+  border: 0;
+}
+body.page-hpbx .ui-widget-overlay {
+  background-color: #000;
+  background-image: none; 
+  opacity: .60;
+  filter: Alpha(Opacity=60);
+}
+
+body.page-hpbx .ui-dialog .ui-dialog-titlebar {
+	padding-left: 40px;
+}
+
+body.page-hpbx .ui-dialog .ui-dialog-titlebar-close {
+  right: -15px;
+  top: 0px;
+}
+
+/*
+body.page-hpbx #hpbx-device-subscriber-dialog {
+  background-color: #F3F4EE;
+  height: 80px !important;
+  width: 100% !important;
+  padding-top: 20px;
+}
+  
+body.page-hpbx #hpbx-device-subscriber-dialog.hpbx-device-remove-dialog{
+  display: none !important;
+}
+
+body.page-hpbx #hpbx-device-subscriber-dialog form div label {
+  font-size: 13px;
+  color: #666;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+body.page-hpbx #hpbx-device-subscriber-dialog form div select#subscriber_id {
+	width: 220px;
+}
+body.page-hpbx #hpbx-device-subscriber-dialog form div:nth-child(1) {
+	width: 220px;
+	float: left;
+	padding-left: 40px;
+}
+
+body.page-hpbx #hpbx-device-subscriber-dialog form div:nth-child(2) {
+	width: 220px;
+  float: right;
+}
+
+*/
+div#block-hpbx-hpbx_device_subscribers h2 {
+	display: flex;
+	padding-left: 8px;
+}
+
+/*
+body.page-hpbx div.ui-dialog-buttonset button {
+	border: 0;
+	background: url("../../../../../themes/ccs/images/btn_3d_sprite_v3.png") no-repeat scroll left -724px rgba(0, 0, 0, 0);
+  float: left;
+  font-weight: bold;
+  height: 24px;
+  padding: 0 8px 0 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body.page-hpbx div.ui-dialog-buttonset button {
+  border: 0;
+  background: url("../../../../../themes/ccs/images/btn_3d_sprite_v3.png") no-repeat scroll left -724px rgba(0, 0, 0, 0);
+  float: left;
+  font-weight: bold;
+  height: 24px;
+  padding: 0 8px 0 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body.page-hpbx div.ui-dialog-buttonset button.ui-state-focus {
+  outline: 0;	
+}
+
+body.page-hpbx div.ui-dialog-buttonset button span.ui-button-text {
+  background: url("../../../../../themes/ccs/images/btn_3d_sprite_v3.png") no-repeat scroll right -749px rgba(0, 0, 0, 0);
+  color: #FFF !important;
+  cursor: pointer;
+  float: left;
+  padding: 5px 28px 0 0;
+  border: 0px;
+  font-size: 12px !important;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 24px;
+}
+body.page-hpbx button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
+  background: url(../images/close.png) no-repeat;
+  border: 0;
+  height: 22px;
+  top: -7px;
+  outline: 0;
+}
+
+body.page-hpbx button.ui-button-icon-only .ui-icon {
+	display: none;
+}
+
+body.page-hpbx button.ui-status-focus {
+  outline: 0;
+}
+*/

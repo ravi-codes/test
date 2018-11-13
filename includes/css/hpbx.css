@@ -1,0 +1,566 @@
+
+body.page-hpbx span.hpbx-remove-disabled {
+  color: gray;  
+}
+body.page-hpbx small.hpbx-customer-suspend-date {
+  padding-left: 7px;
+  font-style: italic;
+}
+
+body.page-hpbx  input#edit-terms-terms-nid-value {
+  width: 100px;
+  float: left;
+  margin-right: 15px;
+}
+
+html body #hpbx-subscribers-edit-form .clearfix {
+  display:block !important;
+}
+
+body.page-hpbx div#overlay-content div#header {
+  display:none;
+}
+
+#overlay-container, .overlay-modal-background, .overlay-element {
+z-index: 999;
+}
+body.page-hpbx div#overlay-content #content-area {
+  box-shadow: none;
+  border-radius:0;
+  width: inherit;
+}
+
+body.page-hpbx #overlay-content {
+  background: #FFF;
+  -webkit-border-radius: 4px 0px 4px;
+  -moz-border-radius: 4px 0px 4px;
+  -ms-border-radius: 4px 0px 4px;
+  -o-border-radius: 4px 0px 4px;
+  border-radius: 4px 0px 4px;
+  padding: 2em;
+  border-top: 0;
+  position: relative;
+  box-shadow: 0 0 8px #999;
+}
+
+html body.page-hpbx div#main .vertical-tabs.clearfix {
+  display:block;
+}
+
+div#block-hpbx-hpbx_logged_in {
+  position: absolute;
+  top: -94px;
+  z-index: 999;
+  left: 296px;
+}
+
+div#block-menu-menu-hostedpbx-management .block-box-header div.right {
+  background-position: 0 -100px;
+}
+
+div#hpbx-pbxdevice-line-table-wrapper table tr:last-child {
+  border-top: 2px solid #D3D3D3;
+}
+
+body.page-hpbx-pbxdevice-sync.overlay div#overlay-content div.messages {
+  display:none;
+}
+
+body.page-hpbx-pbxdevice-sync.overlay #content-area {
+  min-height: 0;
+}
+body.page-hpbx-pbxdevice-sync.overlay #content-area h1.title {
+  display:none;
+}
+body.page-hpbx-pbxdevice-sync.overlay {
+  padding-top: 200px;
+}
+body.page-hpbx-pbxdevice-sync.overlay #main {
+  margin-top: 0;
+}
+html.js .no-sidebars.page-hpbx.overlay #main {
+  width: inherit;
+  margin-left: inherit;
+}
+
+body.page-hpbx div.messages.status {
+  color: #239;
+  border-color: #A2D1E7;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 13px;
+  background: #EFF2FB;
+}
+
+body.page-hpbx div.messages.error {
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 13px;
+  background: #C02;
+}
+
+body.page-hpbx #hpbx-table-wrappertable {
+  font-size: 13px;
+}
+
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper {
+  padding: 0;
+}
+
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper.vertical-tabs-pane {
+  padding: 0.5em;
+}
+
+legend#hpbx-huntgroup-members,
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper legend {
+  background-color: #239;
+  width: 100%;
+  display:block;
+  
+}
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper.vertical-tabs-pane legend {
+  display:none;
+}
+
+body.page-hpbx #hpbx-table-wrapper {
+  padding-top: 7px;
+}
+
+body.page-hpbx .fieldset-wrapper{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body .vertical-tabs ul.vertical-tabs-list li a:hover {
+  outline: none;
+}
+
+body .vertical-tabs ul.vertical-tabs-list li a:focus strong,
+body .vertical-tabs ul.vertical-tabs-list li a:active strong,
+body .vertical-tabs ul.vertical-tabs-list li a:hover strong {
+  text-decoration: none;
+}
+
+
+body .vertical-tabs ul.vertical-tabs-list li a strong:hover {
+  text-decoration:none;
+}
+
+body.page-hpbx form#hpbx-audio-overview-form div.fieldset-wrapper table thead th:nth-child(3) {
+  width: 250px;
+}
+
+body.page-hpbx form#hpbx-audio-overview-form div.fieldset-wrapper table thead th:nth-child(4) {
+  width: 50px;
+}
+
+legend#hpbx-huntgroup-members  span.fieldset-legend,
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper legend span.fieldset-legend {
+  font-family: "speak_bold",Arial;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #BEBFB9;
+  color: #E1E2DC;
+  padding: 5px;
+  border: 0px;
+  font-size: 12px;
+}
+
+#hpbx-huntgroup-edit-form table {
+margin-top: 0;
+}
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper table {
+  margin-top: 0px;
+}
+
+div#hpbx-speed-dials-table-wrapper legend,
+div#hpbx-pbxdevice-line-table-wrapper legend {
+  display:none;
+}
+
+audio {
+  width: 250px;
+  height: 30px;
+  padding-top: 5px;
+}
+
+.messages.status.pre {
+  word-wrap: break-word;
+}
+
+#hpbx-masquerade-form div {
+padding-left: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+#hpbx-masquerade-form {
+padding-bottom:20px;
+}
+
+body.page-hpbx .hint {
+  color: lightgrey;
+  font-style: italic;
+  padding: 2px 3px 2px 3px !important;
+  border: 1px solid #CCC;
+}
+
+
+body.page-hpbx div#hpbx-cfu_times-table-wrapper thead th:first-child,
+body.page-hpbx div#hpbx-cfu_times-table-wrapper tbody td:first-child,
+body.page-hpbx div#hpbx-pbxdevice-line-table-wrapper thead th:first-child,
+body.page-hpbx div#hpbx-pbxdevice-line-table-wrapper tbody td:first-child,
+body.page-hpbx div#hpbx-speeddials-table-wrapper thead th:first-child,
+body.page-hpbx div#hpbx-speeddials-table-wrapper tbody td:first-child,
+body.page-hpbx div#hpbx-numberranges-table-wrapper thead th:first-child,
+body.page-hpbx div#hpbx-numberranges-table-wrapper tbody td:first-child,
+body.page-hpbx div#hpbx-autoattendants-table-wrapper thead th:first-child,
+body.page-hpbx div#hpbx-autoattendants-table-wrapper tbody td:first-child{
+  display:none;
+}
+
+form#hpbx-customer-edit-form #edit-general-settings div.fieldset-wrapper tbody td:first-child {
+  width: 404px;
+}
+
+form#hpbx-customer-edit-form select#edit-general-settings-cfu-value {
+  width: 250px
+}
+
+div.form-item-voicemail-delete-value div.description,
+div.form-item-voicemail-attach-value div.description {
+  margin:0;
+}
+body.page-hpbx-customer fieldset.form-wrapper div.form-item label,
+body.page-hpbx-auto-attendant fieldset.form-wrapper div.form-item label,
+body.page-hpbx-subscriber fieldset.form-wrapper div.form-item label,
+body.page-hpbx-settings fieldset.form-wrapper div.form-item label,
+body.page-hpbx-conference fieldset.form-wrapper div.form-item label,
+body.page-hpbx-huntgroup fieldset.form-wrapper div.form-item label,
+body.page-hpbx-pbxdevice fieldset.form-wrapper div.form-item label,
+body.page-hpbx-affiliate fieldset.form-wrapper div.form-item label,
+body.page-hpbx-affiliate-customer fieldset.form-wrapper div.form-item label,
+div.form-item-general-table-external-id-value label {
+  display: none;
+}
+
+div.form-item-general-block-out-override-pin-value input,
+div.form-item-general-pbx-extension-value input {
+  width: 75px !important;
+}
+
+
+div.hpbx-seconds-prefix {
+  padding-top: 2px;
+}
+
+div#hpbx-browser-version {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 19px;
+  background-color: #F00;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1em;
+  border: 2px solid #FF0;
+  padding: 2px;
+  color: #FFF;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+
+div input[readonly="readonly"] {
+  background-color: #EBEBE4;
+}
+
+form#hpbx-pbxdevice-sync-form ul li:before {
+  content: "";
+}
+
+form#hpbx-pbxdevice-sync-form ul li {
+  margin: 0;
+  padding-left: 0;
+
+}
+div.hpbx-sound-filename {
+  float: left;
+  padding-top: 12px;
+  padding-right: 20px;
+  min-width: 140px;
+}
+
+form#hpbx-callrecords-overview-form {
+  float: left;
+  width: 700px;
+}
+form#hpbx-callrecords-overview-form div.item-list {
+  width: 700px;
+}
+form#hpbx-callrecords-overview-form div.item-list ul.pager li {
+  padding:0;
+}
+fieldset#edit-cfu-times fieldset {
+  margin-bottom: 0;
+}
+
+.hpbx-times-day .form-item {
+  float: left;
+  padding-right: 5px;
+  margin: 5px;
+}
+.hpbx-times-day .form-item label {
+  padding-right: 10px;
+}
+.hpbx-times-day .form-item label,
+.hpbx-times-day .form-item select {
+  float:left;
+  font-weight: normal;
+}
+
+.hpbx-times-day .form-item label.option {
+  float:right;
+  width: 30px;
+  padding-left: 3px;
+}
+.hpbx-times-day .form-item input[type=checkbox] {
+  float:left;
+}
+
+fieldset.hpbx-callforwards-times {
+  position: absolute;
+  width: 450px;
+  height: 316px;
+  border: 1px solid #BEBFB9 !important;
+  box-shadow: 4px 4px 8px 1px #CCC;
+  padding-top: 12px !important;
+  display:none;
+  background-color: #fff;
+  margin-left: -100px;
+  padding-right: 20px !important;
+  margin-bottom: 100px;
+}
+
+fieldset.hpbx-callforwards-times legend {
+  display:none !important;
+}
+body.page-hpbx div.block-inner div.content fieldset.form-wrapper.vertical-tabs-pane fieldset.hpbx-callforwards-times legend {
+  diplay: inherit !important;
+}
+
+fieldset.hpbx-callforwards-times legend span {
+  float: right;
+  padding-top: 2px;
+  padding-right: 5px;
+  cursor: hand;
+}
+
+body.page-hpbx .hpbx-times-day div.form-type-checkbox {
+  padding-top: 10px;  
+}
+
+body.page-hpbx .time-bar {
+  width: 400px;
+  height: 21px;
+  padding-left: 56px;
+}
+
+fieldset.hpbx-callforwards-times h3 {
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0px;
+}
+
+fieldset.hpbx-callforwards-times .item-list {
+  padding-left: 56px;
+}
+fieldset.hpbx-callforwards-times .item-list ul {
+  list-style-type: none;
+}
+fieldset.hpbx-callforwards-times .item-list ul li {
+  margin-left: 0;
+} 
+
+/*
+ * 
+ * body.page-hpbx .time-bar div.open {
+ *  background-color: #52A108;
+ * }
+ * 
+ * body.page-hpbx .time-bar div.open {
+ *  background-color: #A10000;
+ * }
+ * 
+ * body.page-hpbx .time-bar,
+ * body.page-hpbx .markers {
+ *   
+ * }
+ * body.page-hpbx .markers {
+ *  cursor:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ1JREFUeNq8VAEKwCAITOn%2FX3ZzTBCxUicTBsvsOO9EIKJhAwCe5H0H4xBvLQgOegV8yZ8AZwJHc8zKI4c53bk6IGNqMH3GCJuMlkeG4p4G1e5Lq1KXatmCM7AdrbLLq7FC0agycx7oXOmk8%2FY%2FPNjRR7s6ZFHFqY5AcasLFDPtpAC7WH7aNkxgO9gdLNv3oWdKiKXX7r8bu6rlJcAA9ZRfMt5oHoIAAAAASUVORK5CYII%3D') 5 0,pointer;
+ *  width: 235px;  
+ * }
+ * 
+ * body.page-hpbx .markers {
+ *  height: 30px;
+ * }
+ * 
+ * body.page-hpbx .marker {
+ *  width: 7px;
+ *  height: 7px;
+ *  border: 1px solid black;
+ *  -moz-box-shadow: inset 0 0 2px #000;
+ *   -webkit-box-shadow: inset 0 0 2px #000;
+ *   box-shadow: inset 0 0 2px #000;
+ *  float:left;
+ *  cursor: pointer;
+ * }
+ */
+
+
+
+body.page-hpbx-customers div#block-hpbx-hpbx_customer_search .block-inner {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+body.page-hpbx-customers div#block-hpbx-hpbx_customer_search input.form-text{
+  width: 150px; 
+}
+
+body.page-hpbx-pbxdevice-sync-success span.hpbx-sync-busy {
+  font-weight: bold;
+  color: red;
+}
+
+body.page-hpbx ul.ui-autocomplete {
+  list-style-type: none;
+  padding-left: 5px;
+}
+
+body.page-hpbx-terms- h1.title {
+  display: none;
+}
+body.page-hpbx-terms- form#hpbx-terms-form .node-page {
+  height: 400px;
+  overflow-y: scroll;
+  border: 1px solid #000;
+  box-shadow: inset 1px 1px 9px 1px #D3D3D3;
+  padding: 20px;  
+  margin-bottom: 20px;
+}
+body.page-hpbx-terms- #overlay-content {
+  padding: 0.1em;
+}
+body.page-hpbx-terms- #main {
+  margin-top: 20px;
+}
+
+
+body.page-hpbx #main {
+  float:left;
+}
+
+body.page-hpbx #sidebar-second {
+  float:right;
+  right: 100px;
+}
+
+body.page-hpbx.two-sidebars div#content-area {
+  float: left;
+}
+
+body.page-hpbx #sidebar-second-inner {
+  padding-left: 30px;
+}
+
+/** DIALOG **/
+body.page-hpbx .ui-widget-header {
+  background-image: none;
+  background-color: inherit;
+  border: none;
+}
+
+li.r-tabs-tab.r-tabs-state-default.r-tabs-state-disabled .r-tabs-anchor {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+
+li.r-tabs-tab.r-tabs-state-default.r-tabs-state-disabled:hover {
+  background-color: #f0f0f0;
+}
+li.r-tabs-tab.r-tabs-state-default.r-tabs-state-disabled .r-tabs-anchor:hover {
+  cursor: default;
+}
+
+
+body.page-node-edit.node-type-hpbx-terms-page .ckeditor_links,
+body.page-node-edit.node-type-hpbx-terms-page .filter-guidelines,
+body.page-node-edit.node-type-hpbx-terms-page .filter-help {
+  display:none !important;
+}
+body.page-node-edit.node-type-hpbx-terms-page .filter-wrapper {
+  border:0;
+}
+
+
+/* SEARCH BOX */
+#hpbx-customer-search-form {
+	float:right;
+   width: 30%;
+   display:none; 
+}
+
+#hpbx-customer-search-form .row {
+	margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+  margin-top: 0.5rem;
+  margin-right: 5px;
+  margin-right: 0.5rem;
+  margin-right: -4px;
+  margin-right: -0.4rem;
+  padding-right: 0px;
+}
+
+#hpbx-customer-search-form .row div {
+	float: right;
+}
+    
+#hpbx-customer-search-form .submit-button {
+	display:none;
+}
+
+
+body.page-hpbx-customers #edit-query,
+body.page-hpbx-affiliate-customers #edit-query {
+  width: 20em;
+  float: right;
+}
+
+body.page-hpbx-customers .hpbx-table-caption-link,
+body.page-hpbx-affiliate-customers .hpbx-table-caption-link {
+	float:left;
+	width: 70%;
+}
+
+@media screen and (min-width: 750px) {
+	
+	#hpbx-customer-search-form {
+  	display: block; 
+	}
+}
+
+
+.hpbx-bundle-settings tr th {
+  text-align: left;
+  padding-left: 1.9em;
+}
+
+.hpbx-bundle-settings tr th:nth-child(1) {width: 93px;}
+.hpbx-bundle-settings tr th:nth-child(2) {width: 300px;}
+.hpbx-bundle-settings tr th:nth-child(3) {width: 300px;}

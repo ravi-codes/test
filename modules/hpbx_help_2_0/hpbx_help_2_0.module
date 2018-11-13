@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HPBX help 2.0 feature.
+ */
+
+include_once 'hpbx_help_2_0.features.inc';
