@@ -147,21 +147,35 @@ function hpbx_pbxdevice_edit_form_validate($form, &$form_state) {
         require_once($class_path);
 
         $RPSDevice = new $class($form_state['values']['table']['identifier']['value'], $form_state['values']['table']['profile_id']['value']);
-
-        // Verify if the device is not yet registered at RPS.
-        if (!$RPSDevice->is_registered()) {
-    
-          // Register.
-          if (!$RPSDevice->register()) {
-    
-            // Could not register.
-            form_set_error('table][identifier', t('MAC address is invalid, please check the MAC address'));
-          }
-          else {
+        if($class == 'grandstream'){
+          if ($form_state['values']['id']) {
+      	   // Existing pbx device..
+      	    $PBXDevice = SipwiseEntity::load('pbxdevices', $form_state['values']['id']);
+           }
+          if (!$PBXDevice->id) {
+            if (!$RPSDevice->register()) {
+             // Could not register.
+              form_set_error('table][identifier', t('MAC address is invalid, please check the MAC address'));
+             }
+             else {
+               // Device successfully registered, so unregister it again.
+               $RPSDevice->unregister();
+             }
+          } 
+        }else{
+          // Verify if the device is not yet registered at RPS.
+          if (!$RPSDevice->is_registered()) {
+            // Register.
+           if (!$RPSDevice->register()) {
+             // Could not register.
+             form_set_error('table][identifier', t('MAC address is invalid, please check the MAC address'));
+           }
+           else {
             // Device successfully registered, so unregister it again.
-            $RPSDevice->unregister();
-          }
+             $RPSDevice->unregister();
+           }
         }
+      }
       }
     }
   }
@@ -238,13 +252,21 @@ function hpbx_pbxdevice_edit_form_submit($form, &$form_state) {
         if (file_exists($class_path)) {
           require_once($class_path);
           $RPSDevice = new $class($PBXDevice->identifier, $PBXDevice->profile_id);
-  
           // Verify if the device is not yet registered at RPS.
-          if (!$RPSDevice->is_registered()) {
-          
+        if($class == 'grandsteam'){
+            if (!$PBXDevice->id) {
+              // Register.
+            if (!$RPSDevice->register()) {
+              // Remove the device from Sipwise again.
+              $PBXDevice->delete();
+              $PBXDevice->id='';
+              drupal_set_message(t('MAC address is invalid, please check the MAC address')); 
+            }
+           }
+        }else{
+         if (!$RPSDevice->is_registered()) {
             // Register.
             if (!$RPSDevice->register()) {
-              
               // Remove the device from Sipwise again.
               $PBXDevice->delete();
 
@@ -253,10 +275,8 @@ function hpbx_pbxdevice_edit_form_submit($form, &$form_state) {
             }
           }
         }
+        }
       }
-      
-      // Set message.
-      //drupal_set_message(t('Device successfully saved'));
       
     }
   }
@@ -275,6 +295,9 @@ function hpbx_pbxdevice_edit_form_submit($form, &$form_state) {
     if (!empty($PBXDeviceModel->bootstrap_method) && substr($PBXDeviceModel->bootstrap_method,0,strlen('redirect_')) == 'redirect_') {
       // RPS device; reboot;
       $output['type'] = 'reboot';
+    }
+    else if($class =='grandstream'){
+       $output['type'] = 'reboot';
     }
     else {
       
@@ -439,22 +462,26 @@ function hpbx_pbxdevice_delete_page($pbxdevice_id) {
           if (file_exists($class_path)) {
             require_once($class_path);
             $RPSDevice = new $class($PBXDevice->identifier, $PBXDevice->profile_id);
-          
-            // Verify if the device is registered at Yealink RPS.
-            if ($RPSDevice->is_registered()) {
-
+            if($class == 'grandstream'){
+               if (!$RPSDevice->unregister()) {
+                // Tell us what went wrong.
+                drupal_set_message(t('Failed to un-provision the device'));
+              }
+            }else{
+               // Verify if the device is registered at Yealink RPS.
+              if ($RPSDevice->is_registered()) {
+                $RPSDevice = new $class($PBXDevice->identifier, $PBXDevice->profile_id);
               // Unregister.
-              if (!$RPSDevice->unregister()) {
-
+                if (!$RPSDevice->unregister()) {
+                  drupal_set_message(t('Failed to un-provision the device'));
                 // Tell us what went wrong.
                //('Failed to unregister device');
               }
             }
           }
-
-          // Set message.
+          }
+         // Set message.
           drupal_set_message(t('Device successfully deleted'));
-          
         }
       }
     }
@@ -512,15 +539,18 @@ function hpbx_pbxdevice_get_sync_url($pbxdevice_id, $ref = NULL) {
     
     $prov_url = $conf['sipwise'][$ActiveReseller->id]['sipwise_prov_endpoint'] . '/sync/'. $hash . '/$MA/?';
     
-    //for LGI environments only
-    $prov_url = str_replace( 'http://', 'https://', $prov_url );
-    
     if (is_null($ref)) {
       global $base_url, $language;
       $ref = $base_url . '/'. $language->language . '/'. $_GET['q'];
     }
-   // return 'http://www.ccswebtool.com/hpbx/link.php?ref='. $ref . '&url='. $prov_url . '&ip=';
-    return $conf['sipwise'][$ActiveReseller->id]['sipwise_prov_endpoint'] .'/link.php?ref='. $ref . '&url='. $prov_url . '&ip=';
+    if($PBXDevice->profile_id != '3'){
+      //for LGI environments only
+     $prov_url = str_replace( 'http://', 'https://', $prov_url );
+     // return 'http://www.ccswebtool.com/hpbx/link.php?ref='. $ref . '&url='. $prov_url . '&ip=';
+      return $conf['sipwise'][$ActiveReseller->id]['sipwise_prov_endpoint'] .'/link.php?ref='. $ref . '&url='. $prov_url . '&ip=';
+    }else{
+      return 'http://www.ccswebtool.com/hpbx/link.php?ref='. $ref . '&url='. $prov_url . '&ip=';
+    }
   }
   return FALSE;
 }

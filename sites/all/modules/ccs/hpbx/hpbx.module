@@ -11,7 +11,7 @@ define('HPBX_BUNDLE_SETTINGS_OFFSET_COUNTER_INCREASE_PROFILE', 2);
 define('HPBX_CUSTOMER_DELETE_NOT_ALLOWED', 0);
 define('HPBX_CUSTOMER_SUSPENDED_DELETE_ALLOWED', 1);
 define('HPBX_CUSTOMER_SUSPENDED_DELETE_NOT_ALLOWED', 2);
-define('HPBX_CUSTOMER_SUSPENDED_OFFSET_DAYS', '-7 days');
+//define('HPBX_CUSTOMER_SUSPENDED_OFFSET_DAYS', '-7 days');
 
 /**
  * Implementation of hook_page_delivery_callback_alter().
@@ -395,7 +395,7 @@ function hpbx_soundset_get_subscriber_soundset($Subscriber, $soundset_name) {
 }
 
 
-function hpbx_soundset_upload_file(&$Subscriber, $soundset_name) {
+function hpbx_soundset_upload_file(&$Subscriber, $soundset_name,$ActiveReseller) {
 
   try {
 
@@ -436,10 +436,12 @@ function hpbx_soundset_upload_file(&$Subscriber, $soundset_name) {
 
           // Convert to wav (8000, 1 channel).
           $soundfiles[$handle]->recording = hpbx_audio_convert_to_wav($sf['tmp_name'], $sf['name']);
-
+          if($ActiveReseller->_settings->help_mail === 'No mail support'){
+              $soundfiles[$handle]->loopplay = 'true';
+          }else{
           // Set loopplay value (as string).
-          $soundfiles[$handle]->loopplay = 'false';
-
+            $soundfiles[$handle]->loopplay = 'false';
+          }
           // Save the soundfile.
           $soundfiles[$handle]->save();
 
@@ -1195,26 +1197,64 @@ function hpbx_subscriber_number_extension_elements(&$form, $form_state, $Custome
   global $ActiveReseller;
 
   // Get free numbers from the pilot alias_numbers list.
-  $options = $Customer->get_free_numbers($Subscriber);
-
+ if(is_null($Subscriber)){
+    $options = $Customer->get_free_numbers($Subscriber);
+  }else{
+    $number_options = $Customer->get_free_numbers($Subscriber);
+    $min_length = $ActiveReseller->_settings->area_code_min_digits + $ActiveReseller->_settings->subscriber_number_min_digits;
+    $max_length = $ActiveReseller->_settings->area_code_max_digits + $ActiveReseller->_settings->subscriber_number_max_digits;
+    foreach($number_options as $option){ 
+     if(strlen($option) >= $min_length && strlen($option) <= $max_length){
+      $options[$option] = $option;
+     }
+    }
+  }
+  
   $form['alias_key'] = array(
     '#type' => 'value',
     '#value' => $key
   );
-
-  $form[$key]['alias_number']['value'] = array(
-    '#type' => 'select',
-    '#required' => TRUE,
-    '#options' => $options,
-    '#empty_option' => '-'. t('None') . '-',
-    '#default_value' => (!is_null($Subscriber) ? $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN) : FALSE),
-    '#access' => user_access('hpbx edit subscriber'),
-    '#title' => t('Number'). '*',
-    '#attributes' => array(
-      'class' => array('chzn-select', 'sg-element', 'no-search'),
-      'data-placeholder' => t('Choose an option'),
-    ),
-  );
+  if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did && $form_state[build_info][form_id]!='hpbx_fax2email_edit_form'){
+  		//array_unshift($options, 'None');
+  		$options['0'] = 'None';
+	  		foreach(ksort($options) as $key=>$value){
+	  			$options[]=$value;
+	  		}
+  		  		
+  		if(isset($Subscriber) && !empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN))){
+  			$defaultAliasNo = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN);
+  		}else{
+  			$defaultAliasNo = 0;
+  		}
+  		 		
+  		$form[$key]['alias_number']['value'] = array(
+	    '#type' => 'select',
+	    '#required' => FALSE,
+	    '#options' => $options,
+	    '#empty_option' => '-'. t('Choose Number') . '-',
+	    '#default_value' => (!is_null($Subscriber) ? $defaultAliasNo : '-'. t('Choose Number') . '-'),
+	    '#access' => user_access('hpbx edit subscriber'),
+	    '#title' => t('Number'),
+	    '#attributes' => array(
+	      'class' => array('chzn-select', 'sg-element', 'no-search'),
+	      'data-placeholder' => t('Choose an option'),
+	    ),
+  		);
+  }else{
+	    $form[$key]['alias_number']['value'] = array(
+	    '#type' => 'select',
+	    '#required' => TRUE,
+	    '#options' => $options,
+	    '#empty_option' => '-'. t('None') . '-',
+	    '#default_value' => (!is_null($Subscriber) ? $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN) : '-'. t('Choose Number') . '-'),
+	    '#access' => user_access('hpbx edit subscriber'),
+	    '#title' => t('Number'). '*',
+	    '#attributes' => array(
+	      'class' => array('chzn-select', 'sg-element', 'no-search'),
+	      'data-placeholder' => t('Choose an option'),
+	    ),
+  		);
+  }
 
   $form[$key]['pbx_extension']['value'] = array(
       '#type' => 'textfield',
@@ -1226,16 +1266,24 @@ function hpbx_subscriber_number_extension_elements(&$form, $form_state, $Custome
       '#maxlength' => $Customer->_settings->extension_length,
   );
 
-  if ($Customer->_settings->derive_extension_from_did) {
+   if ($Customer->_settings->derive_extension_from_did || $Customer->_settings->allow_subscribers_without_did) {
     $form[$key]['alias_number']['value']['#attributes'] += array(
       'data-custom-change-event' => 'edit-subscriber-general-number-change',
       'data-derive-extension-from-did' => (int)$Customer->_settings->derive_extension_from_did,
+      'data-allow-subscribers-without-did' => (int)$Customer->_settings->allow_subscribers_without_did,
       'data-extension-length' => (int)$Customer->_settings->extension_length,
       'data-extension-id' => '#edit-'. $key . '-pbx-extension-value',
+      'data-form-id' => $form_state['build_info']['form_id'],
+      'data-extension-value' => (!is_null($Subscriber) ? $Subscriber->pbx_extension : "")
     );
-
-    $form[$key]['pbx_extension']['value']['#attributes']['readonly'] = 'readonly';
-    $form[$key]['pbx_extension']['value']['#attributes']['class'][] = 'hpbx-incognito';
+    
+    if(!$Customer->_settings->allow_subscribers_without_did){
+    	$form[$key]['pbx_extension']['value']['#attributes']['readonly'] = 'readonly';
+    	$form[$key]['pbx_extension']['value']['#attributes']['class'][] = 'hpbx-incognito';
+    }else{
+    	$form[$key]['pbx_extension']['value']['#attributes']['enabled'] = 'enabled';
+    	$form[$key]['pbx_extension']['value']['#attributes']['class'][]= 'sg-element form-text';
+    }
 
     // Add customer number ranges for validation purposes.
     $ranges = array();
@@ -1285,6 +1333,8 @@ function hpbx_subscriber_number_extension_elements(&$form, $form_state, $Custome
         $prefix = hpbx_get_extension_prefix($Customer, $form[$key]['alias_number']['#default_value']);
         $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
         $form[$key]['pbx_extension']['value']['#value'] = $prefix. substr($form[$key]['alias_number']['#default_value'], $extension_suffix_length * - 1);
+      } else if(isset($Subscriber->pbx_extension) && $Subscriber->pbx_extension!=''){
+      	$form[$key]['pbx_extension']['value']['#value'] = $Subscriber->pbx_extension;
       }
       else {
         $form[$key]['pbx_extension']['value']['#value'] = '';
@@ -4194,7 +4244,12 @@ function hpbx_get_subscriber_options($Customer, $Subscriber = NULL, $number_key 
     if (is_null($Subscriber) || ($SubscriberForCLI->id!=$Subscriber->id)) {
 
       if ($number_key) {
+      if(!empty($SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_GSN))){
         $key = $SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
+      }
+      else{
+        $key =  $SubscriberForCLI->pbx_extension;
+      }
       }
       else {
         $key = $SubscriberForCLI->id;
@@ -4243,6 +4298,98 @@ function hpbx_get_subscriber_options($Customer, $Subscriber = NULL, $number_key 
     }
   }
 
+  if (isset($subscriber_options[t('Subscribers')])) {
+    // Sort subscribers.
+    asort($subscriber_options[t('Subscribers')], SORT_NATURAL|SORT_FLAG_CASE);
+  }
+
+  if (isset($subscriber_options[t('Groups')])) {
+    // Sort groups.
+    asort($subscriber_options[t('Groups')], SORT_NATURAL|SORT_FLAG_CASE);
+  }
+
+  if ($so_debug && $_SERVER['REMOTE_ADDR'] == '10.254.242.19') {
+
+  }
+  $so_debug = FALSE;
+  return $subscriber_options;
+}
+
+/**supportive function to get CLI dropdown values*/
+function hpbx_get_subscriber_options_subscriber_create($Customer, $Subscriber = NULL, $number_key = FALSE, $is_pbx_pilot = FALSE, $is_pbx_group = TRUE,
+    $autoattendant = TRUE, $conference = TRUE, $is_subscriber = TRUE, $must_be_pbx_group_member = FALSE) {
+
+  global $so_debug;
+  if ($so_debug == TRUE && $_SERVER['REMOTE_ADDR'] == '10.254.242.19') {
+    drupal_set_message('is_subscriber: '. var_export($is_subscriber, TRUE));
+    drupal_set_message('autoattendant: '. var_export($autoattendant, TRUE));
+    drupal_set_message('is_pbx_group: '. var_export($is_pbx_group, TRUE));
+    drupal_set_message('must_be_pbx_group_member: '. var_export($must_be_pbx_group_member, TRUE));
+    drupal_set_message('conference: '. var_export($conference, TRUE));
+    drupal_set_message('is_pbx_pilot: '. var_export($is_pbx_pilot, TRUE));
+  }
+
+  global $ActiveReseller;
+
+  // Get all subscribers to fill the options.
+  $subscriber_options = array();
+  foreach ($Customer->get_subscribers($is_pbx_pilot, $is_pbx_group,
+      $autoattendant, $conference) as $SubscriberForCLI) {
+if(!empty($SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_GSN))){
+    // Exclude own number.
+    if (is_null($Subscriber) || ($SubscriberForCLI->id!=$Subscriber->id)) {
+
+      if ($number_key) {
+        $key = $SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
+      }
+      else {
+        $key = $SubscriberForCLI->id;
+      }
+
+      $value = array();
+      $value[] = '';
+      $value[] = ' - '. hpbx_get_profile_name_from_profile_id($SubscriberForCLI->profile_set_id, $SubscriberForCLI->profile_id) . ' - ';
+      $value[] = $SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
+      $value[] = ' ('. $SubscriberForCLI->pbx_extension . ')';
+
+      if ($SubscriberForCLI->profile_id == $ActiveReseller->_settings->auto_attendant_subscriber_profile_id ||
+          $SubscriberForCLI->profile_id == $ActiveReseller->_settings->conference_room_subscriber_profile_id ||
+          $SubscriberForCLI->is_pbx_group) {
+
+        if ($SubscriberForCLI->is_pbx_group && $must_be_pbx_group_member) {
+
+           // Verify if the subscriber is member of the pbx_group.
+          if (is_null($Subscriber) || !in_array($Subscriber->id, $SubscriberForCLI->pbx_groupmember_ids)) {
+
+            // The subscriber is not part of the hunt group, which is required by
+            // the argument passed. Ignore this entry.
+            continue;
+          }
+        }
+
+        $value[0] = hpbx_truncate_name_element($SubscriberForCLI->external_id, 30);
+        $subscriber_options[t('Groups')][$key] = implode('' , $value);
+      }
+      elseif ($is_subscriber) {
+
+        // For subscriber with ad account.
+        if ($ad_entry = hpbx_users_get_user($SubscriberForCLI->webusername)) {
+
+          $value[0] = $ad_entry['sn'][0]. ', '. $ad_entry['givenname'][0] . ' ';
+          $subscriber_options[t('Subscribers')][$key] = implode('', $value);
+        }
+
+        // For subscribers with external_id.
+        elseif (!empty($SubscriberForCLI->external_id)) {
+
+          $value[0] = hpbx_truncate_name_element($SubscriberForCLI->external_id, 30);
+          $subscriber_options[t('Subscribers')][$key] = implode('', $value);
+        }
+      }
+    }
+}
+  }
+ 
   if (isset($subscriber_options[t('Subscribers')])) {
     // Sort subscribers.
     asort($subscriber_options[t('Subscribers')], SORT_NATURAL|SORT_FLAG_CASE);
@@ -4522,19 +4669,24 @@ function hpbx_add_more_table(&$form, &$form_state, $SipwiseEntity) {
     $template_row['inported']['data'] = array(
         '#type' => 'checkbox',
     );
-
+    
+    $placeholder_number = mt_rand(1234567891,1234567899);
+    $area_placholder = substr($placeholder_number,0,$ActiveReseller->_settings->area_code_max_digits);
     $template_row['area']['data'] = array(
       '#type' => 'textfield',
       '#required' => TRUE,
       '#size' => $ActiveReseller->_settings->area_code_max_digits,
       '#maxlength' => $ActiveReseller->_settings->area_code_max_digits,
+      '#attributes' => array('placeholder' => $area_placholder),
     );
 	//Modified for Bug #1100 - PE LAB: Create Customer - Numberrange removed after error message about prefix starting with a zero
+   $start_placeholder = substr($placeholder_number,0,$ActiveReseller->_settings->subscriber_number_max_digits);
     $template_row['start']['data'] = array(
       '#type' => 'textfield',
       '#required' => TRUE,
       '#size' => $ActiveReseller->_settings->subscriber_number_max_digits,
       '#maxlength' => $ActiveReseller->_settings->subscriber_number_max_digits,
+      '#attributes' => array('placeholder' => $start_placeholder),
       /*'#rules' => array(
         array(
           'rule' => 'length['. $ActiveReseller->_settings->subscriber_number_min_digits .','. $ActiveReseller->_settings->subscriber_number_max_digits . ']',
@@ -4546,7 +4698,7 @@ function hpbx_add_more_table(&$form, &$form_state, $SipwiseEntity) {
       '#type' => 'select',
       '#required' => TRUE,
       '#options' => drupal_map_assoc(array(1, 5, 10, 100, 1000)),
-      '#attributes' => array('class' => array('sg-element', 'no-search')),
+      '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
       '#field_size_class' => array('col-xs-12', 'col-sm-12', 'col-md-12'),
     );
     $template_row['prefix']['data'] = array(
@@ -4960,7 +5112,59 @@ function hpbx_ncos_is_allowed($ncos_level, $destination, $subscriber_id = NULL) 
   // NCOS not found.
   return FALSE;
 }
+/* default forward
+*/
+function hpbx_set_simple_default_callforward_values($cf_type, $form_state, &$Callforwards, $Subscriber,$CFSubscriber) { 
 
+  if (empty($form_state['values']['call-forwards'][$cf_type]['destination_type'])) {
+
+    if (isset($Callforwards->$cf_type)) {
+      unset($Callforwards->$cf_type);
+    }
+    return;
+  }
+  elseif ($form_state['values']['call-forwards'][$cf_type]['destination_type'] == 'uri') {
+
+    if (is_numeric($form_state['values']['call-forwards'][$cf_type]['destination_uri'])) { 
+        $primary_number = (array)$CFSubscriber->primary_number;
+        $cc = $primary_number['cc'];
+        $destination = $cc.$form_state['values']['call-forwards'][$cf_type]['destination_uri'];
+   }
+    else {
+      $destination = '';
+    }
+  }
+  else {
+    $destination = $form_state['values']['call-forwards'][$cf_type]['destination_type'];
+  }
+
+  $Callforwards->$cf_type = new stdClass();
+  $cf = &$Callforwards->$cf_type;
+
+  $cf->destinations[0] = array(
+    'destination' => $destination, // Set dutch prefix.
+    'timeout'=> 300,
+    'priority' => 1,
+  ); 
+
+  if (isset($form_state['values']['call-forwards'][$cf_type]['times_api'])) {
+    $cf->times = $form_state['values']['call-forwards'][$cf_type]['times_api'];
+  }
+  else {
+    $cf->times = array();
+  }
+
+  if ($cf_type =='cft') {
+
+    if (!empty($form_state['values']['call-forwards'][$cf_type]['ringtimeout'])) {
+      $cf->ringtimeout = $form_state['values']['call-forwards'][$cf_type]['ringtimeout'];
+    }
+    else {
+      $cf->ringtimeout = '30';
+    }
+  } 
+  return;
+}
 
 /**
  *

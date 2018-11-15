@@ -375,7 +375,11 @@ function hpbx_dashboard_get_subscriber_rows($data_set) {
       }
       else {
         $number = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
-        $number = substr($number, 0, $Customer->_settings->extension_length * -1). '<span class="hpbx-pbx-extension" >'. $Subscriber->pbx_extension . '</span>';
+      	if(isset($number) && $number !=''){
+			$number = substr($number, 0, $Customer->_settings->extension_length * -1) . '<span class="hpbx-pbx-extension" >' . $Subscriber->pbx_extension . '</span>';
+		}else{
+			$number = "<span style='padding-left:35px'>&nbsp</span>" . '<span class="hpbx-pbx-extension" >' . $Subscriber->pbx_extension . '</span>';
+		}
         $row[] = array('data' => $number, 'class' => $cell_class);
       }
 
@@ -437,9 +441,9 @@ function theme_hpbx_dashboard_help() {
           -->
         </div>';
       }else{
-  	  return '
+  	  $output = '
       <h4 class="hpbx-dashboard-info-title">
-        <span class="hpbx-dashboard-info-icon LGI-iconb-help-large"></span> '. t('Need help?') . '
+        <span class="hpbx-dashboard-info-icon LGI-iconb-help-large"></span> '. t("Need help?") . '
       </h4>
       <div class="hpbx-dashboard-info-subtitle">'. $ActiveReseller->_settings->help_name .'</div>
       <div class="hpbx-dashboard-info-content">
@@ -448,16 +452,28 @@ function theme_hpbx_dashboard_help() {
         </div>
         <div class="hpbx-contact-item">
           <span class="hpbx-contact-item-icon LGI-iconglobe"></span> <a href="http://'. $ActiveReseller->_settings->help_website .'" target="_blank">'. t('visit website') . '</a>
-        </div>
-        <div class="hpbx-contact-item">
-          <span class="hpbx-contact-item-icon LGI-iconvoicemail"></span> <a href="mailto:'. $ActiveReseller->_settings->help_mail .'">'. t('mail us') . '</a>
-        </div>
-        <!--
-        <div class="hpbx-contact-item">
+        </div>';
+        if($ActiveReseller->_settings->help_mail === 'No mail support'){
+          $output .= 
+            '<!--
+            <div class="hpbx-contact-item">
+              <span class="hpbx-contact-item-icon LGI-iconvoicemail"></span> <a href="mailto:'. $ActiveReseller->_settings->help_mail .'">'. t('mail us') . '</a>
+            </div>
+            -->';
+        }
+        else{
+          $output .= 
+            '<div class="hpbx-contact-item">
+              <span class="hpbx-contact-item-icon LGI-iconvoicemail"></span> <a href="mailto:'. $ActiveReseller->_settings->help_mail .'">'. t('mail us') . '</a>
+            </div>'; 
+        }
+        
+      /* <div class="hpbx-contact-item">
           <span class="hpbx-contact-item-icon LGI-iconconference-room"></span> <a href="#">'. t('start chat') . '</a>
-        </div>
-        -->
-      </div>';
+        </div> */
+        
+      $output .= '</div>';
+      return $output;
     }  	
   }  
 }

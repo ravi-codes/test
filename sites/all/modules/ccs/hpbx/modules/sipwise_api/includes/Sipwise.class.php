@@ -58,6 +58,7 @@ class Sipwise {
         die();
       }
     }
+<<<<<<< HEAD
     $curl = curl_init();
     $options = array( 
         CURLOPT_SSLCERT => $conf['sipwise'][$reseller_id]['sipwise_api_cert'],
@@ -77,6 +78,14 @@ class Sipwise {
         'Content-Type: application/json',
         'Expect: '
       );
+=======
+
+    $request_headers = array(
+      'Prefer: return=representation',
+      'Content-Type: application/json',
+      'Expect: '
+    );
+>>>>>>> branch1
     
     if (!is_null($custom_request_headers)) {
       $request_headers = $custom_request_headers;
@@ -175,7 +184,11 @@ class Sipwise {
         watchdog('sipwise', $curl_debug_cmd);
     }
 
+<<<<<<< HEAD
     $response = curl_exec($ch[$reseller_id]);
+=======
+  	if($response = curl_exec($ch[$reseller_id])){
+>>>>>>> branch1
     // Check if any error occurred
     if (curl_errno($ch[$reseller_id])) {
       watchdog('sipwise_api', 'cURL Error: ' . curl_error($ch[$reseller_id]));
@@ -199,7 +212,13 @@ class Sipwise {
       $result[] = $body;
     }
 
+<<<<<<< HEAD
     return $result;
+=======
+    	return $result;
+	}else{
+		return FALSE;
+>>>>>>> branch1
 	}
   }
 

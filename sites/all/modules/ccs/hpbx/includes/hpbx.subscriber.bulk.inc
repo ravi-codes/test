@@ -20,6 +20,7 @@ function hpbx_subscriber_bulk_header() {
     'alias_number' => t('Number'),
     'pbx_extension' => t('Extension'),
     'cli' => t('Caller line identification'),
+    'clir' => t('Caller Line Identification Restriction'),
     'profile_id' => t('Subscriber profile'),
     'block_in_clir' => t('Block anonymous inbound calls'),
     'ncos' => t('Call barrings'),
@@ -33,7 +34,7 @@ function hpbx_subscriber_bulk_header() {
   );
 
   // Remove values for properties not allowed within selected profile.
-  foreach (array('clir', 'block_in_clir', 'block_out_override_pin', 'language') as $element) {
+  foreach (array('cli', 'block_in_clir', 'block_out_override_pin', 'language') as $element) {
     if (!hpbx_attribute_allowed($element)) {
   
       if (isset($header[$element])) {
@@ -41,10 +42,19 @@ function hpbx_subscriber_bulk_header() {
       }
     }
   }
-  
-  if ($Customer->_settings->derive_extension_from_did) {
+  if(isset($Customer->_settings->allow_subscribers_without_did)){
+    if(($Customer->_settings->derive_extension_from_did) && (!$Customer->_settings->allow_subscribers_without_did)){
       unset($header['pbx_extension']);
+    }
   }
+ else if ($Customer->_settings->derive_extension_from_did) {
+       unset($header['pbx_extension']);
+  }
+  
+   if(!(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did)){
+     unset($header['clir']);
+   }
+  
   if (!$Customer->_settings->multi_site) {
     unset($header['site']);
   }
@@ -93,7 +103,8 @@ function hpbx_subscriber_bulk_dummy_data() {
       'administrative' => t('No'),
       'alias_number' => !empty($alias_numbers[0]) ? $alias_numbers[0] : '',
       'pbx_extension' => !empty($pbx_extensions[0]) ? $pbx_extensions[0] : '',
-      'cli' => t('Restricted'),
+      'cli' => 'random',
+      'clir' =>'random',
       'profile_id' => 'random', // Pick a random value from the list.
       'block_in_clir' => t('No'),
       'clir' => t('Yes'),
@@ -114,7 +125,8 @@ function hpbx_subscriber_bulk_dummy_data() {
       'administrative' => t('Yes'),
       'alias_number' => !empty($alias_numbers[1]) ? $alias_numbers[1] : '',
       'pbx_extension' => !empty($pbx_extensions[1]) ? $pbx_extensions[1] : '',
-      'cli' => t('Own'),
+      'cli' => 'random',
+      'clir' =>'random',
       'profile_id' => 'random', // Pick a random value from the list.
       'block_in_clir' => t('Yes'),
       'clir' => t('No'),
@@ -135,7 +147,8 @@ function hpbx_subscriber_bulk_dummy_data() {
       'administrative' => '',
       'alias_number' => !empty($alias_numbers[2]) ? $alias_numbers[2] : '',
       'pbx_extension' => !empty($pbx_extensions[2]) ? $pbx_extensions[2] : '',
-      'cli' => t('Own'),
+      'cli' => 'random',
+      'clir' =>'random',
       'profile_id' => 'random', // Pick a random value from the list.
       'block_in_clir' => t('No'),
       'clir' => t('Yes'),
@@ -143,7 +156,7 @@ function hpbx_subscriber_bulk_dummy_data() {
       'block_out_override_pin' => '1234',
       'language' => 'English',
       'station_name' => 'Device 3',
-      'device_model' => 'Cisco SPA303',
+      'device_model' => 'random',
       'device_identifier' => '34:56:78:90:12:34',
     )
   );
@@ -371,12 +384,27 @@ function hpbx_subscriber_bulk_submit_subscriber_validate(&$form, &$form_state) {
   $form_state['values']['no_redirect'] = TRUE;
   
   // Set extenion in case of derive from did.
-  if ($Customer->_settings->derive_extension_from_did && !empty($form_state['values']['general']['settings']['alias_number']['value'])) {
+  if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+    if ($Customer->_settings->derive_extension_from_did && !($Customer->_settings->allow_subscribers_without_did) && !empty($form_state['values']['general']['settings']['alias_number']['value'])) {
     $prefix = hpbx_get_extension_prefix($Customer, $form_state['values']['general']['settings']['alias_number']['value']);
     $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
     $form_state['values']['general']['settings']['pbx_extension']['value'] = $prefix. substr($form_state['values']['general']['settings']['alias_number']['value'], $extension_suffix_length * - 1);
   }
-
+    else if($Customer->_settings->derive_extension_from_did && $Customer->_settings->allow_subscribers_without_did && !empty($form_state['values']['general']['settings']['alias_number']['value']) && is_numeric($form_state['values']['general']['settings']['alias_number']['value']) && empty($form_state['values']['general']['settings']['pbx_extension']['value'])){
+      $prefix = hpbx_get_extension_prefix($Customer, $form_state['values']['general']['settings']['alias_number']['value']);
+      $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
+      $form_state['values']['general']['settings']['pbx_extension']['value'] = $prefix. substr($form_state['values']['general']['settings']['alias_number']['value'], $extension_suffix_length * - 1); 
+    }
+    if($Customer->_settings->allow_subscribers_without_did && !empty($form_state['values']['general']['settings']['alias_number']['value']) && ($form_state['values']['general']['settings']['alias_number']['value']== "None")){
+      $form_state['values']['general']['settings']['alias_number']['value'] = 0 ;
+    }
+  }else{
+    if ($Customer->_settings->derive_extension_from_did && !empty($form_state['values']['general']['settings']['alias_number']['value'])) {
+      $prefix = hpbx_get_extension_prefix($Customer, $form_state['values']['general']['settings']['alias_number']['value']);
+      $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
+      $form_state['values']['general']['settings']['pbx_extension']['value'] = $prefix. substr($form_state['values']['general']['settings']['alias_number']['value'], $extension_suffix_length * - 1);
+    }
+  }
   // Validate the form.
   hpbx_subscriber_edit_form_validate($form, $form_state);
   
@@ -438,6 +466,24 @@ function hpbx_subscriber_bulk_template_download() {
   $list = 0;
   foreach ($row_template as $key => $element) {
     if ($element['data']['#type'] == 'select') {
+     if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+        $datalist = array();
+        $cli = $row_template['cli']['data']['#options']; 
+        foreach ($row_template['cli']['data']['#options'] as $type => $options) { 
+          foreach ($options as $value => $option) {
+            foreach ($option as $value1 => $option1){
+              $datalist['default']= 'Own number';
+               $datalist[$value1] = $option1;
+            }
+          }
+        }
+        if($element['data']['#attributes']['data-field-name'] == "cli"){
+        $element['data']['#options'] = array();
+         foreach ($datalist as $data) {
+              $element['data']['#options'][] = $data; 
+            }
+       }
+     }
 
       if (isset($element['data']['#attributes']['data-device-list'])) {
         if ($json = json_decode($element['data']['#attributes']['data-device-list'])) {
@@ -450,6 +496,13 @@ function hpbx_subscriber_bulk_template_download() {
             }
           }
         }
+      }else{
+        if($element['data']['#attributes']['data-field-name'] == "cli"){
+        $element['data']['#options'] = array();
+         foreach ($datalist as $data) {
+              $element['data']['#options'][] = $data; 
+            }
+       }
       }
 
       natsort($element['data']['#options']);
@@ -491,7 +544,16 @@ function hpbx_subscriber_bulk_template_download() {
 
   // Add list of free numbers.
   $row = 1;
-  foreach ($Customer->get_free_numbers() as $value) {
+  if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+    $alias_numbers = json_decode($row_template['alias_number']['data']['#attributes']['data-values']);
+    $alias_numbers = json_decode(json_encode($alias_numbers), true);  
+    foreach($alias_numbers as $alias_number){
+      $number[$alias_number['value']]=$alias_number['label'];
+    }
+  }else{
+      $number = $Customer->get_free_numbers();
+  }
+  foreach ($number as $value) {
 
     // Prepend numbers with quote, to make it a string and not an integer.
     $objPHPExcel->setActiveSheetIndex(1)->setCellValueExplicit(chr(65+($list)). (string)$row++, $value);
@@ -804,20 +866,28 @@ function hpbx_subscriber_bulk_get_template_row() {
 
   $data_values = array();
   $alias_numbers = $Customer->get_free_numbers();
-  
+  if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){ 
+    $data_values['0']=array('value' => 'None', 'label' => 'None');
+    $alias_number_regex = "^\+?[0-9]\d{1,14}$|^None$";
+	$alias_number_invalid = t('The given value must be of the phone number type / None');
+    
+  }else{
+    $alias_number_regex = "^\+?[0-9]\d{1,14}$";
+	$alias_number_invalid = t('The given value must be of the phone number type');	
+  }
   foreach ($alias_numbers as $key => $number) {
     $data_values[$key] = array('value' => $number, 'label' => $number);
   }
   
   $row_template['alias_number'] = array(
-      'data-invalid-messages' => t('The given value must be of the phone number type'),
+      'data-invalid-messages' => "$alias_number_invalid",
       'data-not-unique-message' => t('One of the values is not unique'),
       'data' => array(
           '#type' => 'textfield',
           '#attributes' => array(
               'class' => array('hpbx-autocomplete hpbx-bulk-upload-field-number'),
               'data-values' => json_encode(array_values($data_values)),
-              'data-regex' => "^\+?[0-9]\d{1,14}$",
+              'data-regex' => "$alias_number_regex",
               'data-field-name' => 'alias_number',
           ),
           '#size' => '',
@@ -827,8 +897,27 @@ function hpbx_subscriber_bulk_get_template_row() {
           '#tab_form_field_classes' => array(),
       )
   );
-
-  if (!$Customer->_settings->derive_extension_from_did) {
+if(isset($Customer->_settings->allow_subscribers_without_did)){
+  if (!($Customer->_settings->derive_extension_from_did && !$Customer->_settings->allow_subscribers_without_did)){
+    $row_template['pbx_extension'] = array(
+        'data-invalid-messages' => t('Extension requires length of @length digits', array('@length' => $Customer->_settings->extension_length)),
+        'data' =>
+        array(
+          '#type' => 'textfield',
+          '#attributes' => array(
+            'class' => array('hpbx-autocomplete hpbx-bulk-upload-field-extension'),
+            'data-field-name' => 'pbx_extension',
+            'data-regex' => '^\d{'.$Customer->_settings->extension_length.'}$',
+            'maxlength' => $Customer->_settings->extension_length,
+            'size' => '',
+          ),
+          '#row_wrapper' => FALSE,
+          '#field_size_class' => array(),
+          '#tab_form_field_classes' => array(),
+        )
+      );
+  }
+ }else if (!$Customer->_settings->derive_extension_from_did) {
     $row_template['pbx_extension'] = array(
       'data-invalid-messages' => t('Extension requires length of @length digits', array('@length' => $Customer->_settings->extension_length)),
       'data' =>
@@ -847,6 +936,14 @@ function hpbx_subscriber_bulk_get_template_row() {
       )
     );
   }
+   if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+     // Get list of subscribers.
+    $subscriber_options = hpbx_get_subscriber_options_subscriber_create($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+     // Prepend the list with some default settings.
+    $subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+   }else{
+     $subscriber_options = array('default' => t('Own'), 'clir' => t('Restricted'));
+   }
 
   $row_template['cli']['data'] = array(
     '#type' => 'select',
@@ -854,12 +951,29 @@ function hpbx_subscriber_bulk_get_template_row() {
       'class' => array('chzn-select', 'chzn-done', 'sg-element', 'no-search', 'hpbx-bulk-upload-field-caller-line-identification'),
       'data-field-name' => 'cli'
     ),
-    '#options' => array('default' => t('Own'), 'clir' => t('Restricted')),
+    '#options' => $subscriber_options,
     '#row_wrapper' => FALSE,
     '#field_size_class' => array(),
       '#tab_form_field_classes' => array(),
   );
-
+  //restrict cli
+  if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+	  // CLI Restriction.
+	 $row_template['clir']['data'] = array(
+      '#type' => 'select',
+      '#attributes' => array(
+          'class' => array('chzn-select', 'chzn-done', 'sg-element', 'no-search', 'hpbx-bulk-upload-field-block-anonymous-inbound-calls'),
+          'data-field-name' => 'clir'
+      ),
+      '#options' => array(
+          0 => t('No'),
+          1 => t('Yes')
+      ),
+      '#row_wrapper' => FALSE,
+      '#field_size_class' => array(),
+      '#tab_form_field_classes' => array(),
+   );
+  }
 
   $row_template['profile_id']['data'] = array(
     '#type' => 'select',
@@ -1129,15 +1243,32 @@ function hpbx_subscriber_bulk_page() {
     }
     
     $row['alias_number']['data']['#attributes']['value'] = !empty($data['alias_number']) ? check_plain($data['alias_number']) : '';
-    
-    if (!empty($data['cli']) && (array_search($data['cli'], $row_template['cli']['data']['#options'])!==FALSE)) {
+    if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+      foreach ($row_template['cli']['data']['#options'] as $type => $options) { 
+        foreach ($options as $value => $option) {
+         foreach ($option as $value1 => $option1){
+          $datalist['default']= 'Own number';
+          $datalist[$value1] = $option1;
+         }
+        }
+       }
+      if (!empty($data['cli']) && (array_search($data['cli'], $datalist)!==FALSE)) { 
+        $row['cli']['data']['#value'] = array_search($data['cli'], $datalist);
+      }
+    }else{
+      if (!empty($data['cli']) && (array_search($data['cli'], $row_template['cli']['data']['#options'])!==FALSE)) {
       $row['cli']['data']['#value'] = array_search($data['cli'], $row_template['cli']['data']['#options']);
+     }
     }
     
-    if (!$Customer->_settings->derive_extension_from_did) {
+    if (!$Customer->_settings->derive_extension_from_did || (!($Customer->_settings->derive_extension_from_did && !$Customer->_settings->allow_subscribers_without_did))) {
       $row['pbx_extension']['data']['#attributes']['value'] = !empty($data['pbx_extension']) ? (int)$data['pbx_extension'] : '';
     }
-    
+    if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+      if (!empty($data['clir']) && (array_search($data['clir'], $row_template['clir']['data']['#options'])!==FALSE)) {
+        $row['clir']['data']['#value'] = array_search($data['clir'], $row_template['clir']['data']['#options']);
+      }
+    }
     if (!empty($data['profile_id']) && (array_search($data['profile_id'], $row_template['profile_id']['data']['#options'])!==FALSE)) {
       $row['profile_id']['data']['#value'] = array_search($data['profile_id'], $row_template['profile_id']['data']['#options']);
     }

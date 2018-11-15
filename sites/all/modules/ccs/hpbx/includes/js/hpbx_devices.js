@@ -248,7 +248,11 @@
       $(div_key).attr('subscriber-id', subscriber_id);
 
       $(tr).find('p.hpbx-device-key-subscriber-name').html(subscriber.name);
-      $(tr).find('p.hpbx-device-key-subscriber-number').html(subscriber.alias_number + ' [' + subscriber.extension + ']');
+      if(subscriber.alias_number){
+    	  $(tr).find('p.hpbx-device-key-subscriber-number').html(subscriber.alias_number + ' [' + subscriber.extension + ']');
+      }else{
+    	  $(tr).find('p.hpbx-device-key-subscriber-number').html(' [' + subscriber.extension + ']');
+      }
     }
     else {
       var subscriber = false;
@@ -428,7 +432,12 @@
 
 
               if (type_count) {
-                $option.html(subscriber.name + ' ' + subscriber.alias_number + ' (' + subscriber.extension + ') ' + (subscriber.in_use ? '*' : ''));
+            	if(subscriber.alias_number){
+            		$option.html(subscriber.name + ' ' + subscriber.alias_number + ' (' + subscriber.extension + ') ' + (subscriber.in_use ? '*' : ''));
+            	}else{
+            		$option.html(subscriber.name + ' ' + ' (' + subscriber.extension + ') ' + (subscriber.in_use ? '*' : ''));
+            	}  
+                
               }
               $('select#subscriber_id').append($option);
             });
@@ -766,8 +775,13 @@
               }
             }
             else {
+            	 var title = Drupal.t('Device Cannot be saved, please check the MAC provided');
+                 var message = '';
+                 var buttonText = Drupal.t('Exit');
               // failed.
-              document.location.href = Drupal.settings.basePath + Drupal.settings.pathPrefix + 'hpbx/pbxdevices';
+                 hpbxShowAlert('small', title, message, buttonText, function(){
+                     document.location.href = Drupal.settings.basePath + Drupal.settings.pathPrefix + 'hpbx/pbxdevices';
+                 });
             }
           },
           error: function( jqXHR, textStatus, errorThrown ) {

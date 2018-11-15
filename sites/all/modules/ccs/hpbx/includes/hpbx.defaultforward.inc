@@ -134,7 +134,18 @@ function hpbx_defaultforward_edit_form_submit($form, $form_state) {
     
     // Reset cfu.
     if (!empty($form_state['values']['value']) && ($CFSubscriber = SipwiseEntity::load('subscribers', (int)$form_state['values']['value']))) {
+     if (isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+       $primary_number= (array)$CFSubscriber->primary_number; 
+       $primary_number = $primary_number['ac'].$primary_number['sn']; 
+       $destination_uri = $primary_number;
       
+      $form_state['values']['call-forwards']['cfu'] = array(
+        'destination_type' => 'uri',
+        'destination_timeout' => 300,
+        'destination_uri' => $destination_uri
+      );
+      hpbx_set_simple_default_callforward_values('cfu', $form_state, $Callforwards, $PilotSubscriber,$CFSubscriber);
+    }else{
       $form_state['values']['call-forwards']['cfu'] = array(
         'destination_type' => 'uri',
         'destination_timeout' => 300,
@@ -142,6 +153,7 @@ function hpbx_defaultforward_edit_form_submit($form, $form_state) {
       );
     
       hpbx_set_simple_callforward_values('cfu', $form_state, $Callforwards, $PilotSubscriber);
+    }
     }
     else {
       // Reset.

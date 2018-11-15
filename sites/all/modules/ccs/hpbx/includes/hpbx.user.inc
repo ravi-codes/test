@@ -1222,6 +1222,8 @@ function hpbx_users_edit_form($form, $form_state, $reseller_id = NULL, $username
   if (is_null($reseller_id)) {
     $reseller_id = sipwise_api_get_active_reseller();;
   }
+  global $ActiveReseller;
+  sipwise_api_activate_reseller($reseller_id);
 
   $ldap_server = ccs_ldap_get_valid_server();
 
@@ -1276,16 +1278,26 @@ function hpbx_users_edit_form($form, $form_state, $reseller_id = NULL, $username
     }
   }
 
-  // Role
-  $form['general']['role']['value'] = array(
-    '#type' => 'select',
-    '#options' => drupal_map_assoc(array('HostedPBX Support', 'HostedPBX Administrator', 'HostedPBX Content Manager', 'HostedPBX Customer Manager')),
-    '#default_value' => count($roles) === 1 ? current($roles) : NULL,
-    '#required' => TRUE,
-    '#title' => t('Role'),
-    '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
-  );
-
+  if($ActiveReseller->_settings->help_mail == 'No mail support'){
+    $form['general']['role']['value'] = array(
+      '#type' => 'select',
+      '#options' => drupal_map_assoc(array('HostedPBX Support', 'HostedPBX Administrator')),
+      '#default_value' => count($roles) === 1 ? current($roles) : NULL,
+      '#required' => TRUE,
+      '#title' => t('Role'),
+      '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
+    );
+  }else{
+    // Role
+    $form['general']['role']['value'] = array(
+      '#type' => 'select',
+      '#options' => drupal_map_assoc(array('HostedPBX Support', 'HostedPBX Administrator', 'HostedPBX Content Manager', 'HostedPBX Customer Manager')),
+      '#default_value' => count($roles) === 1 ? current($roles) : NULL,
+      '#required' => TRUE,
+      '#title' => t('Role'),
+      '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
+    );
+  }
   // Firstname.
   $form['general']['firstname']['value'] = array(
     '#type' => 'textfield',
@@ -1380,16 +1392,35 @@ function hpbx_users_edit_form_validate($form, &$form_state) {
     // Lookup the user in complete directory.
     if ($ldap_username = ccs_ldap_get_user_on_mail_address($email)) {
 
+      
+     $user_ldap = user_load_by_mail($email);
+     $user_ldap = json_decode(json_encode($user_ldap),true);  
+     $ldap_roles  = $user_ldap['roles'];
+     foreach($ldap_roles as $ldap_role){
+       if($ldap_role=='authenticated user'){
+          unset($ldap_role);
+       }else{
+          $role = $ldap_role;
+       }
+     }
+     $role = (array)$role;
+     
+      // Check if this user already does have some HPBX Roles. 
+      if(!empty($drupal_name) && $user_ldap['name']!=$drupal_name){
+        if (isset($role) && is_array($role) && preg_grep("/^HostedPBX.*/", $role)) {
+          form_set_error('general][settings][email][value', t('A user - with one of the HPBX roles - with the provided email address is already present.'));
+          return FALSE;
+        }
+      } else if(empty($drupal_name)){
+         if (isset($role) && is_array($role) && preg_grep("/^HostedPBX.*/", $role)) {
+          form_set_error('general][settings][email][value', t('A user - with one of the HPBX roles - with the provided email address is already present.'));
+          return FALSE;
+        }
+      }
       $form_state['values']['drupal_name'] = $ldap_username;
       if (!$ldap_user = ccs_ldap_user_loopup($ldap_username)) {
         form_set_error('name', t('Unable to retrieve existing ldap user %name.'), array('%name' => $ldap_username));
         return;
-      }
-
-      // Check if this user already does have some HPBX Roles. 
-      if (isset($ldap_user['attr']['memberof']) && is_array($ldap_user['attr']['memberof']) && preg_grep("/^HPBX.*/", $ldap_user['attr']['memberof'])) {
-        form_set_error('general][settings][email][value', t('A user - with one of the HPBX roles - with the provided email address is already present.'));
-        return FALSE;
       }
     }
   }

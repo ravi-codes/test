@@ -167,9 +167,17 @@ class SipwiseSubscriber extends SipwiseEntity {
   private function alias_number_get_national() {
     global $ActiveReseller;
     if (isset($this->alias_numbers) && count($this->alias_numbers) === 1) {
-
+     if ($alias_number = $this->alias_numbers[0]->ac . $this->alias_numbers[0]->sn) { 
+      $min_length = $ActiveReseller->_settings->area_code_min_digits + $ActiveReseller->_settings->subscriber_number_min_digits;
+      $max_length = $ActiveReseller->_settings->area_code_max_digits + $ActiveReseller->_settings->subscriber_number_max_digits;
+      if(strlen($alias_number) >= $min_length && strlen($alias_number) <= $max_length){
+       return $ActiveReseller->_settings->digit_for_national_calls  . $this->alias_numbers[0]->ac . $this->alias_numbers[0]->sn;
+      }else{
+        return FALSE;
+      }
+     }
       // Subscriber does have only one alias_number.
-      return $ActiveReseller->_settings->digit_for_national_calls  . $this->alias_numbers[0]->ac . $this->alias_numbers[0]->sn;
+      //return $ActiveReseller->_settings->digit_for_national_calls  . $this->alias_numbers[0]->ac . $this->alias_numbers[0]->sn;
     }
     return FALSE;
   }
@@ -182,7 +190,15 @@ class SipwiseSubscriber extends SipwiseEntity {
   private function alias_number_get_no_national_digit() {
     global $ActiveReseller;
     if ($an = $this->get_alias_number(HPBX_NUMBER_FORMAT_GSN)) {
-      return substr($an, strlen($ActiveReseller->_settings->digit_for_national_calls));
+      $min_length = $ActiveReseller->_settings->area_code_min_digits + $ActiveReseller->_settings->subscriber_number_min_digits;
+      $max_length = $ActiveReseller->_settings->area_code_max_digits + $ActiveReseller->_settings->subscriber_number_max_digits;
+      $an_length = strlen($an);
+      if($an_length >= $min_length && $an_length <= $max_length){
+       return substr($an, strlen($ActiveReseller->_settings->digit_for_national_calls));
+      }else{
+        return FALSE;
+      }
+      //return substr($an, strlen($ActiveReseller->_settings->digit_for_national_calls));
     }
     return FALSE;
   }
@@ -219,7 +235,13 @@ class SipwiseSubscriber extends SipwiseEntity {
   public function alias_number_set($Customer, $number, $overwrite = TRUE) {
   
     global $ActiveReseller;
-  
+     $min_length = $ActiveReseller->_settings->area_code_min_digits + $ActiveReseller->_settings->subscriber_number_min_digits;
+     $max_length = $ActiveReseller->_settings->area_code_max_digits + $ActiveReseller->_settings->subscriber_number_max_digits;
+     if(strlen($number) >= $min_length && strlen($number) <= $max_length){
+       $number_areacode = $number;
+     }else{
+       $number_areacode = substr($number ,0, -($Customer->_settings->extension_length));
+     }
     // Verify if number is not empty.
     if (!empty($number)) {
   
@@ -227,7 +249,8 @@ class SipwiseSubscriber extends SipwiseEntity {
       $ActiveReseller->remove_national_digits($number);
   
       // Verify if the area code is found, should not happen.
-      if (!$area = $Customer->get_area_code($number)) {
+      
+      if (!$area = $Customer->get_area_code($number_areacode)) {
   
         watchdog('hpbx', 'Could not find area code for number '. $number);
         die();

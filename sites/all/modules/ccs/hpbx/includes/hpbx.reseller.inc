@@ -485,6 +485,7 @@ function hpbx_reseller_edit_form($form, $form_state, $reseller_id = NULL) {
     '#title' => t('Footer'),
     '#default_value' => isset($Reseller->_settings->mail_footer) ? $Reseller->_settings->mail_footer : '',
     '#required' => FALSE,
+    '#attributes' => array('class' => array('sg-element')),
   );
   $mail_key = 'customer_administrator_welcome_'. $Reseller->id;
 
@@ -501,6 +502,7 @@ function hpbx_reseller_edit_form($form, $form_state, $reseller_id = NULL) {
     '#title' => t('Subject'),
     '#default_value' => variable_get('user_mail_'. $mail_key .'_subject', 'New login credentials for [hpbx:company] in [hpbx:profile_set_name]'),
     '#required' => TRUE,
+     '#attributes' => array('class' => array('sg-element')),
   );
 
   $body = <<<EOF
@@ -527,6 +529,7 @@ EOF;
     '#default_value' => variable_get('user_mail_'. $mail_key .'_body', $body),
     '#required' => TRUE,
     '#rows' => 17,
+    '#attributes' => array('class' => array('sg-element')),
   );
   
   $mail_key = 'customer_subscriber_welcome_'. $Reseller->id;
@@ -543,6 +546,7 @@ EOF;
     '#title' => t('Subject'),
     '#default_value' => variable_get('user_mail_'. $mail_key .'_subject', 'New login credentials for [hpbx:firstname] [hpbx:lastname] in [hpbx:lgi_product_name]'),
     '#required' => TRUE,
+    '#attributes' => array('class' => array('sg-element')),
   );
   
   $body = <<<EOF
@@ -569,6 +573,7 @@ EOF;
     '#default_value' => variable_get('user_mail_'. $mail_key .'_body', $body),
     '#required' => TRUE,
     '#rows' => 17,
+    '#attributes' => array('class' => array('sg-element')),
   );
 
   $mail_key = 'affiliate_user_welcome_'. $Reseller->id;
@@ -585,6 +590,7 @@ EOF;
     '#title' => t('Subject'),
     '#default_value' => variable_get('user_mail_'. $mail_key .'_subject', 'Login information for [hpbx:firstname] [hpbx:lastname] at [hpbx:lgi_brand_name]'),
     '#required' => TRUE,
+    '#attributes' => array('class' => array('sg-element')),
   );
 
   $body = <<<EOF
@@ -609,6 +615,7 @@ EOF;
     '#default_value' => variable_get('user_mail_'. $mail_key .'_body', $body),
     '#required' => TRUE,
     '#rows' => 17,
+    '#attributes' => array('class' => array('sg-element')),
   );
 
   ///////////
@@ -781,11 +788,22 @@ EOF;
     '#required' => TRUE,
     '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
   );
-  $domains = sipwise_api_get_all('domains',array('reseller_id' => $Reseller->id));
-   foreach ($domains as $domain){
-    $options[$domain->id] = $domain->domain; 
-   }
-  $form['general']['domain_id']['value'] = array(
+
+  if($ActiveReseller->_settings->help_mail == 'No mail support'){
+   $form['general']['domain_id']['value'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Domain ID'),
+    '#default_value' => !empty($Reseller->_settings->domain_id) ? $Reseller->_settings->domain_id : '',
+    '#required' => TRUE,
+    '#maxlength' => 3,
+    '#attributes' => array('class' => array('sg-element')),
+  );
+  }else{
+    $domains = sipwise_api_get_all('domains',array('reseller_id' => $Reseller->id));
+    foreach ($domains as $domain){
+      $options[$domain->id] = $domain->domain; 
+    }
+    $form['general']['domain_id']['value'] = array(
     '#type' => 'checkboxes',
     '#title' => t('Domain ID'),    
     '#required' => TRUE,
@@ -795,7 +813,7 @@ EOF;
 	'#default_value' => isset($Reseller->_settings->domain_id) ? $Reseller->_settings->domain_id : '',
     '#field_size_class' => array('col-xs-12', 'col-sm-8', 'col-md-1'),    
   );
-
+  }
   $form['general']['digit_for_national_calls']['value'] = array(
     '#type' => 'textfield',
     '#title' => t('digit_for_national_calls'),
@@ -886,6 +904,7 @@ EOF;
     '#default_value' => isset($Reseller->_settings->customer_concurrent_max) ? implode(PHP_EOL, $Reseller->_settings->customer_concurrent_max) : '',
     '#required' => TRUE,
     '#description' => t('Number of concurrent max calls.'),
+    '#attributes' => array('class' => array('sg-element')),
       
   );
   $form['general']['customer_max_extension_length']['value'] = array(
@@ -902,6 +921,7 @@ EOF;
     '#title' => t('extensions_are_not_allowed_to_start_with'),
     '#default_value' => isset($Reseller->_settings->extensions_are_not_allowed_to_start_with) ? implode(PHP_EOL, $Reseller->_settings->extensions_are_not_allowed_to_start_with) : '',
     '#required' => FALSE,
+    '#attributes' => array('class' => array('sg-element')),
   );
   
   $form['general']['exclude_extensions']['value'] = array(
@@ -909,6 +929,15 @@ EOF;
     '#title' => t('exclude_extensions'),
     '#default_value' => isset($Reseller->_settings->exclude_extensions) ? implode(PHP_EOL, $Reseller->_settings->exclude_extensions) : '',
     '#required' => FALSE,
+    '#attributes' => array('class' => array('sg-element')),
+  );
+  $form['general']['allow_subscribers_without_did_default']['value'] = array(
+    '#type' => 'select',
+    '#title' => t('Allow Subscribers without DID default'),
+    '#options' => array(0 => t('No'), 1 => t('Yes')),
+    '#default_value' => isset($Reseller->_settings->allow_subscribers_without_did_default) ? $Reseller->_settings->allow_subscribers_without_did_default : '',
+    '#required' => TRUE,
+    '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
   );
   $form['general']['polish_emergency_routing']['value'] = array(
     '#type' => 'select',
@@ -1097,7 +1126,7 @@ EOF;
     '#default_value' => isset($Reseller->_settings->customer_id_length) ? $Reseller->_settings->customer_id_length : '',
     '#required' => TRUE,
     '#maxlength' => 3,
-    '#options' => drupal_map_assoc(range(6, 10)),
+    '#options' => drupal_map_assoc(range(6, 20)),
     '#empty_value' => '',
     '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
   );
@@ -1145,6 +1174,16 @@ EOF;
     '#maxlength' => 2,
     '#default_value' => isset($Reseller->_settings->number_of_sites) ? $Reseller->_settings->number_of_sites : '',
     '#attributes' => array('class' => array('sg-element')),
+  );
+   $form['general']['suspend_period']['value'] = array(
+    '#type' => 'select',
+    '#title' => t('Suspend period'),
+    '#default_value' => isset($Reseller->_settings->suspend_period) ? $Reseller->_settings->suspend_period : '',
+    '#required' => TRUE,
+    '#maxlength' => 1,
+    '#options' => drupal_map_assoc(range(0, 7)),
+    '#empty_value' => '',
+    '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
   );
   //Stretto Provisioning
   //Loading Stretto Provisioning
@@ -1228,6 +1267,7 @@ EOF;
       '#default_value' => implode(PHP_EOL, $dv),
       '#required' => FALSE,
       '#rows' => 50,
+      '#attributes' => array('class' => array('sg-element')),
     );
   }
   else {
@@ -1250,6 +1290,7 @@ EOF;
       '#default_value' => $dv,
       '#required' => FALSE,
       '#rows' => 50,
+      '#attributes' => array('class' => array('sg-element')),
     );
   }
   

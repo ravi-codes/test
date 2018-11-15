@@ -1,0 +1,47 @@
+<?php
+function hpbx_schema() {
+    $schema['hpbx_help'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'Relations between hpbx url and node id',
+        'fields' => array(
+          'nuid' => array(
+              'description' => 'The primary identifier.',
+              'type' => 'serial',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+          ),
+          'reseller_id' => array(
+              'description' => 'The reseller id',
+              'type' => 'int',
+              'unsigned' => TRUE,
+              'not null' => TRUE,
+              'default' => 0,
+          ),
+          'lang' => array(
+              'description' => 'language',
+              'type' => 'varchar',
+              'length' => 32,
+              'not null' => FALSE,
+          ),
+          'hpbx_url' => array(
+            'description' => 'The subject url',
+            'type' => 'varchar',
+            'length' => 255,
+            'not null' => TRUE,
+            'default' => '',
+          ),
+          'help_url' => array(
+              'description' => 'The node id',
+              'type' => 'varchar',
+              'length' => 255,
+              'not null' => TRUE,
+              'default' => '',
+          ),
+        ),
+        'unique keys' => array(
+            'res_lang_url' => array('reseller_id', 'lang', 'hpbx_url'),
+        ),
+        'primary key' => array('nuid'),
+    );
+    return $schema;
+}

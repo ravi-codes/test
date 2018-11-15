@@ -87,7 +87,13 @@
 
 
   $('document').ready(function() {
-  	
+     $('[id$=length-data]').on('change', function () { $(this).trigger('liszt:updated');console.log($(this).val());});
+	 
+	  if($('#edit-table-alias-number-value').find('option:selected').text()=='None'){
+    	  $('#caller_line_identification').show();
+      }else{
+    	  $('#caller_line_identification').hide();
+      }
    //This will toggling the QR Code on "For Your Mobile" section.
    $("div.qr-toggle").click(function(){
      $(this).toggleClass('qr-show');
@@ -359,43 +365,191 @@
     $(document).on("edit-subscriber-general-number-change", function(event, element) {
       
       var extension_from_did = $(element).data('derive-extension-from-did');
+      var allow_subscribers_without_did = $(element).data('allow-subscribers-without-did');
+      var extension_id = $(element).data('extension-id');
+      var extension_value= $(element).data('extension-value');
+      var form_id = $(element).data('form-id');
+      
+      if($(element).find('option:selected').text()=='None' && (form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form')){
+    	  $('#caller_line_identification').show();
+      }else if($(element).find('option:selected').text()!='None' && (form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form')){
+    	  $('#caller_line_identification').hide();
+      }
       
       if (extension_from_did) {
         
-        var alias_number = $(element).find('option:selected').text();
+        var alias_number = parseInt($(element).find('option:selected').text());
         
         if ($.isNumeric(alias_number)) {
+          if(form_id=='hpbx_subscriber_edit_form'){
+	          var defaultVal = $("select#edit-general-settings-cli-value option[value='default']").text();
+	          if(defaultVal==''){
+	        	  $("#edit-general-settings-cli-value").append('<option value="default">Own Number</option>');
+	        	  $('#edit-general-settings-cli-value')
+	                .trigger('liszt:updated');
+	          }
+          }
+          if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form'){
+	          var defaultVal = $("select#edit-table-cli-value option[value='default']").text();
+	          if(defaultVal==''){
+	        	  $("#edit-table-cli-value").append('<option value="default">Own Number</option>');
+	        	  $('#edit-table-cli-value')
+	                .addClass('sg-disabled')
+	                .prop('disabled', true)
+	                .trigger('liszt:updated');
+	          }
+          }
+          if(form_id=='hpbx_wizard_employee_form'){
+	          var defaultVal = $("select#edit-subscriber-cli option[value='default']").text();
+	          if(defaultVal==''){
+	        	  $("#edit-subscriber-cli").append('<option value="default">Own Number</option>');
+                $('#edit-subscriber-cli')
+	                .trigger('liszt:updated');
+	          }
+          }
           var json = $('#hpbx-numberranges').data('json').replace(/'/g, "\"");
           var numberranges = $.parseJSON(json);
           var extension_prefix = '';
           
           $(numberranges).each(function(idx, range) {
-           
-            var start = range.area + range.start; 
-            var end = parseInt(start) + range.length - 1;
             
-            if(alias_number.length > start.length){
-			  alias_number = alias_number.substring(alias_number.length-start.length);
-			}
-           
-            if (alias_number >= start && alias_number <= end) {              
-              if (range.prefix.length) {
-                extension_prefix = range.prefix;
-              }
+            var start = parseInt(range.area + range.start);
+            var end = start + range.length - 1;
+            if (alias_number >= start && alias_number <= end) {
+            	if(range.prefix){ 
+	              if (range.prefix.length) {
+	                extension_prefix = range.prefix;
+	              }
+	            }
               return false;
             }
           });
-  
+
           var extension_length = $(element).data('extension-length');
           var extension_suffix_length = extension_length - extension_prefix.length;
           var extension_id = $(element).data('extension-id');
           var extension = extension_prefix + $(element).find('option:selected').text().slice(extension_suffix_length * -1);
-
+          if(allow_subscribers_without_did){
+        	  $(extension_id).attr("readonly", false);
+        	  $(extension_id).removeClass().addClass('sg-element form-text');
+          }
           $(extension_id).val(extension);
         }
-        else {
-          $(extension_id).val('');
+        else if ($(element).find('option:selected').text()=='None'){
+        	if(form_id=='hpbx_subscriber_edit_form'){
+	        	$("select#edit-general-settings-cli-value option[value='default']").remove();
+	        	$('#edit-general-settings-cli-value')
+                .trigger('liszt:updated');
+        	}
+        	if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form'){
+	        	$("select#edit-table-cli-value option[value='default']").remove();
+	        	$('#edit-table-cli-value')
+                .removeClass('sg-disabled')
+                .prop('disabled', false)
+                .trigger('liszt:updated');
+        	}
+        	if(form_id=='hpbx_wizard_employee_form'){
+	        	$("select#edit-subscriber-cli option[value='default']").remove();
+	        	$('#edit-subscriber-cli')
+                .removeClass('sg-disabled')
+                .prop('disabled', false)
+                .trigger('liszt:updated');
+        	}
+        	$(extension_id).attr("readonly", false);
+        	$(extension_id).removeClass().addClass('sg-element form-text');
+        	if(extension_value){
+        		$(extension_id).val(extension_value);
+        	}
+        }else{
+        	if($(element).find('option:selected').text()=='-Choose Number-'){
+        		if(allow_subscribers_without_did){
+        			$(extension_id).removeClass().addClass('sg-element form-text');
+        		}else{
+        			$(extension_id).attr("readonly", true);
+        		}
+        	}
+        	if(extension_value){
+        		$(extension_id).val(extension_value);
+        	}else{
+        		$(extension_id).val('');
+        	}
+			if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form'){
+				$('#edit-table-cli-value')
+				.addClass('sg-disabled')
+				.prop('disabled', true)
+				.trigger('liszt:updated');
+			}
         }
+      }else if(allow_subscribers_without_did){
+    	  var alias_number = parseInt($(element).find('option:selected').text());
+    	  if ($.isNumeric(alias_number)) {
+              if(form_id=='hpbx_subscriber_edit_form'){
+    	          var defaultVal = $("select#edit-general-settings-cli-value option[value='default']").text();
+    	          if(defaultVal==''){
+    	        	  $("#edit-general-settings-cli-value").append('<option value="default">Own Number</option>');
+    	        	  $('#edit-general-settings-cli-value')
+    	                .trigger('liszt:updated');
+    	          }
+              }
+              if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form'){
+    	          var defaultVal = $("select#edit-table-cli-value option[value='default']").text();
+    	          if(defaultVal==''){
+    	        	  $("#edit-table-cli-value").append('<option value="default">Own Number</option>');
+    	        	  $('#edit-table-cli-value')
+    	                .addClass('sg-disabled')
+    	                .prop('disabled', true)
+    	                .trigger('liszt:updated');
+    	          }
+              }
+              if(form_id=='hpbx_wizard_employee_form'){
+    	          var defaultVal = $("select#edit-subscriber-cli option[value='default']").text();
+    	          if(defaultVal==''){
+    	        	  $("#edit-subscriber-cli").append('<option value="default">Own Number</option>');
+    	          }
+              }
+              $(extension_id).attr("readonly", false);
+              $(extension_id).removeClass().addClass('sg-element form-text');
+              if(extension_value){
+            		$(extension_id).val(extension_value);
+              }
+            }
+            else if ($(element).find('option:selected').text()=='None'){
+            	if(form_id=='hpbx_subscriber_edit_form'){
+    	        	$("select#edit-general-settings-cli-value option[value='default']").remove();
+    	        	$('#edit-general-settings-cli-value')
+	                .trigger('liszt:updated');
+            	}
+            	if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' || form_id=='hpbx_conference_edit_form'){
+    	        	$("select#edit-table-cli-value option[value='default']").remove();
+    	        	$('#edit-table-cli-value')
+                    .removeClass('sg-disabled')
+                    .prop('disabled', false)
+                    .trigger('liszt:updated');
+            	}
+            	if(form_id=='hpbx_wizard_employee_form'){
+    	        	$("select#edit-subscriber-cli option[value='default']").remove();
+    	        	$('#edit-subscriber-cli')
+                    .removeClass('sg-disabled')
+                    .prop('disabled', false)
+                    .trigger('liszt:updated');
+            	}
+            	$(extension_id).attr("readonly", false);
+            	$(extension_id).removeClass().addClass('sg-element form-text');
+            	if(extension_value){
+            		$(extension_id).val(extension_value);
+            	}
+                }else{
+            	if($(element).find('option:selected').text()=='-Choose Number-'){
+            		$(extension_id).removeClass().addClass('sg-element form-text');
+            	}
+				$(extension_id).val('');
+    	            if(form_id=='hpbx_autoattendant_edit_form' || form_id=='hpbx_huntgroup_edit_form' ||form_id=='hpbx_conference_edit_form'){
+    	  	          	$('#edit-table-cli-value')
+    	  	            .addClass('sg-disabled')
+    	  	            .prop('disabled', true)
+    	  	            .trigger('liszt:updated');
+    	            }
+            }
       }
     });
     

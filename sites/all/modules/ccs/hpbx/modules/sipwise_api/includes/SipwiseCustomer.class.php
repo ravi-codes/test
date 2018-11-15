@@ -23,6 +23,11 @@ class SipwiseCustomer extends SipwiseEntity {
    */
  // Modified for #9759 - PE DEV: Customer overview - Improved caching of customer information  
   static function deleted_allowed_on_date($date) {
+
+    global $ActiveReseller;
+    $suspend_period = $ActiveReseller->_settings->suspend_period;
+    define('HPBX_CUSTOMER_SUSPENDED_OFFSET_DAYS', '-'.$suspend_period.' days');
+
     if (!isset($date)) {
       return HPBX_CUSTOMER_DELETE_NOT_ALLOWED;
     }

@@ -41843,6 +41843,18 @@ var hpbxBulkUploadRemoveRowAnimationDuration = 300;
             }
 
             if (!$input.hasClass('hpbx-disabled')) {
+<<<<<<< HEAD
+=======
+                
+                if ($input.hasClass('hpbx-bulk-upload-field-extension')) {
+                    var extension_length = $input.data('regex').charAt(4);
+                    var inputValue = $input.val();
+                    if(inputValue.length!=0 && inputValue !='0' && inputValue.length < extension_length){ 
+                      $input.val(processExtensionLength(inputValue, extension_length));
+                    } 
+                }
+                 
+>>>>>>> branch1
                 processRegularExpressions($input);
     
                 if ($input.hasClass('hpbx-bulk-upload-field-email')) {
@@ -41865,6 +41877,13 @@ var hpbxBulkUploadRemoveRowAnimationDuration = 300;
             initStyling($input.closest('tr'));
         }
     }
+<<<<<<< HEAD
+=======
+    function processExtensionLength(inputVal, extension_length){
+      var inputVal = inputVal.toString();
+      return  inputVal.length < extension_length? processExtensionLength("0"+inputVal,extension_length) :inputVal;     
+    }
+>>>>>>> branch1
 
     function textfieldAutoCompleteClickHandler(e) {
         $(this).trigger('blur', [true, false]);
@@ -41937,7 +41956,17 @@ var hpbxBulkUploadRemoveRowAnimationDuration = 300;
             var $tempInput = $(this);
 
             if (!$tempInput.prop('disabled') && $tempInput.val() == $input.val()) {
+<<<<<<< HEAD
                 identicalFields.push($tempInput);
+=======
+				        if(selector == '.hpbx-bulk-upload-field-number'){
+        					if($input.val() != 'None'){	
+        						identicalFields.push($tempInput);
+        					}
+        				}else{
+        					identicalFields.push($tempInput);
+        				}
+>>>>>>> branch1
             }
         });
 

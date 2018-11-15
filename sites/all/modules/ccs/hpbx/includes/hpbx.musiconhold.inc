@@ -65,7 +65,11 @@ function hpbx_musiconhold_edit_form($form, $form_state) {
   
   if (!empty($sf->filename)) {
     $markup .= '
+<<<<<<< HEAD
                 <div class="col-xs-12 hpbx-tab-audio-container hpbx-audio-container hpbx-audio-container-singular" data-audio-url="/hpbx/audiorecording/'. $SoundFile->id .'/play" data-audio-id="'.$SoundFile->id.'">
+=======
+                <div class="col-xs-12 hpbx-tab-audio-container hpbx-audio-container hpbx-audio-container-singular" data-audio-url="/hpbx/audiorecording/'. $sf->id .'/play" data-audio-id="'.$SoundFile->id.'">
+>>>>>>> branch1
                   <div class="hpbx-audio-background-active"></div>
                   <div class="hpbx-audio-progress-bar"></div>
                   <div class="hpbx-audio-content">

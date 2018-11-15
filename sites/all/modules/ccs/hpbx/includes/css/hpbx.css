@@ -550,6 +550,7 @@ body.page-hpbx-affiliate-customers .hpbx-table-caption-link {
 
 @media screen and (min-width: 750px) {
 	
+<<<<<<< HEAD
   #hpbx-customer-search-form {
     display: block; 
   }
@@ -557,6 +558,11 @@ body.page-hpbx-affiliate-customers .hpbx-table-caption-link {
 }
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   body.page-hpbx-download .hpbx-main-content .qr-toggle.qr-show img {margin-left: -3%;}  
+=======
+	#hpbx-customer-search-form {
+  	display: block; 
+	}
+>>>>>>> branch1
 }
 
 
@@ -568,5 +574,8 @@ body.page-hpbx-affiliate-customers .hpbx-table-caption-link {
 .hpbx-bundle-settings tr th:nth-child(1) {width: 93px;}
 .hpbx-bundle-settings tr th:nth-child(2) {width: 300px;}
 .hpbx-bundle-settings tr th:nth-child(3) {width: 300px;}
+<<<<<<< HEAD
 body.page-hpbx-download .hpbx-main-content div.qr-show {height: auto;}
 
+=======
+>>>>>>> branch1

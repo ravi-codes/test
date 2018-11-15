@@ -376,6 +376,9 @@ function ccs_preprocess_htmlmail(&$variables) {
     case 'hpbx_theme_virgin':
       $variables['theme_hook_suggestions'][] = 'htmlmail_virgin';
       break;
+    case 'hpbx_theme_vtr':
+      $variables['theme_hook_suggestions'][] = 'htmlmail_vtr';
+      break;
     case 'hpbx_theme_ziggo':
     case 'ziggo':
       $variables['theme_hook_suggestions'][] = 'htmlmail_ziggo';

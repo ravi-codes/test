@@ -18,6 +18,7 @@ function hpbx_wizard_subscriber_submit() {
     'pbx_extension' => array('value' => check_plain($_POST['subscriber']['pbx_extension'])), 
     'site' => array('value' => $_POST['subscriber']['site']),
     'cli' => array('value' => check_plain($_POST['subscriber']['cli'])), 
+    'clir' => array('value' => (int)$_POST['subscriber']['clir']), 
     'profile_id' => array('value' => (int)$_POST['subscriber']['profile_id']), 
     'ncos' => array('value' => (int)$_POST['subscriber']['ncos']), 
     'block_in_clir' => array('value' => (int)$_POST['subscriber']['block_in_clir']), 
@@ -33,9 +34,11 @@ function hpbx_wizard_subscriber_submit() {
   $subscriber_form_state['values']['no_redirect'] = TRUE;
 
   // Verify if required fields are empty.
-  if (empty($subscriber_form_state['values']['general']['settings']['alias_number']['value'])) {
-    form_set_error('general][settings][alias_number', t('!name field is required.', array('!name' =>  t('Number'))));
-  }
+  if(!isset($Customer->_settings->allow_subscribers_without_did) && !$Customer->_settings->allow_subscribers_without_did){
+    if (empty($subscriber_form_state['values']['general']['settings']['alias_number']['value'])) {
+      form_set_error('general][settings][alias_number', t('!name field is required.', array('!name' =>  t('Number'))));
+    }
+ }
   if (isset($Customer->_settings->multi_site) && !empty($Customer->_settings->multi_site)) {
     if (empty($subscriber_form_state['values']['general']['settings']['site']['value'])) {
       form_set_error('general][settings][site', t('!name field is required.', array('!name' =>  t('Site'))));
@@ -50,15 +53,8 @@ function hpbx_wizard_subscriber_submit() {
   if (empty($subscriber_form_state['values']['general']['settings']['language']['value'])) {
     form_set_error('general][settings][language', t('!name field is required.', array('!name' =>  t('Language of Voicemail announcements'))));
   }
-  $subscriber_options_cli = hpbx_get_subscriber_options($Customer, NULL, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+  //$subscriber_options_cli = hpbx_get_subscriber_options_subscriber_create($Customer, NULL, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
   
-  // Prepend the list with some default settings.
-  $subscriber_options_cli = array_merge(array('default' => t('Own number'), 'clir' =>  t('Restricted')), $subscriber_options_cli);
-  
-  if (!in_array($subscriber_form_state['values']['general']['settings']['cli']['value'], array_keys($subscriber_options_cli))) {
-    form_set_error('general][settings][cli', t('!name not allowed value.', array('!name' =>  t('Caller Line Identification'))));
-  }
-
   // Validate the form.
   hpbx_subscriber_edit_form_validate($subscriber_form, $subscriber_form_state);
   
@@ -442,7 +438,25 @@ function hpbx_wizard_employee_form_step2($form, &$form_state) {
   );
 
   $form['content']['subscriber'] = array('#tree' => TRUE);
-
+  if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+  	$options=$Customer->get_free_numbers();
+  	$options[0] = 'None';
+  	foreach(ksort($options) as $key=>$value){
+		$options[]=$value;
+	}
+  	// Get free numbers from the pilot alias_numbers list.
+	  $form['content']['subscriber']['alias_number'] = array(
+	    '#type' => 'select',
+	    '#title' => t('Number'),
+	    '#theme_wrappers' => array('hpbx_wizard_form_element'),
+	    '#options' => $options,
+	    '#attributes' => array(
+	      'class' => array('chzn-select', 'sg-element'),
+	      'data-search-text' => t('Narrow results'),
+	    ),
+	    '#empty_option' => t('Choose number')
+	  );
+  }else{
   // Get free numbers from the pilot alias_numbers list.
   $form['content']['subscriber']['alias_number'] = array(
     '#type' => 'select',
@@ -455,7 +469,7 @@ function hpbx_wizard_employee_form_step2($form, &$form_state) {
     ),
     '#empty_option' => t('Choose number')
   );
-
+  }
   $form['content']['subscriber']['pbx_extension'] = array(
     '#type' => 'textfield',
     '#theme_wrappers' => array('hpbx_wizard_form_element'),
@@ -486,12 +500,14 @@ function hpbx_wizard_employee_form_step2($form, &$form_state) {
     );
   }
 
-  if ($Customer->_settings->derive_extension_from_did) {
+  if ($Customer->_settings->derive_extension_from_did || $Customer->_settings->allow_subscribers_without_did) {
     $form['content']['subscriber']['alias_number']['#attributes'] += array(
       'data-custom-change-event' => 'edit-subscriber-general-number-change',
       'data-derive-extension-from-did' => (int)$Customer->_settings->derive_extension_from_did,
+      'data-allow-subscribers-without-did' => (int)$Customer->_settings->allow_subscribers_without_did,
       'data-extension-length' => (int)$Customer->_settings->extension_length,
       'data-extension-id' => '#edit-subscriber-pbx-extension',
+      'data-form-id' => $form_state['build_info']['form_id']
     );
   
     $form['content']['subscriber']['pbx_extension']['#attributes']['readonly'] = 'readonly';
@@ -510,10 +526,20 @@ function hpbx_wizard_employee_form_step2($form, &$form_state) {
   }
 
   // Get list of subscribers.
-  $subscriber_options = hpbx_get_subscriber_options($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
   
-  // Prepend the list with some default settings.
+  if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+   // Get list of subscribers.
+  $subscriber_options = hpbx_get_subscriber_options_subscriber_create($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+    	if(isset($Subscriber) && !empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN))){
+    		$subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+    	}else if(isset($Customer->_settings->numberranges) && !empty($Customer->_settings->numberranges)){
+    		$subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+    	}
+  }else{
+    $subscriber_options = hpbx_get_subscriber_options($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+    // Prepend the list with some default settings.
   $subscriber_options = array_merge(array('default' => t('Own number'), 'clir' =>  t('Restricted')), $subscriber_options);
+  }
   
   $form['content']['subscriber']['cli'] = array(
     '#type' => 'select',
@@ -525,7 +551,15 @@ function hpbx_wizard_employee_form_step2($form, &$form_state) {
     ),
     '#empty_option' => t('Choose Caller Line Identification')
   );
-
+  //Restrict CLI
+  if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+	  $form['content']['subscriber']['clir'] = array(
+	    '#type' => 'checkbox',	    
+	    '#access' => user_access('hpbx edit subscriber'),
+	    '#theme_wrappers' => array('hpbx_wizard_form_element'),
+	    '#caption' => t('Restrict CLI')
+	  );
+  }
   // Get profiles.
   $options = array();
   

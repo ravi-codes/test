@@ -1,6 +1,7 @@
 <?php
 
 function hpbx_download_page() {
+<<<<<<< HEAD
   global $ActiveReseller;
 
   // Temporary set the reseller_id.
@@ -14,6 +15,9 @@ function hpbx_download_page() {
   $google_ps_url = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' . $Reseller->_settings->playstore_url;
   $apple_ps_url = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=' . $Reseller->_settings->apple_playstore_url;
   
+=======
+
+>>>>>>> branch1
   $output = '<h4 class="hpbx-download-category-title">'.t("For your desktop").'</h4>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-lg-4">
@@ -34,7 +38,10 @@ function hpbx_download_page() {
                                 </div>
                             </a>
                         </div>
+<<<<<<< HEAD
                         <!--
+=======
+>>>>>>> branch1
                         <div class="col-xs-12 col-sm-6 col-lg-4">
                             <a class="hpbx-download-item" href="download/software/linux">
                                 <div class="hpbx-download-item-icon LGI-iconubuntu"></div>
@@ -44,6 +51,7 @@ function hpbx_download_page() {
                                 </div>
                             </a>
                         </div>
+<<<<<<< HEAD
                         -->
                     </div>'; 
                   
@@ -83,6 +91,9 @@ function hpbx_download_page() {
  if (isset($Reseller->_settings->playstore_url) || isset($Reseller->_settings->apple_playstore_url)) {
    $output .= '</div>';
  }              
+=======
+                    </div>';                  
+>>>>>>> branch1
 
   return $output;
 }

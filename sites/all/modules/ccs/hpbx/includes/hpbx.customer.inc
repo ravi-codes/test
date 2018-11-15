@@ -578,8 +578,24 @@ function hpbx_customer_edit_form($form, $form_state, $customer_id = NULL, $resel
         )
       ),
       '#attributes' => array('class' => array('sg-element'), 'placeholder' => t('Pilot number')),
-    );
-  }
+		);
+	}
+	
+	$form['general']['table']['allow_subscribers_without_did']['value'] = array(
+      '#title' => t('Allow Subscribers Without DID'),
+      '#type' => 'select',
+      '#options' => array(
+	    0 => t('No'),
+	    1 => t('Yes'),
+	  ),      
+      '#required' => TRUE,
+      '#default_value' => isset($Customer->_settings->allow_subscribers_without_did) ? (int)$Customer->_settings->allow_subscribers_without_did : 0,
+      '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
+	);
+	
+	if (isset($Customer->id) && count($Customer->get_subscribers(FALSE, FALSE, TRUE, TRUE)) > 0) {
+	  $form['general']['table']['allow_subscribers_without_did']['value']['#disabled'] = TRUE;	
+	}
 
   if (!empty($ActiveReseller->_settings->enable_restricted_access)) {
     $form['general']['table']['allowed_ips']['value'] = array(
@@ -1075,6 +1091,60 @@ function hpbx_customer_parse_bundle_settings($bundle_settings) {
 }
 
 /**
+ * Parse bundle sttings for customer create through web service
+ */
+
+function hpbx_customer_parse_bundle_settings_service($bundle_settings) {
+	global $ActiveReseller;
+	$profileList=array();
+	$subscriberProfiles= sipwise_api_get_all('subscriberprofiles',array('reseller_id' => $resellerId));
+	$profileSetName = $bundle_settings['profileSetName'];
+	$profileSetLimitType = $bundle_settings['profileSetLimitType'];
+	$profileSetLimitAmount = $bundle_settings['profileSetLimitAmount'];
+	$profileLimits = $bundle_settings['profileLimits'];	
+	
+	$settings['bundle_settings'] = array();
+	foreach (sipwise_api_get_all('subscriberprofilesets') as $SubscriberProfileSet) {
+		if($SubscriberProfileSet->name == $profileSetName){
+			$settings['bundle_settings'][$SubscriberProfileSet->id]['value'] = $profileSetLimitType;
+			switch (strtolower($settings['bundle_settings'][$SubscriberProfileSet->id]['value'])) {
+				case 'limit total':
+					$settings['bundle_settings'][$SubscriberProfileSet->id]['value'] = 'limit_total';
+					$settings['bundle_settings'][$SubscriberProfileSet->id]['total_amount'] = (int) $profileSetLimitAmount;
+					break;
+				case 'limit per profile':
+					$settings['bundle_settings'][$SubscriberProfileSet->id]['value'] = 'limit_per_profile';
+					$settings['bundle_settings'][$SubscriberProfileSet->id]['profiles'] = array();
+					foreach($profileLimits as $profileDetails){
+						$profile = $profileDetails['profile'];
+						$profileLimitType = $profileDetails['profileLimitType'];
+						$profileLimitAmount = $profileDetails['profileLimitAmount'];
+						foreach($subscriberProfiles as $profileInfo){
+							if($profile == $profileInfo->name){
+								$profileId = $profileInfo->id;
+							}
+						}	
+						foreach (sipwise_api_get_all('subscriberprofiles', array('profile_set_id' => $SubscriberProfileSet->id)) as $SubscriberProfile) {
+							if ($SubscriberProfile->id == $ActiveReseller->_settings->pilot_subscriber_profile_id) continue;
+							if($profileId == $SubscriberProfile->id){
+								$settings['bundle_settings'][$SubscriberProfileSet->id]['profiles'][$SubscriberProfile->id]['value'] = strtolower($profileLimitType);
+	
+								if ($settings['bundle_settings'][$SubscriberProfileSet->id]['profiles'][$SubscriberProfile->id]['value'] == 'input') {
+									$settings['bundle_settings'][$SubscriberProfileSet->id]['profiles'][$SubscriberProfile->id]['amount'] = (int) $profileLimitAmount;
+								}
+							}
+	
+						}
+					}
+					break;
+			}
+		}
+	}
+
+	return $settings['bundle_settings'];
+}
+
+/**
  * @param string $primary_number
  * @param int $customer_id
  *
@@ -1461,6 +1531,7 @@ function hpbx_customer_edit_form_validate(&$form, &$form_state) {
   $new_ranges[] = $form_state['values']['general']['table']['pilot_number']['value'];
 
   $possible_extensions = array();
+  $extensions = hpbx_get_extensions($Customer);
   foreach ($form_state['input']['general']['numberranges']['table'] as $id => $values) {
 
     // Store the range, to verify if we have duplicates.
@@ -1608,7 +1679,11 @@ function hpbx_customer_edit_form_validate(&$form, &$form_state) {
   if (count(array_unique($possible_extensions))<count($possible_extensions)) {
     form_set_error('numberranges][table', t('Possible overlap in extensions. Please review the numberrange prefixes.'));
   }
-
+  foreach($extensions as $oldExtension){
+		if(in_array($oldExtension,$possible_extensions)){
+			form_set_error('numberranges][table', t('Possible overriding in extensions creation. Please review the numberrange.'));
+		}
+  }
   if (count(array_diff_key( $new_ranges , array_unique( $new_ranges ) ))) {
     form_set_error('numberranges][table', t('Please enter unique number ranges and/or pilot number.'));
   }
@@ -1804,11 +1879,12 @@ function hpbx_customer_edit_form_submit($form, &$form_state) {
       die("Can't find billing profile");
     }
 
-    // These settings are not supported by Sipwise API. They are stored in a special way, using some tricks.
-    $settings = array();
-    $settings['derive_extension_from_did'] = (bool) $form_state['values']['general']['table']['derive_extension_from_did']['value'];
-    $settings['extension_length'] = (int) $form_state['values']['general']['table']['extension_length']['value'];
-    $settings['profile_set_id'] = (int) $form_state['values']['general']['table']['profile_set_id']['value'];
+		// These settings are not supported by Sipwise API. They are stored in a special way, using some tricks.
+		$settings = array();
+		$settings['derive_extension_from_did'] = (bool) $form_state['values']['general']['table']['derive_extension_from_did']['value'];
+		$settings['extension_length'] = (int) $form_state['values']['general']['table']['extension_length']['value'];
+		$settings['profile_set_id'] = (int) $form_state['values']['general']['table']['profile_set_id']['value'];
+		$settings['allow_subscribers_without_did'] = (int)$form_state['values']['general']['table']['allow_subscribers_without_did']['value'];
 
     // Set Allowed IP's (already parsed in _validate()).
     if (isset($ActiveReseller->_settings->enable_restricted_access) && $ActiveReseller->_settings->enable_restricted_access &&
@@ -2060,11 +2136,13 @@ function hpbx_customer_edit_form_submit($form, &$form_state) {
 
       if (!$Subscriber->is_pilot()) {
 
-        // Set prefix based.
-        $prefix = hpbx_get_extension_prefix($Customer, $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN));
-        $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
-        $Subscriber->pbx_extension = $prefix. substr($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN), $extension_suffix_length * - 1);
-        $Subscriber->save();
+				// Set prefix based.
+				$prefix = hpbx_get_extension_prefix($Customer, $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN));
+				$extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
+				if($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN)){
+					$Subscriber->pbx_extension = $prefix. substr($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN), $extension_suffix_length * - 1);
+				}
+				$Subscriber->save();
 
         // Load the subscriberpreferences and update gpp1 and display_name.
         $SubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $Subscriber->id);
@@ -2581,6 +2659,9 @@ function hpbx_customer_delete_page($customer_id, $reseller_id = NULL) {
           drupal_access_denied();
           die();
         }
+        $query = array('customer_id' => $customer_id);
+			  $PBXDevices = sipwise_api_get_all('pbxdevices', $query, TRUE, TRUE);
+        require_once(drupal_get_path('module', 'hpbx') .'/includes/hpbx.pbxdevice.inc');
         
         // Get all subcribers based on customer id.
         foreach (sipwise_api_get_all('subscribers', array('customer_id' => $customer_id)) as $subscriber) {
@@ -2609,7 +2690,43 @@ function hpbx_customer_delete_page($customer_id, $reseller_id = NULL) {
         $Customer->delete();
         $CustomerContact = SipwiseEntity::load('customercontacts', $Customer->contact_id);
 		$CustomerContact->delete();
+    foreach ($PBXDevices as $PBXDevice) {
+      $PBXDeviceModel = hpbx_pbxdevice_get_model_on_profile($PBXDevice->profile_id);
+      if (!empty($PBXDeviceModel->bootstrap_method) && substr($PBXDeviceModel->bootstrap_method,0,strlen('redirect_')) == 'redirect_') {
+      require_once(drupal_get_path('module', 'hpbx_rps') .'/includes/rps.class.inc');
+    
+      list($f, $class) = explode('_', $PBXDeviceModel->bootstrap_method);
 
+      $class_path = drupal_get_path('module', 'hpbx_rps') .'/includes/'. strtolower($class) .'.class.inc';
+      
+      if (file_exists($class_path)) {
+        require_once($class_path);
+        $RPSDevice = new $class($PBXDevice->identifier, $PBXDevice->profile_id);
+        if($class == 'grandstream'){
+          if (!$RPSDevice->unregister()) {
+
+          // Tell us what went wrong.
+          drupal_set_message(t('Failed to un-provision the device'));
+        }
+        }else{
+        // Verify if the device is registered at Yealink RPS.
+        if ($RPSDevice->is_registered()) {
+
+          // Unregister.
+          if (!$RPSDevice->unregister()) {
+              drupal_set_message(t('Failed to un-provision the device'));
+            // Tell us what went wrong.
+           //('Failed to unregister device');
+          }
+        }
+      }
+      }
+
+      // Set message.
+      drupal_set_message(t('Device successfully deleted'));
+      
+    }
+    }
         // Set message.
         drupal_set_message(t('Customer successfully deleted'));
 
@@ -2713,4 +2830,2424 @@ function hpbx_customer_page($customer_id, $reseller_id = NULL) {
 
   // Render the form.
   return drupal_render($form);
+}
+/**
+ * Create a new hpbx customer.
+ *
+ */
+function hpbx_customer_create_service($customerDetails){
+	$resellerId=$customerDetails['resellerId'];
+	global $ActiveReseller;
+	// Temporary set the reseller_id.
+	if (!is_null($resellerId)) {
+		sipwise_api_activate_reseller($resellerId);
+	}
+	$valErrors=array();
+	$genericErrors= array();
+
+	if(isset($ActiveReseller)){
+
+		$Domain = SipwiseEntity::load('domains', $ActiveReseller->_settings->domain_id);
+		
+		//Fetch customer related information from JSON input.
+		$customerId = $customerDetails['customer']['customerId'];
+		$companyName = $customerDetails['customer']['companyName'];
+		$pilotNumber = $customerDetails['customer']['pilotNumber'];
+		$maximumTotalConcurrentCalls = $customerDetails['customer']['maximumTotalConcurrentCalls'];
+		$profileSet = $customerDetails['customer']['profileSet'];
+		$deriveExtensionFromDID = $customerDetails['customer']['deriveExtensionFromDID'];
+		$allowSubscribersWithoutDID = $customerDetails['customer']['allowSubscribersWithoutDID'];
+		$extensionLength = $customerDetails['customer']['extensionLength'];
+		$allowedIPs = $customerDetails['customer']['allowedIPs'];
+	  $multisite =  $customerDetails['customer']['multisite'];
+	  $businessPartner =  $customerDetails['customer']['businessPartner'];
+    
+	//$ActiveReseller->_settings->enable_multisite = '1';
+  // $ActiveReseller->_settings->enable_business_partners = '1';
+		if(isset($ActiveReseller->_settings->enable_multisite) && $ActiveReseller->_settings->enable_multisite && empty($multisite)){
+			$error=array('reasonCode'=>'1041','reasonDescription'=>'Please provide multisite.');
+			$genericErrors[]=$error;
+		}
+		if((user_access('hpbx view business partner customer')|| user_access('hpbx view reseller')) && isset($ActiveReseller->_settings->enable_business_partners) && !empty($ActiveReseller->_settings->enable_business_partners) && empty($businessPartner)){
+			$error=array('reasonCode'=>'1042','reasonDescription'=>'Please provide businessPartner.');
+			$genericErrors[]=$error;
+		}
+    if($ActiveReseller->_settings->enable_multisite && strtolower($customerDetails['customer']['multisite'])!='no'){
+      $error=array('reasonCode'=>'1043','reasonDescription'=>'Please enter multisite = NO.');
+			$genericErrors[]=$error;
+    }
+    if($ActiveReseller->_settings->enable_business_partners && strtolower($customerDetails['customer']['businessPartner'])!= 'none'){
+      $error=array('reasonCode'=>'1044','reasonDescription'=>'Please enter business_partner = None.');
+			$genericErrors[]=$error;
+    }
+		if(isset($allowedIPs)){
+			$bits = 32;
+			$allowedIpRange = explode(",",$allowedIPs);
+			foreach($allowedIpRange as $ipProvided){
+				if(!ip2long($ipProvided)){
+					$invalidIps[]=$ipProvided;
+				}else{
+					$ipSettings[]=$ipProvided.'/'.$bits;
+				}
+			}
+		}
+		if(isset($companyName) && $companyName!=''){
+			if(hpbx_customer_company_name_in_use($companyName,$resellerId)){
+				$error=array('reasonCode'=>'0002','reasonDescription'=>'companyName already exists');
+				$valErrors[]=$error;
+			}
+		}else{
+			$error=array('reasonCode'=>'1003','reasonDescription'=>'Please provide a company name.');
+			$genericErrors[]=$error;
+		}
+			
+		// Verify if the customer external id already exists
+		$subscriberProfileSets= sipwise_api_get_all('subscriberprofilesets',array('reseller_id' => $resellerId));		
+			
+		$customerIds=array();
+		foreach($customers as $retreiveCustomerId){
+			if($retreiveCustomerId->status=='active'){
+				$customerIds[]=$retreiveCustomerId->external_id;
+			}
+		}
+		if(sipwise_api_get_all('customers',array('reseller_id' => $resellerId,'external_id'=>$customerId,'status'=>'active'))) {
+			$error=array('reasonCode'=>'0003','reasonDescription'=>'customerId already exists within this re-seller');
+			$valErrors[]=$error;
+		}
+
+		if (isset($ActiveReseller->_settings->customer_id_length) && (!preg_match('/^[0-9]{' . $ActiveReseller->_settings->customer_id_length . '}$/', $customerId))) {
+			$error=array('reasonCode'=>'0004','reasonDescription'=>'customerId length unequal to customerIdLength configured for this Reseller');
+			$valErrors[]=$error;
+		}
+		if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && !$ActiveReseller->_settings->automatic_pilot_number_generation) {
+			if(!isset($pilotNumber) || $pilotNumber == ''){
+				$error=array('reasonCode'=>'0005','reasonDescription'=>'pilotNumber is mandatory');
+				$valErrors[]=$error;
+			}else if ($in_use_customer_id = hpbx_customer_primary_number_in_use($ActiveReseller->number_get_e164($pilotNumber),$resellerId)){
+				$error=array('reasonCode'=>'0007','reasonDescription'=>'pilotNumber not unique.');
+				$valErrors[]=$error;
+			}else if (isset($ActiveReseller->_settings->pilot_subscriber_number_min_digits) && $ActiveReseller->_settings->pilot_subscriber_number_max_digits) {
+				$pilotSubMinDigit=$ActiveReseller->_settings->pilot_subscriber_number_min_digits;
+				$pilotSubMaxDigit=$ActiveReseller->_settings->pilot_subscriber_number_max_digits;
+				$pilotNoLength=	strlen($pilotNumber);
+				if(($pilotNoLength < $pilotSubMinDigit) || ($pilotNoLength > $pilotSubMaxDigit)){
+					$error=array('reasonCode'=>'0008','reasonDescription'=>'Number of digits of the pilotNumber is not between the pilotSubscriberMinDigits and pilotSubscriberMaxDigits, configured for this Reseller');
+					$valErrors[]=$error;
+				}
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && $ActiveReseller->_settings->automatic_pilot_number_generation) {
+			if(isset($pilotNumber) && $pilotNumber!=''){
+				$error=array('reasonCode'=>'0006','reasonDescription'=>'pilotNumber is not allowed');
+				$valErrors[]=$error;
+			}
+		}
+			
+		foreach($ActiveReseller->_settings->customer_concurrent_max as $valAllowed){
+			$maxValAllowedList[]=$valAllowed;
+		}
+
+		if(!is_numeric($maximumTotalConcurrentCalls) && strtolower($maximumTotalConcurrentCalls)=='unlimited'){
+			$maximumTotalConcurrentCalls = 0;
+		}
+
+		if (isset($ActiveReseller->_settings->customer_concurrent_max)) {
+			if(!in_array($maximumTotalConcurrentCalls,$maxValAllowedList)){
+				$error=array('reasonCode'=>'0050','reasonDescription'=>'Value for maximumTotalConcurrentCalls not according to value list configured for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		$profileSetNames = array();
+		$profileSetId ='';
+		
+		if(isset($profileSet) && $profileSet != ''){
+			foreach($subscriberProfileSets as $profileSetDetails){
+				if($profileSetDetails->name == $profileSet){
+					$profileSetId = $profileSetDetails->id;
+				}
+				$profileSetNames[]=$profileSetDetails->name;
+			}
+		}
+		if(isset($profileSetId) && $profileSetId!=''){
+			$profileNames  = array();
+			$subscriberProfiles= sipwise_api_get_all('subscriberprofiles',array('profile_set_id' => $profileSetId));
+			foreach($subscriberProfiles as $subProfile){
+				$profileNames[]=$subProfile->name;
+			}
+		}
+		if (isset($profileSet) && !in_array($profileSet,$profileSetNames)){
+			$error=array('reasonCode'=>'0009','reasonDescription'=>'profileSet does not exist for this reseller');
+			$valErrors[]=$error;
+		}
+			
+		if($profileSetId == '' && (isset($profileSet) && $profileSet != '')) {
+			if(!in_array($profileSet,$profileSetNames)){
+				$error=array('reasonCode'=>'0051','reasonDescription'=>'profileSetName does not exist for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+
+		if(isset($ActiveReseller->_settings->generic_profile_set_id) && isset($profileSet)){
+			if($ActiveReseller->_settings->generic_profile_set_id == $profileSetId){
+				$error=array('reasonCode'=>'0010','reasonDescription'=>'Generic profileSet is not allowed within the `customer` tag.');
+				$valErrors[]=$error;
+			}
+		}
+
+		if (isset($ActiveReseller->_settings->enable_restricted_access) && !$ActiveReseller->_settings->enable_restricted_access) {
+			if(isset($allowedIPs) && $allowedIPs!=''){
+				$error=array('reasonCode'=>'0011','reasonDescription'=>'allowedIPs is not allowed for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->polish_emergency_routing) && $ActiveReseller->_settings->polish_emergency_routing) {
+			if(!isset($customerDetails['customerLocation']) || empty($customerDetails['customerLocation'])){
+				$error=array('reasonCode'=>'0012','reasonDescription'=>'customerLocation tag is mandatory for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->polish_emergency_routing) && !$ActiveReseller->_settings->polish_emergency_routing) {
+			if(isset($customerDetails['customerLocation']) || $customerDetails['customerLocation']!=''){
+				$error=array('reasonCode'=>'0013','reasonDescription'=>'customerLocation tag is not allowed for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->bundle_settings) && $ActiveReseller->_settings->bundle_settings) {
+			if(!isset($customerDetails['bundleSettings']) || empty($customerDetails['bundleSettings'])){
+				$error=array('reasonCode'=>'0014','reasonDescription'=>'bundleSettings are mandatory for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->bundle_settings) && !$ActiveReseller->_settings->bundle_settings) {
+			if(isset($customerDetails['bundleSettings']) || !empty($customerDetails['bundleSettings'])){
+				$error=array('reasonCode'=>'0015','reasonDescription'=>'bundleSettings are not allowed for this Reseller');
+				$valErrors[]=$error;
+			}
+		}
+			
+		if (isset($ActiveReseller->_settings->bundle_settings) && $ActiveReseller->_settings->bundle_settings) {
+			if(isset($customerDetails['bundleSettings']) && !empty($customerDetails['bundleSettings'])){
+				$profileSetLimitTypeAllowed = array("unlimited","limit total","limit per profile");
+				$profileLimitTypeAllowed = array("unlimited","none","input");
+				foreach($customerDetails['bundleSettings'] as $bundleSettings){
+					foreach($bundleSettings as $profileSets){
+						isset($profileSets['profileSetName']) ? $profileSetName = $profileSets['profileSetName'] : $profileSetName="";
+						isset($profileSets['profileSetLimitType']) ? $profileSetLimitType = $profileSets['profileSetLimitType'] : $profileSets['profileSetName']="";
+						isset($profileSets['profileSetLimitAmount'])? $profileSetLimitAmount = $profileSets['profileSetLimitAmount'] : $profileSetLimitAmount="";
+						isset($profileSets['profileLimits']) ? $profileLimits = $profileSets['profileLimits'] : $profileLimits="";						
+						
+						if (isset($profileSetLimitType) &&!in_array(strtolower($profileSetLimitType),$profileSetLimitTypeAllowed)){
+							$error=array('reasonCode'=>'1050','reasonDescription'=>'Please provide a valid value for profile set limit type.');
+							$genericErrors[]=$error;
+						}
+						if(isset($profileLimits) && !empty($profileLimits)){
+							foreach($profileLimits as $profileDetails){
+								isset($profileDetails['profile']) ? $profile = $profileDetails['profile'] : $profile="";
+								isset($profileDetails['profileLimitType']) ? $profileLimitType = $profileDetails['profileLimitType']:$profileLimitType="";
+								isset($profileDetails['profileLimitAmount']) ? $profileLimitAmount = $profileDetails['profileLimitAmount']:$profileLimitAmount="";
+								
+								if (isset($profileLimitType) &&!in_array(strtolower($profileLimitType),$profileLimitTypeAllowed)){
+									$error=array('reasonCode'=>'1051','reasonDescription'=>'Please provide a valid value for profile limit type.');
+									$genericErrors[]=$error;
+								}
+							
+								if(strtolower($profileLimitType)=='unlimited' || strtolower($profileLimitType)=='none'){
+									if(isset($profileLimitAmount) && $profileLimitAmount!=''){
+										$error=array('reasonCode'=>'0021','reasonDescription'=>'If profileLimits.profileLimitType = Unlimited OR None then profileLimitAmount is not allowed');
+										$valErrors[]=$error;
+									}
+								}
+								
+								if(strtolower($profileLimitType)=='input'){
+									if(!isset($profileLimitAmount) || $profileLimitAmount==''){
+										$error=array('reasonCode'=>'0022','reasonDescription'=>'If profileLimits.profileLimitType = Input then profileLimitAmount is mandatory');
+										$valErrors[]=$error;
+									}
+								}
+								if(isset($profileSetName) && $profileSetName!='' && !in_array($profileSetName,$profileSetNames)){
+									$error=array('reasonCode'=>'0051','reasonDescription'=>'profileSetName does not exist for this Reseller');
+									$valErrors[]=$error;
+								}
+								
+							   foreach($subscriberProfileSets as $profileSetDetails){
+									if($profileSetDetails->name == $profileSetName){
+										$profileIdSet = $profileSetDetails->id;
+									}
+								}
+								
+							  	if(isset($profileIdSet) && $profileIdSet!=''){
+									$checkProfileNames  = array();
+									$subscriberProfiles= sipwise_api_get_all('subscriberprofiles');
+									foreach($subscriberProfiles as $subProfile){
+										$checkProfileNames[]=$subProfile->name;
+									}
+								}
+								
+								if(isset($profile) && $profile!='' && !in_array($profile,$checkProfileNames)){
+									$error=array('reasonCode'=>'0052','reasonDescription'=>'profile does not exist for this Reseller.');
+									$valErrors[]=$error;
+								}
+								
+								if(isset($profileIdSet)){
+									$subscriberProfilesWithinSub = sipwise_api_get_all('subscriberprofiles',array('profile_set_id' => $profileIdSet));
+									$profileNamesWithinSub = array();
+									foreach($subscriberProfilesWithinSub as $subProfile){
+										$profileNamesWithinSub[]=$subProfile->name;
+									}
+									if(isset($profile) && $profile!='' && !in_array($profile,$profileNamesWithinSub)){
+										$error=array('reasonCode'=>'0053','reasonDescription'=>'profile does not belong to the Subscriber Profile Set.');
+										$valErrors[]=$error;
+									}
+								}
+							}
+						}
+
+						if(isset($profileSetLimitType) && $profileSetLimitType!=''){
+							if(strtolower($profileSetLimitType) == 'unlimited' && ($profileSetLimitAmount!='' || ($profileLimits!=''))){
+								$error=array('reasonCode'=>'0016','reasonDescription'=>'If `profileSetLimitType` = Unlimited then the following tags are not allowed: profileSetLimitAmount and profileLimits');
+								$valErrors[]=$error;
+							}else if(strtolower($profileSetLimitType) == 'limit total'){
+								if(!isset($profileSetLimitAmount) || $profileSetLimitAmount==''){
+									$error=array('reasonCode'=>'0017','reasonDescription'=>'If `profileSetLimitType` = Limit total then profileSetLimitAmount is mandatory');
+									$valErrors[]=$error;
+								}
+								if(isset($profileLimits) && !empty($profileLimits)){
+									$error=array('reasonCode'=>'0018','reasonDescription'=>'If `profileSetLimitType` = Limit total then the following tags are not allowed: profileLimits');
+									$valErrors[]=$error;
+								}
+							}else if (strtolower($profileSetLimitType) == 'limit per profile'){
+								if(isset($profileSetLimitAmount) && $profileSetLimitAmount!=''){
+									$error=array('reasonCode'=>'0019','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then profileSetLimitAmount is not allowed');
+									$valErrors[]=$error;
+								}
+								if(isset($profileLimits) && !empty($profileLimits)){
+									if($profile=='' || $profileLimitType==''){
+										$error=array('reasonCode'=>'0020','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then the following tags are mandatory:profileLimits.profile, profileLimits.profileLimitType');
+										$valErrors[]=$error;
+									}
+								}else{
+									$error=array('reasonCode'=>'0020','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then the following tags are mandatory:profileLimits.profile, profileLimits.profileLimitType');
+									$valErrors[]=$error;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		$settings = array();
+		$settings['profile_set_id']= $profileSetId;
+		strtolower($deriveExtensionFromDID)=='yes' ? $settings['derive_extension_from_did']=1 :$settings['derive_extension_from_did']= 0;
+		strtolower($allowSubscribersWithoutDID)=='yes' ? $settings['allow_subscribers_without_did']=1 :$settings['allow_subscribers_without_did']= 0;
+		$settings['extension_length']= (int) $extensionLength;
+
+    // multisite
+    if(isset($ActiveReseller->_settings->enable_multisite) && $ActiveReseller->_settings->enable_multisite) {
+      if(strtolower($multisite)=='no'){
+      $settings['multi_site'] = '';
+      }
+   }
+   
+		if(empty($invalidIps)){
+			$settings['allowed_ips']=$ipSettings;
+		}else{
+			$ipInValid=implode(",",$invalidIps);
+			$error=array('reasonCode'=>'1004','reasonDescription'=>'The followings ip`s '.$ipInValid.' are in invalid state');
+			$genericErrors[]=$error;
+		}
+
+		//Fetch customer location information from JSON input.
+		$settings['township']=$customerDetails['customerLocation']['township'];
+		$settings['region']=$customerDetails['customerLocation']['region'];
+		$settings['city']=$customerDetails['customerLocation']['city'];
+		$settings['z_gm']=$customerDetails['customerLocation']['zgm'];
+			
+
+		$Customer = SipwiseEntity::create('customers');
+		$Customer->type = 'pbxaccount';
+		$Customer->status = 'active';
+		$Customer->external_id = $customerId;
+			
+		if ($BillingProfiles = sipwise_api_get_all('billingprofiles', array('reseller_id' => $ActiveReseller->id))) {
+			$BillingProfile = current($BillingProfiles);
+			$Customer->billing_profile_id = $BillingProfile->id;
+		}
+		else {
+			$error=array('reasonCode'=>'1005','reasonDescription'=>'Billing profile for the resellerId '.$ActiveReseller->id. ' cannot be found');
+			$genericErrors[]=$error;
+		}
+
+		// Bundle settings.
+		if (!empty($ActiveReseller->_settings->bundle_settings) && isset($customerDetails['bundleSettings'])) {
+			foreach($customerDetails['bundleSettings'] as $bundleSettings)
+			{
+				foreach($bundleSettings as $profileSets)
+				{
+				 $parsedBundleSettings = hpbx_customer_parse_bundle_settings_service($profileSets);
+				 foreach($parsedBundleSettings as $key=>$value){
+				 	$settings['bundle_settings'][$key]=$value;
+				 }
+				}
+			}
+		}
+
+		//Create customer in sipwise based on the settings and paraments set against the customer object.
+		$Customer->_settings = (object)$settings;
+		$Customer->save();
+
+		// Load the existing (or by sipwise api created when customer was saved) customer contact.
+		$CustomerContact = SipwiseEntity::load('customercontacts', $Customer->contact_id);
+		$CustomerContact->reseller_id = $ActiveReseller->id;
+		// Save company name.
+		if(isset($companyName)){
+			$CustomerContact->company = $companyName;
+		}
+    
+    //bp_name 
+    if(isset($ActiveReseller->_settings->enable_business_partners) && !empty($ActiveReseller->_settings->enable_business_partners)){
+      if(strtolower($business_partner)=='none'){
+        $CustomerContact->gpp9 = '';
+        hpbx_reseller_clear_cache($ActiveReseller->id, TRUE);
+      }
+    }
+
+		//Fetch customer administration information.
+		$firstName=$customerDetails['customerAdministrator']['firstName'];
+		$lastName=$customerDetails['customerAdministrator']['lastName'];
+		$email=$customerDetails['customerAdministrator']['email'];
+			
+		// Check valid customer administrator first name.
+		if(!isset($firstName) && $firstName == ''){
+			$error=array('reasonCode'=>'1006','reasonDescription'=>'Please provide a first name to create customer administrator.');
+			$genericErrors[]=$error;
+		}
+
+		// Check valid customer administrator last name.
+		if(!isset($lastName) && $lastName == ''){
+			$error=array('reasonCode'=>'1007','reasonDescription'=>'Please provide a last name to create customer administrator.');
+			$genericErrors[]=$error;
+		}
+
+		// Check valid e-mail address.
+		if(isset($email) && filter_var($email, FILTER_VALIDATE_EMAIL)){
+			if(user_load_by_mail(trim($email))){
+				$error=array('reasonCode'=>'0023','reasonDescription'=>'Email Address already exists for the HPBX service');
+				$valErrors[]=$error;
+			}
+		}else{
+			$error=array('reasonCode'=>'1008','reasonDescription'=>'Please provide a valid email address.');
+			$genericErrors[]=$error;
+		}
+
+		$CustomerContact->email = 'contact@domain.com';
+		$CustomerContact->save();
+
+		// Load customer preferences.
+		if ($CustomerPreferences = SipwiseEntity::load('customerpreferences', $Customer->id)) {
+			/*global $user;
+			 $account = user_load($user->uid);
+			 if (user_access('hpbx edit customer',$account) && isset($allowed_clis)) {
+			 $CustomerPreferences->allowed_clis = array_values($allowed_clis);
+			 $CustomerPreferences->allowed_clis_reject_policy = 'override_by_clir';
+			 }*/
+			if(isset($maximumTotalConcurrentCalls)){
+				if(!is_numeric($maximumTotalConcurrentCalls) && strtolower($maximumTotalConcurrentCalls)=='unlimited'){
+					$CustomerPreferences->concurrent_max = 0;
+				}else{
+					$CustomerPreferences->concurrent_max = $maximumTotalConcurrentCalls;
+				}
+			}
+			$CustomerPreferences->save();
+		}
+		else {
+			$error=array('reasonCode'=>'1009','reasonDescription'=>'Failed to load customerpreferences for customer id'. $Customer->id);
+			$genericErrors[]=$error;
+		}
+
+		if(empty($valErrors)  && empty($genericErrors)){
+			// Create new Pilot Subscriber.
+			$PilotSubscriber = SipwiseEntity::create('subscribers');
+			$PilotSubscriber->username = uniqid($Customer->id);
+			$PilotSubscriber->webusername = uniqid((int)$Customer->id);
+			$PilotSubscriber->password = hpbx_subscriber_password($Customer->id);
+			$PilotSubscriber->administrative = TRUE;
+			$PilotSubscriber->is_pbxgroup = FALSE;
+			$PilotSubscriber->pbx_group_id = NULL;
+			$PilotSubscriber->customer_id = $Customer->id;
+			$PilotSubscriber->status = 'active';
+			$PilotSubscriber->is_pbx_pilot = TRUE;
+
+			// Set the domain id.
+			$PilotSubscriber->domain_id = $Domain->id;
+			$PilotSubscriber->profile_set_id = $ActiveReseller->_settings->generic_profile_set_id;
+			$PilotSubscriber->profile_id = $ActiveReseller->_settings->pilot_subscriber_profile_id;
+			$activeResellerCountryCode = $ActiveReseller->_settings->country_code;
+	  // Set the pilot_number as primary number of the pilot subscriber.
+	  if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && $ActiveReseller->_settings->automatic_pilot_number_generation) {
+	  	$PilotSubscriber->primary_number = array();
+	  	if($activeResellerCountryCode!=''){
+	  		$PilotSubscriber->primary_number['cc'] = $activeResellerCountryCode;
+	  	}
+	  	$PilotSubscriber->primary_number['ac'] = $ActiveReseller->_settings->automatic_pilot_number_generation_prefix;
+	  	$PilotSubscriber->primary_number['sn'] = $customerId;
+	  }else{
+	  	$PilotSubscriber->primary_number = array();
+	  	if($activeResellerCountryCode!=''){
+	  		$PilotSubscriber->primary_number['cc'] = $activeResellerCountryCode;
+	  	}
+	  	$PilotSubscriber->primary_number['ac'] = $pilotNumber[0];
+	  	$PilotSubscriber->primary_number['sn'] = substr($pilotNumber,1);
+	  }
+	  // Save the pilot subscriber.
+	  try{
+	  	$PilotSubscriber->save();
+	  	// Load pilot subscriber preferences.
+	  	$PilotSubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $PilotSubscriber->id);
+
+	  	// Set the subscriber soundset.
+	  	$PilotSubscriberPreferences->contract_sound_set = 'Subscriber ' . $PilotSubscriber->id;
+
+	  	// Get or create the subscriber SoundSet.
+	  	$SoundSet = hpbx_soundset_get_subscriber_soundset($Subscriber,$PilotSubscriberPreferences->contract_sound_set);
+
+	  	$PilotSubscriberPreferences->cli = $activeResellerCountryCode. substr(hpbx_parse_primary_number($PilotSubscriber->primary_number), 1);
+	  	$PilotSubscriberPreferences->gpp0 = $PilotSubscriberPreferences->cli;
+
+	  	// Only when the pilot subscriber is created
+	  	$role = 'HostedPBX Customer Administrator';
+
+	  	if ($account = hpbx_users_create_customer_user($Customer, $PilotSubscriber->id,
+	  	$email, $firstName, $lastName,
+	  	$role))
+	  	{
+	  		// Now find the uid (==username) of the AD and Drupal user.
+	  		$PilotSubscriber->webusername = $account->uid;
+	  		$PilotSubscriber->save();
+	  	}
+	  	else {
+	  		$error=array('reasonCode'=>'1010','reasonDescription'=>'Failed to create an administrative user');
+	  		$genericErrors[]=$error;
+	  	}
+	  }catch (Exception $e)
+	  {//var_dump($e);
+	  	$error=array('reasonCode'=>'1011','reasonDescription'=>'The pilot subscriber could not be created.');
+	  	$genericErrors[]=$error;
+	  }
+		}
+
+		if (empty($valErrors)  && empty($genericErrors)) {
+			$success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+			return $success;
+		}else{
+
+			// Remove Pilot Subscriber if been created.
+			if (!is_null($PilotSubscriber)) {
+				if (!empty($PilotSubscriber->webusername)) {
+					hpbx_users_remove($PilotSubscriber);
+				}
+				try {
+					hpbx_users_remove($PilotSubscriber);
+					$PilotSubscriber->delete();
+				}
+				catch(Exception $e) {}
+			}
+
+			// Remove Customer been created.
+			if (!is_null($Customer)) {
+				try {
+					$Customer->delete();
+				}
+				catch(Exception $e) {}
+			}
+
+			// Remove Customer Contacts been created.
+			if (!is_null($CustomerContact)) {
+				try {
+					$CustomerContact->delete();
+				}
+				catch(Exception $e) {}
+			}
+			$error=array('reasonCode'=>'1000','reasonDescription'=>'technical error.');
+			$genericErrors[]=$error;
+			$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+			return $errors;
+		}
+	}else{
+		$error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+		$valErrors[]=$error;
+		$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+		return $errors;
+	}
+}
+
+/**
+ * Update customer.
+ *
+ */
+function hpbx_customer_update_service($customerDetails)
+{
+	$resellerId=$customerDetails['resellerId'];
+	$customerId=$customerDetails['customerId'];
+
+	$companyName = $customerDetails['customer']['companyName'];
+	$customerIdNew = $customerDetails['customer']['customerIdNew'];
+	$pilotNumber = $customerDetails['customer']['pilotNumber'];
+	$maximumTotalConcurrentCalls = $customerDetails['customer']['maximumTotalConcurrentCalls'];
+	$profileSet = $customerDetails['customer']['profileSet'];
+	$deriveExtensionFromDID = $customerDetails['customer']['deriveExtensionFromDID'];
+	$allowSubscribersWithoutDID = $customerDetails['customer']['allowSubscribersWithoutDID'];
+	$extensionLength = $customerDetails['customer']['extensionLength'];
+	$allowedIPs = $customerDetails['customer']['allowedIPs'];
+  $multisite =  $customerDetails['customer']['multisite'];
+	$businessPartner =  $customerDetails['customer']['businessPartner'];
+ 
+	if(isset($allowedIPs)){
+		$bits = 32;
+		$allowedIpRange = explode(",",$allowedIPs);
+		foreach($allowedIpRange as $ipProvided){
+			if(!ip2long($ipProvided)){
+				$invalidIps[]=$ipProvided;
+			}else{
+				$ipSettings[]=$ipProvided.'/'.$bits;
+			}
+		}
+	}
+	global $ActiveReseller;
+	// Temporary set the reseller_id.
+	if (!is_null($resellerId))
+	{
+		sipwise_api_activate_reseller($resellerId);
+	}
+	// Verify if the reseller id is valid
+	if(isset($ActiveReseller))
+	{ 
+		$valErrors=array();
+		$genericErrors = array();
+		$Domain = SipwiseEntity::load('domains', $ActiveReseller->_settings->domain_id);
+
+    if(isset($ActiveReseller->_settings->enable_multisite) && $ActiveReseller->_settings->enable_multisite && empty($multisite)){
+			$error=array('reasonCode'=>'1041','reasonDescription'=>'Please provide multisite.');
+			array_push($genericErrors,$error);
+		}
+		if((user_access('hpbx view business partner customer')|| user_access('hpbx view reseller')) && isset($ActiveReseller->_settings->enable_business_partners) && !empty($ActiveReseller->_settings->enable_business_partners) && empty($businessPartner)){
+			$error=array('reasonCode'=>'1042','reasonDescription'=>'Please provide businessPartner.');
+			array_push($genericErrors,$error);
+		}
+    if($ActiveReseller->_settings->enable_multisite && strtolower($customerDetails['customer']['multisite'])!='no'){
+      $error=array('reasonCode'=>'1043','reasonDescription'=>'Please enter multisite = NO.');
+		  array_push($genericErrors,$error);
+    }
+    if($ActiveReseller->_settings->enable_business_partners && strtolower($customerDetails['customer']['businessPartner'])!= 'none'){
+      $error=array('reasonCode'=>'1044','reasonDescription'=>'Please enter business_partner = None.');
+			array_push($genericErrors,$error);
+    }
+		if(isset($customerId) && $customerId!=''){
+			foreach(hpbx_customer_get_cust_id($resellerId,$customerId)as $Cust)
+			{
+				$customer_id = $Cust->customer_id;
+			} 
+			$currentCompName = db_query("SELECT company FROM {hpbx_customers} WHERE customer_id = :customerId AND status = 'active'", array(':customerId' => $customer_id))->fetchObject();			
+		}
+		if(isset($companyName) && $companyName!='' && strtolower($currentCompName->company)!=strtolower($companyName))
+		{
+			if(hpbx_customer_company_name_in_use($companyName,$resellerId))
+			{
+				$error=array('reasonCode'=>'0002','reasondescription'=>'companyName already exists');
+				array_push($valErrors,$error);
+			}
+		}
+		
+		// Verify if the customer external id already exists
+		$customers = sipwise_api_get_all('customers',array('reseller_id' => $resellerId));
+		$subscriberProfileSets= sipwise_api_get_all('subscriberprofilesets',array('reseller_id' => $resellerId));
+		
+		if(isset($customer_id) && $customer_id!=''){
+			$Customer = SipwiseEntity::load('customers',$customer_id);
+			$customerIds=array();
+			$customerExternalids=array();
+
+			foreach($customers as $customer)
+			{
+				if($customer->status=='active')
+				{
+					array_push($customerExternalids,$customer->external_id);
+				}
+			}
+				
+			if(!empty($customerExternalids) && $customerIdNew != '')
+			{
+				if($Customer->external_id != $customerIdNew && in_array($customerIdNew,$customerExternalids))
+				{
+					$error=array('reasonCode'=>'0025','reasondescription'=>'The new customer Id '.$customerIdNew.' already exists within the reseller');
+					array_push($valErrors,$error);
+				}
+			}
+
+			if(isset($customerIdNew) && $customerIdNew!=''){
+				if (isset($ActiveReseller->_settings->customer_id_length) && (!preg_match('/^[0-9]{' . $ActiveReseller->_settings->customer_id_length . '}$/', $customerIdNew)))
+				{
+					$error=array('reasonCode'=>'0004','reasondescription'=>'customerId length unequal to customerIdLength configured for this Reseller');
+					array_push($valErrors,$error);
+				}
+			}
+
+			if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && !$ActiveReseller->_settings->automatic_pilot_number_generation)
+			{
+				if(!isset($pilotNumber) || $pilotNumber == '')
+				{
+					$error=array('reasonCode'=>'0005','reasondescription'=>'pilotNumber is mandatory');
+					array_push($valErrors,$error);
+				}
+				else if($in_use_customer_id = hpbx_customer_primary_number_in_use($ActiveReseller->number_get_e164($customerDetails['pilotNumber']),$resellerId))
+				{
+					$error=array('reasonCode'=>'0007','reasondescription'=>'pilotNumber not unique');
+					array_push($valErrors,$error);
+				}
+				else if (isset($ActiveReseller->_settings->pilot_subscriber_number_min_digits) && $ActiveReseller->_settings->pilot_subscriber_number_max_digits)
+				{
+					$pilotSubMinDigit=$ActiveReseller->_settings->pilot_subscriber_number_min_digits;
+					$pilotSubMaxDigit=$ActiveReseller->_settings->pilot_subscriber_number_max_digits;
+					$pilotNoLength=	strlen($pilotNumber);
+
+					if(($pilotNoLength < $pilotSubMinDigit) || ($pilotNoLength > $pilotSubMaxDigit))
+					{
+						$error=array('reasonCode'=>'0008','reasondescription'=>'Number of digits of the pilotNumber is not between the pilotSubscriberMinDigits and pilotSubscriberMaxDigits, configured for this Reseller');
+						array_push($valErrors,$error);
+					}
+				}
+			}
+
+			if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && $ActiveReseller->_settings->automatic_pilot_number_generation)
+			{
+				if(isset($pilotNumber) && $pilotNumber!='')
+				{
+					$error=array('reasonCode'=>'0006','reasondescription'=>'pilotNumber is not allowed');
+					array_push($valErrors,$error);
+				}
+			}
+				
+			foreach($ActiveReseller->_settings->customer_concurrent_max as $valAllowed){
+				$maxValAllowedList[]=$valAllowed;
+			}
+				
+			if(!is_numeric($maximumTotalConcurrentCalls) && strtolower($maximumTotalConcurrentCalls)=='unlimited'){
+				$maximumTotalConcurrentCalls = 0;
+			}
+
+			if (isset($ActiveReseller->_settings->customer_concurrent_max)) {
+				if(!in_array($maximumTotalConcurrentCalls,$maxValAllowedList)){
+					$error=array('reasonCode'=>'0050','reasonDescription'=>'Value for maximumTotalConcurrentCalls not according to value list configured for this Reseller');
+					$valErrors[]=$error;
+				}
+			}
+				
+			$profileSetNames = array();
+			$profileSetId ='';
+			if(isset($profileSet) && $profileSet!= '')
+			{
+				foreach($subscriberProfileSets as $profileSets)
+				{
+					if($profileSets->name==$profileSet)
+					{
+						$profileSetId = $profileSets->id;
+					}
+					$profileSetNames[]=$profileSets->name;
+				}
+			}
+			
+			if(isset($profileSetId) && $profileSetId!=''){
+				$profileNames  = array();
+				$subscriberProfiles= sipwise_api_get_all('subscriberprofiles',array('profile_set_id' => $profileSetId));
+				foreach($subscriberProfiles as $subProfile){
+					$profileNames[]=$subProfile->name;
+				}
+			}
+
+			if($profileSetId == '' && (isset($profileSet) && $profileSet!= ''))
+			{
+				if(!in_array($profileSet,$profileSetNames))
+				{
+					$error=array('reasonCode'=>'0051','reasonDescription'=>'profileSetName does not exist for this Reseller');
+					$valErrors[]=$error;
+				}
+			}
+
+			if(isset($ActiveReseller->_settings->generic_profile_set_id) && isset($profileSet)){
+				if($ActiveReseller->_settings->generic_profile_set_id == $profileSetId){
+					$error=array('reasonCode'=>'0010','reasonDescription'=>'Generic profileSet is not allowed within the `customer` tag.');
+					$valErrors[]=$error;
+				}
+			}
+
+			if (isset($ActiveReseller->_settings->enable_restricted_access) && !$ActiveReseller->_settings->enable_restricted_access) {
+				if(isset($allowedIPs) && $allowedIPs!=''){
+					$error=array('reasonCode'=>'0011','reasonDescription'=>'allowedIPs is not allowed for this Reseller');
+					$valErrors[]=$error;
+				}
+			}
+
+		 if (isset($ActiveReseller->_settings->enable_restricted_access) && !$ActiveReseller->_settings->enable_restricted_access)
+		 {
+		 	if(isset($allowedIP))
+		 	{
+		 		$error=array('reasonCode'=>'0011','reasondescription'=>'allowedIPs is not allowed for this Reseller');
+		 		array_push($valErrors,$error);
+		 	}
+		 }
+
+		 if (isset($ActiveReseller->_settings->polish_emergency_routing) && $ActiveReseller->_settings->polish_emergency_routing) {
+		 	if(!isset($customerDetails['customerLocation']) || empty($customerDetails['customerLocation'])){
+		 		$error=array('reasonCode'=>'0012','reasonDescription'=>'customerLocation tag is mandatory for this Reseller');
+		 		$valErrors[]=$error;
+		 	}
+		 }
+
+		 if (isset($ActiveReseller->_settings->polish_emergency_routing) && !$ActiveReseller->_settings->polish_emergency_routing) {
+		 	if(isset($customerDetails['customerLocation']) || $customerDetails['customerLocation']!=''){
+		 		$error=array('reasonCode'=>'0013','reasonDescription'=>'customerLocation tag is not allowed for this Reseller');
+		 		$valErrors[]=$error;
+		 	}
+		 }
+		 	
+		 if (isset($ActiveReseller->_settings->bundle_settings) && $ActiveReseller->_settings->bundle_settings) {
+		 	if(!isset($customerDetails['bundleSettings']) || empty($customerDetails['bundleSettings'])){
+		 		$error=array('reasonCode'=>'0014','reasonDescription'=>'bundleSettings are mandatory for this Reseller');
+		 		$valErrors[]=$error;
+		 	}
+		 }
+
+		 if (isset($ActiveReseller->_settings->bundle_settings) && !$ActiveReseller->_settings->bundle_settings)
+		 {
+		 	if(isset($customerDetails['bundleSettings']) || !empty($customerDetails['bundleSettings']))
+		 	{
+		 		$error=array('reasonCode'=>'0015','reasondescription'=>'bundleSettings are not allowed for this Reseller');
+		 		array_push($valErrors,$error);
+		 	}
+		 }
+
+		 if($ActiveReseller->_settings->bundle_settings)
+		 {
+		 	$bundleSetting = $Customer->_settings->bundle_settings;
+		 }
+		 $bundleSetting = json_decode(json_encode($bundleSetting),true);
+		 foreach($bundleSetting as $bundleSettingsInfo){
+		 	if (isset($bundleSettingsInfo['profiles'])){
+		 		$profilesBeenSet[]=$bundleSettingsInfo['profiles'];
+		 	}
+		 }
+		 if (isset($ActiveReseller->_settings->bundle_settings) && $ActiveReseller->_settings->bundle_settings)
+		 {
+		 	if(isset($customerDetails['bundleSettings']) && !empty($customerDetails['bundleSettings']))
+		 	{
+		 		$profileSetLimitTypeAllowed = array("unlimited","limit total","limit per profile");
+				$profileLimitTypeAllowed = array("unlimited","none","input");
+		 		foreach($customerDetails['bundleSettings'] as $bundleSettings){
+		 			foreach($bundleSettings as $profileSets){
+							$profileSetNewName = $profileSets['profileSetName'];
+							$profileSetNewLimitType = $profileSets['profileSetLimitType'];
+							$profileSetNewLimitAmount = $profileSets['profileSetLimitAmount'];
+							$profileNewLimits = $profileSets['profileLimits'];
+							
+				 			if (isset($profileSetNewLimitType) &&!in_array(strtolower($profileSetNewLimitType),$profileSetLimitTypeAllowed)){
+									$error=array('reasonCode'=>'1050','reasonDescription'=>'Please provide a valid value for profile set limit type.');
+									$genericErrors[]=$error;
+							}
+
+							if(isset($profileNewLimits) && !empty($profileNewLimits))
+							{
+								foreach($profileNewLimits as $profileDetails)
+								{
+									$profileNew = $profileDetails['profile'];
+									$profileNewLimitType = $profileDetails['profileLimitType'];
+									$profileNewLimitAmount = $profileDetails['profileLimitAmount'];
+									
+									if (isset($profileNewLimitType) &&!in_array(strtolower($profileNewLimitType),$profileLimitTypeAllowed)){
+										$error=array('reasonCode'=>'1051','reasonDescription'=>'Please provide a valid value for profile limit type.');
+										$genericErrors[]=$error;
+									}
+									
+									if(isset($profileNewLimitType) && $profileNewLimitType!='')
+									{
+										if(strtolower($profileNewLimitType)=='unlimited' || strtolower($profileNewLimitType)=='none')
+										{
+											if(isset($profileNewLimitAmount) && $profileNewLimitAmount!='')
+											{
+												$error=array('reasonCode'=>'0021','reasonDescription'=>'If profileLimits.profileLimitType = Unlimited OR None then profileLimits.profileLimitAmount is not allowed');
+												$valErrors[]=$error;
+											}
+										}
+										if(strtolower($profileNewLimitType)=='input')
+										{
+											if(!isset($profileNewLimitAmount) || $profileNewLimitAmount=='')
+											{
+												$error=array('reasonCode'=>'0022','reasonDescription'=>'If profileLimits.profileLimitType = Input then profileLimitAmount is mandatory');
+												$valErrors[]=$error;
+											}
+										}
+										if(isset($profileSetNewName) && $profileSetNewName!='' && !in_array($profileSetNewName,$profileSetNames))
+										{
+											$error=array('reasonCode'=>'0051','reasonDescription'=>'profileSetName does not exist for this Reseller');
+											$valErrors[]=$error;
+										}
+									foreach($subscriberProfileSets as $profileSetDetails){
+										if($profileSetDetails->name == $profileSetNewName){
+											$profileIdSet = $profileSetDetails->id;
+										}
+									}
+								
+								  	if(isset($profileIdSet) && $profileIdSet!=''){
+										$checkProfileNames  = array();
+										$subscriberProfiles= sipwise_api_get_all('subscriberprofiles');
+										foreach($subscriberProfiles as $subProfile){
+											$checkProfileNames[]=$subProfile->name;
+										}
+									}
+								
+									if(isset($profileNew) && $profileNew!='' && !in_array($profileNew,$checkProfileNames)){
+										$error=array('reasonCode'=>'0052','reasonDescription'=>'profile does not exist for this Reseller.');
+										$valErrors[]=$error;
+									}
+								
+									if(isset($profileIdSet)){
+										$subscriberProfilesWithinSub = sipwise_api_get_all('subscriberprofiles',array('profile_set_id' => $profileIdSet));
+										$profileNamesWithinSub = array();
+										foreach($subscriberProfilesWithinSub as $subProfile){
+											$profileNamesWithinSub[]=$subProfile->name;
+										}
+										if(isset($profile) && $profile!='' && !in_array($profileNew,$profileNamesWithinSub)){
+											$error=array('reasonCode'=>'0053','reasonDescription'=>'profile does not belong to the Subscriber Profile Set.');
+											$valErrors[]=$error;
+										}
+									}
+										// foreach($subscriberProfiles as $key=>$profiles){
+										// 	if(strtolower($profiles->name) == strtolower($profileNew)){
+										// 		foreach($profilesBeenSet as $setProfile){
+										// 			if(isset($setProfile[$key])){
+										// 				$profileSetAmount=$setProfile[$key]['amount'];
+										// 			}else{
+										// 				$profileSetAmount='';
+										// 			}
+										// 			if(strtolower($profileNewLimitType) =='input'|| strtolower($profileNewLimitType)=='none')
+										// 			{		
+										// 				if(isset($profileNewLimitAmount) && $profileSetAmount!='')
+										// 				{
+										// 					if($profileNewLimitAmount < $profileSetAmount)
+										// 					{
+										// 						$error=array('reasonCode'=>'0027','reasonDescription'=>'Downgrade not allowed because the amount of entities exceeds the new profileLimits.profileLimitAmount');
+										// 						$valErrors[]=$error;
+										// 					}
+										// 				}
+										// 			}	
+										// 		}
+										// 	}
+										// }
+									}
+								}
+							}
+							// foreach($subscriberProfileSets as $key=>$profileSet){
+							// 	if(strtolower($profileSet->name) == strtolower($profileSetNewName)){
+							// 		if(isset($bundleSetting[$key])){
+							// 			$profileSetLimitAmount = $bundleSetting[$key]['total_amount'];
+							// 		}else{
+							// 			$profileSetLimitAmount='';
+							// 		}
+									
+							// 		if(isset($profileSetNewLimitAmount) && $profileSetLimitAmount!='')
+							// 		{
+							// 			if($profileSetNewLimitAmount < $profileSetLimitAmount)
+							// 			{
+							// 				$error=array('reasonCode'=>'0026','reasonDescription'=>'Downgrade not allowed because the amount of entities exceeds the new profileSetLimitAmount');
+							// 				$valErrors[]=$error;
+							// 			}
+							// 		}									
+							// 	}
+							// }
+							if(isset($profileSetNewLimitType) && $profileSetNewLimitType!='')
+							{
+								if(strtolower($profileSetNewLimitType)=='unlimited' && ($profileSetNewLimitAmount!='' || isset($profileNewLimits)))
+								{
+									$error=array('reasonCode'=>'0016','reasonDescription'=>'If `profileSetLimitType` = Unlimited then the following tags are not allowed: profileSetLimitAmount and profileLimits');
+									$valErrors[]=$error;
+								}
+								else if(strtolower($profileSetNewLimitType) =='limit total')
+								{	
+									if(!isset($profileSetNewLimitAmount) || $profileSetNewLimitAmount=='')
+									{
+										$error=array('reasonCode'=>'0017','reasonDescription'=>'If `profileSetLimitType` = Limit total then profileSetLimitAmount is mandatory');
+										$valErrors[]=$error;
+									}
+									if(isset($profileNewLimits) && !empty($profileNewLimits))
+									{
+										$error=array('reasonCode'=>'0018','reasonDescription'=>'If `profileSetLimitType` = Limit total then the following tags are not allowed: profileLimits');
+										$valErrors[]=$error;
+									}
+								}
+								else if (strtolower($profileSetNewLimitType)=='limit per profile')
+								{	
+									if(isset($profileSetNewLimitAmount) && $profileSetNewLimitAmount!='')
+									{
+										$error=array('reasonCode'=>'0019','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then profileSetLimitAmount is not allowed');
+										$valErrors[]=$error;
+									}
+									if(isset($profileNewLimits) && !empty($profileNewLimits)){
+										if($profileNew=='' || $profileNewLimitType=='')
+										{
+											$error=array('reasonCode'=>'0020','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then the following tags are mandatory:profileLimits.profile, profileLimits.profileLimitType');
+											$valErrors[]=$error;
+										}
+									}
+									else
+									{
+										$error=array('reasonCode'=>'0020','reasonDescription'=>'If `profileSetLimitType` = Limit per profile then the following tags are mandatory:profileLimits.profile, profileLimits.profileLimitType');
+										$valErrors[]=$error;
+									}
+								}
+							}
+		 			}
+		 		}
+		 	}
+		 }
+		 $settings = array();
+		 $settings['profile_set_id']= $profileSetId;
+		 strtolower($deriveExtensionFromDID)=='yes' ? $settings['derive_extension_from_did']=1 :$settings['derive_extension_from_did']= 0;
+		 strtolower($allowSubscribersWithoutDID)=='yes' ? $settings['allow_subscribers_without_did']=1 :$settings['allow_subscribers_without_did']=0;
+		 $extension = (int)$extensionLength;
+		 $settings['extension_length'] = $extension;
+
+     // multisite
+    if(isset($ActiveReseller->_settings->enable_multisite) && $ActiveReseller->_settings->enable_multisite) {
+      if(strtolower($multisite)=='no'){
+      $settings['multi_site'] = '';
+      }
+    }
+
+		 foreach($customerDetails['location'] as $custLocation)
+		 {
+		 	$settings['township']=$custLocation['township'];
+		 	$settings['region']=$custLocation['region'];
+		 	$settings['city']=$custLocation['city'];
+		 	$settings['z_gm']=$custLocation['zgm'];
+		 }
+		 $Customer->type = 'pbxaccount';
+		 $Customer->status = 'active';
+		 // save new CustomerId
+		 if(isset($customerIdNew) && $customerIdNew!=''){
+		 	$Customer->external_id= $customerIdNew; //$customerInfo['customerIdNew'];
+		 }
+
+		 // update not allowed deriveExtensionFromDID when any Subscriber OR any Auto Attendant,etc.
+		 if (isset($deriveExtensionFromDID) && count($Customer->get_subscribers(FALSE, FALSE, TRUE, TRUE, TRUE)) > 0)
+		 {
+		 	$error=array('reasonCode'=>'0028','reasonDescription'=>'deriveExtensionFromDID update not allowed');
+		 	$valErrors[]=$error;
+		 }
+
+		 //update not allowed allowSubscribersWithoutDID when any Subscriber OR any Auto Attendant,etc.
+		 if (isset($allowSubscribersWithoutDID) && count($Customer->get_subscribers(FALSE, FALSE, TRUE, TRUE, TRUE)) > 0)
+		 {
+		 	$error=array('reasonCode'=>'0029','reasonDescription'=>'allowSubscribersWithoutDID update not allowed');
+		 	$valErrors[]=$error;
+		 }
+
+		 //update not allowed extension_length when any Subscriber OR any Auto Attendant,etc.
+		 if (isset($extensionLength) && count($Customer->get_subscribers(FALSE, FALSE, TRUE, TRUE, TRUE)) > 0)
+		 {
+		 	$error=array('reasonCode'=>'0030','reasonDescription'=>'extension_length update not allowed');
+		 	$valErrors[]=$error;
+		 }
+
+		 if ($BillingProfiles = sipwise_api_get_all('billingprofiles', array('reseller_id' => $ActiveReseller->id)))
+		 {
+		 	$BillingProfile = current($BillingProfiles);
+		 	$Customer->billing_profile_id = $BillingProfile->id;
+		 }
+		 else
+		 {
+		 	$error=array('reasonCode'=>'1005','reasonDescription'=>'Billing profile for the resellerId '.$ActiveReseller->id. ' cannot be found');
+		 	array_push($genericErrors,$error);
+		 }
+		 //Bundle settings.
+		 if (!empty($ActiveReseller->_settings->bundle_settings) && isset($customerDetails['bundleSettings']))
+		 {
+		 	foreach($customerDetails['bundleSettings'] as $bundleSettings)
+		 	{
+		 		foreach($bundleSettings as $profileSets)
+		 		{
+		 			$parsedBundleSettings = hpbx_customer_parse_bundle_settings_service($profileSets);
+		 			foreach($parsedBundleSettings as $key=>$value)
+		 			{
+		 				$settings['bundle_settings'][$key]=$value;
+		 			}
+		 		}
+		 	}
+		 }
+		 	
+		 if(empty($invalidIps)){
+		 	$settings['allowed_ips']=$ipSettings;
+		 }else{
+		 	$ipInValid=implode(",",$invalidIps);
+		 	$error=array('reasonCode'=>'1004','reasonDescription'=>'The followings ip`s '.$ipInValid.' are in invalid state');
+		 	$genericErrors[]=$error;
+		 }
+
+		 if(empty($valErrors) && empty($genericErrors)){
+		 	//Update customer in sipwise based on the settings and paraments set against the customer object.
+		 	$Customer->_settings = (object)$settings;
+		 	//save the customer
+		 	$Customer->save();
+
+		 	//load customerPreference
+		 	$CustomerPreferences = SipwiseEntity::load('customerpreferences', $Customer->id);
+		 	if(!isset($CustomerPreferences))
+		 	{
+		 		$error=array('reasonCode'=>'1009','reasonDescription'=>'Failed to load customerpreferences for customer id'. $Customer->id);
+		 		array_push($genericErrors,$error);
+		 	}else{
+		 		if(isset($maximumTotalConcurrentCalls))
+		 		{
+		 			if(!is_numeric($maximumTotalConcurrentCalls) && strtolower($maximumTotalConcurrentCalls)=='unlimited'){
+		 				$maximumTotalConcurrentCalls = 0;
+		 			}
+		 			$CustomerPreferences->concurrent_max = $maximumTotalConcurrentCalls;
+		 		}
+		 		$CustomerPreferences->save();
+		 	}
+		 	// Load pilot subscriber preferences.
+		 	$PilotSubscriber = $Customer->get_pilot_subscriber();
+		 	$PilotSubscriberPreferences =  SipwiseEntity::load('subscriberpreferences', $PilotSubscriber->id);
+
+		 	$PilotSubscriberPreferences->force_inbound_calls_to_peer = $pilot_force_inbound_calls_to_peer;
+		 	$PilotSubscriberPreferences->cli = $ActiveReseller->_settings->country_code . substr(hpbx_parse_primary_number($PilotSubscriber->primary_number), 1);
+		 	$PilotSubscriberPreferences->gpp0 = $PilotSubscriberPreferences->cli;
+
+		 	// Save the PilotSubscriberPreferences
+		 	$PilotSubscriberPreferences->save();
+
+		 	$i = str_pad(1, $ActiveReseller->_settings->customer_max_extension_length + 1, STR_PAD_RIGHT);
+		 	$pilot_force_inbound_calls_to_peer = FALSE;
+		 	$allowed_clis = array();
+
+		 	// Before changing the prefix for all subscribers, we need to give all
+		 	// subscribers an pbx_extention which can not overlap with any existing
+		 	// of new extension.
+		 	foreach (sipwise_api_get_all('subscribers', array('customer_id' => $Customer->id)) as $Subscriber)
+		 	{
+		 		if (!$Subscriber->is_pbx_pilot)
+		 		{
+		 			$i++;
+		 			$Subscriber->pbx_extension = $i;
+		 			$Subscriber->save();
+		 		}
+		 	}
+		 	// Load all sibling subscribers to reset the primary_number, but also
+		 	// change the prefix in case the prefix of the numberrange changed.
+		 	foreach (SipwiseSubscriber::get_all(array('customer_id' => $Customer->id)) as $Subscriber)
+		 	{
+		 		if (!$Subscriber->is_pilot())
+		 		{
+		 			// Set prefix based.
+		 			$prefix = hpbx_get_extension_prefix($Customer, $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN));
+		 			$extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
+		 			$Subscriber->pbx_extension = $prefix. substr($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN), $extension_suffix_length * - 1);
+		 			$Subscriber->save();
+
+		 			// Load the subscriberpreferences and update gpp1 and display_name.
+		 			$SubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $Subscriber->id);
+
+		 			$SubscriberPreferences->display_name = trim($Subscriber->pbx_extension);
+		 			$SubscriberPreferences->gpp1 = $Subscriber->pbx_extension;
+
+		 			// To support routing for non-ported numbers to peer, which is necessary
+		 			// to ensure  that calling  non-ported numbers  from HPBX will be routed
+		 			// correctly  (to the peer), we  will set force_inbound_calls_to_peer to
+		 			// TRUE in case the number is not yet ported or to FALSE when the number
+		 			// is ported. To verify if the number is ported, we will use the allowed
+		 			// -clis variable, which is filled based on the inported checkbox at the
+		 			// customer edit form.
+		 			if (in_array($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_E164), $CustomerPreferences->allowed_clis))
+		 			{
+		 				$SubscriberPreferences->force_inbound_calls_to_peer = FALSE;
+		 			}
+		 			else
+		 			{
+		 				$SubscriberPreferences->force_inbound_calls_to_peer = TRUE;
+		 			}
+
+		 			// Set allowed ip's in case the settings is set and allowed for
+		 			// this reseller.
+		 			if (isset($ActiveReseller->_settings->enable_restricted_access) &&
+		 			$ActiveReseller->_settings->enable_restricted_access &&
+		 			isset($Customer->_settings->allowed_ips) &&
+
+		 			// Only set the allowed_ips value for a regular subscriber or a
+		 			// huntgroup
+		 			($Subscriber->is_regular() || $Subscriber->is_huntgroup()))
+		 			{
+		 				$SubscriberPreferences->allowed_ips = $Customer->_settings->allowed_ips;
+		 			}
+		 			elseif(isset($SubscriberPreferences->allowed_ips))
+		 			{
+		 				// Currently set and not set on customer level, so unset the variable.
+		 				unset($SubscriberPreferences->allowed_ips);
+		 			}
+
+		 			// Set location id in case polish emergency routing is active for this customer / reseller.
+		 			if (isset($ActiveReseller->_settings->polish_emergency_routing) && $ActiveReseller->_settings->polish_emergency_routing)
+		 			{
+		 				$emergency_indexes = variable_get('hpbx_emergency_indexes_' . $ActiveReseller->id, array());
+		 				$SubscriberPreferences->emergency_mapping_container = $emergency_indexes[$Customer->_settings->region][$Customer->_settings->township][$Customer->_settings->city][$Customer->_settings->z_gm];
+		 			}
+		 			// Save the preferences.
+		 			$SubscriberPreferences->save();
+		 		}
+		 		else
+		 		{
+		 			// Save subscriber.
+		 			$Subscriber->save();
+		 		}
+		 	}
+		 	// Load the existing (or by sipwise api created when customer was saved) customer contact.
+		 	$CustomerContact = SipwiseEntity::load('customercontacts', $Customer->contact_id);
+		 	$CustomerContact->reseller_id = $ActiveReseller->id;
+
+		 	// Save company name.
+		 	if(isset($companyName) && $companyName!='')
+		 	{
+		 		$CustomerContact->company = $companyName;
+		 	}
+       //bp_name 
+      if(isset($ActiveReseller->_settings->enable_business_partners) && !empty($ActiveReseller->_settings->enable_business_partners)){
+        if(strtolower($business_partner)=='none'){
+          $CustomerContact->gpp9 = '';
+          hpbx_reseller_clear_cache($ActiveReseller->id, TRUE);
+        }
+      }
+		 	//save Customer Contact
+		 	$CustomerContact->save();
+
+		 	// Set the domain id.
+		 	$PilotSubscriber->domain_id = $Domain->id;
+		 	$PilotSubscriber->profile_set_id = $ActiveReseller->_settings->generic_profile_set_id;
+		 	$PilotSubscriber->profile_id = $ActiveReseller->_settings->pilot_subscriber_profile_id;
+		 	$activeResellerCountryCode = $ActiveReseller->_settings->country_code;
+
+		 	// Set the pilot_number as primary number of the pilot subscriber.
+			 if (isset($ActiveReseller->_settings->automatic_pilot_number_generation) && $ActiveReseller->_settings->automatic_pilot_number_generation) {
+			 	if(isset($customerIdNew) && $customerIdNew!=''){
+			 		$PilotSubscriber->primary_number = array();
+			 		if($activeResellerCountryCode!=''){
+			 			$PilotSubscriber->primary_number['cc'] = $activeResellerCountryCode;
+			 		}
+			 		$PilotSubscriber->primary_number['ac'] = $ActiveReseller->_settings->automatic_pilot_number_generation_prefix;
+			 		$PilotSubscriber->primary_number['sn'] = $customerIdNew;
+			 	}
+			 }else{
+			 	$PilotSubscriber->primary_number = array();
+			 	if($activeResellerCountryCode!=''){
+			 		$PilotSubscriber->primary_number['cc'] = $activeResellerCountryCode;
+			 	}
+			 	$PilotSubscriber->primary_number['ac'] = $pilotNumber[0];
+	  			$PilotSubscriber->primary_number['sn'] = substr($pilotNumber,1);
+			 }
+		 	// Save the pilot subscriber.
+		 	try{
+		 		$PilotSubscriber->save();
+		 	}catch(Exception $e){
+		 		$error=array('reasonCode'=>'1000','reasonDescription'=>'technical error.');
+		 		$genericErrors[]=$error;
+		 	}
+		 }
+		}else{
+			$error=array('reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this reseller');
+			array_push($valErrors,$error);
+		}
+	}else{
+		$error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+		$genericErrors[]=$error;
+	}
+	if(empty($valErrors) && empty($genericErrors)){
+		$success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+		return $success;
+	}else{
+		$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+		return $errors;
+	}
+}
+
+/**
+ * Terminate a customer.
+ *
+ */
+function hpbx_customer_terminate_service($customerDetails) {
+	global $ActiveReseller;
+	$resellerId=$customerDetails['resellerId'];
+	$external_id = $customerDetails['customerId'];
+	$genericErrors = array();
+	$valErrors=array();
+
+	// Temporary set the reseller_id.
+	if (!is_null($resellerId))
+	{
+		sipwise_api_activate_reseller($resellerId);
+	}
+
+	// Verify if the reseller id is valid
+	if(isset($ActiveReseller))
+	{
+		foreach(hpbx_customer_get_cust_id($resellerId,$external_id)as $Cust)
+		{
+			$customer_id = $Cust->customer_id;
+		}
+		$Customer = SipwiseEntity::load('customers',$customer_id);
+		if(isset($customer_id) && $customer_id!=''){
+			if(empty($Customer->_settings->suspend_date))
+			{
+				$error=array('reasonCode'=>'0031','reasonDescription'=>'Customer must be suspended in order to allow customer termination');
+				array_push($valErrors,$error);
+			}
+			if(empty($valErrors) && empty($genericErrors))
+			{  $suspend_period = $ActiveReseller->_settings->suspend_period;
+				if ($Customer->delete_allowed() != HPBX_CUSTOMER_SUSPENDED_DELETE_ALLOWED && !variable_get('hpbx_sipwise_delete_allowed', FALSE))
+				{
+					$error= array('reasonCode'=>'0032','reasonDescription'=>'Customer must be suspended for ' . $suspend_period . 'calendar days in order to allow customer termination');
+					array_push($valErrors,$error);
+				}
+				else
+				{   
+					$query = array('customer_id' => $customer_id);
+				    $PBXDevices = sipwise_api_get_all('pbxdevices', $query, TRUE, TRUE);
+           require_once(drupal_get_path('module', 'hpbx') .'/includes/hpbx.pbxdevice.inc');
+					 // 'Delete' the customer; will set the state to 'terminated'.
+					$Customer->delete();
+        foreach ($PBXDevices as $PBXDevice) { 
+           $PBXDeviceModel = hpbx_pbxdevice_get_model_on_profile($PBXDevice->profile_id);
+          if (!empty($PBXDeviceModel->bootstrap_method) && substr($PBXDeviceModel->bootstrap_method,0,strlen('redirect_')) == 'redirect_') {
+          require_once(drupal_get_path('module', 'hpbx_rps') .'/includes/rps.class.inc');
+        
+          list($f, $class) = explode('_', $PBXDeviceModel->bootstrap_method);
+
+          $class_path = drupal_get_path('module', 'hpbx_rps') .'/includes/'. strtolower($class) .'.class.inc';
+          
+          if (file_exists($class_path)) {
+            require_once($class_path);
+            $RPSDevice = new $class($PBXDevice->identifier, $PBXDevice->profile_id);
+            if($class == 'grandstream'){
+               $RPSDevice->unregister();
+            }else{
+              // Verify if the device is registered at Yealink RPS.
+              if ($RPSDevice->is_registered()) {
+
+                // Unregister.
+                $RPSDevice->unregister();
+              }
+            }
+          }
+        }
+				}
+					// Clear the Drupal cache for this API type.
+					$cid = 'customerpreferences_'. $ActiveReseller->id . '_'. $Customer->id .'_response';
+					cache_clear_all($cid, 'cache_sipwise_api');
+
+					$cid = 'customerpreferences_list_'. $ActiveReseller->id.'_';
+					cache_clear_all($cid, 'cache_sipwise_api', TRUE);
+
+					// Clear the Drupal cache for this API type.
+					$cid = 'customercontacts_'. $ActiveReseller->id . '_'. $Customer->contact_id .'_response';
+					cache_clear_all($cid, 'cache_sipwise_api');
+
+					$cid = 'customercontacts_list_'. $ActiveReseller->id .'_';
+					cache_clear_all($cid, 'cache_sipwise_api', TRUE);
+				}
+			}
+		}
+		else{
+			$error=array('reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this reseller');
+			array_push($valErrors,$error);
+		}
+	}
+	else
+	{
+		$error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+		array_push($valErrors,$error);
+	}
+
+	if(empty($valErrors) && empty($genericErrors)){
+		$success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+		return $success;
+	}else{
+		$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+		return $errors;
+	}
+}
+
+/**
+ * Suspend a customer.
+ *
+ */
+function hpbx_customer_suspend_service($customerDetails) {
+	global $ActiveReseller;
+	$resellerId=$customerDetails['resellerId'];
+	$external_id = $customerDetails['customerId'];
+	$valErrors=array();
+	$genericErrors = array();
+
+	// Temporary set the reseller_id.
+	if (!is_null($resellerId))
+	{
+		sipwise_api_activate_reseller($resellerId);
+	}
+	if(isset($ActiveReseller)){
+		foreach(hpbx_customer_get_cust_id($resellerId,$external_id)as $Cust)
+		{
+			$customer_id = $Cust->customer_id;
+		}
+		if(isset($customer_id) && $customer_id!=''){
+			$Customer = SipwiseEntity::load('customers',$customer_id);
+			$CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);
+			//In case an non-suspended customer is set to suspended, the suspended date needs to be set.
+			if(!isset($Customer->_settings->suspend_date) || empty($Customer->_settings->suspend_date))
+			{
+				$Customer->_settings->suspend_date = date('Y-m-d H:i:s');
+				$Customer->save();
+			}
+			if(!empty($CustomerPreferences))
+			{
+				// Set customer ncos level to suspend (most likely ncos 7)
+				$CustomerPreferences->ncos = $ActiveReseller->_settings->suspend_ncos_level;
+				$CustomerPreferences->save();
+			}
+			else
+			{
+				$error=array('reasonCode'=>'1009','reasonDescription'=>'Failed to load customerpreferences for customer id '. $customer_id);
+				$genericErrors[]=$error;
+			}
+		}else{
+			$error=array('reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this reseller');
+			array_push($valErrors,$error);
+		}
+	}else{
+		$error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+		array_push($valErrors,$error);
+	}
+
+	if(empty($valErrors) && empty($genericErrors)){
+		$success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+		return $success;
+	}else{
+		$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+		return $errors;
+	}
+}
+
+/**
+ * Unsuspend a customer.
+ *
+ */
+function hpbx_customer_unsuspend_service($customerDetails) {
+	global $ActiveReseller;
+	$resellerId=$customerDetails['resellerId'];
+	$external_id = $customerDetails['customerId'];
+	$genericErrors = array();
+	$valErrors=array();
+	// Temporary set the reseller_id.
+	if (!is_null($resellerId))
+	{
+		sipwise_api_activate_reseller($resellerId);
+	}
+
+	// Verify if the reseller id is valid
+	if(isset($ActiveReseller))
+	{
+		foreach(hpbx_customer_get_cust_id($resellerId,$external_id)as $Cust)
+		{
+			$customer_id = $Cust->customer_id;
+		}
+		$customers = sipwise_api_get_all('customers',array('reseller_id' => $resellerId));
+		if(isset($customer_id) && $customer_id!=''){
+			$Customer = SipwiseEntity::load('customers',$customer_id);
+			$CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);
+			if(isset($Customer->_settings->suspend_date) && !empty($Customer->_settings->suspend_date))
+			{
+				unset($Customer->_settings->suspend_date);
+				$Customer->save();
+				if(isset($CustomerPreferences) && !empty($CustomerPreferences->ncos))
+				{
+					if ($CustomerPreferences->ncos == $ActiveReseller->_settings->suspend_ncos_level) {
+						unset($CustomerPreferences->ncos);
+						$CustomerPreferences->save();
+					}
+				}
+				else
+				{
+					$error=array('reasonCode'=>'1009','reasonDescription'=>'Failed to load customerpreferences for customerId ');
+					array_push($genericErrors,$error);
+				}
+			}
+		}else{
+			$error=array('reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this reseller');
+			array_push($valErrors,$error);
+		}
+	}
+	else
+	{
+		$error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+		array_push($valErrors,$error);
+	}
+	if(empty($valErrors) && empty($genericErrors)){
+		$success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+		return $success;
+	}else{
+		$errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+		return $errors;
+	}
+}
+
+/**
+ * Add a number range.
+ *
+ */
+function hpbx_customer_number_range_add_service($customerDetails){ 
+    global $ActiveReseller; 
+    $resellerId=$customerDetails['resellerId'];
+    $customerId=$customerDetails['customerId'];
+    $valErrors=array();
+	$genericErrors= array();
+	//Temporary set the reseller_id.
+	  if (!is_null($resellerId)) {	
+	    sipwise_api_activate_reseller($resellerId);
+	  }
+	  if(isset($ActiveReseller)){ 
+    // Verify if the customer exists within the re-seller
+      if(!$customers = sipwise_api_get_all('customers', array('reseller_id'=>$resellerId, 'external_id'=>$customerId ))){          
+        $error=array('result'=>'NOK', 'reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this Reseller');
+        array_push($valErrors,$error);    
+      }else{
+      //Vallidations
+      foreach ($customers as $customer){
+        $customer_id = $customer->id; 
+      }
+      $Customer = SipwiseEntity::load('customers',$customer_id);
+      $extensions = array();
+      $numRange = $Customer->_settings->numberranges;
+      $numRange = json_decode(json_encode($numRange), true);
+      $extension_length = $Customer->_settings->extension_length; 
+      if(!empty($numRange)){
+      	$extensions = hpbx_get_extension_array($Customer,$numRange,$extension_length);
+      }      
+      $PilotSubscriber = $Customer->get_pilot_subscriber(); 
+      $pilot_number = (array)$PilotSubscriber->primary_number;
+	    $pilot_number = $pilot_number['ac'] . $pilot_number['sn']; 
+      $extensions_start = array();
+      $new_ranges = array();
+      $new_numberranges = array();
+      $possible_extensions = array();
+      $lengths = array();
+      $new_numberranges[] = array(
+       'from' => $pilot_number,
+       'to' => $pilot_number,
+      );
+    
+      // Add pilot number to the ranges, so we can verify if it is overlapping with the ranges.
+      $new_ranges[] = $pilot_number;
+     foreach($customerDetails['numberRange'] as  $custDetails){ 
+      // Store the range, to verify if we have duplicates.
+      $new_ranges[] = $custDetails['areaCode'] . $custDetails['startNumber'];  
+      // Store the  range to verify if have duplicates.
+      $new_numberranges[] = array(
+       'from' => $custDetails['areaCode'] . $custDetails['startNumber'],
+       'to' => $custDetails['areaCode'] . ($custDetails['startNumber'] + $custDetails['length'] - 1),
+      );
+   
+      // Before validation the area code, extract the national digit.
+      $ActiveReseller->remove_national_digits($custDetails['areaCode']);
+
+      if((strlen($custDetails['areaCode']) < $ActiveReseller->_settings->area_code_min_digits - strlen($ActiveReseller->_settings->digit_for_national_calls)) || 
+       strlen($custDetails['areaCode']) > $ActiveReseller->_settings->area_code_max_digits - strlen($ActiveReseller->_settings->digit_for_national_calls)) {
+        $error=array('reasonCode'=>'0033','reasonDescription'=>'number of digits of the areaCode is not between the areaCodeMinDigits and areaCodeMinDigits, configured for this Reseller');
+        array_push($valErrors,$error);
+      }
+      if((strlen($custDetails['startNumber']) < $ActiveReseller->_settings->subscriber_number_min_digits) ||
+      (strlen($custDetails['startNumber']) > $ActiveReseller->_settings->subscriber_number_max_digits)) {
+        $error=array('reasonCode'=>'0034','reasonDescription'=>'number of digits of the startNumber is not between the subscriberNumberMinDigits and subscriberNumberMaxDigits, configured for this Reseller');
+        array_push($valErrors,$error);
+      }
+      if(empty($custDetails['areaCode']) || !preg_match('/^[0-9]+$/', $custDetails['areaCode'])) {
+        $error=array('reasonCode'=>'1030','reasonDescription'=>'Invalid area code.');
+	      array_push($genericErrors,$error);
+      }
+      if(empty($custDetails['startNumber']) || !preg_match('/^[0-9]+$/', $custDetails['startNumber'])) {
+        $error=array('reasonCode'=>'1031','reasonDescription'=>'Invalid Start Number.');
+	      array_push($genericErrors,$error);
+      }
+     ///////// Validate number range prefix - start./////     
+      $lengths = strlen($custDetails['prefix']); 
+      $range[] = $Customer->_settings->numberranges;
+      $range = json_decode(json_encode($range), true); 
+      $ranges = json_decode(json_encode($range[0]), false); 
+      if(!empty($ranges)){ 
+      foreach($range as $key => $value){
+        for($i=0;$i<100;$i++){ 
+          $range_prefix[] = $range[$key][$i]['prefix'];
+          
+        }
+      }
+      $range_prefix = array_filter($range_prefix); 
+      foreach($range_prefix as $prefix){ 
+        $prefix_length = strlen($prefix); 
+      } 
+      if((!empty($range_prefix))&&($lengths!=0)&&($lengths!=$prefix_length)){ 
+           $error=array('reasonCode'=>'0045','reasonDescription'=>'The number of digits used for the prefix must be the same for all NumberRanges');
+	        array_push($valErrors,$error); 
+        }
+		 
+      $prefix_count = count($range_prefix); 
+      if(!empty($custDetails['prefix'])){
+        if($prefix_count==0){
+          $error=array('reasonCode'=>'0041','reasonDescription'=>'prefix is not allowed');
+	        array_push($valErrors,$error);
+		} 
+		else{
+			if( !preg_match('/^[0-9]+$/', $custDetails['prefix'])) {
+              $error=array('reasonCode'=>'1032','reasonDescription'=>'Invalid Prefix.');
+	          array_push($genericErrors,$error);
+            } 
+		}
+        }
+   
+      if(empty($custDetails['prefix'])){
+        if($prefix_count>0){ 
+          $error=array('reasonCode'=>'0040','reasonDescription'=>'prefix is mandatory because it occurs in one of the existing NumberRanges of this Customer or in the NumberRangeAddListRequest');
+	        array_push($valErrors,$error); 
+        } 
+      }
+  } 
+  ///////// Validate number range prefix - end .
+ 
+      if(!empty($custDetails['prefix'])){
+      if (strlen($ActiveReseller->_settings->digit_for_national_calls) && preg_match('/^'. $ActiveReseller->_settings->digit_for_national_calls .'/', $custDetails['prefix'])) {
+        $error=array('reasonCode'=>'0042','reasonDescription'=>'prefix cannot start with digitForNationalCalls configured for this Reseller');
+        array_push($valErrors,$error);
+      } 
+     // Not allowed to start with.
+      foreach ($ActiveReseller->_settings->extensions_are_not_allowed_to_start_with as $na) {
+        if (preg_match('/^'. $na .'/', $custDetails['prefix'])) {
+          $error=array('reasonCode'=>'0043','reasonDescription'=>'prefix cannot start with one of the values configured in extensionsAreNotAllowedToStartWith for this Reseller');
+          array_push($valErrors,$error);
+        }
+      }
+      } 
+      for($x =($custDetails['areaCode'] . $custDetails['startNumber']);$x<= ($custDetails['areaCode'] . ($custDetails['startNumber'] + $custDetails['length'] - 1));$x++) {
+        $extension_suffix_length = $extension_length - strlen($custDetails['prefix']);
+        $possible_extension = $custDetails['prefix']. substr($x, $extension_suffix_length * - 1);
+        $possible_extensions[] = $possible_extension;
+      } 
+      // Verify if the result of the extension length + number range prefix results in a non allowed.
+      if ($Customer->_settings->derive_extension_from_did){
+        $extension_start = hpbx_get_number_range_extension_start($extension_length, $custDetails['prefix'],
+        $custDetails['startNumber'], $custDetails['length']);
+       // Verify if there is potential overlap between extensions when adding multiple numberranges.
+        $overlap_id = array_search($extension_start, $extensions_start); 
+          if ($overlap_id === FALSE) {
+            $extensions_start[$id] = $extension_start;
+          }
+          else {
+            $error=array('reasonCode'=>'1033','reasonDescription'=>'Potential overlap between extensions');
+            array_push($genericErrors,$error); 
+          }
+       // Not allowed to start with.
+      foreach ($ActiveReseller->_settings->extensions_are_not_allowed_to_start_with as $na){
+        if (preg_match('/^'. substr($na, 0, strlen($extension_start)) .'/', $extension_start)){
+          $error=array('reasonCode'=>'0038','reasonDescription'=>'The extension part of one of the NumberRanges starts with the one of the values in extensionsAreNotAllowedToStartWith  configured for this Reseller');
+          array_push($valErrors,$error); 
+        }
+      } 
+      // Exclude national call digit.
+      if (strlen($ActiveReseller->_settings->digit_for_national_calls) && substr($extension_start, 0, 1) == $ActiveReseller->_settings->digit_for_national_calls) {
+        $error=array('reasonCode'=>'0037','reasonDescription'=>'The extension part of one of the NumberRanges starts with the digitForNationalCalls configured for this Reseller');
+        array_push($valErrors,$error);     
+      } 
+      //exclude extensions
+	  foreach($possible_extensions as $possible_extension){
+      foreach ($ActiveReseller->_settings->exclude_extensions as $na){
+        if ($extension_length == strlen($na) && preg_match('/^'. substr($na, 0, strlen($possible_extension)) .'/', $possible_extension)) {
+          $error=array('reasonCode'=>'0039','reasonDescription'=>'The extension part of one of the NumberRanges will cause extensions to be generated that match one or more values in excludeExtensions configured for this Reseller');
+          array_push($valErrors,$error);  
+        }
+      }
+	  } 
+    } 
+    $from = $custDetails['areaCode'] . $custDetails['startNumber'];
+    $to = $custDetails['areaCode'] . ($custDetails['startNumber'] + $custDetails['length'] - 1);
+    // Remove the leading national digit, if present.
+    $ActiveReseller->remove_national_digits($from);
+    // Remove the leading national digit, if present.
+    $ActiveReseller->remove_national_digits($to); 
+    if ($in_use_customer_id = hpbx_customer_range_in_use($from, $to, $customerId)){
+      $Customer3 = SipwiseEntity::load('customers', $in_use_customer_id);
+      $CustomerContact3 = SipwiseEntity::load('customercontacts', $Customer3->contact_id);
+      $error=array('reasonCode'=>'0035','reasonDescription'=>'One of the NumberRanges in the request already exists or overlaps with an existing NumberRange');
+      array_push($valErrors,$error);  
+    }
+    $length[] = strlen($custDetails['prefix']);
+    $custDetails_prefix[] = $custDetails['prefix']; 
+    
+ }  
+ $custDetails_prefix = array_filter($custDetails_prefix);
+ $pre_count = count($custDetails_prefix); 
+ $numberRange_count = count($customerDetails['numberRange']); 
+    if(empty($ranges)){
+		foreach($custDetails_prefix as $custDetail_prefix){
+		if(!empty($custDetail_prefix) && !preg_match('/^[0-9]+$/', $custDetail_prefix)) {
+        $error=array('reasonCode'=>'1032','reasonDescription'=>'Invalid Prefix.');
+	      array_push($genericErrors,$error);
+         } 
+		}
+      if(!(($pre_count==$numberRange_count)||($pre_count==0))){ 
+        $error=array('reasonCode'=>'','reasonDescription'=>'If a prefix is set for a number range, all numberranges must have a prefix');
+	      array_push($valErrors,$error);
+      }
+    $len_count = count((array_unique($length))); 
+    if(($len_count>1)&&($pre_count==$numberRange_count)){
+           $error=array('reasonCode'=>'0045','reasonDescription'=>'The number of digits used for the prefix must be the same for all NumberRanges');
+	        array_push($valErrors,$error); 
+    } 
+    }  
+	if(empty($extensions)){
+      $possible_extensions = $possible_extensions;
+	}else{
+		$possible_extensions = array_merge($extensions, $possible_extensions);
+	} 
+	  if((count(array_unique($possible_extensions))<count($possible_extensions))){
+        $error=array('reasonCode'=>'0036','reasonDescription'=>'The extension part of one of the NumberRanges overlaps with one of the existing NumberRanges of this Customer or with one of the NumberRanges in the NumberRangeAddListRequest.');
+	    array_push($valErrors,$error);	
+	}
+	 
+  foreach($length as $lengths){
+    if ($lengths >= $extension_length){
+      $error=array('reasonCode'=>'1035','reasonDescription'=>'The prefix must have less digits then the choosen extension length');
+	    array_push($genericErrors,$error);
+    } 
+  } 
+    foreach ($new_numberranges as $key => $range){ 
+
+      foreach ($new_numberranges as $key2 => $range2){
+
+        if($key != $key2){
+          if (($range['from'] >= $range2['from'] &&  $range['from'] <= $range2['to'])){ 
+			  $flag = TRUE;
+			 break;
+          }
+          if(($range['to'] >= $range2['from'] &&  $range['to'] <= $range2['to'])){
+			  $flag = TRUE;
+			 break;
+           
+          }
+        }  
+      }   
+    }
+	  if($flag){
+	    $error=array('reasonCode'=>'1034','reasonDescription'=>'Overlapping number ranges and/or pilot number are not allowed');
+	    array_push($genericErrors,$error); 
+	  } 
+    }
+    }else{
+       $error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+	     array_push($valErrors,$error);  
+     }
+    
+    //save the numberRanges 
+    if(empty($valErrors)&& empty($genericErrors)){
+      $settings = array();  
+      $pilot_force_inbound_calls_to_peer = FALSE;
+      $alias_numbers = hpbx_get_numbers_from_rows($customerDetails[numberRange],$resellerId, $settings,$allowed_clis, $customer_id,TRUE,$pilot_force_inbound_calls_to_peer);  
+      if(empty($Customer->_settings->numberranges)){
+        $Customer->_settings->numberranges = $settings;
+      }
+      else{
+      $settings = json_decode(json_encode($settings), true); 
+      $Customer->_settings->numberranges = json_decode(json_encode($Customer->_settings->numberranges), true);
+      $numberrange = array_merge($Customer->_settings->numberranges,  $settings); 
+      $numberrange = json_decode(json_encode($numberrange), FALSE);  
+      $Customer->_settings->numberranges = $numberrange; 
+      } 
+      $Customer->save(); 
+       if(isset($allowed_clis)){ 
+          $CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);  
+          if(empty($CustomerPreferences->allowed_clis)){
+            $CustomerPreferences->allowed_clis = $allowed_clis;
+          }
+          else{
+          $CustomerPreferences->allowed_clis = array_merge($CustomerPreferences->allowed_clis, array_values($allowed_clis));
+          }
+          $CustomerPreferences->allowed_clis_reject_policy = 'override_by_clir'; 
+          $CustomerPreferences->save(); 
+          $SubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $PilotSubscriber->id); 
+          $SubscriberPreferences->force_inbound_calls_to_peer = $pilot_force_inbound_calls_to_peer; 
+          $SubscriberPreferences->save();
+       }
+       if(empty($PilotSubscriber->alias_numbers)){
+          $PilotSubscriber->alias_numbers = $alias_numbers;
+        }
+        else{
+        $a_number = array_merge($PilotSubscriber->alias_numbers, $alias_numbers);
+        $PilotSubscriber->alias_numbers = $a_number;
+        } 
+        // Save the pilot subscriber.
+        $PilotSubscriber->save();
+        $success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+        return $success; 
+    }
+      else{
+      $errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+      return $errors;
+    }
+}
+
+/*
+ * Number range delete
+ *
+ */
+function hpbx_customer_numberrange_delete_service($customerDetails){
+      
+    global $ActiveReseller;
+	$resellerId = $customerDetails['resellerId'];
+    $customerId = $customerDetails['customerId'];
+    $valErrors=array();
+    $genericErrors = array();
+    // Temporary set the reseller_id.
+  	if (!is_null($resellerId)){
+       sipwise_api_activate_reseller($resellerId);
+	  } 
+    // Verify if the reseller id is valid
+   if(isset($ActiveReseller)){ 
+    // Verify if the customer exists within the re-seller
+      if(!$customers = sipwise_api_get_all('customers', array('reseller_id'=>$resellerId, 'external_id'=>$customerId ))){          
+        $error=array('result'=>'NOK', 'reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this Reseller');
+        array_push($valErrors,$error);    
+      }else{
+      //Vallidations
+      foreach ($customers as $customer){
+        $customer_id = $customer->id; 
+      }
+      $Customer = SipwiseEntity::load('customers',$customer_id); 
+      $ranges = $Customer->_settings->numberranges;  
+      $ranges = json_decode(json_encode($ranges), true); 
+      foreach($ranges as $range){ 
+      $startNumber[] =  $range['area'].$range['start'];
+      $ported[] = $range['inported'];
+    } 
+    foreach ($customerDetails['numberRange'] as $custNumber){
+      $givenNumbers[] = $custNumber['areaCode'].$custNumber['startNumber'];
+    }    
+   foreach ($givenNumbers as $givenNumber){ 
+     if(!in_array($givenNumber, $startNumber)){
+       $numberRange_error=array('result'=>'failure','reasonCode'=>'0046','reasonDescription'=>'NumberRange does not exist');
+     }
+   } 
+   if(empty($numberRange_error)){ 
+     foreach ($customerDetails['numberRange'] as $custDetails){ 
+       $ranges[] = $Customer->_settings->numberranges; 
+       $ranges = json_decode(json_encode($ranges), true); 
+     foreach($ranges as $key=> $value){
+       for($i=0;$i<=100;$i++){ 
+         if(($value[$i]['area']==$custDetails['areaCode'])&&($value[$i]['start']==$custDetails['startNumber'])){
+         $ported = $ranges[$key][$i]['inported'];
+         $length = $ranges[$key][$i]['length'];
+         $areaCode = $ranges[$key][$i]['area'];
+         $startNumber = $ranges[$key][$i]['start'];
+         }   
+       }
+      }
+       $end = $start = $custDetails['startNumber'];
+       $end += $length;
+        
+      for ($i=$start;$i<$end;$i++) {
+        $an = new stdClass();
+        $an->cc = $ActiveReseller->_settings->country_code; 
+        $an->ac = trim($custDetails['areaCode']);
+        $an->sn = $i;
+        $alias_numbers[] = $an;
+      }
+      
+     $Subscribers = $Customer->get_subscribers(FALSE, TRUE, TRUE, TRUE); 
+	 foreach($Subscribers as $Subscriber){
+		 $numRanges[] = hpbx_get_numberrange($Customer, $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_GSN));
+	 } 
+	 $numRanges = json_decode(json_encode($numRanges), true);
+	 $flag = FALSE;  
+	 foreach($numRanges as $numRange){ 
+		 if(($numRange['area'] == $custDetails['areaCode'])&& ($numRange['start']==$custDetails['startNumber'])){
+			 $flag = TRUE;
+			 break;
+		 }
+	 }
+	 if($flag){
+	   $error=array('reasonCode'=>'0047','reasonDescription'=>'NumberRange cannot be deleted because numbers are in use by Subscribers or Group services');
+       array_push($valErrors,$error);  
+	 } 
+	}
+       $range = $Customer->_settings->numberranges; 
+       $range = json_decode(json_encode($range), true); 
+      foreach($customerDetails['numberRange'] as $custDetails){
+        foreach($range as $key=> $ranges){
+          if(($ranges['area']==$custDetails['areaCode']&&$ranges['start']==$custDetails['startNumber'])){         
+          unset($range[$key]);          
+          } 
+        } 
+      } ;
+  if($ported==1){
+    foreach($customerDetails['numberRange'] as $custDetails){
+       $end = $start = $custDetails['startNumber']; 
+       $end += $length;
+      for ($i=$start;$i<$end;$i++) {
+        $an = new stdClass();
+        $an->cc = $ActiveReseller->_settings->country_code; 
+        $an->ac = trim($custDetails['areaCode']);
+        $an->sn = $i;
+        $allowed_clis[] = $an->cc . $an->ac . $an->sn;
+       }  
+     }
+   } 
+    $PilotSubscriber = $Customer->get_pilot_subscriber();
+    $pilot_aliasnumbers = $PilotSubscriber->alias_numbers; 
+    $pilot_aliasnumbers = json_decode(json_encode($pilot_aliasnumbers), true);  
+    $alias_numbers = json_decode(json_encode($alias_numbers), true);
+    foreach($alias_numbers as $alias_number){
+      foreach($pilot_aliasnumbers as $key=> $pilot_aliasnumber){
+         if(($pilot_aliasnumber['ac']==$alias_number['ac']&&$pilot_aliasnumber['sn']==$alias_number['sn'])){         
+          unset($pilot_aliasnumbers[$key]);          
+        } 
+      }
+    } 
+    if(empty($pilot_aliasnumbers)){
+       $error=array('reasonCode'=>'1040','reasonDescription'=>'Atleast one numberRange must be defined for customer. So cant delete numberRange');
+      array_push($genericErrors,$error);
+     }
+     }else{
+      $error=array('reasonCode'=>'0046','reasonDescription'=>'NumberRange does not exist');
+      array_push($valErrors,$error);
+    }
+    }
+    }else{
+      $error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+      array_push($valErrors,$error);
+    }
+	
+    if(empty($valErrors) && empty($genericErrors)){ 
+
+        $range = json_decode(json_encode($range), false);
+		$range = (array)$range; 
+        $Customer->_settings->numberranges = array_values($range); 
+        $Customer->save();
+        $pilot_aliasnumbers = json_decode(json_encode($pilot_aliasnumbers), false);
+		$pilot_aliasnumbers = (array)$pilot_aliasnumbers; 
+        $PilotSubscriber->alias_numbers = array_values($pilot_aliasnumbers); 
+	
+        $PilotSubscriber->save();
+        if(!empty($allowed_clis)){
+        $CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);   
+        $CustomerPreferences->allowed_clis = array_diff($CustomerPreferences->allowed_clis,$allowed_clis); 
+		$CustomerPreferences->allowed_clis =array_values($CustomerPreferences->allowed_clis);
+		if(empty($CustomerPreferences->allowed_clis)){
+			unset($CustomerPreferences->allowed_clis);
+		}
+        $CustomerPreferences->save();
+      } 
+       
+        $success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+	      return $success;
+      }   
+      else{    
+      $errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+  	  return $errors;
+      }
+}
+
+/**
+ * Supportive function toget number from rows against add number range.
+ *
+ */
+function hpbx_get_numbers_from_rows($number,$resellerId, &$numberranges, &$allowed_clis,$customer_id, $exclude_in_use = TRUE, &$pilot_force_inbound_calls_to_peer = FALSE) {
+
+	global $ActiveReseller;
+	sipwise_api_activate_reseller($resellerId);
+	$allowed_clis = array();
+	$alias_numbers = array();
+	$numberranges = array();
+	$Customer = SipwiseEntity::load('customers',$customer_id);
+	$in_use = array();
+	if ($exclude_in_use){
+		$subscribers = $Customer->get_subscribers(FALSE, TRUE, TRUE, TRUE, TRUE);
+		foreach ($subscribers as $Subscriber) {
+			if (isset($Subscriber->alias_numbers)) {
+				$in_use[] = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN);
+			}
+		}
+	}
+	foreach($number as $numbers){
+		if (!empty($numbers['areaCode']) && !empty($numbers['startNumber']) && !empty($numbers['length'])) {
+			$ActiveReseller->remove_national_digits($numbers['areaCode']);
+			if ($numbers['portedOrNewNumberFlag']== 0) {
+				$pilot_force_inbound_calls_to_peer = TRUE;
+			}
+			$range = array(
+          'inported' => $numbers['portedOrNewNumberFlag'],
+          'area' => $numbers['areaCode'],
+          'start' => $numbers['startNumber'],
+          'length' => (int)$numbers['length'],
+          'prefix' => $numbers['prefix'],
+			 
+			);
+			$numberranges[] = (object)$range;
+
+			$end = $start = $numbers['startNumber'];
+			$end += $numbers['length'];
+
+			for ($i=$start;$i<$end;$i++) {
+				$an = new stdClass();
+				$an->cc = $ActiveReseller->_settings->country_code;
+				$an->ac = trim($numbers['areaCode']);
+				$an->sn = $i;
+
+				if(!$exclude_in_use || !in_array($an->ac.$an->sn, $in_use)) {
+					$alias_numbers[$an->ac.$an->sn] = $an;
+				}
+
+				if($numbers['portedOrNewNumberFlag']== 1) {
+					$allowed_clis[] = $an->cc . $an->ac . $an->sn;
+				}
+			}
+		}
+	}
+	return array_values($alias_numbers);
+	// return array_values($allowed_clis);
+}
+
+/**
+ * Supportive function toget customer_id using external_id.
+ *
+ */
+
+function hpbx_customer_get_cust_id($reseller_id,$external_id) {
+	if (!$reseller_id) return array();
+
+	try {
+		// Search for company name and external id.
+		$query = db_select('hpbx_customers', 'c')
+		->fields('c')
+		->condition('reseller_id', $reseller_id)
+		->condition('external_id', $external_id);
+
+		$result = $query->execute();
+
+		return $result->fetchAllAssoc('customer_id');
+	}
+	catch (Exception $e) {
+		watchdog('hpbx_customer_search', $e->getMessage());
+		return FALSE;
+	}
+}
+
+/**
+ * Update a number range.
+ *
+ */
+function hpbx_customer_number_range_update_service($customerDetails){
+  
+  global $ActiveReseller;
+  $resellerId=$customerDetails['resellerId'];
+  $customerId=$customerDetails['customerId'];
+  $valErrors=array();
+	$genericErrors= array();
+	//Temporary set the reseller_id.
+	if (!is_null($resellerId)) {	
+	  sipwise_api_activate_reseller($resellerId);
+  }
+	if(isset($ActiveReseller)){ 
+    // Verify if the customer exists within the re-seller
+      if(!$customers = sipwise_api_get_all('customers', array('reseller_id'=>$resellerId, 'external_id'=>$customerId ))){          
+        $error=array('result'=>'Failure', 'reasonCode'=>'0024','reasonDescription'=>'customerId does not exist within this Reseller');
+        array_push($valErrors,$error);    
+      }else{
+      //Vallidations
+      foreach ($customers as $customer){
+        $customer_id = $customer->id; 
+      }
+      $Customer = SipwiseEntity::load('customers',$customer_id);  
+      $PilotSubscriber = $Customer->get_pilot_subscriber(); 
+      $extension_length = $Customer->_settings->extension_length;   
+      $pilot_number = $PilotSubscriber->primary_number; 
+      $extensions_start = array();
+      $new_ranges = array();
+      $new_numberranges = array();
+      $possible_extensions = array();
+      $lengths = array();
+      $ranges = $Customer->_settings->numberranges; 
+      $ranges = json_decode(json_encode($ranges), true);  
+	  $extensions = hpbx_get_extension_array($Customer,$ranges,$extension_length); 
+      foreach($ranges as $range){
+        $startNumber[] = $range['area'].$range['start'];
+      }
+
+      foreach ($customerDetails['numberRange'] as $custNumber){
+        $givenNumbers[] = $custNumber['areaCode'].$custNumber['startNumber'];
+        $prefixs[] = $custNumber['prefix'];
+      }
+           
+      foreach ($givenNumbers as $givenNumber){
+        if(!in_array($givenNumber, $startNumber)){
+        $numberRange_error=array('result'=>'failure','reasonCode'=>'0046','reasonDescription'=>'NumberRange does not exist');
+      }
+      }
+  $prefixs_count = count(array_filter($prefixs));      
+  if(empty($numberRange_error)){ 
+    foreach ($customerDetails['numberRange'] as $custDetails){ 
+      $range[] = $Customer->_settings->numberranges;
+      $range = json_decode(json_encode($range), true); 
+    foreach($range as $key=> $value){
+      for($i=0;$i<=100;$i++){
+        if($value[$i]['area']==$custDetails['areaCode']&&$value[$i]['start']==$custDetails['startNumber']){         
+          $range[$key][$i]['prefix'] = $custDetails['prefix'];
+          $range[$key][$i]['inported'] = $custDetails['portedOrNewNumberFlag']; 
+          $length = $range[$key][$i]['length'];
+          $areaCode = $range[$key][$i]['area'];
+          $startNumber = $range[$key][$i]['start'];
+        } 
+      }
+    } 
+ 
+    $new_numberranges[] = array(
+       'from' => $pilot_number,
+       'to' => $pilot_number,
+    );
+    
+    // Add pilot number to the ranges, so we can verify if it is overlapping with the ranges.
+    $new_ranges[] = $pilot_number;
+    // Store the range, to verify if we have duplicates.
+    $new_ranges[] = $custDetails['areaCode'] . $custDetails['startNumber'];  
+    // Store the  range to verify if have duplicates.
+    $new_numberranges[] = array(
+      'from' => $custDetails['areaCode'] . $custDetails['startNumber'],
+     'to' => $custDetails['areaCode'] . ($custDetails['startNumber'] + $length - 1),
+    );
+    // Before validation the area code, extract the national digit.
+    $ActiveReseller->remove_national_digits($custDetails['areaCode']);
+
+    if(empty($custDetails['areaCode']) || !preg_match('/^[0-9]+$/', $custDetails['areaCode'])) {
+      $error=array('reasonCode'=>'1030','reasonDescription'=>'Invalid area code.');
+	    array_push($genericErrors,$error);
+    }
+    if(empty($custDetails['startNumber']) || !preg_match('/^[0-9]+$/', $custDetails['startNumber'])) {
+      $error=array('reasonCode'=>'1031','reasonDescription'=>'Invalid Start Number.');
+	    array_push($genericErrors,$error);
+    }
+    if(!empty($custDetails['prefix']) && !preg_match('/^[0-9]+$/', $custDetails['prefix'])) {
+      $error=array('reasonCode'=>'1032','reasonDescription'=>'Invalid Prefix.');
+	    array_push($genericErrors,$error);
+    }
+     // Validate number range prefix.
+    $lengths = strlen($custDetails['prefix']); 
+    $ranges = $Customer->_settings->numberranges;
+    $range_count = count($ranges);
+	$ranges = json_decode(json_encode($ranges), true); 
+    $ranges[] = $ranges;
+    
+  
+    foreach($ranges as $key => $value){
+      for($i=0;$i<100;$i++){ 
+        $range_prefix[] = $ranges[$key][$i]['prefix'];
+      }
+    } 
+    $range_prefix = array_filter($range_prefix); 
+    foreach($range_prefix as $prefix){ 
+       $prefix_length = strlen($prefix); 
+    } 
+    
+    $prefix_count = count($range_prefix); 
+    $custDetails_prefix[] = $custDetails['prefix']; 
+    $length_prefix[] = strlen($custDetails['prefix']);
+     
+      if(empty($custDetails['prefix'])&& ($prefix_count>0)){
+          $error=array('reasonCode'=>'0040','reasonDescription'=>'prefix is mandatory because it occurs in one of the existing NumberRanges of this Customer or in the NumberRangeAddListRequest');
+	        array_push($valErrors,$error); 
+      } 
+      if($prefixs_count!=$prefix_count){ 
+      	$bol = FALSE;
+      }
+      
+      if(!empty($range_prefix) && !empty($custDetails['prefix'])&&($bol)){ 
+        if(($lengths!=$prefix_length)){
+          $error=array('reasonCode'=>'0045','reasonDescription'=>'The number of digits used for the prefix must be the same for all NumberRanges');
+                      array_push($valErrors,$error); 
+        }
+      }
+      
+    if(!empty($custDetails['prefix'])){
+      
+      if (strlen($ActiveReseller->_settings->digit_for_national_calls) && preg_match('/^'. $ActiveReseller->_settings->digit_for_national_calls .'/', $custDetails['prefix'])) {
+        $error=array('reasonCode'=>'0042','reasonDescription'=>'prefix cannot start with digitForNationalCalls configured for this Reseller');
+        array_push($valErrors,$error);
+      } 
+     // Not allowed to start with.
+      foreach ($ActiveReseller->_settings->extensions_are_not_allowed_to_start_with as $na) {
+        if (preg_match('/^'. $na .'/', $custDetails['prefix'])) {
+          $error=array('reasonCode'=>'0043','reasonDescription'=>'prefix cannot start with one of the values configured in extensionsAreNotAllowedToStartWith for this Reseller');
+          array_push($valErrors,$error);
+        }
+      }
+    } 
+    if(!empty($custDetails['prefix'])){
+      for($x =($custDetails['areaCode'] . $custDetails['startNumber']);$x<= ($custDetails['areaCode'] . ($custDetails['startNumber'] + $length - 1));$x++) {
+        $extension_suffix_length = $extension_length - strlen($custDetails['prefix']);
+        $possible_extension = $custDetails['prefix']. substr($x, $extension_suffix_length * - 1);
+        $possible_extensions[] = $possible_extension;
+      }
+    }
+      // Verify if the result of the extension length + number range prefix results in a non allowed.
+    if ($Customer->_settings->derive_extension_from_did){
+      $extension_start = hpbx_get_number_range_extension_start($extension_length, $custDetails['prefix'],
+      $custDetails['startNumber'], $length);
+      // Verify if there is potential overlap between extensions when adding multiple numberranges.
+      $overlap_id = array_search($extension_start, $extensions_start); 
+      if ($overlap_id === FALSE) {
+        $extensions_start[$id] = $extension_start;
+      }
+      else {
+        $error=array('reasonCode'=>'1033','reasonDescription'=>'Potential overlap between extensions');
+        array_push($genericErrors,$error); 
+      }
+       // Not allowed to start with.
+      foreach ($ActiveReseller->_settings->extensions_are_not_allowed_to_start_with as $na){
+        if (preg_match('/^'. substr($na, 0, strlen($extension_start)) .'/', $extension_start)){
+          $error=array('reasonCode'=>'0044','reasonDescription'=>'The prefix of the NumberRange causes the extension part of one of the NumberRanges to start with the one of the values in extensionsAreNotAllowedToStartWith  configured for this Reseller');
+          array_push($valErrors,$error); 
+        }
+      } 
+      // Exclude national call digit.
+      if (strlen($ActiveReseller->_settings->digit_for_national_calls) && substr($extension_start, 0, 1) == $ActiveReseller->_settings->digit_for_national_calls) {
+        $error=array('reasonCode'=>'0037','reasonDescription'=>'The extension part of one of the NumberRanges starts with the digitForNationalCalls configured for this Reseller');
+        array_push($valErrors,$error);     
+      }
+      // Exclude extensions. 
+      
+      // Exclude extensions.
+      if(!empty($possible_extensions)){
+	  foreach($possible_extensions as $possible_extension){
+      foreach ($ActiveReseller->_settings->exclude_extensions as $na){
+        if ($extension_length == strlen($na) && preg_match('/^'. substr($na, 0, strlen($possible_extension)) .'/', $possible_extension)) {
+          $error=array('reasonCode'=>'0039','reasonDescription'=>'The extension part of one of the NumberRanges will cause extensions to be generated that match one or more values in excludeExtensions configured for this Reseller');
+          array_push($valErrors,$error);  
+        }
+      }
+	  }
+      }
+    } 
+ } 
+ 
+ $custDetails_prefix = array_filter($custDetails_prefix);
+ $pre_count = count($custDetails_prefix); 
+ $numberRange_count = count($customerDetails['numberRange']); 
+ $len_count = count(array_unique($length_prefix));
+
+ if($pre_count>0){
+        if(($prefix_count==0)&&($range_count!=$pre_count)){
+          $error=array('reasonCode'=>'0049','reasonDescription'=>'prefix shall be added to all NumberRanges of this Customer');
+	        array_push($valErrors,$error);
+        } 
+ }
+ if(empty($range_prefix)){ 
+   if(($numberRange_count==$pre_count)&& ($len_count>1)){
+      $error=array('reasonCode'=>'0045','reasonDescription'=>'The number of digits used for the prefix must be the same for all NumberRanges');
+	        array_push($valErrors,$error);
+   } 
+ } 
+ $possible_extensions = array_merge($extensions,$possible_extensions); 
+    if (count(array_unique($possible_extensions))<count($possible_extensions)){
+      $error=array('reasonCode'=>'0036','reasonDescription'=>'The extension part of one of the NumberRanges overlaps with one of the existing NumberRanges of this Customer or with one of the NumberRanges in the NumberRangeAddListRequest.');
+	    array_push($valErrors,$error);
+    } 
+    // Prefix length can't increase extensionlength -1
+
+   foreach($length_prefix as $len){
+    if ($len >= $extension_length){
+      $error=array('reasonCode'=>'1035','reasonDescription'=>'The prefix must have less digits then the choosen extension length');
+	    array_push($genericErrors,$error);
+    } 
+   }
+ }else{
+      $error=array('result'=>'Failure', 'reasonCode'=>'0046','reasonDescription'=>'numberRange does not exist');
+      array_push($valErrors,$error);  
+   }
+   }
+  }else{
+    $error=array('reasonCode'=>'0001','reasonDescription'=>'resellerId does not exist');
+	  array_push($valErrors,$error);  
+ }
+  
+ if(empty($valErrors)&& empty($genericErrors)){ 
+   $range = json_decode(json_encode($range[0]), false); 
+   $range = (array)$range;
+    $Customer->_settings->numberranges = $range;
+    $Customer->save();
+    $allowed_clis = get_local_allowed_cli($customerDetails['numberRange'],$resellerId,$allowed_clis,$customer_id,$length);
+     
+	  foreach($customerDetails['numberRange'] as $custDetails){ 
+        if($custDetails['portedOrNewNumberFlag']==0){
+          $CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);  
+          $end = $start = $custDetails['startNumber'];
+          $end += $length;  
+         for ($i=$start;$i<$end;$i++) {
+          $an = new stdClass();
+          $an->cc = $ActiveReseller->_settings->country_code; 
+          $an->ac = trim($custDetails['areaCode']);
+          $an->sn = $i;
+          $allowed_cli[] = $an->cc . $an->ac . $an->sn;   
+         } 
+         $CustomerPreferences->allowed_clis = array_diff($CustomerPreferences->allowed_clis,$allowed_cli); 
+		 $CustomerPreferences->allowed_clis =array_values($CustomerPreferences->allowed_clis); 
+		   if(empty($CustomerPreferences->allowed_clis)){
+			 unset($CustomerPreferences->allowed_clis);
+		    }
+         $CustomerPreferences->save();
+        }
+      } 
+ 
+    if(!empty($allowed_clis)){ 
+      $CustomerPreferences = SipwiseEntity::load('customerpreferences', $customer_id);  
+      if(empty($CustomerPreferences->allowed_clis)){
+        $CustomerPreferences->allowed_clis = $allowed_clis;
+      }
+      else{
+        $allowed_clis = array_diff($CustomerPreferences->allowed_clis,$allowed_clis);
+        $CustomerPreferences->allowed_clis = array_merge($CustomerPreferences->allowed_clis,$allowed_clis);
+      }  
+     $CustomerPreferences->allowed_clis_reject_policy = 'override_by_clir';
+     $CustomerPreferences->save(); 
+     }
+   
+
+// change the prefix in case the prefix of the numberrange changed.
+  foreach (SipwiseSubscriber::get_all(array('customer_id' => $customer_id)) as $Subscriber) {
+    if (!$Subscriber->is_pilot()) {
+        // Set prefix based.
+      $prefix = hpbx_get_extension_prefix($Customer, $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN)); 
+      $extension_suffix_length = $Customer->_settings->extension_length - strlen($prefix);
+      $Subscriber->pbx_extension = $prefix. substr($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN), $extension_suffix_length * - 1);
+      $Subscriber->save();
+      // Load the subscriberpreferences and update gpp1 and display_name.
+      $SubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $Subscriber->id);
+      $SubscriberPreferences->display_name = trim($Subscriber->pbx_extension);
+      $SubscriberPreferences->gpp1 = $Subscriber->pbx_extension;
+      
+    
+        // To support routing for non-ported numbers to peer, which is necessary
+        // to ensure  that calling  non-ported numbers  from HPBX will be routed
+        // correctly  (to the peer), we  will set force_inbound_calls_to_peer to
+        // TRUE in case the number is not yet ported or to FALSE when the number
+        // is ported. To verify if the number is ported, we will use the allowed
+        // -clis variable, which is filled based on the inported checkbox at the
+        // customer edit form.
+        
+      if (in_array($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_E164), $CustomerPreferences->allowed_clis)) {
+        $SubscriberPreferences->force_inbound_calls_to_peer = FALSE;
+      }
+      else {
+        $SubscriberPreferences->force_inbound_calls_to_peer = TRUE;
+      }
+        // Save the preferences.
+     $SubscriberPreferences->save();
+    }
+     else {
+        // Save subscriber.
+       $Subscriber->save();
+      }
+  }
+    $success=array('result'=>'OK','reasonCode'=>'','reasonDescription'=>'');
+		return $success;
+  }
+  else{
+    $errors=array("result"=>"NOK","validationErrors"=>$valErrors,"genericErrors"=>$genericErrors);
+    return $errors;
+  }
+}
+
+/**
+ * Supportive function toget allowed cli.
+ *
+ */
+function get_local_allowed_cli($number,$resellerId,&$allowed_clis,$customer_id,$length){
+
+	global $ActiveReseller;
+	sipwise_api_activate_reseller($resellerId);
+	$allowed_clis = array();
+	$Customer = SipwiseEntity::load('customers',$customer_id);
+	foreach($number as $numbers){
+		if (!empty($numbers['areaCode']) && !empty($numbers['startNumber'])) {
+			$ActiveReseller->remove_national_digits($numbers['areaCode']);
+			$range = array(
+          'inported' => $numbers['portedOrNewNumberFlag'],
+          'area' => $numbers['areaCode'],
+          'start' => $numbers['startNumber'],
+          'length' => $length,
+          'prefix' => $numbers['prefix'], 
+			);
+			$numberranges[] = (object)$range;
+			$end = $start = $numbers['startNumber'];
+			$end += $length;
+			for ($i=$start;$i<$end;$i++) {
+				$an = new stdClass();
+				$an->cc = $ActiveReseller->_settings->country_code;
+				$an->ac = trim($numbers['areaCode']);
+				$an->sn = $i;
+				if($numbers['portedOrNewNumberFlag'] == 1) {
+					$allowed_clis[] = $an->cc . $an->ac . $an->sn;
+				}
+			}
+		}
+	}
+	return array_values($allowed_clis);
+}
+
+/**
+ * Supportive function to get extensions with prefix.
+ *
+ */
+function hpbx_get_extension_array($Customer, $ranges,$extension_length){
+  foreach($ranges as $range){
+    $startNumbers[] = $range['start'];
+	$prefixs[] = $range['prefix'];
+	$length[] = $range['length'];
+   } 
+//generating extension with prefix 
+  $start = new ArrayIterator($startNumbers);
+  $prefix = new ArrayIterator($prefixs);
+  $it = new MultipleIterator;
+  $it->attachIterator($start);
+  $it->attachIterator($prefix);
+  foreach($it as $e){
+	$num = substr($e[0], -$extension_length + strlen($e[1]));
+	$number = $e[1].$num;
+	$extension[] = $number;
+  }
+
+  $extension = new ArrayIterator($extension);
+  $length = new ArrayIterator($length);
+  $it = new MultipleIterator;
+  $it->attachIterator($extension);
+  $it->attachIterator($length);
+
+  foreach($it as $e) {
+   $end = $start = $e[0];
+   $end += $e[1];    
+   for($i=$start;$i<$end;$i++) {
+        $numbers[] = $i;
+   }
+  }
+  return array_values($numbers);
 }

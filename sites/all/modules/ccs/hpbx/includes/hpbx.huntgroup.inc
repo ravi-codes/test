@@ -58,7 +58,11 @@ function hpbx_huntgroups_overview_form($form, $form_state, $customer_id = NULL) 
       }
       else {
         $number = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
-        $number = substr($number, 0, $Customer->_settings->extension_length * -1). '<span class="hpbx-pbx-extension" >'. $Subscriber->pbx_extension . '</span>';
+	    if(isset($number) && $number !=''){
+			$number = substr($number, 0, $Customer->_settings->extension_length * -1) . '<span class="hpbx-pbx-extension" >' . $Subscriber->pbx_extension . '</span>';
+		}else{
+			$number = "<span style='padding-left:30px'>&nbsp</span>" . '<span class="hpbx-pbx-extension" >' . $Subscriber->pbx_extension . '</span>';
+		}
         $form['table'][$Subscriber->id]['number']['data'] = array('#markup' =>  $number);
         $form['table'][$Subscriber->id]['number']['#attributes']['class'] = array('hpbx-show hpbx-nowrap');
       }
@@ -84,6 +88,27 @@ function hpbx_huntgroups_overview_form($form, $form_state, $customer_id = NULL) 
 function hpbx_huntgroup_delete_page($subscriber_id) {
 
   hpbx_subscriber_delete($subscriber_id);
+   if ($Subscriber = SipwiseEntity::load('subscribers', $subscriber_id)) {
+    if (!is_null($Subscriber)) {
+      $alias_number_original = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
+    }
+    $Customer = hpbx_get_active_customer();
+    $pilot_sub = $Customer->get_pilot_subscriber(); 
+    if (!empty($alias_number_original)) {
+      $pilot_sub->alias_number_set($Customer, $alias_number_original, FALSE);
+      $pilot_sub->save();
+    }else{ 
+      $sub_alias = $Subscriber->alias_numbers;
+      $alias_no = json_decode(json_encode($sub_alias[0]));
+      $number = (array)$alias_no;
+      foreach ($pilot_sub->alias_numbers as $p_key => $p_an) { 
+        if ($p_an->cc == $number['cc'] && $p_an->ac == $number['ac'] && $p_an->sn == $number['sn']) { 
+          unset($pilot_sub->alias_numbers[$p_key]);
+          $pilot_sub->save();
+        }
+      }
+    }
+  }
   drupal_goto('hpbx/huntinggroups');
 }
 
@@ -201,8 +226,63 @@ function hpbx_huntgroup_edit_form($form, &$form_state, $subscriber_id = NULL) {
 
   // Set number + extension form elements.
   hpbx_subscriber_number_extension_elements($form, $form_state, $Customer, $HuntGroup, 'table');
+  // Set default value based on cli setting.
+    if (!isset($HuntGroup->id) || isset($SubscriberPreferences->cli) && $SubscriberPreferences->cli == $ActiveReseller->_settings->country_code . substr($HuntGroup->get_alias_number(HPBX_NUMBER_FORMAT_GSN), strlen($ActiveReseller->_settings->digit_for_national_calls)))  {
+      $default_value = 'default';
+    }
+    // Set default value based on cli setting.
+    elseif (isset($SubscriberPreferences->cli)) {
+      $default_value =  $ActiveReseller->_settings->digit_for_national_calls . substr($SubscriberPreferences->cli, strlen($ActiveReseller->_settings->country_code), -($Customer->_settings->extension_length));
+    }
+    else {
+      $default_value = FALSE;
+    }
   $form['container']['table'] += $form['table'];
   unset($form['table']);
+  $Subscriber = SipwiseEntity::load('subscribers', $subscriber_id);
+ 
+ if(isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+  	
+   	$subscriber_options = hpbx_get_subscriber_options_subscriber_create($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+   		/*if(isset($Subscriber) && !empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN))){
+    		$subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+    	}else if(!isset($Subscriber) && isset($Customer->_settings->numberranges) && !empty($Customer->_settings->numberranges) && $form_state['input']['table']['alias_number']['value']=='0'){
+    		$subscriber_options = $subscriber_options;
+    	}else if(!isset($Subscriber) && isset($Customer->_settings->numberranges) && !empty($Customer->_settings->numberranges) && $form_state['input']['table']['alias_number']['value']!=''){
+    		$subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+    	}*/
+      //$subscriber_options = hpbx_get_subscriber_options_subscriber_create($Customer, $Subscriber, TRUE, FALSE, TRUE,  TRUE, FALSE, TRUE, TRUE);
+   	if(isset($Subscriber) && (($form_state['input']['table']['alias_number']['value']=='0') || (!isset($form_state['input']['table']['alias_number']['value']) && empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_GSN))))){
+      $subscriber_options = $subscriber_options;	
+    }else {
+      $subscriber_options = array_merge(array('default' => t('Own number'), $subscriber_options));
+    }
+
+    	   
+   	  // CLI.
+	  $form['container']['table']['cli']['value'] = array(
+	    '#type' => 'select',
+	    '#options' => $subscriber_options,
+	    '#default_value' => $default_value,
+	    '#required' => TRUE,
+	  	'#prefix' => '<span id="caller_line_identification">',
+	    '#title' => t('Caller Line Identification'),
+	    '#attributes' => array('class' => array('chzn-select', 'sg-element', 'no-search')),
+	    '#access' => hpbx_attribute_allowed('cli'),
+	    '#suffix' => '</span>'
+	  );
+   }
+   if(isset($Subscriber) && !empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN))){
+  		$defaultAliasNo = $Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN);
+  		$form['container']['table']['cli']['value']['#disabled'] = TRUE;
+   }if(isset($SubscriberPreferences->cli) && empty($Subscriber->get_alias_number(HPBX_NUMBER_FORMAT_SN))){
+   		$form['container']['table']['cli']['value']['#disabled'] = FALSE;
+   }else if(isset($form_state['input']['table']['alias_number']['value']) && $form_state['input']['table']['alias_number']['value']==0){
+   		$form['container']['table']['cli']['value']['#disabled'] = FALSE;
+   }else{
+  		$defaultAliasNo = 0;
+  		$form['container']['table']['cli']['value']['#disabled'] = TRUE;
+   }   
 
   $options = array(
     'serial' => t('Serial Ringing'),
@@ -448,8 +528,8 @@ function hpbx_huntgroup_edit_form($form, &$form_state, $subscriber_id = NULL) {
 
   $form_cfu = $form_state_resort = array();
 
-  hpbx_subscribers_callforwards_form($form_cfu, $form_state_resort, $Customer, $HuntGroup, $Callforwards);
-  
+  hpbx_subscribers_callforwards_form($form_cfu, $form_state_resort, $Customer, $HuntGroup, $Callforwards,$ActiveReseller);
+
   // Some conversion.
   unset(
     $form_cfu['call-forwards']['cfb'],
@@ -523,7 +603,7 @@ function hpbx_huntgroup_edit_form($form, &$form_state, $subscriber_id = NULL) {
 
   $form_cfna = $form_state_resort = array();
   $Callforwards = SipwiseEntity::load('callforwards', $HuntGroup->id);
-  hpbx_subscribers_callforwards_form($form_cfna, $form_state_resort, $Customer, $HuntGroup, $Callforwards);
+  hpbx_subscribers_callforwards_form($form_cfna, $form_state_resort, $Customer, $HuntGroup, $Callforwards,$ActiveReseller);
 
   // Some conversion.
   unset(
@@ -865,14 +945,23 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
     $alias_number_original = $HuntGroup->get_alias_number(HPBX_NUMBER_FORMAT_GSN);
 
     $an_change = FALSE;
+  
+    $alias_no_original = $form_state['values']['table']['alias_number']['value'];
+    
+    if(empty($form_state['values']['table']['alias_number']['value']) && isset($Customer->_settings->allow_subscribers_without_did) && $Customer->_settings->allow_subscribers_without_did){
+      $form_state['values']['table']['alias_number']['value'] = $form_state['values']['table']['cli']['value'] . $form_state['values']['table']['pbx_extension']['value'];
+    } 
 
     if ($form_state['values']['table']['alias_number']['value']!=$alias_number_original) {
 
       $an_change = TRUE;
-
+      $min_length = $ActiveReseller->_settings->area_code_min_digits + $ActiveReseller->_settings->subscriber_number_min_digits;
+      $max_length = $ActiveReseller->_settings->area_code_max_digits + $ActiveReseller->_settings->subscriber_number_max_digits;
+      
       // Remove the newly set alias number from the pilot subscriber.
-      $PilotSubscriber->alias_number_unset($Customer, $form_state['values']['table']['alias_number']['value']);
-
+       if(strlen($form_state['values']['table']['alias_number']['value']) >= $min_length && strlen($form_state['values']['table']['alias_number']['value']) <= $max_length && !empty($alias_no_original)){
+         $PilotSubscriber->alias_number_unset($Customer, $form_state['values']['table']['alias_number']['value']);
+       }
       // Set the newly set alias number on the subscriber, remove it when empty.
       $HuntGroup->alias_number_set($Customer, $form_state['values']['table']['alias_number']['value']);
     }
@@ -890,7 +979,7 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
     // Load the subscriberpreferences.
     $SubscriberPreferences = SipwiseEntity::load('subscriberpreferences', $HuntGroup->id);
   	//Modified for Bug#9743 - BUILD: Change request - Set display_name for AA/CR/Fax for create/update use cases
-  	$SubscriberPreferences->display_name = $HuntGroup->external_id; 
+  	//$SubscriberPreferences->display_name = $HuntGroup->external_id; 
     //$SubscriberPreferences->display_name = $HuntGroup->pbx_extension;
     $SubscriberPreferences->cc = $ActiveReseller->_settings->country_code;
     if ($area =$Customer->get_area_code($form_state['values']['table']['alias_number']['value'])) {
@@ -961,8 +1050,70 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
       $SubscriberPreferences->music_on_hold = FALSE;
     }
 
-    // Set the gpp0 value equal to the aliasnumber for billing purposses.
-    $SubscriberPreferences->cli = $SubscriberPreferences->gpp0 = $ActiveReseller->_settings->country_code . $form_state['values']['table']['alias_number']['value'];
+    
+  //CLI Restriction.
+    if (isset($alias_no_original) && is_numeric($alias_no_original) && $alias_no_original!=0) {
+      	//Set the gpp0 value equal to the aliasnumber for billing purposses.
+        $SubscriberPreferences->cli = $SubscriberPreferences->gpp0  = $ActiveReseller->_settings->country_code . substr($form_state['values']['table']['alias_number']['value'], strlen($ActiveReseller->_settings->digit_for_national_calls));
+
+        if (in_array($ActiveReseller->_settings->country_code . $form_state['values']['table']['alias_number']['value'],
+	        $CustomerPreferences->allowed_clis)) {
+	        $SubscriberPreferences->force_inbound_calls_to_peer = FALSE;
+      	}
+      	else {
+        	$SubscriberPreferences->force_inbound_calls_to_peer = TRUE;
+      	}	
+        $SubscriberPreferences->display_name = $HuntGroup->external_id;
+	      
+    }
+    else if(isset($form_state['values']['table']['cli']['value']) && is_numeric($form_state['values']['table']['cli']['value']) && $alias_no_original==0){
+      //$SubscriberPreferences->user_cli = $ActiveReseller->_settings->country_code . substr($form_state['values']['table']['cli']['value'], strlen($ActiveReseller->_settings->digit_for_national_calls));
+      
+      //Set the gpp0 value equal to the aliasnumber for billing purposses.
+      $SubscriberPreferences->gpp0  = $ActiveReseller->_settings->country_code . substr($form_state['values']['table']['cli']['value'], strlen($ActiveReseller->_settings->digit_for_national_calls));
+      $SubscriberPreferences->cli = $ActiveReseller->_settings->country_code . substr($form_state['values']['table']['cli']['value'], strlen($ActiveReseller->_settings->digit_for_national_calls)).$HuntGroup->pbx_extension;
+      $SubscriberPreferences->cc = $ActiveReseller->_settings->country_code;
+
+      // Get area number
+      $area = $Customer->get_area_code($form_state['values']['table']['cli']['value']);
+
+      // Set area code in case it is found.
+      if ($area) {
+        $SubscriberPreferences->ac = $area;
+      }
+
+      if ($ActiveReseller->_settings->execute_logic_for_area_code_dependant_emergency_suffix) {
+
+        // Set emergency prefix.
+        $SubscriberPreferences->emergency_prefix = $ActiveReseller->_settings->emergency_prefix;
+
+        // Get emergency index.
+        $ei = hpbx_get_emergency_index($area);
+
+        // Set emergency suffix.
+        $SubscriberPreferences->emergency_suffix = $ei;
+      }
+       // To support routing for non-ported numbers to peer, which is necessary
+      // to ensure  that calling  non-ported numbers  from HPBX will be routed
+      // correctly  (to the peer), we  will set force_inbound_calls_to_peer to
+      // TRUE in case the number is not yet ported or to FALSE when the number
+      // is ported. To verify if the number is ported, we will use the allowed
+      // -clis variable, which is filled based on the inported checkbox at the
+      // customer edit form.
+      if (in_array($ActiveReseller->_settings->country_code . $form_state['values']['table']['cli']['value'],
+        $CustomerPreferences->allowed_clis)) {
+
+        $SubscriberPreferences->force_inbound_calls_to_peer = FALSE;
+      }
+      else {
+        $SubscriberPreferences->force_inbound_calls_to_peer = TRUE;
+      }		
+      $SubscriberPreferences->display_name = $HuntGroup->pbx_extension;
+	}
+    /*else {
+     // Set the pilot subscriber primary number as cli.      
+      $SubscriberPreferences->user_cli = $ActiveReseller->_settings->country_code . substr(hpbx_parse_primary_number($PilotSubscriber->primary_number), strlen($ActiveReseller->_settings->digit_for_national_calls));
+    }*/
     $SubscriberPreferences->gpp1 = $HuntGroup->pbx_extension;
     
     // Set announcement language.
@@ -1011,21 +1162,6 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
       $SubscriberPreferences->ringtimeout = $HuntGroup->pbx_hunt_timeout * count($HuntGroup->pbx_groupmember_ids);
     }
 
-    // To support routing for non-ported numbers to peer, which is necessary
-    // to ensure  that calling  non-ported numbers  from HPBX will be routed
-    // correctly  (to the peer), we  will set force_inbound_calls_to_peer to
-    // TRUE in case the number is not yet ported or to FALSE when the number
-    // is ported. To verify if the number is ported, we will use the allowed
-    // -clis variable, which is filled based on the inported checkbox at the
-    // customer edit form.
-    if (in_array($ActiveReseller->_settings->country_code . $form_state['values']['table']['alias_number']['value'],
-        $CustomerPreferences->allowed_clis)) {
-
-      $SubscriberPreferences->force_inbound_calls_to_peer = FALSE;
-    }
-    else {
-      $SubscriberPreferences->force_inbound_calls_to_peer = TRUE;
-    }
         
     $allsite = json_decode(json_encode($Customer->_settings->multisite),true);
     foreach($allsite as $key=>$sites){
@@ -1069,6 +1205,11 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
 
     // Office hours.
     $out_of_office_hours_destination = FALSE;
+    if(empty($alias_no_original)){
+     $DDI = $form_state['values']['table']['cli']['value'];
+    }else{
+     $DDI = $form_state['values']['table']['alias_number']['value'];
+    }
     
     if ($form_state['values']['last_resort'] == 'ooa') {
       $out_of_office_hours_destination = 'officehours';
@@ -1078,7 +1219,27 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
         $out_of_office_hours_destination = 'voicebox';
       }
       elseif ($form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_type'] == 'uri') {
-        $out_of_office_hours_destination = sipwise_api_normalize_number($HuntGroup->id, $form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri']);
+         foreach ($Customer->get_subscribers(FALSE,TRUE,TRUE,TRUE) as $SubscriberForCLI) {
+      if($form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri']==$SubscriberForCLI->pbx_extension){
+        $form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri'] = $DDI . $SubscriberForCLI->pbx_extension;
+      }
+    }
+
+        /*foreach ($Customer->get_subscribers(FALSE,TRUE,TRUE,TRUE) as $SubscriberForCLI) {
+          //$alias_number[] = $SubscriberForCLI->get_alias_number(HPBX_NUMBER_FORMAT_SN);
+          $primary_numbers[] = (array) $SubscriberForCLI->primary_number; 
+        }
+        foreach($primary_numbers as $pn){
+          $primary_number[] = $pn['ac'].$pn['sn'];
+        }
+         
+       if(in_array($form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri'],$primary_number)){
+          $out_of_office_hours_destination = $ActiveReseller->_settings->country_code . $form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri'];
+       
+       }else{
+         $out_of_office_hours_destination = sipwise_api_normalize_number($HuntGroup->id, $form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri']);
+       }*/
+       $out_of_office_hours_destination = sipwise_api_normalize_number($HuntGroup->id, $form_state['values']['call-forwards']['cfu']['times']['cfu']['destination_uri']);
       }
     }
     
@@ -1099,6 +1260,12 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
       $no_answer_destination = 'voicebox';
     }
     elseif($form_state['values']['no_answer_settings']['cfna']['destination_type'] == 'uri') {
+       foreach ($Customer->get_subscribers(FALSE,TRUE,TRUE,TRUE) as $SubscriberForCLI) {
+      if($form_state['values']['no_answer_settings']['cfna']['destination_uri']==$SubscriberForCLI->pbx_extension){
+        $form_state['values']['no_answer_settings']['cfna']['destination_uri'] = $DDI . $SubscriberForCLI->pbx_extension;
+      }
+    }
+
       $no_answer_destination = $form_state['values']['no_answer_settings']['cfna']['destination_uri'];
     }
     
@@ -1118,7 +1285,7 @@ function hpbx_huntgroup_edit_form_submit($form, $form_state) {
           $form_state_no_answer['values']['call-forwards']['cft']['ringtimeout'] = $SubscriberPreferences->ringtimeout;
         }
 
-        hpbx_set_simple_callforward_values($cf_type, $form_state_no_answer, $Callforwards, $HuntGroup);
+        hpbx_set_simple_callforward_values($cf_type, $form_state_no_answer, $Callforwards, $HuntGroup,$ActiveReseller, $Customer);
       }
       $Callforwards->save();
     }
